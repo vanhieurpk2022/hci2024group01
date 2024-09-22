@@ -1,0 +1,178 @@
+Cau1
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý Nhân Viên Văn Phòng </title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 10px;
+        }
+        table {
+            width: 50%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        table, th, td {
+            border: 1px solid #ccc;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Quản lý Nhân viên Văn Phòng</h1>
+
+<h2>Thêm Nhân Viên</h2>
+<form id="addForm">
+    <input type="text" id="name" placeholder="Tên Nhân viên" required>
+    <input type="text" id="subject" placeholder="chức vụ" required>
+    <input type="text" id="subject" placeholder="nhóm" required>
+    <button type="submit">Thêm</button>
+</form>
+
+<h2>Tìm kiếm Nhân viên</h2>
+<input type="text" id="searchInput" placeholder="Tìm theo tên" onkeyup="search()">
+
+<table>
+    <thead>
+        <tr>
+            <th>Tên</th>
+            <th>phòng làm việc</th>
+            <th>chức vụ</th>
+        </tr>
+    </thead>
+    <tbody id="teacherTable">
+        <!-- Danh sách nhân viên sẽ được thêm vào đây -->
+    </tbody>
+</table>
+
+<script>
+    const teacherTable = document.getElementById('teacherTable');
+    const addForm = document.getElementById('addForm');
+
+    // Mảng lưu trữ nhân viên
+    let teachers = [];
+
+    // Thêm nhân viên
+    addForm.onsubmit = function (e) {
+        e.preventDefault();
+        const name = document.getElementById('name').value;
+        const subject = document.getElementById('subject').value;
+
+        const staff = { name, subject };
+        teachers.push(staff);
+        renderTable();
+        addForm.reset();
+    };
+
+    // Hiển thị danh sách nhân viên
+    function renderTable() {
+        teacherTable.innerHTML = '';
+        teachers.forEach((staff, index) => {
+            const row = `<tr>
+                <td>${staff.name}</td>
+                <td>${staff.subject}</td>
+                <td>
+                    <button onclick="editTeacher(${index})">Sửa</button>
+                    <button onclick="deleteTeacher(${index})">Xóa</button>
+                </td>
+            </tr>`;
+            staffTable.innerHTML += row;
+        });
+    }
+
+    // Sửa nhân viên
+    function editStaff(index) {
+        const name = prompt("Nhập tên mới:", teachers[index].name);
+        const subject = prompt("Nhập phòng mới:", staffs[index].subject);
+        if (name && subject) {
+            staffs[index] = { name, subject };
+            renderTable();
+        }
+    }
+
+    // Xóa nhân viên
+    function deleteTeacher(index) {
+        teachers.splice(index, 1);
+        renderTable();
+    }
+
+    // Tìm kiếm nhân viên
+    function searchStaff() {
+const input = document.getElementById('searchInput').value.toLowerCase();
+Cau2
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab1</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        nav {
+            background-color: #333;
+            overflow: hidden;
+        }
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .content {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <a href="#requirement">Requirement</a>
+    <a href="#design">Design</a>
+    <a href="#implement">Implement</a>
+</nav>
+
+<div class="content" id="requirement">
+    <h2>Yêu Cầu</h2>
+    <p>Chèn nội dung yêu cầu ở đây. Bạn có thể trình bày lại cho đẹp hơn, ví dụ:</p>
+    <ul>
+        <li>Yêu cầu 1: Chọn 1 đối tượng bất kỳ trong thế giới thực, ví dụ như
+lớp môn học, giảng viên,...</li>
+        <li>Sau đó thiết kế chức năng Quản lý đối
+tượng đó trên html bao gồm các tính năng thêm, sửa, xóa, tìm
+kiếm cho đối tượng đó.</li>
+      
+    </ul>
+</div>
+
+<div class="content" id="design">
+    <h2>Thiết Kế</h2>
+    <p>Liên kết tới các file thiết kế:</p>
+    <ul>
+        <li><a href="path/to/design-paper.jpg" target="_blank">Thiết kế trên giấy</a></li>
+        <li><a href="path/to/html-screenshot.jpg" target="_blank">Chụp lại màn hình HTML</a></li>
+    </ul>
+</div>
+
+<div class="content" id="implement">
+    <h2>Triển Khai</h2>
+    <p>Liên kết tới trang HTML chức năng Quản lý:</p>
+    <a href="path/to/management.html" target="_blank">Quản lý</a>
+</div>
+
+</body>
+</html>
