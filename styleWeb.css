@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab1 - Quản lý</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f7f7f7;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .menu {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+
+        .menu a {
+            text-decoration: none;
+            font-weight: 600;
+            padding: 15px 30px;
+            margin: 0 10px;
+            background-color: #007bff;
+            color: white;
+            border-radius: 25px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            box-shadow: 0 5px 15px rgba(0, 123, 255, 0.3);
+        }
+
+        .menu a:hover {
+            background-color: #0056b3;
+            transform: translateY(-5px);
+        }
+
+        .tab-content {
+            display: none;
+            background-color: white;
+            padding: 30px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .tab-content h2 {
+            font-weight: 600;
+            color: #007bff;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .tab-content p, .tab-content ul {
+            color: #555;
+            line-height: 1.6;
+        }
+
+        .tab-content ul {
+            list-style: inside;
+            margin-top: 10px;
+            padding-left: 20px;
+        }
+
+        .image-container {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .image-container img {
+            max-width: 100%;
+            height: auto;
+            border: 2px solid #007bff;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 123, 255, 0.2);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 14px;
+            color: #777;
+        }
+    </style>
+    <script>
+        function showTab(tabId) {
+            var tabs = document.querySelectorAll('.tab-content');
+            tabs.forEach(tab => {
+                tab.classList.remove('active');
+            });
+            document.getElementById(tabId).classList.add('active');
+        }
+    </script>
+</head>
+<body>
+
+    <h1>Lab1 - Quản lý Sách</h1>
+
+    <div class="menu">
+        <a href="javascript:void(0)" onclick="showTab('requirement')">Requirement</a>
+        <a href="javascript:void(0)" onclick="showTab('design')">Design</a>
+        <a href="javascript:void(0)" onclick="showTab('implement')">Implement</a>
+    </div>
+
+    <!-- Tab Requirement -->
+    <div id="requirement" class="tab-content active">
+        <h2>Yêu cầu</h2>
+        <p>Chọn 1 đối tượng bất kỳ trong thế giới thực, ví dụ như
+lớp môn học, giảng viên,... Sau đó thiết kế chức năng Quản lý đối
+tượng đó trên html bao gồm các tính năng thêm, sửa, xóa, tìm
+kiếm cho đối tượng đó. Ví dụ, làm chức năng Quản lý Sinh viên,
+bao gôm tính năng thêm, sửa, xóa, tìm kiếm. Chú ý: Các thành
+viên trong nhóm không được chọn các đối tượng giống nhau.</p>
+    </div>
+
+    <!-- Tab Design -->
+<div id="design" class="tab-content">
+    <h2>Thiết kế</h2>
+    <p><strong>Thiết kế trên giấy:</strong></p>
+    <div class="image-container">
+        <a href="link-to-full-paper-design.jpg" target="_blank">
+            <img src="path/to/your/paper-design.jpg" alt="https://i.imgur.com/NV8J9EA.png">
+        </a>
+    </div>
+    
+    <p><strong>Chụp lại màn hình thiết kế HTML:</strong></p>
+    <div class="image-container">
+        <a href="link-to-full-html-design-screenshot.jpg" target="_blank">
+            <img src="path/to/your/html-design-screenshot.jpg" alt="https://i.imgur.com/NV8J9EA.png">
+        </a>
+    </div>
+</div>
+
+
+    <!-- Tab Implement -->
+    <div id="implement" class="tab-content">
+        <h2>Chức năng quản lý</h2>
+        <p>Đây là nơi bạn có thể đặt mã HTML cho chức năng quản lý của bạn.</p>
+        <!-- Chèn mã HTML của chức năng quản lý tại đây -->
+    </div>
+
+    <footer>
+        © 2024 Quản lý Sách.
+    </footer>
+
+</body>
+</html>
