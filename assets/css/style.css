@@ -1,7 +1,17 @@
+/* defalut do not fix it */
 * {
-  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
 }
 
 html {
   font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* ===============Common=============== */
+a {
+  text-decoration: none;
 }
