@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap" rel="stylesheet" />
+    <link rel="apple-touch-icon" sizes="57x57" href="./assets/img/web_logo/apple-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="./assets/img/web_logo/apple-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="./assets/img/web_logo/apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/web_logo/apple-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="./assets/img/web_logo/apple-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="./assets/img/web_logo/apple-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="./assets/img/web_logo/apple-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="./assets/img/web_logo/apple-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/img/web_logo/apple-icon-180x180.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="./assets/img/web_logo/android-icon-192x192.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/web_logo/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="./assets/img/web_logo/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/img/web_logo/favicon-16x16.png" />
+    <link rel="manifest" href="./assets/img/web_logo/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="./assets/img/web_logo/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>BookingCare - Health is Paramount</title>
+</head>
+    <style>
+        .doctor-container {
+            display: none;
+        }
+    </style>
+</head>
+<body style="height: 10000px">
+    <header class="header fixed">
+        <div class="main-contain">
+            <div class="body">
+                <a href="#!">
+                    <img src="./assets/img/logo.png" alt="Logo" width="100" />
+                </a>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./homeMedical.html">Home Medical Care</a></li>
+                        <li><a href="./hospitalVisit.html">Hospital Visit</a></li>
+                        <li><a href="./healthily.html">Healthily</a></li>
+                        <input type="search" class="search" placeholder="Search..." />
+                        <li><a href="#">Collaboration</a></li>
+                        <li><a href="#">Appointment</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <label>
+        <input type="checkbox" class="checkbox" />
+        <div class="toggle">
+            <span class="top_line common"></span>
+            <span class="middle_line common"></span>
+            <span class="bottom_line common"></span>
+        </div>
+
+        <div class="slide">
+            <h1>MENU</h1>
+            <ul>
+                <li>
+                    <a href="#"><i class="fa-solid fa-house"></i>Home</a>
+                    <a href="./handbook.html"><i class="fa-solid fa-book"></i>Handbook</a>
+                    <a href="./contact.html"><i class="fa-regular fa-handshake"></i>Contact</a>
+                    <a href="./business.html"><i class="fa-solid fa-building"></i>Business Health</a>
+                    <a href="./digital.html"><i class="fas fa-folder"></i>Digital Transformation Package</a>
+                    <a href="./recruitment.html"><i class="fa-solid fa-users"></i>Recruitment</a>
+                    <a href="./patient.html"><i class="fa-solid fa-hospital-user"></i>Patient</a>
+                    <a href="#" id="doctor-link"><i class="fa-solid fa-user-doctor"></i>Doctor</a>
+                    <a href="./roleOf.html"><i class="fa-solid fa-flag"></i>Role of BookingCare</a>
+                    <a href="./hotline.html"><i class="fa-solid fa-phone"></i>Hotline</a>
+                    <a href="./faq.html"><i class="fa-solid fa-question"></i>FAQ</a>
+                    <a href="./terms.html"><i class="fa-solid fa-scroll"></i>Terms</a>
+                </li>
+            </ul>
+        </div>
+    </label>
+
+    <div class="doctor-container" id="doctor-functions">
+        <h1>Doctor Functions</h1>
+        
+        <section id="schedule">
+            <h2>Manage Work Schedule</h2>
+            <form id="schedule-form">
+                <label for="work-date">Select Date:</label>
+                <input type="date" id="work-date" name="work-date" required />
+                <label for="work-time">Select Time:</label>
+                <input type="time" id="work-time" name="work-time" required />
+                <button type="submit">Update Schedule</button>
+            </form>
+        </section>
+
+        <section id="patient-info">
+            <h2>View Patient Information</h2>
+            <ul id="patient-list">
+                <li>Patient 1: Name - Contact Information</li>
+                <li>Patient 2: Name - Contact Information</li>
+            </ul>
+        </section>
+
+        <section id="notes">
+            <h2>Patient Consultation Notes</h2>
+            <form id="notes-form">
+                <label for="patient">Select Patient:</label>
+                <select id="patient" name="patient">
+                    <option value="patient1">Patient 1</option>
+                    <option value="patient2">Patient 2</option>
+                </select>
+                <label for="note">Notes:</label>
+                <textarea id="note" name="note" rows="4" required></textarea>
+                <button type="submit">Save Notes</button>
+            </form>
+        </section>
+
+        <section id="consultation">
+            <h2>Online Consultation</h2>
+            <button onclick="startConsultation()">Start Consultation</button>
+        </section>
+    </div>
+
+    <script>
+        document.getElementById('doctor-link').addEventListener('click', function(event) {
+            event.preventDefault();
+            const doctorContainer = document.getElementById('doctor-functions');
+            doctorContainer.style.display = doctorContainer.style.display === 'none' || doctorContainer.style.display === '' ? 'block' : 'none';
+        });
+
+        document.getElementById('schedule-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Work schedule has been updated!');
+        });
+
+        document.getElementById('notes-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert('Notes have been saved!');
+        });
+
+        function startConsultation() {
+            alert('Online consultation has started!');
+        }
+    </script>
+</body>
+</html>

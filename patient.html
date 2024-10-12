@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap" rel="stylesheet" />
+    <link rel="apple-touch-icon" sizes="57x57" href="./assets/img/web_logo/apple-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="./assets/img/web_logo/apple-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="./assets/img/web_logo/apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/web_logo/apple-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="./assets/img/web_logo/apple-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="./assets/img/web_logo/apple-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="./assets/img/web_logo/apple-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="./assets/img/web_logo/apple-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/img/web_logo/apple-icon-180x180.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="./assets/img/web_logo/android-icon-192x192.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/web_logo/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="./assets/img/web_logo/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="./assets/img/web_logo/favicon-16x16.png" />
+    <link rel="manifest" href="./assets/img/web_logo/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="./assets/img/web_logo/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#ffffff" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>BookingCare - Health is Paramount</title>
+</head>
+<body style="height: 10000px">
+    <header class="header fixed">
+        <div class="main-contain">
+            <div class="body">
+                <a href="#!">
+                    <img src="./assets/img/logo.png" alt="Logo" width="100" />
+                </a>
+                <nav class="nav">
+                    <ul>
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./homeMedical.html">Home Medical Care</a></li>
+                        <li><a href="./hopitalVisit.html">Hospital Visit</a></li>
+                        <li><a href="./healthily.html">Healthily</a></li>
+                        <input type="search" class="search" />
+                        <li><a>Collaboration</a></li>
+                        <li><a>Appointment</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <label>
+        <input type="checkbox" class="checkbox" />
+        <div class="toggle">
+            <span class="top_line common"></span>
+            <span class="middle_line common"></span>
+            <span class="bottom_line common"></span>
+        </div>
+        <div class="slide">
+            <h1>MENU</h1>
+            <ul>
+                <li>
+                    <a href="#"><i class="fa-solid fa-house"></i>Home</a>
+                    <a href="./handbook.html"><i class="fa-solid fa-book"></i>Handbook</a>
+                    <a href="./contact.html"><i class="fa-regular fa-handshake"></i>Contact</a>
+                    <a href="./bussine.html"><i class="fa-solid fa-building"></i>Business Health</a>
+                    <a href="./digital.html"><i class="fas fa-folder"></i>Digital Transformation Package</a>
+                    <a href="./recruitment.html"><i class="fa-solid fa-users"></i>Recruitment</a>
+                    <a href="#" id="patient-menu"><i class="fa-solid fa-hospital-user"></i>Patient</a>
+                    <a href="./doctor.html"><i class="fa-solid fa-user-doctor"></i>Doctor</a>
+                    <a href="./roleOf.html"><i class="fa-solid fa-flag"></i>Role of BookingCare</a>
+                    <a href="./hotline.html"><i class="fa-solid fa-phone"></i>Hotline</a>
+                    <a href="./faq.html"><i class="fa-solid fa-question"></i>FAQ</a>
+                    <a href="./tems.html"><i class="fa-solid fa-scroll"></i>Terms</a>
+                </li>
+            </ul>
+        </div>
+    </label>
+
+   
+    <div class="patient-functions" style="display: none; margin: 20px;">
+        <h2>Patient Functions</h2>
+
+        <div id="appointment-form" style="display: block;">
+            <h3>Book Appointment</h3>
+            <form>
+                <label for="date">Select Date:</label>
+                <input type="date" id="date" required />
+                <label for="time">Select Time:</label>
+                <input type="time" id="time" required />
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+
+        <div id="health-records" style="display: block;">
+            <h3>Health Records</h3>
+            <p>Your health records will be displayed here.</p>
+        </div>
+
+        <div id="consultation" style="display: block;">
+            <h3>Online Consultation</h3>
+            <p>Chat with your doctor here.</p>
+        </div>
+
+        <div id="reminder" style="display: block;">
+            <h3>Reminder Settings</h3>
+            <input type="text" placeholder="Enter reminder details" />
+            <button id="set-reminder">Set Reminder</button>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("patient-menu").onclick = function() {
+            const functions = document.querySelector(".patient-functions");
+            functions.style.display = functions.style.display === "none" ? "block" : "block";
+        };
+
+        document.getElementById("set-reminder").onclick = function() {
+            alert("Reminder has been set!");
+            document.getElementById("reminder").style.display = "none";
+        };
+    </script>
+
+    <style>
+        .patient-functions {
+            margin: 20px;
+        }
+        .patient-functions button {
+            margin: 5px;
+        }
+    </style>
+</body>
+</html>

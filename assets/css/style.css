@@ -1,0 +1,151 @@
+/* default value cannot be edited */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+body {
+  font-size: 1.6rem;
+  font-family: "Montserrat", sans-serif;
+}
+.main-contain {
+  width: 1223;
+  margin-left: auto;
+  margin-top: auto;
+  max-width: calc(100% - 48px);
+}
+/* ===============Common=============== */
+a {
+  text-decoration: none;
+}
+
+/* ======Header===================== */
+.header {
+  background: #00ced1;
+}
+.header .body {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.nav {
+  margin-left: 31px;
+}
+.nav ul {
+  display: flex;
+}
+.nav a {
+  color: #5f5f5f;
+  font-size: 1.6rem;
+  padding: 12px 21px;
+}
+.search {
+  border-radius: 25px;
+}
+/* ===============DashBoard======= */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;500&display=swap");
+
+.slide {
+  height: 100%;
+  width: 300px;
+  position: absolute;
+  background-color: #fff;
+  transition: 0.5s ease;
+  font-family: "poppins", sans-serif;
+  transform: translateX(-300px);
+}
+h1 {
+  color: #8000ff;
+  font-weight: 800;
+  text-align: center;
+  padding: 10px 0;
+  padding-right: 30px;
+  pointer-events: none;
+}
+ul li {
+  list-style: none;
+}
+ul li a {
+  color: #011a41;
+  font-weight: 500;
+  padding: 5px 0;
+  display: block;
+  text-transform: capitalize;
+  text-decoration: none;
+  transition: 0.2s ease-out;
+  margin-top: 25px;
+}
+ul a:hover {
+  color: #fff;
+  background-color: #8000ff;
+}
+ul li a i {
+  width: 60px;
+  text-align: center;
+}
+.checkbox {
+  display: none;
+  visibility: hidden;
+  -webkit-appearance: none;
+}
+.toggle {
+  position: absolute;
+  height: 30px;
+  width: 30px;
+  top: 20px;
+  left: 15px;
+  z-index: 1;
+  cursor: pointer;
+  border-radius: 2px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.toggle .common {
+  position: absolute;
+  height: 2px;
+  width: 20px;
+  background-color: #8000ff;
+  border-radius: 50px;
+  transition: 0.3s ease;
+}
+/*  */
+.toggle .top_line {
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.toggle .middle_line {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.toggle .bottom_line {
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+input:checked ~ .toggle .top_line {
+  left: 2px;
+  top: 14px;
+  width: 25px;
+  transform: rotate(45deg);
+}
+input:checked ~ .toggle .bottom_line {
+  left: 2px;
+  top: 14px;
+  width: 25px;
+  transform: rotate(-45deg);
+}
+input:checked ~ .toggle .middle_line {
+  opacity: 0;
+  transform: translateX(20px);
+}
+input:checked ~ .slide {
+  transform: translateX(0);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+/* ======================= default value cannot be edited ================= */
