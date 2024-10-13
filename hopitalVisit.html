@@ -97,17 +97,16 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
     <title>BookingCare - Sức khỏe là trên hết</title>
   </head>
-  <body style="height: 10000px">
+  <body>
     <header class="header fixed">
       <div class="main-contain">
-        <div class="body">
-          <!-- logo -->
-          <a href="#!">
-            <img src="./assets/img/logo.png" alt="Logo" width="100" />
-          </a>
-          <!-- thẻ nav -->
-          <nav class="nav">
+        <!-- Logo -->
+        <div class="header_left">
+          <nav class="header_nav">
             <ul>
+              <a href="./index.html"
+                ><img src="./assets/img/logo.png" width="75" alt=""
+              /></a>
               <li>
                 <a href="./index.html">Home</a>
               </li>
@@ -117,15 +116,15 @@
               <li>
                 <a href="./hopitalVisit.html">Hospital Visit</a>
               </li>
-              <li>
-                <a href="./healthily.html">Healthily</a>
-              </li>
-              <input type="search" class="search" />
-
-              <li><a>Collaborationc</a></li>
-              <li><a>Appointment</a></li>
+              <li><a href="./healthily.html">Healthily</a></li>
             </ul>
           </nav>
+        </div>
+        <!-- header Right -->
+        <div class="header_right">
+          <input type="search" placeholder="Search" id="header_search" />
+          <a href="">Collaborationc</a>
+          <a href="">Appointment</a>
         </div>
       </div>
     </header>
@@ -139,7 +138,6 @@
       </div>
 
       <div class="slide">
-        <h1>MENU</h1>
         <ul>
           <li>
             <a href="#"><i class="fa-solid fa-house"></i>Home</a>

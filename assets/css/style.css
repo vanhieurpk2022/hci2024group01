@@ -1,3 +1,6 @@
+@media (min-width: 320) {
+}
+
 /* default value cannot be edited */
 
 * {
@@ -11,40 +14,59 @@ body {
   font-size: 1.6rem;
   font-family: "Montserrat", sans-serif;
 }
-.main-contain {
-  width: 1223;
-  margin-left: auto;
-  margin-top: auto;
-  max-width: calc(100% - 48px);
-}
+
 /* ===============Common=============== */
 a {
   text-decoration: none;
 }
 
 /* ======Header===================== */
+.main-contain {
+  display: flex;
+  margin: auto;
+  width: 80%;
+  flex-wrap: nowrap;
+}
 .header {
-  background: #00ced1;
+  max-width: (calc(100% - 15%));
+  background-color: #45c3d2;
 }
-.header .body {
+.header_nav {
+  position: relative;
+}
+.header_left {
+  width: 50%;
+}
+
+.header_nav ul {
   display: flex;
-  flex-direction: row;
   align-items: center;
-  justify-content: center;
+  margin-left: 150px;
+  justify-content: space-between;
 }
-.nav {
-  margin-left: 31px;
+.header_nav ul li a {
+  padding: 10px;
 }
-.nav ul {
-  display: flex;
+.header_right {
+  width: 50%;
+  align-content: center;
+  margin-left: 2%;
 }
-.nav a {
-  color: #5f5f5f;
-  font-size: 1.6rem;
-  padding: 12px 21px;
+
+#header_search {
+  height: 40px;
+  padding: 10px;
+  border-radius: 40px;
 }
-.search {
-  border-radius: 25px;
+.header_right a {
+  margin-left: 2%;
+  padding: 10px;
+}
+.header_nav ul li a:hover,
+.header_right a:hover {
+  border-radius: 40px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.6);
 }
 /* ===============DashBoard======= */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;500&display=swap");
@@ -58,7 +80,7 @@ a {
   font-family: "poppins", sans-serif;
   transform: translateX(-300px);
 }
-h1 {
+.slide h1 {
   color: #8000ff;
   font-weight: 800;
   text-align: center;
@@ -66,10 +88,10 @@ h1 {
   padding-right: 30px;
   pointer-events: none;
 }
-ul li {
+.slide ul li {
   list-style: none;
 }
-ul li a {
+.slide ul li a {
   color: #011a41;
   font-weight: 500;
   padding: 5px 0;
@@ -79,11 +101,11 @@ ul li a {
   transition: 0.2s ease-out;
   margin-top: 25px;
 }
-ul a:hover {
+.slide ul a:hover {
   color: #fff;
   background-color: #8000ff;
 }
-ul li a i {
+.slide ul li a i {
   width: 60px;
   text-align: center;
 }
