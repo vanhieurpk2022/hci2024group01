@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tuyển Dụng</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Công Ty ABC - Tuyển Dụng</h1>
+        <nav>
+            <ul>
+                <li><a href="#jobs">Công Việc</a></li>
+                <li><a href="#apply">Nộp Hồ Sơ</a></li>
+                <li><a href="#contact">Liên Hệ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <h2>Gia Nhập Đội Ngũ Của Chúng Tôi!</h2>
+        <p>Chúng tôi đang tìm kiếm những tài năng xuất sắc để cùng phát triển.</p>
+    </section>
+
+    <section id="jobs">
+        <h2>Các Vị Trí Đang Tuyển Dụng</h2>
+        <div class="job">
+            <h3>Chuyên Viên Marketing</h3>
+            <p>Mô tả công việc: Xây dựng và triển khai các chiến dịch marketing.</p>
+            <p>Yêu cầu: Tốt nghiệp đại học, kinh nghiệm 2 năm trong lĩnh vực marketing.</p>
+        </div>
+        <div class="job">
+            <h3>Lập Trình Viên Frontend</h3>
+            <p>Mô tả công việc: Phát triển giao diện người dùng cho ứng dụng web.</p>
+            <p>Yêu cầu: Thành thạo HTML, CSS, JavaScript.</p>
+        </div>
+        <div class="job">
+            <h3>Nhân Viên Hỗ Trợ Khách Hàng</h3>
+            <p>Mô tả công việc: Giải đáp thắc mắc và hỗ trợ khách hàng.</p>
+            <p>Yêu cầu: Kỹ năng giao tiếp tốt, có kinh nghiệm là một lợi thế.</p>
+        </div>
+    </section>
+
+    <section id="apply">
+        <h2>Nộp Hồ Sơ</h2>
+        <form action="submit_application.php" method="post" enctype="multipart/form-data">
+            <label for="name">Tên:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="resume">Hồ Sơ (PDF hoặc DOCX):</label>
+            <input type="file" id="resume" name="resume" accept=".pdf,.docx" required>
+            
+            <button type="submit">Gửi Hồ Sơ</button>
+        </form>
+    </section>
+
+    <section id="contact">
+        <h2>Liên Hệ Với Chúng Tôi</h2>
+        <p>Địa chỉ: 123 Đường ABC, Thành phố XYZ</p>
+        <p>Điện thoại: (012) 345-6789</p>
+        <p>Email: contact@companyabc.com</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Công Ty ABC. Tất cả quyền được bảo lưu.</p>
+    </footer>
+</body>
+</html>
