@@ -1,6 +1,3 @@
-@media (min-width: 320) {
-}
-
 /* default value cannot be edited */
 
 * {
@@ -171,3 +168,97 @@ input:checked ~ .slide {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
 /* ======================= default value cannot be edited ================= */
+
+/*==============================Index HTML==============Home================*/
+.first_main_content {
+  background-color: #a6cfc4;
+  height: 400px;
+}
+.chatbot_question_hub {
+  width: 60%;
+  margin: auto;
+}
+.chatbot_main_content1 {
+  padding: 39px;
+}
+.chatbot_main_content1 h1 {
+  font-size: 2.3rem;
+  font-weight: bold;
+  text-align: center;
+}
+.chatbot_main_content {
+  align-items: flex-start; /* căn phần tử theo chiều dọc */
+}
+#textArea_chatbot {
+  width: 89%;
+  border: none;
+  margin: auto;
+  resize: none;
+}
+
+#textArea_chatbot:focus {
+  outline: none;
+}
+.chatbot_main_content {
+  padding: 50px;
+  background-color: white;
+  border-radius: 20px;
+}
+#intput_file_chatbot {
+  margin-left: 42px;
+}
+
+.fa-regular .fa-file {
+  font-size: 3rem;
+}
+.button_get_file label {
+  margin-left: 50px;
+}
+.get_file_read {
+  margin-top: 25px;
+}
+
+.chatbot_question_hub .text_silder {
+  display: flex;
+  margin-top: 30px;
+  height: 50px;
+}
+.slider_text_1 {
+  background-color: white;
+  border-radius: 3px;
+  align-items: center;
+  height: 51px;
+  width: 349px;
+  overflow: hidden;
+  align-items: center;
+  display: flex;
+  white-space: nowrap;
+  margin: auto;
+}
+.text_silder .slider_text_1 div:first-child {
+  margin: 7px 7px;
+  font-size: 25px;
+}
+.slider_text {
+  overflow: hidden;
+}
+
+.slider_text p {
+  display: flex;
+  animation: marquee 20s linear infinite;
+  animation-delay: 2s;
+}
+.marquee{
+  margin-left: 5px;
+}
+
+
+@keyframes marquee {
+  0%,2% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
