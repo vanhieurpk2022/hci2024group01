@@ -80,4 +80,22 @@
   animation-play-state: paused;
 }
 
+.nav_task_bar_small {
+  list-style: none;
+}
+@media (max-width: 768px) {
+  .invisible-md {
+    visibility: hidden;
+  }
+}
 
+@media (max-width: 992px) {
+  .invisible-lg {
+    visibility: hidden;
+  }
+}
+@media (max-width: 576px) {
+  .invisible-sm {
+    visibility: hidden;
+  }
+}
