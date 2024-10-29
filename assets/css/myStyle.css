@@ -1,8 +1,26 @@
+:root{
+  --background-color:#00000000;
+  --bs-light-blue: #E3F2FD;
+  --bs-icon-blue: #2196F3;
+}
+
+.icon-bg {
+  background: linear-gradient(120deg, #E3F2FD, #BBDEFB);
+}
+
+.menu-item {
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+.menu-item:hover {
+  box-shadow: 0 5px 8px rgba(0,0,0,0.1);
+}
 .form-control-search {
-  padding-left: 35px;
+  padding-left: 45px;
 }
 .fa-magnifying-glass {
-  padding-left: 10px;
+  padding-left: 25px;
 }
 
 .main-title {
