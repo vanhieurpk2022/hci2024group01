@@ -1,3 +1,10 @@
+:root {
+  /* set màu navbar */
+  --default-color: white;
+}
+.navbar_main_index {
+  background-color: var(--default-color) !important;
+}
 .form-control-search {
   padding-left: 35px;
 }
@@ -99,4 +106,3 @@
     visibility: hidden;
   }
 }
-
