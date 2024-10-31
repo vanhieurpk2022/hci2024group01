@@ -87,5 +87,6 @@ document.addEventListener("DOMContentLoaded", function () {
     setupCarouselPagination('articleCarousel', 'paginationCarousel');
     setupCarouselPagination('articleCarousel1', 'paginationCarousel1');
   });
-
-
+  
+  
+ 
