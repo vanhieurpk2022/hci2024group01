@@ -18,10 +18,14 @@
     />
     <link rel="stylesheet" href="./assets/css/myStyle.css" />
     <title>HeathCare</title>
+    <style>
+      /*  */
+      :root {
+        --aqua-color: #00ced1;
+      }
+    </style>
   </head>
   <body>
-    <!--navBar -->
-    <!--navBar -->
     <!-- DashBroad -->
     <div class="container">
       <nav class="navbar bg-body-tertiary">
@@ -45,7 +49,7 @@
             class="navbar-nav me-auto mb-2 mb-lg-0 d-sm-flex flex-row ms-5 ms-md-0 order-md-0 order-1 mt-3 mt-lg-0"
           >
             <li class="nav-item me-2 me-md-2">
-              <a class="nav-link active" aria-current="page" href="./index.html"
+              <a class="nav-link" aria-current="page" href="./index.html"
                 >Home</a
               >
             </li>
@@ -166,18 +170,18 @@
                     ><i class="fa-solid fa-flag"></i> Role of bookingcare</a
                   >
                 </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="./hotLine.html"
+                <li class="nav-item active">
+                  <a class="nav-link" href="#"
                     ><i class="fa-solid fa-phone"></i> Hotline</a
                   >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="./fAQ.html"
+                  <a class="nav-link" href="#"
                     ><i class="fa-solid fa-question"></i> FAQ</a
                   >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#"
+                  <a class="nav-link" href="./terms.html"
                     ><i class="fa-solid fa-scroll"></i> Terms</a
                   >
                 </li>
@@ -187,154 +191,69 @@
         </div>
       </nav>
     </div>
-    <header class="main-header_about">
-      <div class="container mt-5">
-        <h1 class="text-center">Wellcome to my group</h1>
 
-        <div class="card-group mt-5">
-          <div class="card">
-            <img
-              src="./assets/img/avatar-svgrepo-com.svg"
-              class="card-img-top"
-              alt="avatar"
-            />
-            <div
-              class="card-body flex-column justify-content-center align-items-center"
-            >
-              <h5 class="card-title text-center">Vi Văn Hiếu</h5>
-              <p class="text-center"><small>Leader</small></p>
-              <p class="card-text text-center">
-                Don’t dwell on dreams and ignore life.
-              </p>
-              <div class="card_link d-flex justify-content-center">
-                <a
-                  href="https://vanhieurpk2022.github.io/project_personal_23130109/"
-                  target="_blank"
-                  class="btn me-2 btn-success"
-                  ><i
-                    class="fa-brands fa-github"
-                    style="width: 16px; height: 16px"
-                  ></i
-                ></a>
-                <a
-                  href="mailto:23130109@st.hcmuaf.edu.vn"
-                  class="btn btn-success"
-                  ><i class="fa-regular fa-envelope"></i
-                ></a>
+    <!-- Home  -->
+    <!-- header start -->
+    <header>
+      <div class="container mt-4">
+        <nav aria-label="breadcrumb ">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item ms-3">
+              <a href="./index.html"><i class="fa-solid fa-house"></i> </a>
+            </li>
+            <li class="breadcrumb-item"><a href="../fAQ.html">FAQ</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Hồ sơ sức khỏe</li>
+          </ol>
+        </nav>
+        <div class="container">
+          <h3>Hồ sơ sức khỏe</h3>
+          <div class="d-flex flex-column">
+            <div class="accordion" id="accordionExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseOne"
+                    aria-expanded="true"
+                    aria-controls="collapseOne"
+                  >
+                  Hướng dẫn nhập ghi chú
+                  </button>
+                </h2>
+                <div
+                  id="collapseOne"
+                  class="accordion-collapse collapse show"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    Hồ sơ sức khỏe là tính năng giúp người dùng quản lý thông tin về sức khỏe của mình và người thân. Để lưu trữ thông tin, bạn có thể ấn vào mục “Thêm ghi chú” và điền thông tin theo mẫu. Bạn vui lòng lưu ý một số điều sau khi điền thông tin:
+                    <ol>
+                        <li>Người dùng: Ấn vào ô “Người dùng” để lựa chọn tên người dùng tương ứng với ghi chú.</li>
+                        <li> Danh mục:  Ấn vào ô “Danh mục” để lựa chọn danh mục tương ứng với loại ghi chú (Tiền sử bệnh/ dị ứng, xét nghiệm, đơn thuốc, ghi chú khác)</li>
+                        <li>  Lịch khám:
+                            <ul>
+                                <li>Nếu ghi chú đó gắn với lịch khám có sẵn thì chọn lịch khám tương ứng.
+                                </li>
+                                <li> Nếu ghi chú đó thuộc 1 lịch khám khác, chưa được lưu thông tin trên App BookingCare thì chọn “Nhập lịch khám mới” và điền các thông tin bổ sung (Bác sĩ, nơi khám, lý do khám).
+                                </li>
+                                <li> Nếu không có thông tin về lịch khám thì có thể bỏ qua mục này.
+                                </li>
+                            </ul>
+                        </li>
+                        <li> Thời gian: Thời gian xuất hiện triệu chứng, bệnh/ nhận xét nghiệm, đơn thuốc.</li>
+                        <li> Nội dung: Nhập nội dung chi tiết của ghi chú (triệu chứng, bệnh, lưu ý, dặn dò của bác sĩ…)
+
+                        </li>
+                        <li>  Danh sách ảnh: Ấn vào biểu tượng dấu cộng “+” để thêm ảnh (nếu có)</li>
+                    </ol>
+                </div>
+                </div>
               </div>
-            </div>
-          </div>
-          <div class="card ms-2">
-            <img
-              src="./assets/img/avtQ.jpg"
-              class="card-img-top"
-              alt="..."
               
-            />
-
-            <div class="card-body">
-              <h5 class="card-title text-center">Đỗ Minh Quốc</h5>
-              <p class="text-center"><small>Member</small></p>
-              <p class="card-text text-center">
-                "Once you choose hope, anything's possible"🍀
-              </p>
-              <div class="card_link d-flex justify-content-center">
-                <a
-                  href="https://mdquoc.github.io/MyProjec/"
-                  target="_blank"
-                  class="btn me-2 btn-success"
-                  ><i
-                    class="fa-brands fa-github"
-                    style="width: 16px; height: 16px"
-                  ></i
-                ></a>
-                <a
-                  href="mailto:23130261@st.hcmuaf.edu.vn"
-                  class="btn btn-success"
-                  ><i class="fa-regular fa-envelope"></i
-                ></a>
               </div>
-            </div>
-          </div>
-          <div class="card ms-2">
-            <img
-              src="./assets/img/avatar-svgrepo-com.svg"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="card-body">
-              <h5 class="card-title text-center">Đoàn Huy Cương</h5>
-              <p class="text-center"><small>Member</small></p>
-              <p class="card-text text-center">
-                Don’t dwell on dreams and ignore life.
-              </p>
-              <div class="card_link d-flex justify-content-center">
-                <a href="#" class="btn me-2 btn-success"
-                  ><i
-                    class="fa-brands fa-github"
-                    style="width: 16px; height: 16px"
-                  ></i
-                ></a>
-                <a
-                  href="mailto:23130035@st.hcmuaf.edu.vn"
-                  class="btn btn-success"
-                  ><i class="fa-regular fa-envelope"></i
-                ></a>
-              </div>
-            </div>
-          </div>
-          <div class="card ms-2">
-            <img
-              src="https://i.imgur.com/FQZew1m.png"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="card-body">
-              <h5 class="card-title text-center">Nguyễn Duy Khánh</h5>
-              <p class="text-center"><small>Member</small></p>
-              <p class="card-text text-center">Reach out and touch someone.</p>
-              <div class="card_link d-flex justify-content-center">
-                <a
-                  href="https://khanh28102005.github.io/khanh.github.com/"
-                  target="_blank"
-                  class="btn me-2 btn-success"
-                  ><i
-                    class="fa-brands fa-github"
-                    style="width: 16px; height: 16px"
-                  ></i
-                ></a>
-                <a
-                  href="mailto:23130153@st.hcmuaf.edu.vn"
-                  class="btn btn-success"
-                  ><i class="fa-regular fa-envelope"></i
-                ></a>
-              </div>
-            </div>
-          </div>
-          <div class="card ms-2">
-            <img
-              src="./assets/img/avatar-svgrepo-com.svg"
-              class="card-img-top"
-              alt="..."
-            />
-            <div class="card-body">
-              <h5 class="card-title text-center">Nguyễn Thành An</h5>
-              <p class="text-center"><small>Member</small></p>
-              <p class="card-text text-center">
-                Don’t dwell on dreams and ignore life.
-              </p>
-              <div class="card_link d-flex justify-content-center">
-                <a href="#" class="btn me-2 btn-success"
-                  ><i
-                    class="fa-brands fa-github"
-                    style="width: 16px; height: 16px"
-                  ></i
-                ></a>
-                <a
-                  href="mailto:23130001@st.hcmuaf.edu.vn"
-                  class="btn btn-success"
-                  ><i class="fa-regular fa-envelope"></i
-                ></a>
+              
               </div>
             </div>
           </div>

@@ -3,7 +3,9 @@
   --bs-light-blue: #E3F2FD;
   --bs-icon-blue: #2196F3;
 }
-
+* a{
+  text-decoration: none;
+}
 .icon-bg {
   background: linear-gradient(120deg, #E3F2FD, #BBDEFB);
 }
