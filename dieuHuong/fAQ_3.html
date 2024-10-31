@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./assets/css/myStyle.css" />
+    <title>HeathCare</title>
+    <style>
+      /*  */
+      :root {
+        --aqua-color: #00ced1;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- DashBroad -->
+    <div class="container">
+      <nav class="navbar bg-body-tertiary">
+        <div class="container" style="color: var(--aqua-color)">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!-- navBar -->
+          <a class="navbar-brand ms-1" href="./index.html"
+            ><img width="125px" src="./assets/img/logo.png" alt=""
+          /></a>
+
+          <ul
+            class="navbar-nav me-auto mb-2 mb-lg-0 d-sm-flex flex-row ms-5 ms-md-0 order-md-0 order-1 mt-3 mt-lg-0"
+          >
+            <li class="nav-item me-2 me-md-2">
+              <a class="nav-link" aria-current="page" href="./index.html"
+                >Home</a
+              >
+            </li>
+
+            <li class="nav-item me-2 me-md-2">
+              <a class="nav-link" href="./about.html">About</a>
+            </li>
+            <li class="nav-item me-2 me-md-2">
+              <a class="nav-link" href="#">Hospital</a>
+            </li>
+            <li class="nav-item me-2 me-md-2">
+              <a class="nav-link" href="#">Wellness</a>
+            </li>
+          </ul>
+          <form class="d-flex order-md-1 order-0" role="search">
+            <!-- search khi chưa sm -->
+            <div
+              class="d-flex justify-content-center align-items-center d-none d-lg-flex position-relative"
+            >
+              <i
+                class="d-none d-lg-flex fa-solid fa-magnifying-glass position-absolute start-0"
+                style="color: #41353d"
+                ;
+              ></i>
+            </div>
+            <input
+              class="form-control form-control-search me-2 rounded-pill d-none d-lg-flex"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+          </form>
+          <div
+            class="order-md-2 d-flex mt-lg-0 mt-sm-2 mt-sm-0 order-0 ms-5 mt-2 mt-sm-0 ms-sm-0"
+          >
+            <!-- search khi small -->
+            <div
+              class="me-1 py-1 px-2 d-lg-none me-2 rounded-start rounded-end"
+              style="background-color: azure"
+            >
+              <a href=""
+                ><i
+                  class="fa-solid fa-magnifying-glass p-2"
+                  style="color: #41353d"
+                  ;
+                ></i
+              ></a>
+            </div>
+
+            <div class="me-1">
+              <a href="" class="btn btn-primary">Sign up</a>
+            </div>
+            <div class=""><a href="" class="btn btn-primary">Login</a></div>
+          </div>
+          <div
+            class="offcanvas offcanvas-start"
+            tabindex="-1"
+            id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel"
+          >
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a
+                    class="nav-link active"
+                    aria-current="page"
+                    href="./index.html"
+                    ><i class="fa-solid fa-house"></i> Home</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="handbook.html"
+                    ><i class="fa-solid fa-book-medical"></i> Handbook</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"
+                    ><i class="fa-regular fa-handshake"></i> Contact</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"
+                    ><i class="fa-solid fa-building"></i> Business heath</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"
+                    ><i class="fa-solid fa-folder"></i> Digital Transformation
+                    Package</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"
+                    ><i class="fa-solid fa-users"></i> Recruitment</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"
+                    ><i class="fa-solid fa-hospital-user"></i> Patitent</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"
+                    ><i class="fa-solid fa-user-doctor"></i> Doctor</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"
+                    ><i class="fa-solid fa-flag"></i> Role of bookingcare</a
+                  >
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="#"
+                    ><i class="fa-solid fa-phone"></i> Hotline</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"
+                    ><i class="fa-solid fa-question"></i> FAQ</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./terms.html"
+                    ><i class="fa-solid fa-scroll"></i> Terms</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <!-- Home  -->
+    <!-- header start -->
+    <header>
+      <div class="container mt-4">
+        <nav aria-label="breadcrumb ">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item ms-3">
+              <a href="./index.html"><i class="fa-solid fa-house"></i> </a>
+            </li>
+            <li class="breadcrumb-item"><a href="../fAQ.html">FAQ</a></li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Về bác sĩ
+            </li>
+          </ol>
+        </nav>
+        <div class="container">
+          <h3>Về bác sĩ</h3>
+          <div class="d-flex flex-column">
+            <div class="accordion" id="accordionExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseOne"
+                    aria-expanded="true"
+                    aria-controls="collapseOne"
+                  >
+                    Bác sĩ trên hệ thống BookingCare có giỏi không?
+                  </button>
+                </h2>
+                <div
+                  id="collapseOne"
+                  class="accordion-collapse collapse show"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    BookingCare giúp bệnh nhân dễ dàng lựa chọn bác sĩ từ mạng
+                    lưới bác sĩ chuyên khoa giỏi, với thông tin đã được xác
+                    thực. Bác sĩ trên hệ thống BookingCare là các bác sĩ chuyên
+                    khoa giỏi, được nhiều bệnh nhân tin tưởng, đồng nghiệp đánh
+                    giá cao, có uy tín trong ngành. Các bác sĩ đã, đang công tác
+                    tại các bệnh viện hàng đầu như: Bệnh viện Bạch Mai, Bệnh
+                    Viện Việt Đức, Bệnh viện TW Quân đội 108, Bệnh viện Quân Y
+                    103, Bệnh viện Nhi TW, Bệnh viện Tai Mũi Họng TW, Viện Tim
+                    mạch Việt Nam… Các bác sĩ có lịch khám tại các bệnh viện
+                    công lập, bệnh viện và phòng khám tư nhân uy tín, được chọn
+                    lọc kỹ lưỡng. Bên cạnh đó, BookingCare cũng ghi nhận ý kiến
+                    đánh giá phản hồi của bệnh nhân sau khi đi khám và phương án
+                    điều trị của từng bác sĩ. Từ đó chúng tôi có thêm thông tin
+                    để giới thiệu bác sĩ chuyên khoa phù hợp cho người bệnh.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo"
+                    aria-expanded="false"
+                    aria-controls="collapseTwo"
+                  >
+                    Thế nào là “bác sĩ phù hợp”?
+                  </button>
+                </h2>
+                <div
+                  id="collapseTwo"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    Các chuyên khoa được tổ chức khoa học, thông tin và kinh
+                    nghiệm của bác sĩ được xác thực, nội dung bài viết cẩm nang
+                    dễ hiểu cùng với sự gợi ý từ hệ thống, giúp bệnh nhân chọn
+                    đặt khám với bác sĩ chuyên khoa phù hợp với tình trạng bệnh
+                    tật của mình.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseThree"
+                    aria-expanded="false"
+                    aria-controls="collapseThree"
+                  >
+                    Bác sĩ trên BookingCare có tư vấn qua điện thoại không?
+                  </button>
+                </h2>
+                <div
+                  id="collapseThree"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    Hiện tại BookingCare đang hỗ trợ bệnh nhân đặt lịch theo 2
+                    hình thức: Khám trực tiếp tại phòng khám/ bệnh viện và khám
+                    từ xa qua Video. Với bệnh nhân đăng ký khám trực tiếp, bác
+                    sĩ sẽ tư vấn khi bệnh nhân đến khám tại cơ sở y tế. Với bệnh
+                    nhân đăng ký khám từ xa qua Video, bác sĩ sẽ tư vấn cho bệnh
+                    nhân qua cuộc gọi Video trên app BookingCare.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseFour"
+                    aria-expanded="false"
+                    aria-controls="collapseThree"
+                  >
+                    Tôi có thể được biết số điện thoại và thông tin cá nhân của
+                    bác sĩ không?
+                  </button>
+                </h2>
+                <div
+                  id="collapseFour"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    <strong>Không.</strong><br />
+                    BookingCare không cung cấp các thông tin cá nhân của bác sĩ
+                    ngoài các thông tin được đăng tải trên hệ thống. BookingCare
+                    là Nền tảng Y tế Chăm sóc sức khỏe toàn diện giúp bệnh nhân
+                    dễ dàng lựa chọn đúng bác sĩ, dịch vụ từ mạng lưới bác sĩ
+                    chuyên khoa giỏi, cơ sở y tế uy tín, với thông tin đã xác
+                    thực và đặt lịch nhanh chóng. Với người bệnh đăng ký khám
+                    trực tiếp tại cơ sở y tế: Sau khi đặt lịch, người bệnh đến
+                    cơ sở y tế để được bác sĩ trực tiếp thăm khám, tư vấn và
+                    điều trị. Với ngời bệnh đăng ký dịch vụ "Bác sĩ từ xa": Sau
+                    khi đặt lịch thành công, bác sĩ sẽ liên hệ cho người bệnh
+                    thông qua App BookingCare.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseFive"
+                    aria-expanded="false"
+                    aria-controls="collapseThree"
+                  >
+                    BookingCare có thể giúp tôi đặt khám với một bác sĩ không có
+                    trên hệ thống không?
+                  </button>
+                </h2>
+                <div
+                  id="collapseFive"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    Đối với các trường hợp bác sĩ chưa có trên hệ thống,
+                    BookingCare sẵn sàng cung cấp cho người bệnh các thông tin
+                    về nơi khám của bác sĩ hoặc sự hỗ trợ cần thiết khác trong
+                    phạm vi hiểu biết của chúng tôi. Ngoài ra, bạn cũng có thể
+                    tìm một bác sĩ khác với chuyên khoa tương đương trên
+                    BookingCare để đi khám. Các bác sĩ trên hệ thống đều có
+                    thông tin rõ ràng và được BookingCare xác thực.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- nhung javascript -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

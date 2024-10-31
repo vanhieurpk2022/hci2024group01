@@ -1,0 +1,142 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+}
+.container {
+  max-width: 1200px;
+}
+
+/* Header */
+
+.breadcrumb {
+  padding-left: 20px;
+  display: flex;
+  align-items: center;
+  font-size: 10px;
+  color: #333;
+  margin: 20px 0;
+}
+
+.breadcrumb a {
+  color: #45c3d2;
+  text-decoration: none;
+  margin-right: 8px;
+}
+
+.breadcrumb i {
+  font-size: 15px;
+}
+
+.breadcrumb h3 {
+  font-size: 16px;
+  margin: 0;
+  font-weight: normal;
+}
+
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  flex-wrap: nowrap;
+}
+
+.section-heading {
+  flex: 1;
+  font-size: 1.5rem;
+  white-space: nowrap;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.search-container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+}
+
+.search-bar {
+  height: 50px;
+  border-radius: 50px;
+  padding-right: 35px;
+}
+
+.search-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #aaa;
+  font-size: 16px;
+  cursor: pointer;
+}
+.search-icon:active {
+  color: #007bff; /* Màu xanh lam khi nhấn và giữ */
+}
+@media (max-width: 768px) {
+  .search-bar {
+    display: none;
+  }
+  .section-heading {
+    flex: 1;
+  }
+}
+/* Article Cards */
+.article-card {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background-color: #ffffff;
+}
+
+.article-card img {
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.article-body {
+  padding: 15px;
+  margin: 0;
+}
+
+.article-title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #333;
+}
+/* Khung chứa ảnh */
+.image-frame {
+  width: 90%;
+  margin: 0;
+  padding: 8px;
+  background-color: #ffffff;
+  border-radius: 8px;
+}
+
+.image-frame img {
+  width: 100%;
+
+  border-radius: 10px;
+}
+.category-section {
+  margin: 20px 0;
+}
+
+/* Button */
+.btn-custom {
+  background-color: #00bcd4;
+  color: #ffffff;
+  border-radius: 30px;
+  padding: 10px 20px;
+  text-align: center;
+}
+footer {
+  padding: 20px 0;
+}
+
+footer a {
+  text-decoration: none;
+}

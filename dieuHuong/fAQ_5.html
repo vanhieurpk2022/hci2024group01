@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./assets/css/myStyle.css" />
+    <title>HeathCare</title>
+    <style>
+      /*  */
+      :root {
+        --aqua-color: #00ced1;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- DashBroad -->
+    <div class="container">
+      <nav class="navbar bg-body-tertiary">
+        <div class="container" style="color: var(--aqua-color)">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!-- navBar -->
+          <a class="navbar-brand ms-1" href="./index.html"
+            ><img width="125px" src="./assets/img/logo.png" alt=""
+          /></a>
+
+          <ul
+            class="navbar-nav me-auto mb-2 mb-lg-0 d-sm-flex flex-row ms-5 ms-md-0 order-md-0 order-1 mt-3 mt-lg-0"
+          >
+            <li class="nav-item me-2 me-md-2">
+              <a class="nav-link" aria-current="page" href="./index.html"
+                >Home</a
+              >
+            </li>
+
+            <li class="nav-item me-2 me-md-2">
+              <a class="nav-link" href="./about.html">About</a>
+            </li>
+            <li class="nav-item me-2 me-md-2">
+              <a class="nav-link" href="#">Hospital</a>
+            </li>
+            <li class="nav-item me-2 me-md-2">
+              <a class="nav-link" href="#">Wellness</a>
+            </li>
+          </ul>
+          <form class="d-flex order-md-1 order-0" role="search">
+            <!-- search khi chưa sm -->
+            <div
+              class="d-flex justify-content-center align-items-center d-none d-lg-flex position-relative"
+            >
+              <i
+                class="d-none d-lg-flex fa-solid fa-magnifying-glass position-absolute start-0"
+                style="color: #41353d"
+                ;
+              ></i>
+            </div>
+            <input
+              class="form-control form-control-search me-2 rounded-pill d-none d-lg-flex"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+          </form>
+          <div
+            class="order-md-2 d-flex mt-lg-0 mt-sm-2 mt-sm-0 order-0 ms-5 mt-2 mt-sm-0 ms-sm-0"
+          >
+            <!-- search khi small -->
+            <div
+              class="me-1 py-1 px-2 d-lg-none me-2 rounded-start rounded-end"
+              style="background-color: azure"
+            >
+              <a href=""
+                ><i
+                  class="fa-solid fa-magnifying-glass p-2"
+                  style="color: #41353d"
+                  ;
+                ></i
+              ></a>
+            </div>
+
+            <div class="me-1">
+              <a href="" class="btn btn-primary">Sign up</a>
+            </div>
+            <div class=""><a href="" class="btn btn-primary">Login</a></div>
+          </div>
+          <div
+            class="offcanvas offcanvas-start"
+            tabindex="-1"
+            id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel"
+          >
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a
+                    class="nav-link active"
+                    aria-current="page"
+                    href="./index.html"
+                    ><i class="fa-solid fa-house"></i> Home</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="handbook.html"
+                    ><i class="fa-solid fa-book-medical"></i> Handbook</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"
+                    ><i class="fa-regular fa-handshake"></i> Contact</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"
+                    ><i class="fa-solid fa-building"></i> Business heath</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"
+                    ><i class="fa-solid fa-folder"></i> Digital Transformation
+                    Package</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"
+                    ><i class="fa-solid fa-users"></i> Recruitment</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"
+                    ><i class="fa-solid fa-hospital-user"></i> Patitent</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"
+                    ><i class="fa-solid fa-user-doctor"></i> Doctor</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"
+                    ><i class="fa-solid fa-flag"></i> Role of bookingcare</a
+                  >
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="#"
+                    ><i class="fa-solid fa-phone"></i> Hotline</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"
+                    ><i class="fa-solid fa-question"></i> FAQ</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./terms.html"
+                    ><i class="fa-solid fa-scroll"></i> Terms</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <!-- Home  -->
+    <!-- header start -->
+    <header>
+      <div class="container mt-4">
+        <nav aria-label="breadcrumb ">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item ms-3">
+              <a href="./index.html"><i class="fa-solid fa-house"></i> </a>
+            </li>
+            <li class="breadcrumb-item"><a href="../fAQ.html">FAQ</a></li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Giá và thanh toán
+            </li>
+          </ol>
+        </nav>
+        <div class="container">
+          <h3>Giá và thanh toán</h3>
+          <div class="d-flex flex-column">
+            <div class="accordion" id="accordionExample">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseOne"
+                    aria-expanded="true"
+                    aria-controls="collapseOne"
+                  >
+                    “Đặt khám miễn phí” nghĩa là gì?
+                  </button>
+                </h2>
+                <div
+                  id="collapseOne"
+                  class="accordion-collapse collapse show"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    Có nghĩa là BookingCare "miễn phí đặt lịch" (không thu phí)
+                    khi thực hiện đặt khám qua hệ thống BookingCare. Phí khám và
+                    các chi phí dịch vụ xét nghiệm, chụp chiếu người bệnh sẽ chi
+                    trả trực tiếp theo bảng giá niêm yết tại bệnh viện/phòng
+                    khám.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseTwo"
+                    aria-expanded="false"
+                    aria-controls="collapseTwo"
+                  >
+                    Làm thế nào để tôi biết phí khám của bệnh viện/phòng khám
+                  </button>
+                </h2>
+                <div
+                  id="collapseTwo"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    Chi phí khám sẽ hiện ngay bên dưới lịch khám của bác sĩ.
+                    Ngoài chi phí khám, còn có một số chi phí dịch vụ liên quan
+                    đến chuyên khoa của bác sĩ. Các chi phí này đều theo bảng
+                    giá niêm yết tại bệnh viện/phòng khám.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseThree"
+                    aria-expanded="false"
+                    aria-controls="collapseThree"
+                  >
+                    Làm thế nào để tôi biết chi phí những dịch vụ liên quan của
+                    bệnh viện/phòng khám?
+                  </button>
+                </h2>
+                <div
+                  id="collapseThree"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    Chi phí dịch vụ hiện ngay bên dưới lịch khám của bác sĩ. Bạn
+                    nhấn vào “xem thêm” trên phần Giá khám để biết được chi phí
+                    dịch vụ. Các chi phí này đều theo quy định của phòng
+                    khám/bệnh viện. Ngoài các dịch vụ liên quan, trong quá trình
+                    thăm khám có thể phát sinh thêm các xét nghiệm khác theo chỉ
+                    định của bác sĩ mà chưa có giá thể hiện ở đây. Chúng tôi
+                    khuyên bạn nên trao đổi với bác sĩ hoặc nhân viên y tế để
+                    biết trước khi đồng ý làm các dịch vụ.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseFour"
+                    aria-expanded="false"
+                    aria-controls="collapseThree"
+                  >
+                    Tôi có cần nộp tiền đặt cọc khi làm thủ tục khám không?
+                  </button>
+                </h2>
+                <div
+                  id="collapseFour"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    Bạn không cần đặt cọc trước cho BookingCare. BookingCare
+                    miễn phí đặt khám và các chi phí bạn chi trả trực tiếp tại
+                    phòng khám/bệnh viện. Tại nhiều bệnh viện, phòng khám trên
+                    Nền tảng BookingCare, người đi khám bệnh không cần đặt cọc
+                    tiền mặt trước. Tuy nhiên, có một số bệnh viện lớn vì rất
+                    đông bệnh nhân đến khám, nhằm mục đích tạo điều kiện giảm
+                    thời gian chờ và rút ngắn qui trình thanh toán cho bệnh nhân
+                    khi cần chụp chiếu, xét nghiệm thì người bệnh có thể phải
+                    nộp trước một lượng tiền đặt cọc. Sau khi khám xong người
+                    bệnh sẽ nhận lại tiền thừa sau khi đã tính đủ các chi phí
+                    xét nghiệm, chụp chiếu. Đặt cọc tiền trước hiện đang áp dụng
+                    tại Khu vực khám theo Yêu cầu - Bệnh viện Việt Đức.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapseFive"
+                    aria-expanded="false"
+                    aria-controls="collapseThree"
+                  >
+                    Tôi cần chuẩn bị bao nhiêu tiền khi đi khám bệnh?
+                  </button>
+                </h2>
+                <div
+                  id="collapseFive"
+                  class="accordion-collapse collapse"
+                  data-bs-parent="#accordionExample"
+                >
+                  <div class="accordion-body">
+                    Tùy thuộc vào chuyên khoa và tình trạng của bạn mà số tiền
+                    mang theo khi đi khám bệnh là khác nhau. Trên hệ thống
+                    BookingCare có cung cấp phí khám của bác sĩ và một số chi
+                    phí dịch vụ liên quan, bạn có thể tham khảo. Chúng tôi
+                    thường khuyên người đi khám nên mang thêm một ít tiền dự
+                    phòng trong trường hợp phát sinh chụp chiếu, xét nghiệm hoặc
+                    mua thuốc theo đơn bác sĩ.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- nhung javascript -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
