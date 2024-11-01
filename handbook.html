@@ -17,21 +17,17 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="./assets/css/stylehanhb.css" />
-    <title>Document</title>
-    <style>
-      /*  */
-      :root {
-        --default-color: #edfffa;
-      }
-      .navBar_main_index {
-        background-color: var(--default-color) !important;
-      }
-    </style>
+
+    <title>handbook</title>
+    
+
   </head>
   <body>
     <div class="container">
       <nav class="navbar bg-body-tertiary navBar_main_index">
-        <div class="container" style="color: var(--aqua-color)">
+
+        <div class="container">
+
           <button
             class="navbar-toggler"
             type="button"
@@ -51,7 +47,11 @@
             class="navbar-nav me-auto mb-2 mb-lg-0 d-sm-flex flex-row ms-5 ms-md-0 order-md-0 order-1 mt-3 mt-lg-0"
           >
             <li class="nav-item me-2 me-md-2">
-              <a class="nav-link active" aria-current="page" href="#">Home</a>
+
+              <a class="nav-link active" aria-current="page" href="index.html"
+                >Home</a
+              >
+
             </li>
 
             <li class="nav-item me-2 me-md-2">
@@ -104,12 +104,16 @@
                   >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#"
+
+                  <a class="nav-link" href="./contact.html"
+
                     ><i class="fa-regular fa-handshake"></i> Contact</a
                   >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#"
+
+                  <a class="nav-link" href="business.html"
+
                     ><i class="fa-solid fa-building"></i> Business heath</a
                   >
                 </li>
@@ -179,71 +183,183 @@
         </div>
       </div>
       <hr />
-      <!-- Article Grid -->
-      <div class="row">
-        <!-- Card 1 -->
-        <div class="col-md-3 mb-4">
-          <div class="article-card">
-            <div class="image-frame">
-              <img
-                src="https://cdn.bookingcare.vn/fo/w640/2024/10/26/190050-kham-nam-khoa-gan-day.png"
-                alt="Article Image"
-              />
+
+      <div id="articleCarousel" class="carousel slide" data-bs-interval="false">
+        <div class="carousel-inner">
+          <!-- Slide containing the first 4 cards -->
+          <div class="carousel-item active">
+            <div class="row">
+              <div class="col-md-3 mb-4">
+                <div class="article-card">
+                  <div class="image-frame">
+                    <img
+                      src="https://cdn.bookingcare.vn/fo/w640/2024/10/26/190050-kham-nam-khoa-gan-day.png"
+                      alt="Article Image"
+                    />
+                  </div>
+                  <div class="article-body">
+                    <div class="article-title">
+                      20+ địa chỉ khám nam khoa gần đây theo quận tại Hà Nội
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-3 mb-4">
+                <div class="article-card">
+                  <div class="image-frame">
+                    <img
+                      src="https://cdn.bookingcare.vn/fo/w640/2024/07/09/112159-cat-bao-quy-dau-gia-bao-nhieu.png"
+                      alt="Article Image"
+                    />
+                  </div>
+                  <div class="article-body">
+                    <div class="article-title">
+                      Cắt bao quy đầu bao nhiêu tiền? Chi phí tại 7 địa chỉ uy
+                      tín
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-3 mb-4">
+                <div class="article-card">
+                  <div class="image-frame">
+                    <img
+                      src="https://cdn.bookingcare.vn/fo/w640/2024/10/25/222818-kham-nam-khoa-o-dau-ha-noi.png"
+                      alt="Article Image"
+                    />
+                  </div>
+                  <div class="article-body">
+                    <div class="article-title">
+                      Top 8 bệnh viện, phòng khám Nam khoa Hà Nội đáng tin cậy
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-3 mb-4">
+                <div class="article-card">
+                  <div class="image-frame">
+                    <img
+                      src="https://cdn.bookingcare.vn/fo/w640/2023/07/27/140254-bang-gia-xet-nghiem-tinh-trung-1.jpg"
+                      alt="Article Image"
+                    />
+                  </div>
+                  <div class="article-body">
+                    <div class="article-title">
+                      Bảng giá xét nghiệm tinh trùng tại 8 địa chỉ uy tín Hà Nội
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="article-body">
-              <div class="article-title">
-                20+ địa chỉ khám nam khoa gần đây theo quận tại Hà Nội
+          </div>
+
+          <!-- Slide containing the last card and duplicated cards to maintain 4 cards per slide -->
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col-md-3 mb-4">
+                <div class="article-card">
+                  <div class="image-frame">
+                    <img
+                      src="https://cdn.bookingcare.vn/fo/w1080/2024/10/25/142255-sinh-con-tai-benh-vien-tu-nhan.png"
+                      alt="Article Image"
+                    />
+                  </div>
+                  <div class="article-body">
+                    <div class="article-title">
+                      Nên đăng kí thai sản trọn gói tại Bệnh viện tư nhân nào Hà
+                      Nội?
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-3 mb-4">
+                <div class="article-card">
+                  <div class="image-frame">
+                    <img
+                      src="https://cdn.bookingcare.vn/fo/w1080/2024/10/24/164044-phong-kham-sieu-am-thai-gan-day-nhat-p2.png"
+                      alt="Article Image"
+                    />
+                  </div>
+                  <div class="article-body">
+                    <div class="article-title">
+                      Tổng hợp Phòng khám Siêu âm thai gần đây Hà Nội theo quận
+                      (phần 2)
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-3 mb-4">
+                <div class="article-card">
+                  <div class="image-frame">
+                    <img
+                      src="https://cdn.bookingcare.vn/fo/w1080/2024/10/24/141807-khuyen-mai-victoria-healthcare-1.png"
+                      alt="Article Image"
+                    />
+                  </div>
+                  <div class="article-body">
+                    <div class="article-title">
+                      Victoria Healthcare: Ưu đãi 0đ dành riêng cho khách hàng
+                      mới
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-3 mb-4">
+                <div class="article-card">
+                  <div class="image-frame">
+                    <img
+                      src="https://cdn.bookingcare.vn/fo/w1080/2023/01/13/085558-benh-vien-mo-mat-can-tot-tphcm.png"
+                      alt="Article Image"
+                    />
+                  </div>
+                  <div class="article-body">
+                    <div class="article-title">
+                      Top 5 bệnh viện mổ mắt cận tốt, uy tín tại TPHCM
+                    </div>
+                  </div>
+                </div>
+
               </div>
             </div>
           </div>
         </div>
-        <!-- Card 2 -->
-        <div class="col-md-3 mb-4">
-          <div class="article-card">
-            <div class="image-frame">
-              <img
-                src="https://cdn.bookingcare.vn/fo/w640/2024/07/09/112159-cat-bao-quy-dau-gia-bao-nhieu.png"
-                alt="Article Image"
-              />
-            </div>
-            <div class="article-body">
-              <div class="article-title">
-                Cắt bao quy đầu bao nhiêu tiền? Chi phí tại 7 địa chỉ uy tín
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Card 3 -->
-        <div class="col-md-3 mb-4">
-          <div class="article-card">
-            <div class="image-frame">
-              <img
-                src="https://cdn.bookingcare.vn/fo/w640/2024/10/25/222818-kham-nam-khoa-o-dau-ha-noi.png"
-                alt="Article Image"
-              />
-            </div>
-            <div class="article-body">
-              <div class="article-title">
-                Top 8 bệnh viện, phòng khám Nam khoa Hà Nội đáng tin cậy
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Card 4 -->
-        <div class="col-md-3 mb-4">
-          <div class="article-card">
-            <div class="image-frame">
-              <img
-                src="https://cdn.bookingcare.vn/fo/w640/2023/07/27/140254-bang-gia-xet-nghiem-tinh-trung-1.jpg"
-                alt="Article Image"
-              />
-            </div>
-            <div class="article-body">
-              <div class="article-title">
-                Bảng giá xét nghiệm tinh trùng tại 8 địa chỉ uy tín Hà Nội
-              </div>
-            </div>
-          </div>
+
+
+        <!-- Carousel controls with Font Awesome icons -->
+        <button
+          class="carousel-control-prev"
+          id="prevBtnCarousel"
+          type="button"
+          data-bs-target="#articleCarousel"
+          data-bs-slide="prev"
+          style="display: none"
+        >
+          <i class="fa-solid fa-chevron-left custom-arrow-icon"></i>
+          <span class="visually-hidden">Previous</span>
+        </button>
+
+        <button
+          class="carousel-control-next"
+          id="nextBtnCarousel"
+          type="button"
+          data-bs-target="#articleCarousel"
+          data-bs-slide="next"
+        >
+          <i class="fa-solid fa-chevron-right custom-arrow-icon"></i>
+          <span class="visually-hidden">Next</span>
+        </button>
+        <div class="pagination-container" id="paginationCarousel">
+          <ul class="pagination">
+            <li class="page-item"><a class="page-link" href="#" data-slide-to="0">1</a></li>
+            <li class="page-item"><a class="page-link" href="#" data-slide-to="1">2</a></li>
+          </ul>
+
         </div>
       </div>
 
@@ -253,72 +369,189 @@
         <hr />
       </div>
 
-      <!-- Article Grid -->
-      <div class="row">
-        <!-- Card 1 -->
-        <div class="col-md-3 mb-4">
-          <div class="article-card">
-            <div class="image-frame">
-              <img
-                src="https://cdn.bookingcare.vn/fo/w640/2022/11/03/085519-dieu-tri-nam-da-o-dau.png"
-                alt="Article Image"
-              />
+
+      <div
+        id="articleCarousel1"
+        class="carousel slide"
+        data-bs-interval="false"
+      >
+        <div class="carousel-inner">
+          <!-- Slide containing the first 4 cards -->
+          <div class="carousel-item active">
+            <div class="row">
+              <div class="col-md-3 mb-4">
+                <div class="article-card">
+                  <div class="image-frame">
+                    <img
+                      src="https://cdn.bookingcare.vn/fo/w640/2022/11/03/085519-dieu-tri-nam-da-o-dau.png"
+                      alt="Article Image"
+                    />
+                  </div>
+                  <div class="article-body">
+                    <div class="article-title">
+                      Review Top 8 địa chỉ điều trị nám da uy tín tại TP.HCM
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-3 mb-4">
+                <div class="article-card">
+                  <div class="image-frame">
+                    <img
+                      src="https://cdn.bookingcare.vn/fo/w640/2024/10/26/190050-kham-nam-khoa-gan-day.png"
+                      alt="Article Image"
+                    />
+                  </div>
+                  <div class="article-body">
+                    <div class="article-title">
+                      20+ địa chỉ khám nam khoa gần đây theo quận tại Hà Nội
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-3 mb-4">
+                <div class="article-card">
+                  <div class="image-frame">
+                    <img
+                      src="https://cdn.bookingcare.vn/fo/w640/2024/07/09/112159-cat-bao-quy-dau-gia-bao-nhieu.png"
+                      alt="Article Image"
+                    />
+                  </div>
+                  <div class="article-body">
+                    <div class="article-title">
+                      Cắt bao quy đầu bao nhiêu tiền? Chi phí tại 7 địa chỉ uy
+                      tín
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-3 mb-4">
+                <div class="article-card">
+                  <div class="image-frame">
+                    <img
+                      src="https://cdn.bookingcare.vn/fo/w640/2024/10/25/222818-kham-nam-khoa-o-dau-ha-noi.png"
+                      alt="Article Image"
+                    />
+                  </div>
+                  <div class="article-body">
+                    <div class="article-title">
+                      Top 8 bệnh viện, phòng khám Nam khoa Hà Nội đáng tin cậy
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="article-body">
-              <div class="article-title">
-                Review Top 8 địa chỉ điều trị nám da uy tín tại TP.HCM
+          </div>
+
+          <!-- Slide containing the last card and duplicated cards to maintain 4 cards per slide -->
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col-md-3 mb-4">
+                <div class="article-card">
+                  <div class="image-frame">
+                    <img
+                      src="https://cdn.bookingcare.vn/fo/w1080/2024/03/04/170056-nha-khoa-nieng-rang-tra-gop-tphcm.png"
+                      alt="Article Image"
+                    />
+                  </div>
+                  <div class="article-body">
+                    <div class="article-title">
+                      7 Địa chỉ Niềng răng trả góp uy tín, chính sách hấp dẫn
+                      tại TPHCM
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-3 mb-4">
+                <div class="article-card">
+                  <div class="image-frame">
+                    <img
+                      src="https://cdn.bookingcare.vn/fo/w1080/2024/09/25/211305-ra-mat-tro-ly-ai-bookingcare.png"
+                      alt="Article Image"
+                    />
+                  </div>
+                  <div class="article-body">
+                    <div class="article-title">
+                      BookingCare ra mắt Trợ lý AI - Bước tiến mới trong chăm
+                      sóc sức khỏe với trí tuệ nhân tạo
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-3 mb-4">
+                <div class="article-card">
+                  <div class="image-frame">
+                    <img
+                      src="https://cdn.bookingcare.vn/fo/w1080/2024/06/26/174040-bac-si-khoa-tim-mach-ha-noi.png"
+                      alt="Article Image"
+                    />
+                  </div>
+                  <div class="article-body">
+                    <div class="article-title">
+                      7 bác sĩ khám chữa Tim mạch giỏi tại Hà Nội (Phần 1)
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-3 mb-4">
+                <div class="article-card">
+                  <div class="image-frame">
+                    <img
+                      src="https://cdn.bookingcare.vn/fo/w1080/2024/06/17/152042-bac-si-than-kinh-gioi-ha-noi.png"
+                      alt="Article Image"
+                    />
+                  </div>
+                  <div class="article-body">
+                    <div class="article-title">
+                      8 bác sĩ Thần kinh giỏi và nhiều kinh nghiệm ở Hà Nội
+                      (Phần 1)
+                    </div>
+                  </div>
+                </div>
+
               </div>
             </div>
           </div>
         </div>
-        <!-- Card 2 -->
-        <div class="col-md-3 mb-4">
-          <div class="article-card">
-            <div class="image-frame">
-              <img
-                src="https://cdn.bookingcare.vn/fo/w640/2024/03/17/111302-nha-khoa-nieng-rang-tra-gop-sinh-vien.png"
-                alt="Article Image"
-              />
-            </div>
-            <div class="article-body">
-              <div class="article-title">
-                6 Địa chỉ niềng răng trả góp cho Sinh viên uy tín
-              </div>
-            </div>
-          </div>
+
+
+        <!-- Carousel controls with Font Awesome icons -->
+        <button
+          class="carousel-control-prev"
+          id="prevBtnCarousel1"
+          type="button"
+          data-bs-target="#articleCarousel1"
+          data-bs-slide="prev"
+          style="display: none"
+        >
+          <i class="fa-solid fa-chevron-left custom-arrow-icon"></i>
+          <span class="visually-hidden">Previous</span>
+        </button>
+
+        <button
+          class="carousel-control-next"
+          id="nextBtnCarousel1"
+          type="button"
+          data-bs-target="#articleCarousel1"
+          data-bs-slide="next"
+        >
+          <i class="fa-solid fa-chevron-right custom-arrow-icon"></i>
+          <span class="visually-hidden">Next</span>
+        </button>
+        <div class="pagination-container" id="paginationCarousel1">
+          <ul class="pagination">
+            <li class="page-item"><a class="page-link" href="#" data-slide-to="0">1</a></li>
+            <li class="page-item"><a class="page-link" href="#" data-slide-to="1">2</a></li>
+          </ul>
         </div>
-        <!-- Card 3 -->
-        <div class="col-md-3 mb-4">
-          <div class="article-card">
-            <div class="image-frame">
-              <img
-                src="https://cdn.bookingcare.vn/fo/w640/2024/07/08/154843-bac-si-xuong-khop-gioi-ha-noi.png"
-                alt="Article Image"
-              />
-            </div>
-            <div class="article-body">
-              <div class="article-title">
-                7 bác sĩ Cơ xương khớp giỏi tại Hà Nội
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Card 4 -->
-        <div class="col-md-3 mb-4">
-          <div class="article-card">
-            <div class="image-frame">
-              <img
-                src="https://cdn.bookingcare.vn/fo/w640/2024/07/09/110230-kham-co-xuong-khop-o-dau-ha-noi.png"
-                alt="Article Image"
-              />
-            </div>
-            <div class="article-body">
-              <div class="article-title">
-                7 bệnh viện, phòng khám Cơ xương khớp uy tín ở Hà Nội
-              </div>
-            </div>
-          </div>
-        </div>
+        
+
       </div>
 
       <!-- Button -->
@@ -349,5 +582,7 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+    <script src="assets/js/jshb.js"></script>
+
   </body>
 </html>

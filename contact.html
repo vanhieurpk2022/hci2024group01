@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./assets/css/styleContarct.css" />
+    <title>contact</title>
+  </head>
+  <body>
+    <div class="container">
+      <nav class="navbar bg-body-tertiary navBar_main_index">
+        <div
+          class="container d-flex align-items-center"
+          style="color: var(--aqua-color)"
+        >
+          <!-- Toggle Button (visible on all screens) -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <!-- Logo -->
+          <a class="navbar-brand ms-1" href="#">
+            <img width="125px" src="./assets/img/logo.png" alt="Logo" />
+          </a>
+
+          <!-- Full Navigation Menu (visible on larger screens) -->
+          <ul
+            class="navbar-nav me-auto mb-2 mb-lg-0 d-none d-md-flex flex-row ms-5"
+          >
+            <li class="nav-item me-2">
+              <a class="nav-link active" aria-current="page" href="index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item me-2">
+              <a class="nav-link" href="./about.html">About</a>
+            </li>
+            <li class="nav-item me-2">
+              <a class="nav-link" href="#">Hospital</a>
+            </li>
+            <li class="nav-item me-2">
+              <a class="nav-link" href="#">Wellness</a>
+            </li>
+          </ul>
+
+          <!-- Login & Sign Up Buttons (visible on larger screens) -->
+          <div class="d-none d-md-flex order-md-2 ms-5">
+            <div class="me-1">
+              <a href="#" class="btn btn-primary">Sign up</a>
+            </div>
+            <div><a href="#" class="btn btn-primary">Login</a></div>
+          </div>
+
+          <!-- Search Icon (mobile only) -->
+          <div class="d-md-none ms-auto">
+            <a href="#" class="btn btn-outline-secondary">
+              <i class="fa-solid fa-search"></i>
+            </a>
+          </div>
+
+          <!-- Offcanvas Menu -->
+          <div
+            class="offcanvas offcanvas-start"
+            tabindex="-1"
+            id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel"
+          >
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a
+                    class="nav-link active"
+                    aria-current="page"
+                    href="./index.html"
+                    ><i class="fa-solid fa-house"></i> Home</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./handbook.html"
+                    ><i class="fa-solid fa-book-medical"></i> Handbook</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./contact.html"
+                    ><i class="fa-regular fa-handshake"></i> Contact</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="business.html"
+                    ><i class="fa-solid fa-building"></i> Business heath</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"
+                    ><i class="fa-solid fa-folder"></i> Digital Transformation
+                    Package</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"
+                    ><i class="fa-solid fa-users"></i> Recruitment</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"
+                    ><i class="fa-solid fa-hospital-user"></i> Patitent</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"
+                    ><i class="fa-solid fa-user-doctor"></i> Doctor</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"
+                    ><i class="fa-solid fa-flag"></i> Role of bookingcare</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"
+                    ><i class="fa-solid fa-phone"></i> Hotline</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"
+                    ><i class="fa-solid fa-question"></i> FAQ</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"
+                    ><i class="fa-solid fa-scroll"></i> Terms</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <section class="main-section py-3">
+      <div class="container">
+        <div class="row">
+          <div
+            class="col-md-7 d-flex flex-column align-items-center align-items-md-start"
+          >
+            <h1 class="font-weight-bold">HỢP TÁC CÙNG HEATHCARE</h1>
+            <p class="lead">
+              <span class="line">Kết nối bệnh nhân,</span>
+              <span class="line">nâng tầm thương hiệu</span>
+            </p>
+            <a href="#" class="contact-button">LIÊN HỆ HỢP TÁC</a>
+          </div>
+          <!-- Right Column with Statistics -->
+          <div class="col-md-5">
+            <div class="row stats text-center">
+              <div class="col-6 col-md-6 stats-item">
+                <strong>1.500.000+</strong><br />
+                <span>LƯỢT TRUY CẬP/THÁNG</span>
+              </div>
+              <div class="col-6 col-md-6 stats-item">
+                <strong>2.000+</strong> <br /><span>BÁC SĨ</span>
+              </div>
+              <div class="col-6 col-md-6 stats-item">
+                <strong>300.000+</strong><br />
+                <span>NGƯỜI ĐÃ SỬ DỤNG</span>
+              </div>
+              <div class="col-6 col-md-6 stats-item">
+                <strong>300+</strong><br />
+                <span>CƠ SỞ Y TẾ</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="benefits bg-white">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-4 col-12 d-flex justify-content-center">
+            <div class="benefit-item text-center">
+              <div class="icon-circle">
+                <img
+                  src="https://cdn.bookingcare.vn/fo/w1920/2024/08/27/101137-tang-bn-1.png"
+                  alt="Increase Patients"
+                  style="width: 50px"
+                />
+              </div>
+              <h5 class="mt-3">Tăng số lượng bệnh nhân</h5>
+            </div>
+          </div>
+          <div class="col-md-4 col-12 d-flex justify-content-center">
+            <div class="benefit-item text-center">
+              <div class="icon-circle">
+                <img
+                  src="https://cdn.bookingcare.vn/fo/w1920/2024/08/27/101113-.png"
+                  alt="Brand Building"
+                  style="width: 50px"
+                />
+              </div>
+              <h5 class="mt-3">Xây dựng thương hiệu</h5>
+            </div>
+          </div>
+          <div class="col-md-4 col-12 mb-4 d-flex justify-content-center">
+            <!-- Center the item -->
+            <div class="benefit-item text-center">
+              <!-- Center text within each item -->
+              <div class="icon-circle">
+                <img
+                  src="https://cdn.bookingcare.vn/fo/w640/2024/08/27/101155-trai-nghiem-1.png"
+                  alt="Improve Customer Experience"
+                  style="width: 50px"
+                />
+              </div>
+              <h5 class="mt-3">Nâng cao trải nghiệm khách hàng</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="partners text-center">
+      <div class="container custom-container">
+        <h2 class="mb-4">Hơn 300 đơn vị đã hợp tác với HeathCare</h2>
+        <div class="row justify-content-center">
+          <div class="col-4 col-sm-4 col-md-4 col-lg-2">
+            <img
+              src="https://cdn.bookingcare.vn/fo/w1920/2023/03/27/180039-logo-trong-rang-sg-1.png"
+              alt="Partner 1"
+              class="img-fluid partner-image"
+            />
+          </div>
+          <div class="col-4 col-sm-4 col-md-4 col-lg-2">
+            <img
+              src="https://cdn.bookingcare.vn/fo/w1920/2019/09/26/093307logo-pk-da-lieu-bs-thai-ha.jpg"
+              alt="Partner 2"
+              class="img-fluid partner-image"
+            />
+          </div>
+          <div class="col-4 col-sm-4 col-md-4 col-lg-2">
+            <img
+              src="https://cdn.bookingcare.vn/fo/w1920/2023/01/16/141014-mat-viet-nga-logo.png"
+              alt="Partner 3"
+              class="img-fluid partner-image"
+            />
+          </div>
+          <div class="col-4 col-sm-4 col-md-4 col-lg-2">
+            <img
+              src="https://cdn.bookingcare.vn/fo/w1920/2022/12/09/115911-12-logo-hn.png"
+              alt="Partner 4"
+              class="img-fluid partner-image"
+            />
+          </div>
+          <div class="col-4 col-sm-4 col-md-4 col-lg-2">
+            <img
+              src="https://cdn.bookingcare.vn/fo/w1920/2023/11/16/165210-logo-nha-khoa-lac-viet.jpg"
+              alt="Partner 5"
+              class="img-fluid partner-image"
+            />
+          </div>
+          <div class="col-4 col-sm-4 col-md-4 col-lg-2">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRDCH_HiBpKDKaPa6lahienIANxiY27FU9E2w&s"
+              alt="Partner 6"
+              class="img-fluid partner-image"
+            />
+          </div>
+          <div class="col-4 col-sm-4 col-md-4 col-lg-2">
+            <img
+              src="https://thuonghieusaigon.vn/uploads/shops/loai-sp/y-te.gif"
+              alt="Partner 7"
+              class="img-fluid partner-image"
+            />
+          </div>
+          <div class="col-4 col-sm-4 col-md-4 col-lg-2">
+            <img
+              src="https://hdpharma.vn/wp-content/uploads/2019/04/logo-hdpharma.png"
+              alt="Partner 8"
+              class="img-fluid partner-image"
+            />
+          </div>
+          <div class="col-4 col-sm-4 col-md-4 col-lg-2">
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWab9Vc3WXN5FyIFC3tfuSvuhl16NMalIUqQ&s"
+              alt="Partner 9"
+              class="img-fluid partner-image"
+            />
+          </div>
+        </div>
+        <a href="#" class="btn btn-custom mt-4">LIÊN HỆ HỢP TÁC</a>
+      </div>
+    </section>
+
+    <footer class="bg-dark text-center text-lg-start mt-4">
+      <div class="text-center p-3" style="color: #f6f6f6">
+        © 2024 Bản quyền:
+        <a class="text-light" href="#">HeathCare</a>
+        <div class="mt-2">
+          <a href="#" class="me-3 text-light">
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+          <a href="#" class="me-3 text-light">
+            <i class="fa-brands fa-twitter"></i>
+          </a>
+          <a href="#" class="text-light">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

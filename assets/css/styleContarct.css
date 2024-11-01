@@ -1,0 +1,200 @@
+body {
+  font-family: Arial, sans-serif;
+  
+}
+.header {
+  background-color: #1cd1cb;
+}
+.container {
+  max-width: 1315px;
+}
+.main-section {
+  position: relative;
+  padding: 60px 10px;
+  height: 380px;
+  overflow: hidden;
+}
+
+.main-section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("https://img.freepik.com/premium-photo/hospital-room-background_946209-3005.jpg");
+  background-size: cover;
+  background-position: center;
+  filter: blur(4px);
+  z-index: 1;
+}
+
+.main-section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 2;
+}
+
+.main-section > * {
+  position: relative;
+  z-index: 3;
+  color: white;
+}
+
+.main-section h1 {
+  margin-top: 30px;
+  font-size: 3vw;
+  color: white;
+  font-weight: bold;
+}
+
+.main-section p {
+  font-size: 3vw;
+  color: white;
+  font-weight: bold;
+}
+
+.line {
+  display: block;
+  text-align: left;
+}
+.contact-button {
+  padding: 15px 25px;
+  background-color: #ffc00e;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 15px;
+  margin-top: 20px;
+}
+
+.stats-item {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  font-size: 2em;
+  color: white;
+}
+
+.stats-item span {
+  font-size: 20px;
+  color: #f8f6f6;
+  margin-left: 5px;
+  white-space: nowrap;
+}
+
+.benefits .benefit-item {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  position: relative;
+  border: 1px solid black;
+  width: 350px;
+  height: 100px;
+  margin-top: 60px;
+}
+.benefit-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.benefits .container {
+  justify-items: center;
+}
+.icon-circle {
+  width: 70px;
+  height: 70px;
+  background-color: #ffc00e;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: -35px;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0 auto;
+}
+
+.custom-container {
+  max-width: 1100px;
+  margin: auto;
+}
+.partner-image {
+  height: 80px;
+  width: auto;
+  margin: 10px 0;
+  object-fit: contain;
+}
+
+.btn-custom {
+  background-color: #ffc107;
+  color: #fff;
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 15px 30px;
+  border-radius: 50px;
+}
+@media (max-width: 768px) {
+  .main-section h1 {
+    margin-top: 10px;
+    font-size: 5vw;
+  }
+
+  .main-section p {
+    font-size: 3vw;
+  }
+  .line {
+    display: inline;
+    margin-right: 5px;
+  }
+
+  .stats-item {
+    margin-top: 20px;
+    font-size: 1.5em;
+    margin-bottom: 10px;
+  }
+  .stats-item span {
+    font-size: 0.7em;
+  }
+  .contact-button {
+    margin-top: 0px;
+    font-size: 16px;
+  }
+}
+@media (min-width: 769px) {
+  .main-section h1 {
+    font-size: 3rem;
+  }
+
+  .main-section p {
+    font-size: 2.5rem;
+  }
+
+  .stats-item {
+    font-size: 2.5rem;
+  }
+
+  .contact-button {
+    font-size: 1.25rem;
+  }
+}
+@media (max-width: 576px) {
+  .partners img {
+    height: 50px;
+  }
+}
+footer {
+  padding: 20px 0;
+}
+
+footer a {
+  text-decoration: none;
+}
