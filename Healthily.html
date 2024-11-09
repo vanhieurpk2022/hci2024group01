@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heathily - Giao diện chăm sóc sức khỏe</title>
+    <style>
+        /* Reset một số thuộc tính mặc định */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Thiết lập font chữ cơ bản */
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f4f9f4; /* Màu nền nhẹ nhàng */
+            color: #333;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: #4caf50; /* Màu xanh lá cây nhẹ */
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            margin-top: 15px;
+        }
+
+        nav ul li {
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        nav ul li a:hover {
+            color: #f1f1f1;
+        }
+
+        /* Section sức khỏe tổng quan */
+        .health-summary {
+            background-color: white;
+            padding: 30px;
+            margin-top: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .health-summary h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .stat p {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        /* Nhắc nhở */
+        .reminders {
+            background-color: white;
+            padding: 30px;
+            margin-top: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        button {
+            background-color: #4caf50; /* Xanh lá cây */
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9rem;
+            color: #777;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Heathily</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Trang chủ</a></li>
+                <li><a href="#">Chế độ ăn uống</a></li>
+                <li><a href="#">Bài tập</a></li>
+                <li><a href="#">Theo dõi sức khỏe</a></li>
+                <li><a href="#">Cài đặt</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="health-summary">
+            <h2>Tổng quan sức khỏe</h2>
+            <div class="stats">
+                <div class="stat">
+                    <h3>Cân nặng</h3>
+                    <p id="weight">70kg</p>
+                </div>
+                <div class="stat">
+                    <h3>Chỉ số BMI</h3>
+                    <p id="bmi">23.5</p>
+                </div>
+                <div class="stat">
+                    <h3>Giấc ngủ</h3>
+                    <p id="sleep">7.5 giờ</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="reminders">
+            <h2>Nhắc nhở</h2>
+            <button onclick="setReminder()">Nhắc nhở uống nước</button>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Heathily. Tất cả quyền được bảo lưu.</p>
+    </footer>
+
+    <script>
+        // Hàm nhắc nhở uống nước
+        function setReminder() {
+            alert("Đã thiết lập nhắc nhở uống nước!");
+        }
+    </script>
+</body>
+</html>

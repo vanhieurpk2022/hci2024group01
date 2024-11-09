@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giao Diện Thăm Bệnh Viện</title>
+    <style>
+        /* Reset các kiểu mặc định của trình duyệt */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7fc;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px 0;
+        }
+
+        header h1 {
+            text-align: center;
+            font-size: 2em;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1em;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        .intro {
+            background-color: #fff;
+            padding: 50px 0;
+            text-align: center;
+        }
+
+        .intro h2 {
+            font-size: 2em;
+            color: #4CAF50;
+        }
+
+        .doctors, .schedule {
+            background-color: #fff;
+            padding: 50px 0;
+        }
+
+        h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+        }
+
+        .doctor-card {
+            background-color: #f8f9fa;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .doctor-card h3 {
+            color: #4CAF50;
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        form label {
+            margin: 10px 0 5px;
+        }
+
+        form input, form select {
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            width: 80%;
+            max-width: 300px;
+        }
+
+        form button {
+            margin-top: 20px;
+            padding: 10px 30px;
+            font-size: 1.1em;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Thăm Bệnh Viện</h1>
+            <nav>
+                <ul>
+                    <li><a href="#home">Trang Chủ</a></li>
+                    <li><a href="#doctors">Bác Sĩ</a></li>
+                    <li><a href="#schedule">Đặt Lịch</a></li>
+                    <li><a href="#contact">Liên Hệ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="home" class="intro">
+        <div class="container">
+            <h2>Chào mừng bạn đến với bệnh viện chúng tôi</h2>
+            <p>Chúng tôi luôn sẵn sàng phục vụ bạn với đội ngũ bác sĩ chuyên nghiệp và các dịch vụ y tế chất lượng cao.</p>
+        </div>
+    </section>
+
+    <section id="doctors" class="doctors">
+        <div class="container">
+            <h2>Bác Sĩ</h2>
+            <div class="doctor-card">
+                <h3>Dr. Nguyễn Văn A</h3>
+                <p>Chuyên khoa: Nội khoa</p>
+                <button onclick="bookAppointment()">Đặt Lịch Khám</button>
+            </div>
+            <div class="doctor-card">
+                <h3>Dr. Trần Thị B</h3>
+                <p>Chuyên khoa: Ngoại khoa</p>
+                <button onclick="bookAppointment()">Đặt Lịch Khám</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="schedule" class="schedule">
+        <div class="container">
+            <h2>Đặt Lịch Khám</h2>
+            <form id="appointmentForm">
+                <label for="doctor">Chọn bác sĩ:</label>
+                <select id="doctor" required>
+                    <option value="Dr. Nguyễn Văn A">Dr. Nguyễn Văn A</option>
+                    <option value="Dr. Trần Thị B">Dr. Trần Thị B</option>
+                </select>
+                <label for="date">Chọn ngày:</label>
+                <input type="date" id="date" required>
+                <label for="time">Chọn giờ:</label>
+                <input type="time" id="time" required>
+                <button type="submit">Xác Nhận Đặt Lịch</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Bệnh Viện XYZ. Tất cả các quyền được bảo lưu.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Scripts để xử lý các sự kiện JavaScript
+
+        // Hàm xử lý khi đặt lịch khám
+        function bookAppointment() {
+            alert("Lịch khám của bạn đã được xác nhận!");
+        }
+
+        // Thêm chức năng submit form đặt lịch
+        document.getElementById("appointmentForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            
+            const doctor = document.getElementById("doctor").value;
+            const date = document.getElementById("date").value;
+            const time = document.getElementById("time").value;
+            
+            alert(`Đặt lịch thành công!\nBác sĩ: ${doctor}\nNgày: ${date}\nGiờ: ${time}`);
+        });
+    </script>
+</body>
+</html>
