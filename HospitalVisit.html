@@ -96,7 +96,7 @@
         button {
             padding: 10px 20px;
             background-color: #4CAF50;
-            color: #fff;
+            color: white;
             border: none;
             border-radius: 5px;
             cursor: pointer;
@@ -148,6 +148,34 @@
             font-size: 0.9em;
         }
 
+        /* Định dạng phần lịch sử đặt lịch */
+        #appointmentHistory {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        #appointmentHistory h3 {
+            font-size: 1.5em;
+            color: #4CAF50;
+            margin-bottom: 15px;
+        }
+
+        #historyList {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #historyList li {
+            background-color: #f1f1f1;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            font-size: 1.1em;
+        }
     </style>
 </head>
 <body>
@@ -176,7 +204,7 @@
     <!-- Bác Sĩ -->
     <section id="doctors" class="content doctors">
         <div class="container">
-            <h2>Bác Sĩ</h2>
+            <h2>Bác sĩ</h2>
             <div class="doctor-card">
                 <h3>Dr. Nguyễn Văn A</h3>
                 <p>Chuyên khoa: Nội khoa</p>
@@ -193,7 +221,7 @@
     <!-- Đặt Lịch -->
     <section id="schedule" class="content schedule">
         <div class="container">
-            <h2>Đặt Lịch Khám</h2>
+            <h2>Đặt lịch khám</h2>
             <form id="appointmentForm">
                 <label for="doctor">Chọn bác sĩ:</label>
                 <select id="doctor" required>
@@ -206,13 +234,21 @@
                 <input type="time" id="time" required>
                 <button type="submit">Xác Nhận Đặt Lịch</button>
             </form>
+
+            <!-- Hiển thị lịch sử đặt lịch -->
+            <div id="appointmentHistory" class="history">
+                <h3>Lịch sử đặt lịch</h3>
+                <ul id="historyList">
+                    <!-- Các mục lịch sử sẽ được thêm vào đây -->
+                </ul>
+            </div>
         </div>
     </section>
 
     <!-- Liên Hệ -->
     <section id="contact" class="content contact">
         <div class="container">
-            <h2>Liên Hệ</h2>
+            <h2>Liên hệ</h2>
             <p>Để biết thêm thông tin hoặc cần hỗ trợ, vui lòng liên hệ với chúng tôi:</p>
             <form>
                 <label for="name">Họ và Tên:</label>
@@ -247,11 +283,6 @@
         }
 
         // Hàm xử lý khi đặt lịch khám
-        function bookAppointment() {
-            alert("Lịch khám của bạn đã được xác nhận!");
-        }
-
-        // Thêm chức năng submit form đặt lịch
         document.getElementById("appointmentForm").addEventListener("submit", function(event) {
             event.preventDefault();
             
@@ -259,6 +290,17 @@
             const date = document.getElementById("date").value;
             const time = document.getElementById("time").value;
             
+            // Thêm thông tin lịch sử đặt lịch vào danh sách
+            const historyList = document.getElementById("historyList");
+            
+            // Tạo một mục mới cho lịch sử đặt lịch
+            const listItem = document.createElement("li");
+            listItem.textContent = `Bác sĩ: ${doctor}, Ngày: ${date}, Giờ: ${time}`;
+            
+            // Thêm mục mới vào danh sách
+            historyList.appendChild(listItem);
+            
+            // Hiển thị thông báo xác nhận
             alert(`Đặt lịch thành công!\nBác sĩ: ${doctor}\nNgày: ${date}\nGiờ: ${time}`);
         });
     </script>
