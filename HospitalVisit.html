@@ -40,6 +40,7 @@
             display: flex;
             justify-content: center;
             list-style-type: none;
+            margin-top: 10px;
         }
 
         nav ul li {
@@ -56,26 +57,26 @@
             text-decoration: underline;
         }
 
-        .intro {
-            background-color: #fff;
-            padding: 50px 0;
-            text-align: center;
+        /* Ẩn các section và chỉ hiển thị section active */
+        .content {
+            display: none;
         }
 
-        .intro h2 {
+        .content.active {
+            display: block;
+        }
+
+        .intro, .doctors, .schedule, .contact {
+            background-color: #fff;
+            padding: 50px 0;
+            margin-top: 20px;
+        }
+
+        .intro h2, .doctors h2, .schedule h2, .contact h2 {
             font-size: 2em;
             color: #4CAF50;
-        }
-
-        .doctors, .schedule {
-            background-color: #fff;
-            padding: 50px 0;
-        }
-
-        h2 {
             text-align: center;
-            color: #333;
-            margin-bottom: 30px;
+            margin-bottom: 20px;
         }
 
         .doctor-card {
@@ -146,31 +147,34 @@
             margin: 0;
             font-size: 0.9em;
         }
+
     </style>
 </head>
 <body>
     <header>
         <div class="container">
-            <h1>Hosptital Visit</h1>
+            <h1>Thăm Bệnh Viện</h1>
             <nav>
                 <ul>
-                    <li><a href="#home">Trang Chủ</a></li>
-                    <li><a href="#doctors">Bác Sĩ</a></li>
-                    <li><a href="#schedule">Đặt Lịch</a></li>
-                    <li><a href="#contact">Liên Hệ</a></li>
+                    <li><a href="javascript:void(0)" onclick="showContent('home')">Trang Chủ</a></li>
+                    <li><a href="javascript:void(0)" onclick="showContent('doctors')">Bác Sĩ</a></li>
+                    <li><a href="javascript:void(0)" onclick="showContent('schedule')">Đặt Lịch</a></li>
+                    <li><a href="javascript:void(0)" onclick="showContent('contact')">Liên Hệ</a></li>
                 </ul>
             </nav>
         </div>
     </header>
 
-    <section id="home" class="intro">
+    <!-- Trang chủ -->
+    <section id="home" class="content active intro">
         <div class="container">
             <h2>Chào mừng bạn đến với bệnh viện chúng tôi</h2>
             <p>Chúng tôi luôn sẵn sàng phục vụ bạn với đội ngũ bác sĩ chuyên nghiệp và các dịch vụ y tế chất lượng cao.</p>
         </div>
     </section>
 
-    <section id="doctors" class="doctors">
+    <!-- Bác Sĩ -->
+    <section id="doctors" class="content doctors">
         <div class="container">
             <h2>Bác Sĩ</h2>
             <div class="doctor-card">
@@ -186,7 +190,8 @@
         </div>
     </section>
 
-    <section id="schedule" class="schedule">
+    <!-- Đặt Lịch -->
+    <section id="schedule" class="content schedule">
         <div class="container">
             <h2>Đặt Lịch Khám</h2>
             <form id="appointmentForm">
@@ -204,6 +209,23 @@
         </div>
     </section>
 
+    <!-- Liên Hệ -->
+    <section id="contact" class="content contact">
+        <div class="container">
+            <h2>Liên Hệ</h2>
+            <p>Để biết thêm thông tin hoặc cần hỗ trợ, vui lòng liên hệ với chúng tôi:</p>
+            <form>
+                <label for="name">Họ và Tên:</label>
+                <input type="text" id="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+                <label for="message">Tin nhắn:</label>
+                <textarea id="message" rows="4" required></textarea>
+                <button type="submit">Gửi Tin Nhắn</button>
+            </form>
+        </div>
+    </section>
+
     <footer>
         <div class="container">
             <p>&copy; 2024 Bệnh Viện XYZ. Tất cả các quyền được bảo lưu.</p>
@@ -211,7 +233,18 @@
     </footer>
 
     <script>
-        // Scripts để xử lý các sự kiện JavaScript
+        // Hàm xử lý khi thay đổi nội dung hiển thị
+        function showContent(contentId) {
+            // Ẩn tất cả các phần nội dung
+            var contents = document.querySelectorAll('.content');
+            contents.forEach(function(content) {
+                content.classList.remove('active');
+            });
+
+            // Hiển thị phần nội dung tương ứng
+            var activeContent = document.getElementById(contentId);
+            activeContent.classList.add('active');
+        }
 
         // Hàm xử lý khi đặt lịch khám
         function bookAppointment() {
