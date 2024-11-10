@@ -267,7 +267,82 @@
         </section>
         
         
+  <script>
+    function toggleContent(button) {
+    const extraContent = button.previousElementSibling;
+    if (extraContent.style.display === "none" || !extraContent.style.display) {
+        extraContent.style.display = "block";
+        button.textContent = "Thu gọn";
+    } else {
+        extraContent.style.display = "none";
+        button.textContent = "Xem thêm";
+    }
+}
+
+function openConfirmationModal() {
+    document.getElementById("confirmationModal").style.display = "block";
+}
+
+// Function to close the modal
+function closeModal() {
+    document.getElementById("confirmationModal").style.display = "none";
+}
+
+// Function to handle the confirmation action
+function confirmAction() {
+    alert("You confirmed the action to open the Java IDE.");
+    closeModal();
   
-        <script src="digital.js"></script>
+}
+
+
+window.onclick = function(event) {
+    if (event.target == document.getElementById("confirmationModal")) {
+        closeModal();
+    }
+}; function openForm(service) {
+    document.getElementById("service").value = service;
+    document.getElementById("appointmentForm").style.display = "block";
+}
+
+document.getElementById("bookingForm").onsubmit = function(event) {
+    event.preventDefault();
+    alert("Đặt lịch thành công!");
+    document.getElementById("appointmentForm").style.display = "none";
+};
+
+function toggleContent(button) {
+    var content = button.previousElementSibling;
+    content.style.display = content.style.display === 'block' ? 'none' : 'block';
+}
+
+
+function openConfirmationModal() {
+    document.getElementById('confirmationModal').style.display = 'block';
+}
+
+
+function closeModal() {
+    document.getElementById('confirmationModal').style.display = 'none';
+}
+
+
+function openForm(serviceName) {
+    document.getElementById('appointmentForm').style.display = 'block';
+    document.getElementById('service').value = serviceName;
+}
+
+
+function confirmAction() {
+    alert('Đặt lịch thành công!');
+    closeModal(); // Đóng modal sau khi xác nhận
+}
+
+  </script>
+        <script 
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+        
   </body>
 </html>
