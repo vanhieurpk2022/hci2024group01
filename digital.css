@@ -1,69 +1,210 @@
-function toggleContent(button) {
-    const extraContent = button.previousElementSibling;
-    if (extraContent.style.display === "none" || !extraContent.style.display) {
-        extraContent.style.display = "block";
-        button.textContent = "Thu gọn";
-    } else {
-        extraContent.style.display = "none";
-        button.textContent = "Xem thêm";
-    }
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-function openConfirmationModal() {
-    document.getElementById("confirmationModal").style.display = "block";
+body {
+    font-family: Arial, sans-serif;
 }
 
-// Function to close the modal
-function closeModal() {
-    document.getElementById("confirmationModal").style.display = "none";
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
 }
 
-// Function to handle the confirmation action
-function confirmAction() {
-    alert("You confirmed the action to open the Java IDE.");
-    closeModal();
-    // You can add any additional actions here, such as redirecting to a Java IDE or opening a new page.
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffa500;
 }
 
-// Close modal if the user clicks outside the modal content
-window.onclick = function(event) {
-    if (event.target == document.getElementById("confirmationModal")) {
-        closeModal();
-    }
-}; function openForm(service) {
-    document.getElementById("service").value = service;
-    document.getElementById("appointmentForm").style.display = "block";
+.navbar a {
+    margin-left: 1.5rem;
+    text-decoration: none;
+    color: #333;
 }
 
-document.getElementById("bookingForm").onsubmit = function(event) {
-    event.preventDefault();
-    alert("Đặt lịch thành công!");
-    document.getElementById("appointmentForm").style.display = "none";
-};
-// Tạo hiệu ứng ẩn/hiện nội dung khi nhấn "Xem thêm"
-function toggleContent(button) {
-    var content = button.previousElementSibling;
-    content.style.display = content.style.display === 'block' ? 'none' : 'block';
+/* Hero Section */
+.hero {
+    background-image: url('https://static.ybox.vn/2020/10/4/1602763428333-1596807131580-Untitled.jpg'); /* Replace with your image */
+    background-size: cover;
+    color: #333;
+    text-align: center;
+    padding: 10rem 1rem;
 }
 
-// Mở modal xác nhận
-function openConfirmationModal() {
-    document.getElementById('confirmationModal').style.display = 'block';
+.hero h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
 }
 
-// Đóng modal
-function closeModal() {
-    document.getElementById('confirmationModal').style.display = 'none';
+.hero p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
 }
 
-// Mở form đặt lịch
-function openForm(serviceName) {
-    document.getElementById('appointmentForm').style.display = 'block';
-    document.getElementById('service').value = serviceName;
+.hero-button {
+    background-color: #ffa500;
+    color: #fff;
+    padding: 0.5rem 1.5rem;
+    border: none;
+    cursor: pointer;
 }
 
-// Xác nhận hành động
-function confirmAction() {
-    alert('Đặt lịch thành công!');
-    closeModal(); // Đóng modal sau khi xác nhận
+/* Features Section */
+.features {
+    padding: 2rem;
+    background-color: #f8f8f8;
+    text-align: center;
+}
+
+.features h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.feature-cards {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 1.5rem;
+}
+
+.card {
+    background-color: #fff;
+    padding: 1.5rem;
+    width: 30%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.card h3 {
+    font-size: 1.2rem;
+    color: #333;
+}
+
+.card p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.contact-button {
+    margin-top: 1.5rem;
+    padding: 0.5rem 1.5rem;
+    background-color: #ffa500;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+/* Package Section */
+.package {
+    padding: 2rem;
+    text-align: center;
+}
+
+.package h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.package-content {
+    background-color: #e0f7fa;
+    padding: 1.5rem;
+    margin-top: 1rem;
+}
+
+.package-content h3 {
+    font-size: 1.2rem;
+}
+
+.package-content ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+}
+
+.package-content li {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+}
+
+/* Footer */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+.footer-links a {
+    margin: 0 0.5rem;
+    color: #fff;
+    text-decoration: none;
+}
+/* Modal Background */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Modal Content Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Close Button */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Form Styling */
+#contactForm label {
+    display: block;
+    margin-top: 10px;
+}
+
+#contactForm input,
+#contactForm textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+#contactForm button {
+    background-color: #ffa500;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+#contactForm button:hover {
+    background-color: #ff8c00;
 }
