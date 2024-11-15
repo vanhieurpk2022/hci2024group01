@@ -1,13 +1,13 @@
-:root{
-  --background-color:#00000000;
-  --bs-light-blue: #E3F2FD;
-  --bs-icon-blue: #2196F3;
+:root {
+  --background-color: #00000000;
+  --bs-light-blue: #e3f2fd;
+  --bs-icon-blue: #2196f3;
 }
-* a{
+* a {
   text-decoration: none;
 }
 .icon-bg {
-  background: linear-gradient(120deg, #E3F2FD, #BBDEFB);
+  background: linear-gradient(120deg, #e3f2fd, #bbdefb);
 }
 
 .menu-item {
@@ -16,7 +16,7 @@
 }
 
 .menu-item:hover {
-  box-shadow: 0 5px 8px rgba(0,0,0,0.1);
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
 }
 .form-control-search {
   padding-left: 45px;
@@ -120,16 +120,52 @@
   }
 }
 
-#footer_id{
+#footer_id {
   margin-top: 500px;
 }
-#text_area_Chat{
+#text_area_Chat {
   border: none;
   width: 100%;
   resize: none;
   height: 500px;
 }
-.chatbot{
+.chatbot {
   height: 510px;
   list-style: none;
+}
+
+.nav-tabs-scroll {
+  overflow-x: auto;
+  flex-wrap: nowrap;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.nav-tabs-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.nav-tabs-scroll .nav-link {
+  white-space: nowrap;
+  border: none;
+  padding: 8px 16px;
+  color: #666;
+}
+
+.nav-tabs-scroll .nav-link.active {
+  background-color: #ffc107;
+  color: white;
+  border-radius: 20px;
+}
+
+.nav-tabs-scroll .nav-link:hover:not(.active) {
+  border: none;
+  color: #333;
+}
+
+@media (min-width: 578px) {
+  .nav-tabs-scroll {
+    justify-content: center;
+  }
 }

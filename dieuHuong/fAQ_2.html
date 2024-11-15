@@ -16,7 +16,7 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="./assets/css/myStyle.css" />
+    <link rel="stylesheet" href="../assets/css/myStyle.css" />
     <title>HeathCare</title>
     <style>
       /*  */
@@ -42,68 +42,59 @@
           </button>
           <!-- navBar -->
           <a class="navbar-brand ms-1" href="../index.html"
-            ><img width="125px" src="./assets/img/logo.png" alt=""
-          /></a>
+          ><img width="125px" src="./assets/img/logo.png" alt=""
+        /></a>
 
-          <ul
-            class="navbar-nav me-auto mb-2 mb-lg-0 d-sm-flex flex-row ms-5 ms-md-0 order-md-0 order-1 mt-3 mt-lg-0"
-          >
+          <ul  class="list-unstyled nav-tabs nav-tabs-scroll border-0 mb-3 me-auto mb-2 mb-lg-0 d-flex flex-row  ms-auto order-lg-0 order-1 mt-3 mt-lg-0">
+            <li class="nav-item me-2 me-md-2 ">
+              <a class="nav-link " aria-current="page" href="../index.html"
+                >Home</a>
+            </li>
+
             <li class="nav-item me-2 me-md-2">
-              <a class="nav-link" aria-current="page" href="../index.html"
-                >Home</a
+              <a class="nav-link " href="../about.html"
+                >About</a
               >
             </li>
-
-            <li class="nav-item me-2 me-md-2">
-              <a class="nav-link" href="../about.html">About</a>
-            </li>
+            
             <li class="nav-item me-2 me-md-2">
               <a class="nav-link" href="#">Hospital</a>
             </li>
+            
             <li class="nav-item me-2 me-md-2">
               <a class="nav-link" href="#">Wellness</a>
             </li>
+           
           </ul>
-          <form class="d-flex order-md-1 order-0" role="search">
-            <!-- search khi chưa sm -->
-            <div
-              class="d-flex justify-content-center align-items-center d-none d-lg-flex position-relative"
-            >
-              <i
-                class="d-none d-lg-flex fa-solid fa-magnifying-glass position-absolute start-0"
-                style="color: #41353d"
-                ;
-              ></i>
-            </div>
-            <input
-              class="form-control form-control-search me-2 rounded-pill d-none d-lg-flex"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-          </form>
-          <div
-            class="order-md-2 d-flex mt-lg-0 mt-sm-2 mt-sm-0 order-0 ms-5 mt-2 mt-sm-0 ms-sm-0"
-          >
-            <!-- search khi small -->
-            <div
-              class="me-1 py-1 px-2 d-lg-none me-2 rounded-start rounded-end"
-              style="background-color: azure"
-            >
-              <a href=""
-                ><i
-                  class="fa-solid fa-magnifying-glass p-2"
-                  style="color: #41353d"
-                  ;
-                ></i
-              ></a>
-            </div>
+        
+      <form class="d-flex order-lg-1 order-2 d-xl-flex d-flex d-sm-none text-center" role="search">
+        <!-- search khi chưa sm -->
+        <div
+          class="d-flex justify-content-center align-items-center  d-lg-flex  position-relative" >
+          <i class=" d-lg-flex fa-solid fa-magnifying-glass position-absolute start-0 ms-5 ms-md-0"style="color: #41353d";></i>
+        </div>
+        <input class="form-control form-control-search me-2 rounded-pill ms-5 ms-md-0 border " type="search"placeholder="Search" aria-label="Search"/>
+      </form>
+      <div class="order-lg-2 order-0 d-flex mt-lg-0  mt-sm-2 mt-sm-0  mt-2 mt-sm-0 ms-sm-3 ">
+        <!-- search khi small -->
+        <div
+          class="me-1 py-1 px-2 d-xl-none d-sm-flex d-none me-2 rounded-start rounded-end"
+          style="background-color: azure"
+        >
+          <a href=""
+            ><i
+              class="fa-solid fa-magnifying-glass p-2"
+              style="color: #41353d"
+              ;
+            ></i
+          ></a>
+        </div>
 
-            <div class="me-1">
-              <a href="" class="btn btn-primary">Sign up</a>
-            </div>
-            <div class=""><a href="" class="btn btn-primary">Login</a></div>
+          <div class="ms-auto">
+            <a href="" class="btn btn-primary">Sign up</a>
           </div>
+          <div class="ms-2 d-none d-sm-flex"><a href="" class="btn btn-primary">Login</a></div>
+      </div>
           <div
             class="offcanvas offcanvas-start"
             tabindex="-1"
@@ -123,7 +114,7 @@
               <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                 <li class="nav-item">
                   <a
-                    class="nav-link active"
+                    class="nav-link "
                     aria-current="page"
                     href="../index.html"
                     ><i class="fa-solid fa-house"></i> Home</a
@@ -170,13 +161,13 @@
                     ><i class="fa-solid fa-flag"></i> Role of bookingcare</a
                   >
                 </li>
-                <li class="nav-item active">
+                <li class="nav-item ">
                   <a class="nav-link" href="../hotLine.html"
                     ><i class="fa-solid fa-phone"></i> Hotline</a
                   >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#"
+                  <a class="nav-link fw-semibold active" href="#"
                     ><i class="fa-solid fa-question"></i> FAQ</a
                   >
                 </li>
@@ -199,7 +190,7 @@
         <nav aria-label="breadcrumb ">
           <ol class="breadcrumb">
             <li class="breadcrumb-item ms-3">
-              <a href="./index.html"><i class="fa-solid fa-house"></i> </a>
+              <a href="../index.html"><i class="fa-solid fa-house"></i> </a>
             </li>
             <li class="breadcrumb-item"><a href="../fAQ.html">FAQ</a></li>
             <li class="breadcrumb-item active" aria-current="page">
