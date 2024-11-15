@@ -106,3 +106,17 @@
     visibility: hidden;
   }
 }
+
+#footer_id {
+  margin-top: 500px;
+}
+#text_area_Chat {
+  border: none;
+  width: 100%;
+  resize: none;
+  height: 500px;
+}
+.chatbot {
+  height: 510px;
+  list-style: none;
+}
