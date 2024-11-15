@@ -119,11 +119,11 @@
             <div style="background-color: #fff " class="rounded-start rounded-end p-4">
                 <div class="input-group mb-3 d-flex">
                     <input type="text" id="inputGetData" class="form-control p-3" placeholder="Đặt câu hỏi với Trợ lý AI">
-                    <button class="btn btn-success" id="sendBTN" type="button">Search</button>
+                    <button class="btn btn-success" onclick="getRunOnLoad()" id="sendBTN_index" type="button">Search</button>
                 </div>
                 
                 <div class="input-group mt-3">
-                    <input type="file" class="form-control" placeholder="Đọc đơn thuốc/ xét nghiệm">
+                    <input type="file" id="fileInput" class="form-control" placeholder="Đọc đơn thuốc/ xét nghiệm">
                 </div>
             </div>
               
@@ -218,7 +218,7 @@
                     <span class="fs-4 ms-3 ">Khám chuyên khoa</span>
                   </div>
                 </div>
-                <div class="col-sm-6 mt-3 mt-sm-3" style="background-color: var(--background-color) !important;">
+                <div class="col-sm-6 mt-3 mt-sm-0" style="background-color: var(--background-color) !important;">
                   <div class="rounded-pill menu-item bg-white p-3 d-flex align-items-center gap-3 border border-1">
                     <div class="icon-bg align-items-center justify-content-center d-flex p-2 rounded-start rounded-end ms-0 ms-sm-3"><i class="fas fa-flask fs-1"></i></i></div>
                     <span class="fs-4 ms-3 ">Khám chuyên khoa</span>
@@ -233,7 +233,7 @@
                   <span class="fs-4 ms-3 ">Khám chuyên khoa</span>
                 </div>
               </div>
-              <div class="col-sm-6 mt-3 mt-sm-3" style="background-color: var(--background-color) !important;">
+              <div class="col-sm-6 mt-3 mt-sm-0" style="background-color: var(--background-color) !important;">
                 <div class="rounded-pill menu-item bg-white p-3 d-flex align-items-center gap-3 border border-1">
                   <div class="icon-bg align-items-center justify-content-center d-flex p-2 rounded-start rounded-end ms-0 ms-sm-3"><i class="fas fa-tooth fs-1"></i></i></div>
                   <span class="fs-4 ms-3 ">Khám chuyên khoa</span>
@@ -248,7 +248,7 @@
                 <span class="fs-4 ms-3 ">Khám chuyên khoa</span>
               </div>
             </div>
-            <div class="col-sm-6 mt-3 mt-sm-3" style="background-color: var(--background-color) !important;">
+            <div class="col-sm-6 mt-3 mt-sm-0" style="background-color: var(--background-color) !important;">
               <div class="rounded-pill menu-item bg-white p-3 d-flex align-items-center gap-3 border border-1">
                 <div class="icon-bg align-items-center justify-content-center d-flex p-2 rounded-start rounded-end ms-0 ms-sm-3"><i class="fas fa-heartbeat fs-1"></i></i></div>
                 <span class="fs-4 ms-3 ">Khám chuyên khoa</span>
@@ -263,7 +263,7 @@
               <span class="fs-4 ms-3 ">Khám chuyên khoa</span>
             </div>
           </div>
-          <div class="col-sm-6 mt-3 mt-sm-3" style="background-color: var(--background-color) !important;">
+          <div class="col-sm-6 mt-3 mt-sm-0" style="background-color: var(--background-color) !important;">
             <div class="rounded-pill menu-item bg-white p-3 d-flex align-items-center gap-3 border border-1">
               <div class="icon-bg align-items-center justify-content-center d-flex p-2 rounded-start rounded-end ms-0 ms-sm-3"><i class="fas fa-first-aid fs-1"></i></i></div>
               <span class="fs-4 ms-3 ">Khám chuyên khoa</span>
@@ -664,20 +664,20 @@
                   <div class="carousel-item active">
                     <div class="d-flex flex-row justify-content-evenly align-items-center">
                       <div class="card" style="width: 20rem;">
-                        <div style="width: 20rem; height: 11rem;"><img src="./assets/img/icon_coSo/083122lo-go-viet-duc.jpg" class="card-img-top img-thumbnail" alt="..."></div>
+                        <div class="ratio ratio-16x9"><img src="./assets/img/icon_coSo/083122lo-go-viet-duc.jpg" class="card-img-top img-thumbnail" alt="..."></div>
                         <div class="card-body">
                           <h5 class="card-title text-center">Bệnh Viện Hữu Nghị Việt Đức</h5>
                         </div>
                       </div>
                       <div class="card " style="width: 20rem;">
-                       <div style="width: 20rem; height: 11rem; " class="d-flex"> <img src="./assets/img/icon_coSo/103904-logo-thucuc.png" class="card-img-top img-thumbnail " alt="..."></div>
+                       <div class="ratio ratio-16x9"> <img src="./assets/img/icon_coSo/103904-logo-thucuc.png" class="card-img-top img-thumbnail " alt="..."></div>
                         <div class="card-body">
                           <h5 class="card-title text-center">Hệ thống Y tế thu cúc TCI</h5>
                           
                         </div>
                       </div>
                       <div class="card" style="width: 20rem;">
-                          <div style="width: 20rem; height: 11rem;" class="d-flex"><img src="./assets/img/icon_coSo/155206-logo-y-duoc-1.jpg" class="card-img-top img-thumbnail" alt="..."></div>
+                          <div class="ratio ratio-16x9"><img src="./assets/img/icon_coSo/155206-logo-y-duoc-1.jpg" class="card-img-top img-thumbnail" alt="..."></div>
                                         <div class="card-body">
                           <h5 class="card-title text-center">Phòng khám bệnh viện đại học Y dược 1</h5>
                           
@@ -690,13 +690,13 @@
                   <div class="carousel-item">
                     <div class="d-flex flex-row justify-content-evenly">
                       <div class="card" style="width: 20rem;">
-                        <div style="width: 20rem; height: 11rem; "><img src="./assets/img/icon_coSo/085056logobenhvien108.jpg" class="card-img-top img-thumbnail" alt="..."></div>
+                        <div class="ratio ratio-16x9"><img src="./assets/img/icon_coSo/085056logobenhvien108.jpg" class="card-img-top img-thumbnail" alt="..."></div>
                         <div class="card-body" >
                           <h5 class="card-title text-center">bệnh viện trung ương quân đội 108</h5>
                         </div>
                       </div>
                       <div class="card " style="width: 20rem;">
-                        <img src="./assets/img/icon_coSo/153236-logo-hung-viet.jpg" class="card-img-top img-thumbnail" alt="...">
+                       <div class="ratio ratio-16x9"> <img src="./assets/img/icon_coSo/153236-logo-hung-viet.jpg" class="card-img-top img-thumbnail" alt="..."></div>
                         <div class="card-body">
                           <h5 class="card-title text-center">Bệnh viện ưng bưới Hưng Việt</h5>
                           
@@ -704,7 +704,7 @@
                       </div>
                       <div class="card" style="width: 20rem;">
                         <!--  cần resize ảnh này -->
-                        <div ><img src="./assets/img/icon_coSo/104922-logo-med-tai-ha-noi--01.png" class="card-img-top img-thumbnail" alt="..."></div>
+                        <div class="ratio ratio-16x9" ><img src="./assets/img/icon_coSo/104922-logo-med-tai-ha-noi--01.png" class="card-img-top img-thumbnail" alt="..."></div>
                         <div class="card-body">
                           <h5 class="card-title text-center">Hệ thống y tế MEDLATEC</h5>
                           
@@ -717,20 +717,20 @@
                   <div class="carousel-item">
                     <div class="d-flex flex-row justify-content-evenly">
                       <div class="card" style="width: 20rem;">
-                        <img src="./assets/img/icon_coSo/165735-logo-hong-phat.png" class="card-img-top img-thumbnail" alt="...">
+                        <div class="ratio ratio-16x9"><img src="./assets/img/icon_coSo/165735-logo-hong-phat.png" class="card-img-top img-thumbnail" alt="..."></div>
                         <div class="card-body">
                           <h5 class="card-title text-center">Bệnh viện đa khoa hồng phát</h5>
                         </div>
                       </div>
                       <div class="card " style="width: 20rem;">
-                        <img src="./assets/img/icon_coSo/114029-anh1.jpg" class="card-img-top img-thumbnail" alt="...">
+                       <div class="ratio ratio-16x9"> <img src="./assets/img/icon_coSo/114029-anh1.jpg" class="card-img-top img-thumbnail" alt="..."></div>
                         <div class="card-body">
                           <h5 class="card-title text-center">Bệnh viện đa khoa An Việt</h5>
                           
                         </div>
                       </div>
                       <div class="card" style="width: 20rem;">
-                        <img src="./assets/img/icon_coSo/160343logo-nam-hoc-hn.jpg"  class="card-img-top img-thumbnail" alt="...">
+                        <div class="ratio ratio-16x9"><img src="./assets/img/icon_coSo/160343logo-nam-hoc-hn.jpg"  class="card-img-top img-thumbnail" alt="..."></div>
                         <div class="card-body">
                           <h5 class="card-title text-center">Bệnh viện nam học và hiếm muộn Hà Nội</h5>
                         </div>
@@ -817,5 +817,7 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+
+    <script src="./assets/javaScript/javaScriptIn.js"></script>
   </body>
 </html>
