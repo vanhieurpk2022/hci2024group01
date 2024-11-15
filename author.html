@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./assets/css/stylehanhb.css" />
+
+    <title>Nhóm tác giả cẩm nang</title>
+  </head>
+  <body>
+    <div class="container">
+      <nav class="navbar bg-body-tertiary">
+        <div class="container" style="color: var(--aqua-color)">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!-- navBar -->
+          <a class="navbar-brand ms-1" href="#"
+            ><img width="125px" src="./assets/img/logo.png" alt=""
+          /></a>
+
+          <ul
+            class="navbar-nav me-auto mb-2 mb-lg-0 d-sm-flex flex-row ms-auto ms-md-0 order-md-0 order-1 mt-3 mt-lg-0"
+          >
+            <li class="nav-item me-2 me-md-2">
+              <a
+                class="nav-link active fw-semibold"
+                aria-current="page"
+                href="./index.html"
+                >Home</a
+              >
+            </li>
+
+            <li class="nav-item me-2 me-md-2">
+              <a class="nav-link" href="./about.html">About</a>
+            </li>
+            <li class="nav-item me-2 me-md-2">
+              <a class="nav-link" href="#">Hospital</a>
+            </li>
+            <li class="nav-item me-2 me-md-2">
+              <a class="nav-link" href="#">Wellness</a>
+            </li>
+          </ul>
+
+          <div
+            class="order-md-2 d-flex mt-lg-0 mt-sm-2 mt-sm-0 order-0 ms-5 mt-2 mt-sm-0 ms-sm-0"
+          >
+            <div class="me-1">
+              <a href="" class="px-md-3 btn btn-primary"
+                ><i class="d-none d-lg-inline fa-solid fa-user-plus me-2"></i
+                ><span> Sign up</span></a
+              >
+            </div>
+            <div class=""><a href="" class="btn btn-primary">Login</a></div>
+          </div>
+          <div
+            class="offcanvas offcanvas-start"
+            tabindex="-1"
+            id="offcanvasNavbar"
+            aria-labelledby="offcanvasNavbarLabel"
+          >
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a
+                    class="fw-semibold nav-link active"
+                    aria-current="page"
+                    href="./index.html"
+                    ><i class="fa-solid fa-house"></i> Home</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./handbook.html"
+                    ><i class="fa-solid fa-book-medical"></i> Handbook</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="contact.html"
+                    ><i class="fa-regular fa-handshake"></i> Contact</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="business.html"
+                    ><i class="fa-solid fa-building"></i> Business heath</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"
+                    ><i class="fa-solid fa-folder"></i> Digital Transformation
+                    Package</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"
+                    ><i class="fa-solid fa-users"></i> Recruitment</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"
+                    ><i class="fa-solid fa-hospital-user"></i> Patitent</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"
+                    ><i class="fa-solid fa-user-doctor"></i> Doctor</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"
+                    ><i class="fa-solid fa-flag"></i> Role of bookingcare</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./hotLine.html"
+                    ><i class="fa-solid fa-phone"></i> Hotline</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./fAQ.html"
+                    ><i class="fa-solid fa-question"></i> FAQ</a
+                  >
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./terms.html"
+                    ><i class="fa-solid fa-scroll"></i> Terms</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <div class="container" style="background: #f6f6f6">
+      <div class="breadcrumb" style="padding-top: 20px">
+        <a href="./index.html"><i class="fa-solid fa-house"></i></a>
+        <h3>/ Handbook</h3>
+      </div>
+
+      <h1
+        style="
+          display: block;
+          overflow: hidden;
+          padding: 15px 0;
+          font-size: 24px;
+          color: #5d5d5d;
+          font-weight: bold;
+          border-top: 1px solid #eee;
+        "
+      >
+        Nhóm tác giả Cẩm Nang
+      </h1>
+    </div>
+
+    <div class="container tacgia">
+      <h2>
+        <b>Về chúng tôi</b>
+      </h2>
+      <p>
+        HealthCare là <b>Nền tảng Y tế chăm sóc sức khỏe toàn diện</b> kết nối
+        mạng lưới các bệnh viện, phòng khám và dịch vụ y tế chăm sóc sức khỏe
+        hàng đầu tại Việt Nam hiện nay. Thông qua HealthCare, khách hàng dễ dàng
+        lựa chọn bác sĩ, cơ sở y tế, dịch vụ chăm sóc sức khỏe tin cậy, uy tín
+        từ mạng lưới các cơ sở y tế được xác thực và chọn lọc kỹ lưỡng.
+      </p>
+      <p>
+        Đến nay, thông qua HealthCare, khách hàng có thể lựa chọn dịch vụ y tế -
+        chăm sóc sức khỏe từ mạng lưới trên 200 bệnh viện, cơ sở y tế uy tín ở
+        Hà Nội và Thành phố Hồ Chí Minh, với hơn 1,500 bác sĩ chuyên khoa và
+        hàng nghìn dịch vụ trên hệ thống.
+      </p>
+      <p>
+        Khi tìm kiếm trên Google về các thông tin y tế - chăm sóc sức khỏe, một
+        rừng thông tin hiện ra. Trong số đó rất nhiều nội dung rác, xào nấu,
+        chưa được xác thực tạo ra nhiều mối băn khoăn.
+      </p>
+      <p>
+        Cẩm Nang của HealthCare được xây dựng và phát triển với sứ mệnh chia sẻ
+        thông tin <b>tin cậy, chính xác, thực tế</b> và có xác thực về nội dung
+        bài viết và trải nghiệm đi khám - chăm sóc sức khỏe. Đây cũng là những
+        giá trị cốt lõi mà đội ngũ chúng tôi luôn tôn trọng và nhất quán về
+        nguyên tắc xây dựng chuyên trang nội dung Cẩm Nang của mình.
+      </p>
+      <p>
+        Y tế - chăm sóc sức khỏe là một lĩnh vực đòi hỏi yêu cầu thông tin chính
+        xác, tin cậy và có kiểm duyệt đảm bảo độ chính xác cao. Các nội dung bạn
+        đọc quan tâm tìm hiểu về y tế - chăm sóc sức khỏe thường có hai dạng.
+      </p>
+      <p>
+        Một là, những nội dung chia sẻ về kinh nghiệm, trải nghiệm khám chữa
+        bệnh và chăm sóc sức khỏe thực tế, tin cậy và có xác thực. Đây chính là
+        một trong những nhóm nội dung chính mà đội ngũ nội bộ HealthCare tập
+        trung xây dựng, phát triển để trực tiếp chia sẻ với bạn đọc.
+      </p>
+      <p>
+        Hai là, những nội dung chuyên môn liên quan đến bệnh, triệu chứng, kỹ
+        thuật y học và phương pháp điều trị. Những nội dung này được trực tiếp
+        thực hiện, phát triển, kiểm duyệt bởi các bác sĩ và nhà chuyên môn trong
+        lĩnh vực y tế - chăm sóc sức khỏe. Trên HealthCare, chúng tôi kết nối
+        mạng lưới hàng trăm bác sĩ, chuyên gia y tế ở nhiều chuyên khoa khác
+        nhau đã hoặc đang công tác tại các Bệnh viện lớn ở Hà Nội, Tp. HCM và
+        các tỉnh thành trên khắp cả nước tham gia trực tiếp viết bài, xây dựng,
+        kiểm duyệt và thẩm định nội dung chuyên môn đảm bảo nội dung thông tin y
+        khoa chính xác, tin cậy, dễ hiểu và xác thực dành cho bạn đọc.
+      </p>
+
+      <h2>
+        <b>Bài viết nội dung trên Cẩm Nang được tạo ra như thế nào?</b>
+      </h2>
+      <p>
+        Cẩm nang của HealthCare tập trung chia sẻ các nội dung, bài viết về Bác
+        sĩ, Địa chỉ khám chữa bệnh uy tín, Kinh nghiệm và trải nghiệm đi khám
+        hiệu quả để bạn đọc tham khảo. Nội dung chia sẻ đảm bảo 3 yếu tố cốt lõi
+        thực tế - tin cậy - có xác thực và đó là cả một hành trình, là thành quả
+        nỗ lực lao động của một tập thể.
+      </p>
+      <h3><b>Đi thực tế lấy trải nghiệm và tư liệu</b></h3>
+      <p>
+        Đội ngũ sáng tạo nội dung Cẩm Nang trực tiếp đến các Bệnh viện, Phòng
+        khám để tìm hiểu quy trình, trải nghiệm thực tế, ghi nhận thông tin để
+        chia sẻ với bệnh nhân đi khám sao cho hiệu quả.
+      </p>
+      <h3><b>Trao đổi tham vấn với Bác sĩ, bệnh viện, phòng khám</b></h3>
+      <p>
+        Để có thông tin cập nhật, chính xác và tin cậy về chuyên môn bác sĩ,
+        bệnh viện, phòng khám, HealthCare đã trao đổi trực tiếp với bác sĩ, bệnh
+        viện, phòng khám và cơ sở y tế để xác thực thông tin.
+      </p>
+      <h3><b>Tham vấn y khoa với Ban cố vấn chuyên môn</b></h3>
+      <p>
+        HealthCare kết nối với hàng trăm bệnh viện, cơ sở y tế với đội ngũ y bác
+        sĩ ở nhiều chuyên khoa khác nhau. Ngoài trao đổi chuyên môn với các cơ
+        sở y tế chúng tôi đội ngũ cố vấn chuyên môn là các bác sĩ, chuyên gia
+        giàu kinh nghiệm ở nhiều lĩnh vực Nội khoa, Ngoại khoa, Da liễu, Nha
+        khoa, Cơ xương khớp...
+      </p>
+      <h3><b>Tham khảo các nguồn tin cậy</b></h3>
+      <p>
+        Bài viết tham khảo nội dung từ các nguồn tin cậy như sách Y học, ý kiến
+        bác sĩ chuyên khoa, kênh thông tin của các bệnh viện, kênh truyền hình
+        chuyên đề sức khỏe, các trang tin chuyên ngành...
+      </p>
+      <h3><b>Một bài viết là một tác phẩm của tập thể</b></h3>
+      <p>
+        Mỗi nội dung, mỗi bài viết do cá nhân phụ trách, nhưng đó lại là sản
+        phẩm lao động đóng góp của cả tập thể thông qua một quy trình góp ý,
+        phản biện và cập nhật nghiêm túc.
+      </p>
+      <h3><b>Bài viết Nội dung trên chuyên trang Sống khỏe</b></h3>
+      <p>
+        Nội dung chuyên môn y khoa trên chuyên trang "Sống khỏe" HealthCare do
+        các bác sĩ chuyên khoa trực tiếp viết bài, kiểm duyệt và thẩm định nội
+        dung chuyên môn đảm bảo nội dung thông tin y khoa chính xác, tin cậy, dễ
+        hiểu và có xác thực.
+      </p>
+    </div>
+
+    <div class="container covan">
+      <h2>Ban cố vấn chuyên môn Y Khoa</h2>
+
+      <!-- First Doctor -->
+      <div class="row mb-4 align-items-start">
+        <div class="col-3 col-sm-2 d-flex justify-content-center">
+          <img
+            src="./assets/img/avtQ.jpg"
+            alt="Phó Giáo sư, Tiến sĩ Nguyễn Mai Hồng"
+            class="img-fluid rounded-circle"
+          />
+        </div>
+        <div class="col-9 col-sm-10">
+          <h3><b>Phó Giáo sư, Tiến sĩ Nguyễn Mai Hồng</b></h3>
+          <h4>Bác sĩ Chuyên khoa II Chuyên ngành Nội</h4>
+          <ul class="list-unstyled">
+            <li>
+              &bull; Tốt nghiệp Bác sĩ Chuyên khoa II Chuyên ngành Nội, Đại học
+              Y Hà Nội (2002)
+            </li>
+            <li>
+              &bull; Nguyên Trưởng khoa Cơ xương khớp, Bệnh viện Bạch Mai (2013
+              - 2016)
+            </li>
+            <li>
+              &bull; Giảng viên kiêm nhiệm của trường Đại học Y Hà Nội, Khoa Y
+              Đại học Quốc gia Hà Nội, Đại học Y Hải Phòng
+            </li>
+            <li>
+              &bull; Bác sĩ điều trị tại Khoa Cơ Xương Khớp, Bệnh viện Bạch Mai
+              (1985 - nay)
+            </li>
+            <li>
+              &bull; Thực tập sinh Bác sĩ Nội trú tại Bệnh viện Conception, Cộng
+              hòa Pháp (2000)
+            </li>
+            <li>
+              &bull; Tốt nghiệp Bác sĩ Đa khoa Nội - Nhi, Đại học Y Hà Nội
+              (1984)
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Second Doctor -->
+      <div class="row mb-4 align-items-start">
+        <div class="col-3 col-sm-2 d-flex justify-content-center">
+          <img
+            src="./assets/img/avtQ.jpg"
+            alt="Bác sĩ Nguyễn Dương Nhật Thi"
+            class="img-fluid rounded-circle"
+          />
+        </div>
+        <div class="col-9 col-sm-10">
+          <h3><b>Bác sĩ Nguyễn Dương Nhật Thi</b></h3>
+          <h4>Bác sĩ Chuyên khoa Ngoại - Cơ Xương Khớp</h4>
+          <ul class="list-unstyled">
+            <li>&bull; Bác sĩ Chuyên khoa Ngoại - Cơ Xương Khớp</li>
+            <li>
+              &bull; Hiện là Bác sĩ chuyên khoa Chấn thương, chỉnh hình, Bệnh
+              viện Hữu Nghị Việt Đức
+            </li>
+            <li>
+              &bull; Bác sĩ chuyên về các bệnh Loãng xương, đau nhức xương, Chấn
+              thương thể thao, bong gân, trật khớp, mỏi cơ sau tai nạn liên quan
+              đến thể thao
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Third Doctor -->
+      <div class="row mb-4 align-items-sm-start">
+        <div class="col-3 col-sm-2 d-flex justify-content-center">
+          <img
+            src="./assets/img/avtQ.jpg"
+            alt="Tiến sĩ, Bác sĩ Vũ Thái Hà"
+            class="img-fluid rounded-circle"
+          />
+        </div>
+        <div class="col-9 col-sm-10">
+          <h3><b>Tiến sĩ, Bác sĩ Vũ Thái Hà</b></h3>
+          <h4>Bác sĩ Chuyên khoa Da liễu</h4>
+          <ul class="list-unstyled">
+            <li>
+              &bull; Trưởng khoa Khoa nghiên cứu và ứng dụng công nghệ tế bào
+              gốc - Bệnh viện Da liễu Trung ương (2016 - nay)
+            </li>
+            <li>
+              &bull; Bác sĩ Da liễu tại Bệnh viện Da liễu Trung ương (từ 1/2013)
+            </li>
+            <li>
+              &bull; Giảng viên bộ môn da liễu - Trường Đại học Y Hà Nội (từ
+              1/2013)
+            </li>
+            <li>
+              &bull; 16 năm kinh nghiệm trong chuyên ngành da liễu và laser -
+              phẫu thuật trong da liễu
+            </li>
+            <li>&bull; 16 năm giảng dạy trong chuyên ngành Da liễu</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-4">
+      <a href="handbook.html" class="btn btn-custom"
+        >Quay về trang cẩm nang<i class="bi bi-arrow-right ms-2"></i
+      ></a>
+    </div>
+    <footer class="bg-dark text-center text-lg-start mt-4">
+      <div class="text-center p-3" style="color: #f6f6f6">
+        © 2024 Bản quyền:
+        <a class="text-light" href="#">HeathCare</a>
+        <div class="mt-2">
+          <a href="#" class="me-3 text-light">
+            <i class="fa-brands fa-facebook"></i>
+          </a>
+          <a href="#" class="me-3 text-light">
+            <i class="fa-brands fa-twitter"></i>
+          </a>
+          <a href="#" class="text-light">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+    </footer>
+    <button id="scrollToTopBtn" class="btn btn-custom">
+      <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+    <script src="./assets/js/jshb.js"></script>
+  </body>
+</html>

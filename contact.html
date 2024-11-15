@@ -21,12 +21,8 @@
   </head>
   <body>
     <div class="container">
-      <nav class="navbar bg-body-tertiary navBar_main_index">
-        <div
-          class="container d-flex align-items-center"
-          style="color: var(--aqua-color)"
-        >
-          <!-- Toggle Button (visible on all screens) -->
+      <nav class="navbar bg-body-tertiary">
+        <div class="container" style="color: var(--aqua-color)">
           <button
             class="navbar-toggler"
             type="button"
@@ -37,48 +33,45 @@
           >
             <span class="navbar-toggler-icon"></span>
           </button>
+          <!-- navBar -->
+          <a class="navbar-brand ms-1" href="#"
+            ><img width="125px" src="./assets/img/logo.png" alt=""
+          /></a>
 
-          <!-- Logo -->
-          <a class="navbar-brand ms-1" href="#">
-            <img width="125px" src="./assets/img/logo.png" alt="Logo" />
-          </a>
-
-          <!-- Full Navigation Menu (visible on larger screens) -->
           <ul
-            class="navbar-nav me-auto mb-2 mb-lg-0 d-none d-md-flex flex-row ms-5"
+            class="navbar-nav me-auto mb-2 mb-lg-0 d-sm-flex flex-row ms-auto ms-md-0 order-md-0 order-1 mt-3 mt-lg-0"
           >
-            <li class="nav-item me-2">
-              <a class="nav-link active" aria-current="page" href="index.html"
+            <li class="nav-item me-2 me-md-2">
+              <a
+                class="nav-link active fw-semibold"
+                aria-current="page"
+                href="./index.html"
                 >Home</a
               >
             </li>
-            <li class="nav-item me-2">
+
+            <li class="nav-item me-2 me-md-2">
               <a class="nav-link" href="./about.html">About</a>
             </li>
-            <li class="nav-item me-2">
+            <li class="nav-item me-2 me-md-2">
               <a class="nav-link" href="#">Hospital</a>
             </li>
-            <li class="nav-item me-2">
+            <li class="nav-item me-2 me-md-2">
               <a class="nav-link" href="#">Wellness</a>
             </li>
           </ul>
 
-          <!-- Login & Sign Up Buttons (visible on larger screens) -->
-          <div class="d-none d-md-flex order-md-2 ms-5">
+          <div
+            class="order-md-2 d-flex mt-lg-0 mt-sm-2 mt-sm-0 order-0 ms-5 mt-2 mt-sm-0 ms-sm-0"
+          >
             <div class="me-1">
-              <a href="#" class="btn btn-primary">Sign up</a>
+              <a href="" class="px-md-3 btn btn-primary"
+                ><i class="d-none d-lg-inline fa-solid fa-user-plus me-2"></i
+                ><span> Sign up</span></a
+              >
             </div>
-            <div><a href="#" class="btn btn-primary">Login</a></div>
+            <div class=""><a href="" class="btn btn-primary">Login</a></div>
           </div>
-
-          <!-- Search Icon (mobile only) -->
-          <div class="d-md-none ms-auto">
-            <a href="#" class="btn btn-outline-secondary">
-              <i class="fa-solid fa-search"></i>
-            </a>
-          </div>
-
-          <!-- Offcanvas Menu -->
           <div
             class="offcanvas offcanvas-start"
             tabindex="-1"
@@ -98,7 +91,7 @@
               <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                 <li class="nav-item">
                   <a
-                    class="nav-link active"
+                    class="fw-semibold nav-link active"
                     aria-current="page"
                     href="./index.html"
                     ><i class="fa-solid fa-house"></i> Home</a
@@ -110,7 +103,7 @@
                   >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="./contact.html"
+                  <a class="nav-link" href="contact.html"
                     ><i class="fa-regular fa-handshake"></i> Contact</a
                   >
                 </li>
@@ -146,17 +139,17 @@
                   >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#"
+                  <a class="nav-link" href="./hotLine.html"
                     ><i class="fa-solid fa-phone"></i> Hotline</a
                   >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#"
+                  <a class="nav-link" href="./fAQ.html"
                     ><i class="fa-solid fa-question"></i> FAQ</a
                   >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#"
+                  <a class="nav-link" href="./terms.html"
                     ><i class="fa-solid fa-scroll"></i> Terms</a
                   >
                 </li>
