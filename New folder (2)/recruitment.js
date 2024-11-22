@@ -70,7 +70,7 @@ function confirmAction() {
 }
 function openNewTab() {
     // URL muốn mở
-    const url = "handbook.html";
+    const url = "doctor.html";
     // Mở tab mới
     window.open(url, "_blank");
 }
