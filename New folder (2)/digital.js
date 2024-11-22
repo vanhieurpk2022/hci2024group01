@@ -1,69 +1,40 @@
-function toggleContent(button) {
-    const extraContent = button.previousElementSibling;
-    if (extraContent.style.display === "none" || !extraContent.style.display) {
-        extraContent.style.display = "block";
-        button.textContent = "Thu gọn";
-    } else {
-        extraContent.style.display = "none";
-        button.textContent = "Xem thêm";
+
+            // Function to open the contact form modal
+    function openContactForm() {
+        document.getElementById("contactModal").style.display = "block";
     }
-}
-
-function openConfirmationModal() {
-    document.getElementById("confirmationModal").style.display = "block";
-}
-
-// Function to close the modal
-function closeModal() {
-    document.getElementById("confirmationModal").style.display = "none";
-}
-
-// Function to handle the confirmation action
-function confirmAction() {
-    alert("You confirmed the action to open the Java IDE.");
-    closeModal();
-    // You can add any additional actions here, such as redirecting to a Java IDE or opening a new page.
-}
-
-// Close modal if the user clicks outside the modal content
-window.onclick = function(event) {
-    if (event.target == document.getElementById("confirmationModal")) {
-        closeModal();
+    
+    // Function to close the contact form modal
+    function closeContactForm() {
+        document.getElementById("contactModal").style.display = "none";
     }
-}; function openForm(service) {
-    document.getElementById("service").value = service;
-    document.getElementById("appointmentForm").style.display = "block";
-}
-
-document.getElementById("bookingForm").onsubmit = function(event) {
-    event.preventDefault();
-    alert("Đặt lịch thành công!");
-    document.getElementById("appointmentForm").style.display = "none";
-};
-// Tạo hiệu ứng ẩn/hiện nội dung khi nhấn "Xem thêm"
-function toggleContent(button) {
-    var content = button.previousElementSibling;
-    content.style.display = content.style.display === 'block' ? 'none' : 'block';
-}
-
-// Mở modal xác nhận
-function openConfirmationModal() {
-    document.getElementById('confirmationModal').style.display = 'block';
-}
-
-// Đóng modal
-function closeModal() {
-    document.getElementById('confirmationModal').style.display = 'none';
-}
-
-// Mở form đặt lịch
-function openForm(serviceName) {
-    document.getElementById('appointmentForm').style.display = 'block';
-    document.getElementById('service').value = serviceName;
-}
-
-// Xác nhận hành động
-function confirmAction() {
-    alert('Đặt lịch thành công!');
-    closeModal(); // Đóng modal sau khi xác nhận
-}
+    
+    // Function to handle form submission
+    function submitContactForm(event) {
+        event.preventDefault(); // Prevents the default form submission
+    
+        // Collect form data
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const message = document.getElementById("message").value;
+    
+        // Display the collected data or send it to a server here
+        console.log("Name:", name);
+        console.log("Email:", email);
+        console.log("Message:", message);
+    
+        // Show a success message or alert
+        alert("Cảm ơn bạn đã liên hệ! Chúng tôi sẽ phản hồi sớm nhất.");
+    
+        // Close the modal
+        closeContactForm();
+    
+        // Optionally, reset the form fields
+        document.getElementById("contactForm").reset();
+    }
+    function openNewTab() {
+        // URL muốn mở
+        const url = "lichhen.html";
+        // Mở tab mới
+        window.open(url, "_blank");
+    }
