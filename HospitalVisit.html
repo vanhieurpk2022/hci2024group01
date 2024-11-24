@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giao Diện Thăm Bệnh Viện</title>
+    <style>
+        /* Reset các kiểu mặc định của trình duyệt */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7fc;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: #fff;
+            padding: 10px 0;
+        }
+
+        header h1 {
+            text-align: center;
+            font-size: 2em;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+            margin-top: 10px;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1em;
+        }
+
+        nav ul li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Ẩn các section và chỉ hiển thị section active */
+        .content {
+            display: none;
+        }
+
+        .content.active {
+            display: block;
+        }
+
+        .intro, .doctors, .schedule, .contact {
+            background-color: #fff;
+            padding: 50px 0;
+            margin-top: 20px;
+        }
+
+        .intro h2, .doctors h2, .schedule h2, .contact h2 {
+            font-size: 2em;
+            color: #4CAF50;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .doctor-card {
+            background-color: #f8f9fa;
+            padding: 20px;
+            margin: 15px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        .doctor-card h3 {
+            color: #4CAF50;
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        form label {
+            margin: 10px 0 5px;
+        }
+
+        form input, form select {
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            width: 80%;
+            max-width: 300px;
+        }
+
+        form button {
+            margin-top: 20px;
+            padding: 10px 30px;
+            font-size: 1.1em;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        footer {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9em;
+        }
+
+        /* Định dạng phần lịch sử đặt lịch */
+        #appointmentHistory {
+            margin-top: 30px;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        #appointmentHistory h3 {
+            font-size: 1.5em;
+            color: #4CAF50;
+            margin-bottom: 15px;
+        }
+
+        #historyList {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        #historyList li {
+            background-color: #f1f1f1;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            font-size: 1.1em;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Thăm Bệnh Viện</h1>
+            <nav>
+                <ul>
+                    <li><a href="javascript:void(0)" onclick="showContent('home')">Trang Chủ</a></li>
+                    <li><a href="javascript:void(0)" onclick="showContent('doctors')">Bác Sĩ</a></li>
+                    <li><a href="javascript:void(0)" onclick="showContent('schedule')">Đặt Lịch</a></li>
+                    <li><a href="javascript:void(0)" onclick="showContent('contact')">Liên Hệ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Trang chủ -->
+    <section id="home" class="content active intro">
+        <div class="container">
+            <h2>Chào mừng bạn đến với bệnh viện chúng tôi</h2>
+            <p>Chúng tôi luôn sẵn sàng phục vụ bạn với đội ngũ bác sĩ chuyên nghiệp và các dịch vụ y tế chất lượng cao.</p>
+        </div>
+    </section>
+
+    <!-- Bác Sĩ -->
+    <section id="doctors" class="content doctors">
+        <div class="container">
+            <h2>Bác sĩ</h2>
+            <div class="doctor-card">
+                <h3>Dr. Nguyễn Văn A</h3>
+                <p>Chuyên khoa: Nội khoa</p>
+                <button onclick="bookAppointment()">Đặt Lịch Khám</button>
+            </div>
+            <div class="doctor-card">
+                <h3>Dr. Trần Thị B</h3>
+                <p>Chuyên khoa: Ngoại khoa</p>
+                <button onclick="bookAppointment()">Đặt Lịch Khám</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Đặt Lịch -->
+    <section id="schedule" class="content schedule">
+        <div class="container">
+            <h2>Đặt lịch khám</h2>
+            <form id="appointmentForm">
+                <label for="doctor">Chọn bác sĩ:</label>
+                <select id="doctor" required>
+                    <option value="Dr. Nguyễn Văn A">Dr. Nguyễn Văn A</option>
+                    <option value="Dr. Trần Thị B">Dr. Trần Thị B</option>
+                </select>
+                <label for="date">Chọn ngày:</label>
+                <input type="date" id="date" required>
+                <label for="time">Chọn giờ:</label>
+                <input type="time" id="time" required>
+                <button type="submit">Xác Nhận Đặt Lịch</button>
+            </form>
+
+            <!-- Hiển thị lịch sử đặt lịch -->
+            <div id="appointmentHistory" class="history">
+                <h3>Lịch sử đặt lịch</h3>
+                <ul id="historyList">
+                    <!-- Các mục lịch sử sẽ được thêm vào đây -->
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Liên Hệ -->
+    <section id="contact" class="content contact">
+        <div class="container">
+            <h2>Liên hệ</h2>
+            <p>Để biết thêm thông tin hoặc cần hỗ trợ, vui lòng liên hệ với chúng tôi:</p>
+            <form>
+                <label for="name">Họ và Tên:</label>
+                <input type="text" id="name" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" required>
+                <label for="message">Tin nhắn:</label>
+                <textarea id="message" rows="4" required></textarea>
+                <button type="submit">Gửi Tin Nhắn</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Bệnh Viện XYZ. Tất cả các quyền được bảo lưu.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Hàm xử lý khi thay đổi nội dung hiển thị
+        function showContent(contentId) {
+            // Ẩn tất cả các phần nội dung
+            var contents = document.querySelectorAll('.content');
+            contents.forEach(function(content) {
+                content.classList.remove('active');
+            });
+
+            // Hiển thị phần nội dung tương ứng
+            var activeContent = document.getElementById(contentId);
+            activeContent.classList.add('active');
+        }
+
+        // Hàm xử lý khi đặt lịch khám
+        document.getElementById("appointmentForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            
+            const doctor = document.getElementById("doctor").value;
+            const date = document.getElementById("date").value;
+            const time = document.getElementById("time").value;
+            
+            // Thêm thông tin lịch sử đặt lịch vào danh sách
+            const historyList = document.getElementById("historyList");
+            
+            // Tạo một mục mới cho lịch sử đặt lịch
+            const listItem = document.createElement("li");
+            listItem.textContent = `Bác sĩ: ${doctor}, Ngày: ${date}, Giờ: ${time}`;
+            
+            // Thêm mục mới vào danh sách
+            historyList.appendChild(listItem);
+            
+            // Hiển thị thông báo xác nhận
+            alert(`Đặt lịch thành công!\nBác sĩ: ${doctor}\nNgày: ${date}\nGiờ: ${time}`);
+        });
+    </script>
+</body>
+</html>

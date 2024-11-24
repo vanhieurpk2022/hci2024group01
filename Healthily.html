@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heathily - Giao diện chăm sóc sức khỏe</title>
+    <style>
+        /* Thiết lập màu sắc cơ bản */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f7f9fc; /* Màu nền nhẹ nhàng */
+            color: #333; /* Màu chữ tối nhẹ */
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header */
+        header {
+            background-color: #6ec1e4; /* Màu xanh dương pastel nhẹ */
+            color: white;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 2px solid #d3e4e1;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin: 0;
+        }
+
+        /* Điều hướng menu */
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            background-color: #4f9dc7; /* Xanh dương đậm hơn một chút */
+            margin: 0;
+            padding: 10px;
+            border-top: 2px solid #e1e9f1;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        nav ul li a:hover {
+            color: #e1f4ff;
+            text-decoration: underline;
+        }
+
+        /* Nội dung chính */
+        .content {
+            display: none;
+            padding: 20px;
+            margin-top: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e5e5e5;
+        }
+
+        .content.active {
+            display: block;
+        }
+
+        h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        /* Mẫu trang chủ */
+        .home-content {
+            text-align: center;
+        }
+
+        .home-content h3 {
+            color: #4f9dc7; /* Màu xanh dương */
+            font-size: 1.8rem;
+        }
+
+        /* Chế độ ăn uống */
+        .diet-summary {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .diet-summary input {
+            padding: 12px;
+            margin-right: 10px;
+            width: 250px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            background-color: #f7f7f7; /* Màu nền nhẹ cho ô nhập liệu */
+        }
+
+        .diet-summary button {
+            padding: 12px 20px;
+            background-color: #6ec1e4;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .diet-summary button:hover {
+            background-color: #4f9dc7; /* Màu nhấn nhẹ */
+        }
+
+        .diet-summary p {
+            margin-top: 20px;
+            font-size: 1.2rem;
+        }
+
+        /* Bài tập */
+        .exercise-summary select, .exercise-summary button {
+            padding: 12px;
+            font-size: 1rem;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            background-color: #f7f7f7;
+            transition: background-color 0.3s ease;
+        }
+
+        .exercise-summary button {
+            background-color: #6ec1e4;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        .exercise-summary button:hover {
+            background-color: #4f9dc7;
+        }
+
+        .exercise-summary p {
+            margin-top: 20px;
+            font-size: 1.2rem;
+        }
+
+        /* Theo dõi sức khỏe */
+        .health-summary {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .health-summary div {
+            text-align: center;
+            width: 150px;
+            padding: 20px;
+            background-color: #f7f7f7;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border: 1px solid #e5e5e5;
+        }
+
+        .health-summary div h3 {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+
+        .health-summary div p {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #4caf50; /* Màu xanh lá cây */
+        }
+
+        /* Cài đặt */
+        .settings-summary input {
+            padding: 12px;
+            margin: 10px;
+            border-radius: 5px;
+            width: 100%;
+            border: 1px solid #ddd;
+            background-color: #f7f7f7;
+        }
+
+        .settings-summary button {
+            background-color: #6ec1e4;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .settings-summary button:hover {
+            background-color: #4f9dc7;
+        }
+
+        footer {
+            text-align: center;
+            background-color: #4f9dc7;
+            color: white;
+            padding: 15px;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Heathily</h1>
+        <nav>
+            <ul>
+                <li><a href="javascript:void(0)" onclick="showContent('home')">Trang chủ</a></li>
+                <li><a href="javascript:void(0)" onclick="showContent('diet')">Chế độ ăn uống</a></li>
+                <li><a href="javascript:void(0)" onclick="showContent('exercise')">Bài tập</a></li>
+                <li><a href="javascript:void(0)" onclick="showContent('health')">Theo dõi sức khỏe</a></li>
+                <li><a href="javascript:void(0)" onclick="showContent('settings')">Cài đặt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Trang chủ -->
+        <section class="content home active">
+            <div class="home-content">
+                <h2>Chào mừng đến với Heathily</h2>
+                <h3>Hãy bắt đầu hành trình chăm sóc sức khỏe của bạn ngay hôm nay!</h3>
+            </div>
+        </section>
+
+        <!-- Chế độ ăn uống -->
+        <section class="content diet">
+            <h2>Chế độ ăn uống</h2>
+            <div class="diet-summary">
+                <input type="text" id="meal" placeholder="Nhập chế độ ăn uống hôm nay">
+                <button onclick="updateDiet()">Cập nhật chế độ ăn uống</button>
+                <p id="diet-result"></p>
+            </div>
+        </section>
+
+        <!-- Bài tập -->
+        <section class="content exercise">
+            <h2>Bài tập</h2>
+            <div class="exercise-summary">
+                <p>Chọn mục tiêu tập luyện của bạn:</p>
+                <select id="exercise-type">
+                    <option value="giảm cân">Giảm cân</option>
+                    <option value="tăng cơ">Tăng cơ</option>
+                    <option value="duy trì sức khỏe">Duy trì sức khỏe</option>
+                </select>
+                <button onclick="getExerciseRecommendation()">Lấy gợi ý bài tập</button>
+                <p id="exercise-result"></p>
+            </div>
+        </section>
+
+        <!-- Theo dõi sức khỏe -->
+        <section class="content health">
+            <h2>Tổng quan sức khỏe</h2>
+            <div class="health-summary">
+                <div>
+                    <h3>Cân nặng</h3>
+                    <p id="weight">70kg</p>
+                </div>
+                <div>
+                    <h3>Chỉ số BMI</h3>
+                    <p id="bmi">23.5</p>
+                </div>
+                <div>
+                    <h3>Giấc ngủ</h3>
+                    <p id="sleep">7.5 giờ</p>
+                </div>
+            </div>
+            <div class="input-form">
+                <h3>Cập nhật thông tin sức khỏe</h3>
+                <input type="number" id="input-weight" placeholder="Nhập cân nặng (kg)" />
+                <input type="number" id="input-bmi" placeholder="Nhập chỉ số BMI" />
+                <input type="number" id="input-sleep" placeholder="Nhập giấc ngủ (giờ)" />
+                <button onclick="updateHealthData()">Cập nhật</button>
+            </div>
+        </section>
+
+        <!-- Cài đặt -->
+        <section class="content settings">
+            <h2>Cài đặt</h2>
+            <div class="settings-summary">
+                <p>Thiết lập các nhắc nhở hoặc thay đổi thông tin cá nhân tại đây.</p>
+                <input type="text" id="reminder" placeholder="Nhắc nhở uống nước">
+                <button onclick="updateReminder()">Cập nhật nhắc nhở</button>
+                <p id="reminder-result"></p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Heathily. Tất cả quyền được bảo lưu.</p>
+    </footer>
+
+    <script>
+        // Hàm thay đổi nội dung khi nhấn vào menu
+        function showContent(page) {
+            var contents = document.querySelectorAll('.content');
+            contents.forEach(function(content) {
+                content.classList.remove('active');
+            });
+
+            var activeContent = document.querySelector('.' + page);
+            activeContent.classList.add('active');
+        }
+
+        // Cập nhật chế độ ăn uống
+        function updateDiet() {
+            var meal = document.getElementById("meal").value;
+            if (meal) {
+                document.getElementById("diet-result").textContent = "Chế độ ăn uống hôm nay: " + meal;
+            }
+        }
+
+        // Lấy gợi ý bài tập
+        function getExerciseRecommendation() {
+            var exerciseType = document.getElementById("exercise-type").value;
+            var recommendation = "";
+            switch (exerciseType) {
+                case "giảm cân":
+                    recommendation = "Bài tập giảm cân: Chạy bộ, nhảy dây, đạp xe.";
+                    break;
+                case "tăng cơ":
+                    recommendation = "Bài tập tăng cơ: Tập tạ, chống đẩy, kéo xà.";
+                    break;
+                case "duy trì sức khỏe":
+                    recommendation = "Bài tập duy trì sức khỏe: Yoga, đi bộ, bơi lội.";
+                    break;
+            }
+            document.getElementById("exercise-result").textContent = recommendation;
+        }
+
+        // Cập nhật thông tin sức khỏe
+        function updateHealthData() {
+            var weight = document.getElementById("input-weight").value;
+            var bmi = document.getElementById("input-bmi").value;
+            var sleep = document.getElementById("input-sleep").value;
+
+            if (weight) document.getElementById("weight").textContent = weight + "kg";
+            if (bmi) document.getElementById("bmi").textContent = bmi;
+            if (sleep) document.getElementById("sleep").textContent = sleep + " giờ";
+
+            alert("Thông tin sức khỏe đã được cập nhật!");
+        }
+
+        // Cập nhật nhắc nhở uống nước
+        function updateReminder() {
+            var reminder = document.getElementById("reminder").value;
+            if (reminder) {
+                document.getElementById("reminder-result").textContent = "Nhắc nhở: " + reminder;
+            }
+        }
+    </script>
+</body>
+</html>
