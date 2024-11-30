@@ -18,13 +18,10 @@
     />
     <link rel="stylesheet" href="./assets/css/digital.css" />
     <link rel="stylesheet" href="./assets/css/myStyle.css" />
+    <link rel="stylesheet" href="./assets/css/setColor.css">
+
     <title>HeathCare</title>
-    <style>
-      /*  */
-      :root {
-        --aqua-color: #00ced1;
-      }
-    </style>
+   
   </head>
   <body>
      <!-- DashBroad -->
@@ -89,7 +86,7 @@
 
       <div class="ms-auto ">
         
-        <a href="" class="px-3 btn d-flex flex-column text-center" style="color: black; background-color: #007BFF;" > <i class="fa-regular fa-clipboard"></i> Book now</a>
+        <a href="" class="px-3 btn d-flex flex-column text-center" style="color: var(--bookNow-color); background-color: #007BFF;" > <i class="fa-regular fa-clipboard"></i> Book now</a>
       </div>
   </div>
         <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
@@ -152,14 +149,15 @@
           
       
           <!-- Hero Section -->
-          <section class="hero" style="height: 500px;">
-              <div class="hero-content">
-                  <h3>Giải pháp chuyển đổi số toàn diện cho y tế chăm sóc sức khỏe</h3>
-                  <p>Giải pháp chuyển đổi số BookingCare DX ứng dụng công nghệ tiên phong được phát triển theo mô hình Nền tảng như một dịch vụ (Platform as a service - PaaS) bao gồm Website, ứng dụng di động (Mobile App) và phần mềm quản trị, tích hợp 3 trong 1 nền tảng tiện ích dễ dùng.</p>
-                  <button class="contact-button" onclick="openNewTab()">Đăng Ký Dùng Thử</button>
-                  <p>Liên hệ ngay để BookingCare DX, giải pháp chuyển đổi số dễ dàng và thành công.</p>
-              </div>
-          </section>
+          <section class="hero">
+            <div class="overlay"></div>
+            <div class="hero-content" >
+                <h3>Giải pháp chuyển đổi số toàn diện cho y tế chăm sóc sức khỏe</h3>
+                <p>Giải pháp chuyển đổi số BookingCare DX ứng dụng công nghệ tiên phong được phát triển theo mô hình Nền tảng như một dịch vụ (Platform as a service - PaaS) bao gồm Website, ứng dụng di động (Mobile App) và phần mềm quản trị, tích hợp 3 trong 1 nền tảng tiện ích dễ dùng.</p>
+                <button class="contact-button" onclick="openNewTab()">Đăng Ký Dùng Thử</button>
+                <p>Liên hệ ngay để BookingCare DX, giải pháp chuyển đổi số dễ dàng và thành công.</p>
+            </div>
+        </section>
       
           <!-- Features Section -->
           <section class="features">

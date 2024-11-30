@@ -33,11 +33,48 @@ body {
 
 /* Hero Section */
 .hero {
-    background-image: url('../img/martha-dominguez-de-gouveia-nMyM7fxpokE-unsplash.jpg'); /* Replace with your image */
-    background-size: cover;
-    color: #333;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    color: white;
     text-align: center;
-    padding: 10rem 1rem;
+    height: 500px; /* Chiều cao toàn màn hình */
+    background-image: url('../img/pexels-artempodrez-6823602.jpg'); /* Thay bằng URL ảnh nền */
+    background-size: cover;
+    background-position: center;
+    
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Màu đen với độ trong suốt */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2; /* Đảm bảo nội dung nằm trên lớp phủ */
+}
+
+.contact-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-button:hover {
+    background-color: #0056b3;
 }
 
 .hero h1 {
