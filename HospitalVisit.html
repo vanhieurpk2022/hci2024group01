@@ -1,308 +1,275 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Giao Diện Thăm Bệnh Viện</title>
-    <style>
-        /* Reset các kiểu mặc định của trình duyệt */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gói khám & Xét nghiệm</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f7fc;
-            color: #333;
-            line-height: 1.6;
-        }
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      padding: 20px;
+    }
 
-        .container {
-            width: 90%;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
 
-        header {
-            background-color: #4CAF50;
-            color: #fff;
-            padding: 10px 0;
-        }
+    .section {
+      margin-bottom: 40px;
+    }
 
-        header h1 {
-            text-align: center;
-            font-size: 2em;
-        }
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
 
-        nav ul {
-            display: flex;
-            justify-content: center;
-            list-style-type: none;
-            margin-top: 10px;
-        }
+    h2 {
+      font-size: 30px;
+      color: #333;
+    }
 
-        nav ul li {
-            margin: 0 20px;
-        }
+    .see-more {
+      text-decoration: none;
+      color: #007bff;
+      font-size: 20px;
+      font-weight: bold;
+      transition: color 0.3s ease;
+    }
 
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-size: 1.1em;
-        }
+    .see-more:hover {
+      color: #0056b3;
+    }
 
-        nav ul li a:hover {
-            text-decoration: underline;
-        }
+    .cards {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
 
-        /* Ẩn các section và chỉ hiển thị section active */
-        .content {
-            display: none;
-        }
+    .card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  text-align: center;
+  flex: 1;
+  max-width: 30%;
+  min-width: 250px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: all 0.3s ease; /* Thêm hiệu ứng chuyển tiếp */
+}
+.card:hover {
+  transform: translateY(-10px); /* Nâng thẻ lên 10px khi hover */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Tăng cường bóng đổ khi hover */
+}
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: contain; /* Phóng to/thu nhỏ ảnh để vừa khung */
+      border-radius: 5px;
+      background-color: #ffffff; /* Hiển thị nền xám nếu có khoảng trống */
+    }
+    
+    .card1 img {
+  width: 100%;
+  height: 300px; /* Đảm bảo chiều cao cố định */
+  object-fit: cover; /* Đảm bảo ảnh không bị méo */
+  border-radius: 50%; /* Tạo hiệu ứng hình tròn */
+  background-color: #ffffff; /* Nền trắng khi ảnh chưa có */
+}
+.card1 p {
+  font-size: 18px;
+  color: #a5a4a4; /* Màu chữ tối để dễ đọc */
+  margin-top: 10px;
+   font-weight: normal; /*Làm cho chữ đậm hơn */
+  line-height: 1.4;
+  text-align: center; /* Căn giữa nội dung */
+}
 
-        .content.active {
-            display: block;
-        }
+.card1 p:nth-child(2) {
+  font-size: 20px;
+  color: #000000; /* Màu chữ mờ hơn cho dòng dưới */
+  font-weight: bold; /* Dòng dưới có thể để nhẹ hơn */
+  line-height: 1.4;
+  margin-top: 5px;
+}
+/* Thêm hình ảnh làm background */
+.section:nth-child(3) {  /* Chỉ định phần bác sĩ nổi bật */
+  background-image: url('https://cdn.bookingcare.vn/fo/2023/11/01/140311-background5.png');  /* Thay đường dẫn ảnh */
+  background-size: cover;  /* Đảm bảo ảnh bao phủ toàn bộ diện tích */
+  background-position: center;  /* Căn giữa hình ảnh */
+  background-repeat: no-repeat;  /* Không lặp lại hình ảnh */
+  padding: 40px 20px;  /* Thêm khoảng cách padding cho đẹp */
+  border-radius: 8px;  /* Tạo hiệu ứng bo góc */
+}
 
-        .intro, .doctors, .schedule, .contact {
-            background-color: #fff;
-            padding: 50px 0;
-            margin-top: 20px;
-        }
 
-        .intro h2, .doctors h2, .schedule h2, .contact h2 {
-            font-size: 2em;
-            color: #4CAF50;
-            text-align: center;
-            margin-bottom: 20px;
-        }
+    .card p {
+  font-size: 22px;
+  color: #555;
+  margin-top: 10px;
+  flex-grow: 1;
+  display: -webkit-box; /* Sử dụng flex box */
+  -webkit-box-orient: vertical; /* Định hướng văn bản theo chiều dọc */
+  -webkit-line-clamp: 3; /* Giới hạn số dòng tối đa hiển thị */
+  overflow: hidden; /* Ẩn phần văn bản bị tràn */
+  text-overflow: ellipsis; /* Hiển thị dấu ba chấm khi văn bản quá dài */
+  line-height: 1.5;
+  font-weight: bold; /* Đặt font chữ in đậm */
+}
 
-        .doctor-card {
-            background-color: #f8f9fa;
-            padding: 20px;
-            margin: 15px 0;
-            border-radius: 8px;
-            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-            text-align: center;
-        }
+    @media (max-width: 768px) {
+      .card {
+        max-width: 100%;
+        height: auto;
+      }
 
-        .doctor-card h3 {
-            color: #4CAF50;
-            margin-bottom: 10px;
-        }
+      .section-header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
 
-        button {
-            padding: 10px 20px;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        button:hover {
-            background-color: #45a049;
-        }
-
-        form {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        form label {
-            margin: 10px 0 5px;
-        }
-
-        form input, form select {
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-            width: 80%;
-            max-width: 300px;
-        }
-
-        form button {
-            margin-top: 20px;
-            padding: 10px 30px;
-            font-size: 1.1em;
-            background-color: #4CAF50;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-
-        footer {
-            background-color: #4CAF50;
-            color: white;
-            text-align: center;
-            padding: 20px;
-        }
-
-        footer p {
-            margin: 0;
-            font-size: 0.9em;
-        }
-
-        /* Định dạng phần lịch sử đặt lịch */
-        #appointmentHistory {
-            margin-top: 30px;
-            padding: 20px;
-            background-color: #f9f9f9;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-
-        #appointmentHistory h3 {
-            font-size: 1.5em;
-            color: #4CAF50;
-            margin-bottom: 15px;
-        }
-
-        #historyList {
-            list-style-type: none;
-            padding: 0;
-        }
-
-        #historyList li {
-            background-color: #f1f1f1;
-            padding: 10px;
-            margin-bottom: 10px;
-            border-radius: 5px;
-            border: 1px solid #ddd;
-            font-size: 1.1em;
-        }
-    </style>
+      .card img {
+        height: auto;
+      }
+    }
+  </style>
 </head>
+
 <body>
-    <header>
-        <div class="container">
-            <h1>Thăm Bệnh Viện</h1>
-            <nav>
-                <ul>
-                    <li><a href="javascript:void(0)" onclick="showContent('home')">Trang Chủ</a></li>
-                    <li><a href="javascript:void(0)" onclick="showContent('doctors')">Bác Sĩ</a></li>
-                    <li><a href="javascript:void(0)" onclick="showContent('schedule')">Đặt Lịch</a></li>
-                    <li><a href="javascript:void(0)" onclick="showContent('contact')">Liên Hệ</a></li>
-                </ul>
-            </nav>
+  <div class="container">
+    <section class="section">
+        <div class="section-header">
+          <h2>Cơ sở nổi bật</h2>
+          <a href="#" class="see-more">Xem thêm</a>
         </div>
-    </header>
+        <div class="cards">
+          <div class="card">
+            <img src="https://cdn.bookingcare.vn/fo/2018/06/18/083122lo-go-viet-duc.jpg" alt="Gói khám cơ bản nam">
+            <p>Bệnh viện Hữu nghị Việt Đức</p>
+          </div>
+          <div class="card">
+            <img src="https://cdn.bookingcare.vn/fo/2019/03/11/152704logo-bvcr-moi.jpg" alt="Gói khám chuyên sâu nữ">
+            <p>Bệnh viện Chợ Rẫy</p>
+          </div>
+          <div class="card">
+            <img src="https://cdn.bookingcare.vn/fo/2022/08/26/092249-doctor-check.jpg" alt="Gói khám cơ bản nữ">
+            <p>Doctor Check - Tầm Soát Bệnh Để Sống Thọ Hơn</p>
+          </div>
+        </div>
+      </section> 
 
-    <!-- Trang chủ -->
-    <section id="home" class="content active intro">
-        <div class="container">
-            <h2>Chào mừng bạn đến với bệnh viện chúng tôi</h2>
-            <p>Chúng tôi luôn sẵn sàng phục vụ bạn với đội ngũ bác sĩ chuyên nghiệp và các dịch vụ y tế chất lượng cao.</p>
+      <section class="section">
+        <div class="section-header">
+          <h2>Chuyên khoa</h2>
+          <a href="#" class="see-more">Xem thêm</a>
         </div>
+        <div class="cards">
+          <div class="card">
+            <img src="https://cdn.bookingcare.vn/fo/2023/12/26/101627-co-xuong-khop.png" alt="Gói khám cơ bản nam">
+            <p>Cơ xương khớp</p>
+          </div>
+          <div class="card">
+            <img src="https://cdn.bookingcare.vn/fo/2023/12/26/101739-than-kinh.png" alt="Gói khám chuyên sâu nữ">
+            <p>Thần kinh</p>
+          </div>
+          <div class="card">
+            <img src="https://cdn.bookingcare.vn/fo/2023/12/26/101713-tieu-hoa.png" alt="Gói khám cơ bản nữ">
+            <p>Tiêu hóa</p>
+          </div>
+        </div>
+      </section> 
+
+      <section class="section">
+        <div class="section-header">
+          <h2>Bác sĩ nổi bật</h2>
+          <a href="#" class="see-more">Xem thêm</a>
+        </div>
+        <div class="cards">
+          <div class="card1">
+            <img src="https://cdn.bookingcare.vn/fo/2021/04/07/174603-ts-bs-pham-chi-lang.jpg" alt="Gói khám cơ bản nam">
+            <p>Tiến sĩ, Bác sĩ Phạm Chí Lăng</p>
+            <p>Cơ Xương Khớp,Chấn thương chỉnh hình</p>
+          </div>
+          <div class="card1">
+            <img src="https://cdn.bookingcare.vn/fo/2019/03/04/180640bac-si-vu-thai-ha.jpg" alt="Gói khám chuyên sâu nữ">
+            <p>Tiến sĩ, Bác sĩ Vũ Thái Hà</p>
+            <p>Da liễu,Da liễu thẩm mỹ</p>
+          </div>
+          <div class="card1">
+            <img src="https://cdn.bookingcare.vn/fo/2022/08/15/165612-250--bac-si-noi-than-kinh-nguyen-tuong-vu15186.png" alt="Gói khám cơ bản nữ">
+            <p>Bác sĩ Chuyên khoa I Nguyễn Tường Vũ</p>
+            <p>Thần kinh,Ngoại thần kinh</p>
+          </div>
+        </div>
+      </section> 
+
+    <section class="section">
+      <div class="section-header">
+        <h2>Gói khám</h2>
+        <a href="#" class="see-more">Xem thêm</a>
+      </div>
+      <div class="cards">
+        <div class="card">
+          <img src="https://cdn.bookingcare.vn/fo/2019/09/12/093819goi-kham-suc-khoe-co-ban.jpg" alt="Gói khám cơ bản nam">
+          <p>Gói khám sức khỏe tổng quát cơ bản cho nam </p>
+        </div>
+        <div class="card">
+          <img src="https://cdn.bookingcare.vn/fo/2018/06/05/121331goi-kham-suc-khoe-toan-dien-nu.jpg" alt="Gói khám chuyên sâu nữ">
+          <p>Gói khám sức khỏe tổng quát chuyên sâu dành cho nữ </p>
+        </div>
+        <div class="card">
+          <img src="https://cdn.bookingcare.vn/fo/2019/09/12/093819goi-kham-suc-khoe-co-ban.jpg" alt="Gói khám cơ bản nữ">
+          <p>Gói khám sức khỏe tổng quát cơ bản cho nữ </p>
+        </div>
+      </div>
     </section>
 
-    <!-- Bác Sĩ -->
-    <section id="doctors" class="content doctors">
-        <div class="container">
-            <h2>Bác sĩ</h2>
-            <div class="doctor-card">
-                <h3>Dr. Nguyễn Văn A</h3>
-                <p>Chuyên khoa: Nội khoa</p>
-                <button onclick="bookAppointment()">Đặt Lịch Khám</button>
-            </div>
-            <div class="doctor-card">
-                <h3>Dr. Trần Thị B</h3>
-                <p>Chuyên khoa: Ngoại khoa</p>
-                <button onclick="bookAppointment()">Đặt Lịch Khám</button>
-            </div>
+    <section class="section">
+      <div class="section-header">
+        <h2>Xét nghiệm</h2>
+        <a href="#" class="see-more">Xem thêm</a>
+      </div>
+      <div class="cards">
+        <div class="card">
+          <img src="https://cdn.bookingcare.vn/fo/2022/11/08/175554-diag.png" alt="Diag Laboratories">
+          <p>Dịch vụ xét nghiệm của Trung tâm xét nghiệm Diag Laboratories</p>
         </div>
+        <div class="card">
+          <img src="https://cdn.bookingcare.vn/fo/2023/01/18/090630-104922-logo-med-tai-ha-noi--01.png" alt="Medlatec">
+          <p>Dịch vụ lấy mẫu xét nghiệm tại nhà của Hệ thống y tế Medlatec</p>
+        </div>
+        <div class="card">
+          <img src="https://cdn.bookingcare.vn/fo/2017/11/28/103739xet-nghiem-mau.jpg" alt="Tầm soát ung thư">
+          <p>Gói xét nghiệm tầm soát dấu ấn ung thư nam </p>
+        </div>
+      </div>
     </section>
+  </div>
 
-    <!-- Đặt Lịch -->
-    <section id="schedule" class="content schedule">
-        <div class="container">
-            <h2>Đặt lịch khám</h2>
-            <form id="appointmentForm">
-                <label for="doctor">Chọn bác sĩ:</label>
-                <select id="doctor" required>
-                    <option value="Dr. Nguyễn Văn A">Dr. Nguyễn Văn A</option>
-                    <option value="Dr. Trần Thị B">Dr. Trần Thị B</option>
-                </select>
-                <label for="date">Chọn ngày:</label>
-                <input type="date" id="date" required>
-                <label for="time">Chọn giờ:</label>
-                <input type="time" id="time" required>
-                <button type="submit">Xác Nhận Đặt Lịch</button>
-            </form>
-
-            <!-- Hiển thị lịch sử đặt lịch -->
-            <div id="appointmentHistory" class="history">
-                <h3>Lịch sử đặt lịch</h3>
-                <ul id="historyList">
-                    <!-- Các mục lịch sử sẽ được thêm vào đây -->
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <!-- Liên Hệ -->
-    <section id="contact" class="content contact">
-        <div class="container">
-            <h2>Liên hệ</h2>
-            <p>Để biết thêm thông tin hoặc cần hỗ trợ, vui lòng liên hệ với chúng tôi:</p>
-            <form>
-                <label for="name">Họ và Tên:</label>
-                <input type="text" id="name" required>
-                <label for="email">Email:</label>
-                <input type="email" id="email" required>
-                <label for="message">Tin nhắn:</label>
-                <textarea id="message" rows="4" required></textarea>
-                <button type="submit">Gửi Tin Nhắn</button>
-            </form>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Bệnh Viện XYZ. Tất cả các quyền được bảo lưu.</p>
-        </div>
-    </footer>
-
-    <script>
-        // Hàm xử lý khi thay đổi nội dung hiển thị
-        function showContent(contentId) {
-            // Ẩn tất cả các phần nội dung
-            var contents = document.querySelectorAll('.content');
-            contents.forEach(function(content) {
-                content.classList.remove('active');
-            });
-
-            // Hiển thị phần nội dung tương ứng
-            var activeContent = document.getElementById(contentId);
-            activeContent.classList.add('active');
-        }
-
-        // Hàm xử lý khi đặt lịch khám
-        document.getElementById("appointmentForm").addEventListener("submit", function(event) {
-            event.preventDefault();
-            
-            const doctor = document.getElementById("doctor").value;
-            const date = document.getElementById("date").value;
-            const time = document.getElementById("time").value;
-            
-            // Thêm thông tin lịch sử đặt lịch vào danh sách
-            const historyList = document.getElementById("historyList");
-            
-            // Tạo một mục mới cho lịch sử đặt lịch
-            const listItem = document.createElement("li");
-            listItem.textContent = `Bác sĩ: ${doctor}, Ngày: ${date}, Giờ: ${time}`;
-            
-            // Thêm mục mới vào danh sách
-            historyList.appendChild(listItem);
-            
-            // Hiển thị thông báo xác nhận
-            alert(`Đặt lịch thành công!\nBác sĩ: ${doctor}\nNgày: ${date}\nGiờ: ${time}`);
-        });
-    </script>
+  <script>
+    document.querySelectorAll('.see-more').forEach(button => {
+      button.addEventListener('click', (e) => {
+        e.preventDefault();
+        alert("Xem thêm chưa được kích hoạt.");
+      });
+    });
+  </script>
 </body>
+
 </html>
