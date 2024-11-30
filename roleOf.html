@@ -3,150 +3,343 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./assets/css/reset.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital@0;1&display=swap" rel="stylesheet" />
-    <link rel="apple-touch-icon" sizes="57x57" href="./assets/img/web_logo/apple-icon-57x57.png" />
-    <link rel="apple-touch-icon" sizes="60x60" href="./assets/img/web_logo/apple-icon-60x60.png" />
-    <link rel="apple-touch-icon" sizes="72x72" href="./assets/img/web_logo/apple-icon-72x72.png" />
-    <link rel="apple-touch-icon" sizes="76x76" href="./assets/img/web_logo/apple-icon-76x76.png" />
-    <link rel="apple-touch-icon" sizes="114x114" href="./assets/img/web_logo/apple-icon-114x114.png" />
-    <link rel="apple-touch-icon" sizes="120x120" href="./assets/img/web_logo/apple-icon-120x120.png" />
-    <link rel="apple-touch-icon" sizes="144x144" href="./assets/img/web_logo/apple-icon-144x144.png" />
-    <link rel="apple-touch-icon" sizes="152x152" href="./assets/img/web_logo/apple-icon-152x152.png" />
-    <link rel="apple-touch-icon" sizes="180x180" href="./assets/img/web_logo/apple-icon-180x180.png" />
-    <link rel="icon" type="image/png" sizes="192x192" href="./assets/img/web_logo/android-icon-192x192.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="./assets/img/web_logo/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="96x96" href="./assets/img/web_logo/favicon-96x96.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="./assets/img/web_logo/favicon-16x16.png" />
-    <link rel="manifest" href="./assets/img/web_logo/manifest.json" />
-    <meta name="msapplication-TileColor" content="#ffffff" />
-    <meta name="msapplication-TileImage" content="./assets/img/web_logo/ms-icon-144x144.png" />
-    <meta name="theme-color" content="#ffffff" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <title>BookingCare - Health is Paramount</title>
-</head>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./assets/css/myStyle.css" />
+    <title>HeathCare</title>
     <style>
-        .doctor-container {
-            display: none; 
+      :root {
+        --aqua-color: #00ced1;
+      }
+      /* Patient Section Styles */
+.patient-info {
+    color: #333;
+}
+
+.patient-info h4 {
+    color: var(--aqua-color);
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.patient-info .row .col-md-4 p {
+    background-color: #f8f9fa; /* Light background for contrast */
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    color: #555;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* BookingCare Benefits Cards */
+.patient-info .card {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    padding: 15px;
+}
+
+.patient-info .card-body {
+    text-align: center;
+}
+
+.patient-info .card-body i {
+    color: #ff7b54; /* Icon color */
+    margin-bottom: 10px;
+}
+
+.patient-info .card-title {
+    font-weight: bold;
+    color: var(--aqua-color);
+    margin-top: 10px;
+    font-size: 1.2rem;
+}
+
+.patient-info .card-text {
+    color: #666;
+    font-size: 0.95rem;
+}
+
+/* General Styling */
+.container {
+    max-width: 1200px;
+}
+.row {
+            display: flex;
+            justify-content: space-between;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .button-card {
+            background-color: white;
+            border: none;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: 2px solid #ff7b54;
+            flex: 1 1 calc(25% - 20px);
+            max-width: 250px;
+        }
+
+        .button-card:hover {
+            background-color: #ffeedb;
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+            transform: translateY(-5px);
+        }
+
+        .button-card i {
+            font-size: 3rem;
+            color: #ff7b54;
+            margin-bottom: 10px;
+        }
+
+        .button-card h5 {
+            font-size: 1.5rem;
+            color: #333;
+            margin: 10px 0;
+        }
+
+        .content-box {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .content-box h5 {
+            font-size: 2rem;  /* Tăng kích thước chữ cho tiêu đề */
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .content-box p {
+            font-size: 1.2rem; /* Tăng kích thước chữ cho nội dung */
+            color: #333;
+        }
+
+        /* Responsive */
+        @media screen and (max-width: 1024px) {
+            .button-card {
+                flex: 1 1 calc(33% - 20px);
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .button-card {
+                flex: 1 1 calc(50% - 20px);
+            }
+        }
+
+        @media screen and (max-width: 480px) {
+            .button-card {
+                flex: 1 1 100%;
+            }
         }
     </style>
+    
 </head>
-<body style="height: 10000px">
-    <header class="header fixed">
-        <div class="main-contain">
-            <div class="body">
-                <a href="#!">
-                    <img src="./assets/img/logo.png" alt="Logo" width="100" />
-                </a>
-                <nav class="nav">
-                    <ul>
-                        <li><a href="./index.html">Home</a></li>
-                        <li><a href="./homeMedical.html">Home Medical Care</a></li>
-                        <li><a href="./hospitalVisit.html">Hospital Visit</a></li>
-                        <li><a href="./healthily.html">Healthily</a></li>
-                        <input type="search" class="search" placeholder="Search..." />
-                        <li><a href="#">Collaboration</a></li>
-                        <li><a href="#">Appointment</a></li>
-                    </ul>
-                </nav>
+<body>
+    <!-- DashBroad -->
+    <div class="container">
+      <nav class="navbar bg-body-tertiary">
+        <div class="container" style="color: var(--aqua-color)">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a class="navbar-brand ms-1" href="./index.html">
+            <img width="125px" src="./assets/img/logo.png" alt="" />
+          </a>
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 d-sm-flex flex-row ms-5 ms-md-0 order-md-0 order-1 mt-3 mt-lg-0">
+            <li class="nav-item me-2 me-md-2">
+              <a class="nav-link" aria-current="page" href="./index.html">Home</a>
+            </li>
+            <li class="nav-item me-2 me-md-2">
+              <a class="nav-link" href="./about.html">About</a>
+            </li>
+            <li class="nav-item me-2 me-md-2">
+              <a class="nav-link" href="#">Hospital</a>
+            </li>
+            <li class="nav-item me-2 me-md-2">
+              <a class="nav-link" href="#">Wellness</a>
+            </li>
+          </ul>
+          <form class="d-flex order-md-1 order-0" role="search">
+            <div class="d-flex justify-content-center align-items-center d-none d-lg-flex position-relative">
+              <i class="d-none d-lg-flex fa-solid fa-magnifying-glass position-absolute start-0" style="color: #41353d"></i>
             </div>
-        </div>
-    </header>
-
-    <label>
-        <input type="checkbox" class="checkbox" />
-        <div class="toggle">
-            <span class="top_line common"></span>
-            <span class="middle_line common"></span>
-            <span class="bottom_line common"></span>
-        </div>
-
-        <div class="slide">
-            <h1>MENU</h1>
-            <ul>
-                <li>
-                    <a href="#"><i class="fa-solid fa-house"></i>Home</a>
-                    <a href="./handbook.html"><i class="fa-solid fa-book"></i>Handbook</a>
-                    <a href="./contact.html"><i class="fa-regular fa-handshake"></i>Contact</a>
-                    <a href="./business.html"><i class="fa-solid fa-building"></i>Business Health</a>
-                    <a href="./digital.html"><i class="fas fa-folder"></i>Digital Transformation Package</a>
-                    <a href="./recruitment.html"><i class="fa-solid fa-users"></i>Recruitment</a>
-                    <a href="./patient.html"><i class="fa-solid fa-hospital-user"></i>Patient</a>
-                    <a href="#" id="doctor-link"><i class="fa-solid fa-user-doctor"></i>Doctor</a>
-                    <a href="./roleOf.html"><i class="fa-solid fa-flag"></i>Role of BookingCare</a>
-                    <a href="./hotline.html"><i class="fa-solid fa-phone"></i>Hotline</a>
-                    <a href="./faq.html"><i class="fa-solid fa-question"></i>FAQ</a>
-                    <a href="./terms.html"><i class="fa-solid fa-scroll"></i>Terms</a>
+            <input
+              class="form-control form-control-search me-2 rounded-pill d-none d-lg-flex"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+          </form>
+          <div class="order-md-2 d-flex mt-lg-0 mt-sm-2 mt-sm-0 order-0 ms-5 mt-2 mt-sm-0 ms-sm-0">
+            <div class="me-1 py-1 px-2 d-lg-none me-2 rounded-start rounded-end" style="background-color: azure">
+              <a href="#">
+                <i class="fa-solid fa-magnifying-glass p-2" style="color: #41353d"></i>
+              </a>
+            </div>
+            <div class="me-1"><a href="#" class="btn btn-primary">Sign up</a></div>
+            <div><a href="#" class="btn btn-primary">Login</a></div>
+          </div>
+          <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="./index.html"><i class="fa-solid fa-house"></i> Home</a>
                 </li>
-            </ul>
+                <li class="nav-item">
+                  <a class="nav-link" href="handbook.html"><i class="fa-solid fa-book-medical"></i> Handbook</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><i class="fa-regular fa-handshake"></i> Contact</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><i class="fa-solid fa-building"></i> Business Health</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><i class="fa-solid fa-folder"></i> Digital Transformation Package</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><i class="fa-solid fa-users"></i> Recruitment</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><i class="fa-solid fa-hospital-user"></i> Patient</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><i class="fa-solid fa-user-doctor"></i> Doctor</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><i class="fa-solid fa-flag"></i> Role of BookingCare</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><i class="fa-solid fa-phone"></i> Hotline</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#"><i class="fa-solid fa-question"></i> FAQ</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="./terms.html"><i class="fa-solid fa-scroll"></i> Terms</a>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
-    </label>
-
-    <div class="doctor-container" id="doctor-functions">
-        <h1>Doctor Functions</h1>
-        
-        <section id="schedule">
-            <h2>Manage Work Schedule</h2>
-            <form id="schedule-form">
-                <label for="work-date">Select Date:</label>
-                <input type="date" id="work-date" name="work-date" required />
-                <label for="work-time">Select Time:</label>
-                <input type="time" id="work-time" name="work-time" required />
-                <button type="submit">Update Schedule</button>
-            </form>
-        </section>
-
-        <section id="patient-info">
-            <h2>View Patient Information</h2>
-            <ul id="patient-list">
-                <li>Patient 1: Name - Contact Information</li>
-                <li>Patient 2: Name - Contact Information</li>
-            </ul>
-        </section>
-
-        <section id="notes">
-            <h2>Patient Consultation Notes</h2>
-            <form id="notes-form">
-                <label for="patient">Select Patient:</label>
-                <select id="patient" name="patient">
-                    <option value="patient1">Patient 1</option>
-                    <option value="patient2">Patient 2</option>
-                </select>
-                <label for="note">Notes:</label>
-                <textarea id="note" name="note" rows="4" required></textarea>
-                <button type="submit">Save Notes</button>
-            </form>
-        </section>
-
-        <section id="consultation">
-            <h2>Online Consultation</h2>
-            <button onclick="startConsultation()">Start Consultation</button>
-        </section>
+      </nav>
     </div>
 
+    <!-- Header -->
+    <header>
+      <div class="container mt-4">
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item ms-3">
+              <a href="/index.html"><i class="fa-solid fa-house"></i> </a>
+            </li>
+            <li class="breadcrumb-item active">Role Of BookingCare</li>
+          </ol>
+        </nav>
+        <div class="container">
+          <h3>Role Of BookingCare</h3>
+          <div class="specializations my-4">
+           
+           
+    <div class="row text-center">
+        <button class="button-card" onclick="showContent('doctor')">
+            <i class="fa-solid fa-user-md"></i>
+            <h5 class="card-title">Bác sĩ uy tín</h5>
+        </button>
+        <button class="button-card" onclick="showContent('correct-disease')">
+            <i class="fa-solid fa-check-circle"></i>
+            <h5 class="card-title">Đúng người đúng bệnh</h5>
+        </button>
+        <button class="button-card" onclick="showContent('support')">
+            <i class="fa-solid fa-headset"></i>
+            <h5 class="card-title">Hỗ trợ chu đáo</h5>
+        </button>
+        <button class="button-card" onclick="showContent('booking')">
+            <i class="fa-solid fa-clock"></i>
+            <h5 class="card-title">Đặt lịch 24/7</h5>
+        </button>
+    </div>
+
+    <div id="content-box" class="content-box">
+        <h5 id="content-title">Bác sĩ uy tín</h5>
+        <p id="content-text">
+            BookingCare giúp bệnh nhân dễ dàng lựa chọn bác sĩ từ mạng lưới bác sĩ chuyên khoa giỏi, với thông tin đã xác thực và đặt lịch nhanh chóng.<br><br>
+            Bác sĩ chuyên khoa giỏi, được nhiều bệnh nhân tin tưởng, đánh giá cao, có nhiều năm kinh nghiệm.<br><br>
+            Các bác sĩ tại đây, được liên kết từ các bệnh viện lớn như: Bệnh viện Bạch Mai, Bệnh viện Việt Đức, Bệnh viện TW Quốc gia 103, Bệnh viện Nhi TW, 
+            Bệnh viện Mắt Hồng Việt, Viện Tim mạch Việt Nam, Bệnh viện Nhân dân 115...<br><br>
+            Bệnh cạnh đó, đội ngũ bác sĩ cũng sẽ đánh giá phản hồi của bệnh nhân, chuyên môn cao. Chúng tôi cam kết mang lại dịch vụ tốt nhất với sự tận tâm và chuyên nghiệp.
+            Nếu bạn cần tư vấn sức khỏe, hãy liên hệ ngay với chúng tôi để được hỗ trợ.
+        </p>
+    </div>
+    
+
+    <!-- Footer -->
+    <footer class="bg-dark text-center text-lg-start mt-4">
+      <div class="text-center p-3" style="color: #f6f6f6">
+        © 2024 Bản quyền: <a class="text-light" href="#">HeathCare</a>
+        <div class="mt-2">
+          <a href="#" class="me-3 text-light"><i class="fa-brands fa-facebook"></i></a>
+          <a href="#" class="me-3 text-light"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#" class="text-light"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
     <script>
-        document.getElementById('doctor-link').addEventListener('click', function(event) {
-            event.preventDefault();
-            const doctorContainer = document.getElementById('doctor-functions');
-            doctorContainer.style.display = doctorContainer.style.display === 'none' || doctorContainer.style.display === '' ? 'block' : 'none';
-        });
-
-        document.getElementById('schedule-form').addEventListener('submit', function(event) {
-            event.preventDefault();
-            alert('Work schedule has been updated!');
-        });
-
-        document.getElementById('notes-form').addEventListener('submit', function(event) {
-            event.preventDefault();
-            alert('Notes have been saved!');
-        });
-
-        function startConsultation() {
-            alert('Online consultation has started!');
+        function showContent(buttonId) {
+            const contentTitle = document.getElementById('content-title');
+            const contentText = document.getElementById('content-text');
+            if (buttonId === 'doctor') {
+                contentTitle.textContent = 'Bác sĩ uy tín';
+                contentText.innerHTML = 'BookingCare giúp bệnh nhân dễ dàng lựa chọn bác sĩ từ mạng lưới bác sĩ chuyên khoa giỏi, với thông tin đã xác thực và đặt lịch nhanh chóng.<br><br>Bác sĩ chuyên khoa giỏi, được nhiều bệnh nhân tin tưởng, đánh giá cao, có nhiều năm kinh nghiệm.<br><br>Các bác sĩ tại đây, được liên kết từ các bệnh viện lớn như: Bệnh viện Bạch Mai, Bệnh viện Việt Đức, Bệnh viện TW Quốc gia 103, Bệnh viện Nhi TW, Bệnh viện Mắt Hồng Việt, Viện Tim mạch Việt Nam, Bệnh viện Nhân dân 115...<br><br>Bệnh cạnh đó, đội ngũ bác sĩ cũng sẽ đánh giá phản hồi của bệnh nhân, chuyên môn cao. Chúng tôi cam kết mang lại dịch vụ tốt nhất với sự tận tâm và chuyên nghiệp. Nếu bạn cần tư vấn sức khỏe, hãy liên hệ ngay với chúng tôi để được hỗ trợ.';
+            } else if (buttonId === 'correct-disease') {
+                contentTitle.textContent = 'Đúng người đúng bệnh';
+                contentText.innerHTML = 'Các chuyên khoa được thực hiện khoa học, thống nhất và kinh nghiệm được xác thực, nó giúp bệnh cảm nhận được hiệu quả và giảm thiểu thời gian khám chữa bệnh.<br><br>“Đúng bác sĩ” giúp bệnh nhân nhận được gợi ý bác sĩ chuyên khoa giỏi phù hợp với bệnh của mình.<br><br>Nguyện vọng BookingCare nỗ lực kết nối bệnh nhân đến <strong>“đúng bác sĩ” </strong>với vấn đề của mình.';
+            } else if (buttonId === 'support') {
+                contentTitle.textContent = 'Hỗ trợ chu đáo';
+                contentText.innerHTML = '<strong>Giúp bệnh nhân dễ dàng lựa chọn đúng bác sĩ từ mạng lưới bác sĩ chuyên khoa giỏi với thông tin đã xác thực và đặt lịch nhanh.</strong><br><br>Mạng lưới bác sĩ chuyên khoa giỏi, uy tín, thông tin minh bạch, rõ ràng<br><br>Mạng lưới bác sĩ chuyên khoa giỏi, uy tín, thông tin minh bạch, rõ ràng<br><br>Sắp xếp đúng bác sĩ mà bệnh nhân đặt lịch khám<br><br>Hỗ trợ trước, trong và sau khi đi khám<br><br>Bảo vệ quyền lợi của bệnh nhân khi đi khám<br><br><strong>Hỗ trợ trước, trong và sau khi đi khám.</strong><br><br><strong>Trước khám</strong><br><br>Nhắc lịch khám, dặn dò chuẩn bị trước khi đi khám<br><br>Hướng dẫn đi lại, quy trình làm thủ tục khám<br><br><strong>Trong khi khám</strong><br><br>Hỗ trợ giải quyết các vướng mắc trong khi khám<br><br>Hỗ trợ người bệnh những yêu cầu nảy sinh<br><br><strong>Sau khi khám</strong><br><br>Ghi nhận ý kiến của bệnh nhân sau khám<br><br>Hỗ trợ giải đáp, làm rõ những vấn đề chuyên môn<br><br>Hỗ trợ bảo vệ quyền lợi của bệnh nhân sau khi đi khám<br><br><strong>Khám lại miễn phí</strong><br><br>Sau khi đi khám, nếu người bệnh không hài lòng với qui trình khám, tư vấn và phương án điều trị của bác sĩ, hệ thống sẽ hỗ trợ bệnh nhân gặp lại bác sĩ để được khám và tư vấn kỹ hơn (nếu bệnh nhân có yêu cầu).<br><br>Bệnh nhân được hỗ trợ khám miễn phí với bác sĩ khác cùng chuyên khoa (nếu yêu cầu của bệnh nhân phù hợp).<br><br><br><br>BookingCare không trực tiếp cung cấp dịch vụ khám, chữa bệnh mà đóng vai trò trung gian kết nối giữa bệnh nhân và bác sĩ. Trong thực tế khám chữa bệnh, những vướng nảy sinh là khó tránh khỏi. Vì có quan hệ đối tác tin cậy với các bác sĩ, cơ sở y tế, chúng tôi sẽ hỗ trợ giải quyết băn khoăn của bệnh nhân một cách thấu đáo. Trong thực tế, nhiều thắc mắc của bệnh nhân đã được giải đáp rõ ràng hoặc hỗ trợ khám lại miễn phí.';
+            } else if (buttonId === 'booking') {
+                contentTitle.textContent = 'Đặt lịch 24/7';
+                contentText.innerHTML = 'BookingCare.vn hoạt động liên tục 24 giờ một ngày, 7 ngày một tuần, và 365 ngày một năm, kể cả ngày nghỉ và ngày lễ để bạn có thể đặt lịch trực tuyến. Đây là một lợi thế lớn của hệ thống đặt lịch khám trên Internet, hoạt động liên tục 24/7 thay vì chỉ giới hạn trong giờ hành chính như dịch vụ truyền thống.<br><br><strong>Cụ thể như sau:</strong><br><br>Đặt lịch trực tuyến: 24 giờ/ngày, 7 ngày/tuần, 365 ngày/năm. Người dùng đặt khám trực tuyến bằng cách chọn chuyên khoa, bác sĩ, bệnh viện hoặc phòng khám theo nhu cầu khám chữa bệnh.<br><br>Từ 6h30 - 18h00 hàng ngày (trừ ngày nghỉ, ngày lễ, Tết): Đội ngũ hỗ trợ của BookingCare sẽ hỗ trợ trực tiếp với những trường hợp khó khăn lựa chọn chuyên khoa, bác sĩ để đặt khám.<br><br>Bạn có thể sử dụng dịch vụ đặt lịch khám của BookingCare bất cứ lúc nào nếu bạn có một tình trạng sức khỏe không khẩn cấp, có kế hoạch thăm khám chủ động. Hoặc đơn giản là muốn có một lựa chọn phù hợp, hiệu quả thay cho việc đến đăng ký khám trực tiếp, xếp hàng và chờ đợi tại các cơ sở y tế.';
+            }
         }
     </script>
-</body>
 </html>
