@@ -11,14 +11,9 @@
     />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./assets/css/myStyle.css" />
+    <link rel="stylesheet" href="./assets/css/setColor.css">
     <title>HeathCare</title>
-    <style>
-      /*  */
-      :root{
-        --aqua-color:#00CED1;
-        --navbar-color:blue;
-      }
-    </style>
+   
   </head>
   <body>
     <!-- DashBroad -->
@@ -30,35 +25,62 @@
             <span class="navbar-toggler-icon"></span>
           </button>
         <!-- navBar -->
-          <a class="navbar-brand ms-1 " href="#"><img  width="125px" src="./assets/img/logo.png" alt=""></a>
-  
-              <ul class="navbar-nav  me-auto mb-2 mb-lg-0 d-sm-flex flex-row ms-auto ms-md-0 order-md-0 order-1 mt-3 mt-lg-0">
-                <li class="nav-item me-2 me-md-2 ">
-                  <a class="nav-link active fw-semibold "  aria-current="page" href="./index.html">Home</a>
-                </li>
-               
-                <li class="nav-item me-2 me-md-2">
-                  <a class="nav-link " href="./about.html">About</a>
-                </li>
-                <li class="nav-item me-2 me-md-2">
-                  <a class="nav-link " href="#">Hospital</a>
-                </li>
-                <li class="nav-item me-2 me-md-2">
-                  <a class="nav-link " href="#">Wellness</a>
-                </li>
-              </ul>
-          <form class="d-flex  order-md-1 order-0" role="search">
-            <!-- search khi chưa sm -->
-            <div class="d-flex justify-content-center align-items-center d-none d-lg-flex  position-relative "><i class="d-none d-lg-flex fa-solid fa-magnifying-glass position-absolute start-0  "style="color: #41353d";></i></div>
-            <input class="form-control form-control-search me-2 rounded-pill d-none d-lg-flex   " type="search" placeholder="Search" aria-label="Search">
-          </form>
-          <div class="order-md-2 d-flex mt-lg-0 mt-sm-2 mt-sm-0 order-0 ms-5 mt-2 mt-sm-0 ms-sm-0">
-            <!-- search khi small -->
-            <div class="me-1 py-1 px-2 d-lg-none me-2 rounded-start rounded-end" style="background-color: azure;"><a href=""><i class="fa-solid fa-magnifying-glass p-2 "style="color: #41353d";></i></a></div>
+        <a class="navbar-brand ms-1" href="./index.html"
+        ><img width="125px" src="./assets/img/logo.png" alt=""
+      /></a>
 
-            <div class="me-1 "> <a href="" class="px-md-3 btn btn-primary "><i class="d-none d-lg-inline fa-solid fa-user-plus me-2 "></i><span> Sign up</span></a></div>
-            <div class=""> <a href="" class="btn btn-primary ">Login</a></div>
-          </div>
+        <ul  class="list-unstyled nav-tabs nav-tabs-scroll border-0 mb-3 me-auto mb-2 mb-lg-0 d-flex flex-row  ms-auto order-lg-0 order-1 mt-3 mt-lg-0">
+          <li class="nav-item me-2 me-md-2 ">
+            <a class="nav-link active fw-semibold" aria-current="page" href="./index.html"
+              >Home</a>
+          </li>
+
+          <li class="nav-item me-2 me-md-2">
+            <a class="nav-link " href="./about.html"
+              >About</a
+            >
+          </li>
+          <li class="nav-item me-2 me-md-2">
+            <a class="nav-link" href="./project.html">Project</a>
+          </li>
+          <li class="nav-item me-2 me-md-2">
+            <a class="nav-link" href="#">Hospital</a>
+          </li>
+          
+          <li class="nav-item me-2 me-md-2">
+            <a class="nav-link" href="#">Wellness</a>
+          </li>
+         
+        </ul>
+      
+    <form class="d-flex order-lg-1 order-2 d-xl-flex d-flex d-sm-none text-center" role="search">
+      <!-- search khi chưa sm -->
+      <div
+        class="d-flex justify-content-center align-items-center  d-lg-flex  position-relative" >
+        <i class=" d-lg-flex fa-solid fa-magnifying-glass position-absolute start-0 ms-5 ms-md-0"style="color: #41353d";></i>
+      </div>
+      <input class="form-control form-control-search me-2 rounded-pill ms-5 ms-md-0 border " type="search"placeholder="Search" aria-label="Search"/>
+    </form>
+    <div class="order-lg-2 order-0 d-flex mt-lg-0  mt-sm-2 mt-sm-0  mt-2 mt-sm-0 ms-sm-3 ">
+      <!-- search khi small -->
+      <div
+        class="me-1 py-1 px-2 d-xl-none d-sm-flex d-none me-2 rounded-start rounded-end"
+        style="background-color: azure"
+      >
+        <a href=""
+          ><i
+            class="fa-solid fa-magnifying-glass p-2"
+            style="color: #41353d"
+            ;
+          ></i
+        ></a>
+      </div>
+
+        <div class="ms-auto ">
+          
+          <a href="" class="px-3 btn d-flex flex-column text-center" style="color:  var(--bookNow-color); background-color: #007BFF;" > <i class="fa-regular fa-clipboard"></i> Book now</a>
+        </div>
+    </div>
           <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
             <div class="offcanvas-header">
               <h5 class="offcanvas-title " id="offcanvasNavbarLabel">Menu</h5>
@@ -81,19 +103,19 @@
 
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#"><i class="fa-solid fa-folder"></i> Digital Transformation Package</a>
+                  <a class="nav-link" href="./digital.html"><i class="fa-solid fa-folder"></i> Digital Transformation Package</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#"><i class="fa-solid fa-users"></i> Recruitment</a>
+                  <a class="nav-link" href="./Recruitment.html"><i class="fa-solid fa-users"></i> Recruitment</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#"><i class="fa-solid fa-hospital-user"></i> Patitent</a>
+                  <a class="nav-link" href="./patient.html"><i class="fa-solid fa-hospital-user"></i> Patitent</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#"><i class="fa-solid fa-user-doctor"></i> Doctor</a>
+                  <a class="nav-link" href="./doctor.html"><i class="fa-solid fa-user-doctor"></i> Doctor</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#"><i class="fa-solid fa-flag"></i> Role of bookingcare</a>
+                  <a class="nav-link" href="./roleOf.html"><i class="fa-solid fa-flag"></i> Role of bookingcare</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="./hotLine.html"><i class="fa-solid fa-phone"></i> Hotline</a>
@@ -185,7 +207,7 @@
                 <!-- img left -->
                 <div class="me-5"> 
                     <img class="img-thumbnail rounded-pill " width="260" src="./assets/img/140537-chuyen-khoa.png" alt=""> 
-                   <h5 class="text-center mt-2">Chuyên khoa</h5>
+                   <h5 class="text-center mt-2">Specialty</h5>
                 </div>
   
                 <!-- img right -->
@@ -197,12 +219,14 @@
             </div>
            <!-- Dịch Vụ Toàn Diện -->
            <div class="container  py-sm-5 mt-5 mt-sm-0"> 
-            <h3>Dịch vụ</h3>
+            <h3>Service</h3>
               <div class="container row mt-3 ">
                   <div class="col-sm-6" style="background-color: var(--background-color) !important;">
                     <div class="rounded-pill menu-item bg-white p-3  d-flex align-items-center gap-3 border border-1 border border-1">
                       <div class="icon-bg align-items-center justify-content-center d-flex p-2 rounded-start rounded-end ms-0 ms-sm-3 "><i class="fas fa-hospital fs-1"></i></div>
                       <span class="fs-4 ms-3 ">Khám chuyên khoa</span>
+                      
+                              
                     </div>
                   </div>
                   <div class="col-sm-6 mt-3 mt-sm-0" style="background-color: var(--background-color) !important;">
@@ -232,7 +256,7 @@
               <div class="col-sm-6" style="background-color: var(--background-color) !important;">
                 <div class="rounded-pill menu-item bg-white p-3 d-flex align-items-center gap-3 border border-1">
                   <div class="icon-bg align-items-center justify-content-center d-flex p-2 rounded-start rounded-end ms-0 ms-sm-3"><i class="fas fa-brain fs-1"></i></div>
-                  <span class="fs-4 ms-3 ">Khám chuyên khoa</span>
+                  <span class="fs-4  ms-3 ">Khám chuyên khoa</span>
                 </div>
               </div>
               <div class="col-sm-6 mt-3 mt-sm-0" style="background-color: var(--background-color) !important;">
@@ -277,31 +301,36 @@
               <!-- Chuyên Khoa -->
    <div class="container mt-3 mt-sm-0">
      <div class="d-flex justify-content-between">
-                    <h3>Chuyên Khoa</h3>
+                    <h3>Specialty</h3>
             <div class="p-2 "> <a href="" class="text-decoration-none fs-5">Xem thêm</a></div>
      </div>
-                    <div class="container mt-3">
+                    <div class="container mt-3 ">
                       <div id="carouselExample" class="carousel slide">
                         <div class="carousel-inner position-relative">
                           <div class="carousel-item active">
                             <div class="d-flex flex-row justify-content-evenly">
                               <div class="card" style="width: 20rem;">
                                 <img src="./assets/img/icon_chuyenKhoa/101627-co-xuong-khop.png" class="card-img-top" alt="...">
-                                <div class="card-body">
-                                  <h5 class="card-title text-center">Cơ xương khớp</h5>
+                                <div class="card-body ">
+                                  <h5 class="card-title   d-none d-lg-flex justify-content-center ">Cơ xương khớp</h5>
+                                  <h5 class="card-title   d-sm-flex small d-lg-none justify-content-center">Cơ xương khớp</h5>
                                 </div>
                               </div>
                               <div class="card " style="width: 20rem;">
                                 <img src="./assets/img/icon_chuyenKhoa/101739-than-kinh.png" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                  <h5 class="card-title text-center">Khoa thần kinh</h5>
+                        
+                                  
+                                  <h5 class="card-title   d-none d-lg-flex justify-content-center ">Khoa thần kinh</h5>
+                                  <h5 class="card-title   d-sm-flex small d-lg-none justify-content-center">Khoa thần kinh</h5>
                                   
                                 </div>
                               </div>
                               <div class="card" style="width: 20rem;">
                                 <img src="./assets/img/icon_chuyenKhoa/101713-tieu-hoa.png" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                  <h5 class="card-title text-center">Khoa tiêu hóa</h5>
+                                  <h5 class="card-title   d-sm-flex small d-lg-none justify-content-center">Khoa tiêu hóa</h5>
+                                  <h5 class="card-title   d-none d-lg-flex justify-content-center ">Khoa tiêu hóa</h5>
                                   
                                 </div>
                               </div>
@@ -313,21 +342,23 @@
                               <div class="card" style="width: 20rem;">
                                 <img src="./assets/img/icon_chuyenKhoa/101713-tim-mach.png" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                  <h5 class="card-title text-center">Tim mạch</h5>
+                                  <h5 class="card-title   d-none d-lg-flex justify-content-center ">Tim mạch</h5>
+                                  <h5 class="card-title   d-sm-flex small d-lg-none justify-content-center">Tim mạch</h5>
                                 </div>
                               </div>
                               <div class="card " style="width: 20rem;">
                                 <img src="./assets/img/icon_chuyenKhoa/101713-tai-mui-hong.png" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                  <h5 class="card-title text-center">Cột sống</h5>
+                                  <h5 class="card-title   d-none d-lg-flex justify-content-center ">Cột sống</h5>
+                                  <h5 class="card-title   d-sm-flex small d-lg-none justify-content-center">Cột sống</h5>
                                   
                                 </div>
                               </div>
                               <div class="card" style="width: 20rem;">
                                 <img src="./assets/img/icon_chuyenKhoa/101739-y-hoc-co-truyen.png" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                  <h5 class="card-title text-center">Y học cổ truyền</h5>
-                                  
+                                  <h5 class="card-title   d-none d-lg-flex justify-content-center ">Y học cổ truyền</h5>
+                                  <h5 class="card-title   d-sm-flex small d-lg-none justify-content-center">Y học cổ truyền</h5>
                                 </div>
                               </div>
                             </div>
@@ -338,20 +369,23 @@
                               <div class="card" style="width: 20rem;">
                                 <img src="./assets/img/icon_chuyenKhoa/101627-cham-cuu.png" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                  <h5 class="card-title text-center">Châm cứu</h5>
+                                  <h5 class="card-title   d-none d-lg-flex justify-content-center ">Châm cứu</h5>
+                                  <h5 class="card-title   d-sm-flex small d-lg-none justify-content-center">Châm cứu</h5>
                                 </div>
                               </div>
                               <div class="card " style="width: 20rem;">
                                 <img src="./assets/img/icon_chuyenKhoa/101713-san-phu-khoa.png" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                  <h5 class="card-title text-center">Sản phụ khoa</h5>
+                                  <h5 class="card-title   d-none d-lg-flex justify-content-center ">Sản phụ khoa</h5>
+                                  <h5 class="card-title   d-sm-flex small d-lg-none justify-content-center">Sản phụ khoa</h5>
                                   
                                 </div>
                               </div>
                               <div class="card" style="width: 20rem;">
                                 <img src="./assets/img/icon_chuyenKhoa/101713-sieu-am-thai.png" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                  <h5 class="card-title text-center">Siêu âm thai</h5>
+                                  <h5 class="card-title   d-none d-lg-flex justify-content-center ">Siêu âm thai</h5>
+                                  <h5 class="card-title   d-sm-flex small d-lg-none justify-content-center">Siêu âm thai</h5>
                                   
                                 </div>
                               </div>
@@ -364,20 +398,23 @@
                               <div class="card" style="width: 20rem;">
                                 <img src="./assets/img/icon_chuyenKhoa/101655-nhi-khoa.png" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                  <h5 class="card-title text-center">Nhi khoa</h5>
+                                  <h5 class="card-title   d-none d-lg-flex justify-content-center ">Nhi khoa</h5>
+                                  <h5 class="card-title   d-sm-flex small d-lg-none justify-content-center">Nhi khoa</h5>
                                 </div>
                               </div>
                               <div class="card " style="width: 20rem;">
                                 <img src="./assets/img/icon_chuyenKhoa/101638-da-lieu.png" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                  <h5 class="card-title text-center">Da liễu</h5>
+                                  <h5 class="card-title   d-none d-lg-flex justify-content-center ">Da liễu</h5>
+                                  <h5 class="card-title   d-sm-flex small d-lg-none justify-content-center">Da liễu</h5>
                                   
                                 </div>
                               </div>
                               <div class="card" style="width: 20rem;">
                                 <img src="./assets/img/icon_chuyenKhoa/101739-viem-gan.png" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                  <h5 class="card-title text-center">Bệnh viêm gan</h5>
+                                  <h5 class="card-title   d-none d-lg-flex justify-content-center ">Bệnh viêm gan</h5>
+                                  <h5 class="card-title   d-sm-flex small d-lg-none justify-content-center">Bệnh viêm gan</h5>
                                   
                                 </div>
                               </div>
@@ -390,20 +427,23 @@
                               <div class="card" style="width: 20rem;">
                                 <img src="./assets/img/icon_chuyenKhoa/101713-suc-khoe-tam-than.png" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                  <h5 class="card-title text-center">Sức khỏe tâm thần</h5>
+                                  <h5 class="card-title   d-none d-lg-flex justify-content-center ">Sức khỏe tâm thần</h5>
+                                  <h5 class="card-title   d-sm-flex small d-lg-none justify-content-center">Sức khỏe tâm thần</h5>
                                 </div>
                               </div>
                               <div class="card " style="width: 20rem;">
                                 <img src="./assets/img/icon_chuyenKhoa/101638-di-ung-mien-dich.png" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                  <h5 class="card-title text-center">Dị ứng miễn dịch</h5>
+                                  <h5 class="card-title   d-none d-lg-flex justify-content-center ">Dị ứng miễn dịch</h5>
+                                  <h5 class="card-title   d-sm-flex small d-lg-none justify-content-center">Dị ứng miễn dịch</h5>
                                   
                                 </div>
                               </div>
                               <div class="card" style="width: 20rem;">
                                 <img src="./assets/img/icon_chuyenKhoa/101638-ho-hap-phoi.png" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                  <h5 class="card-title text-center">Hô hấp - Phổi</h5>
+                                  <h5 class="card-title   d-none d-lg-flex justify-content-center ">Hô hấp - Phổi</h5>
+                                  <h5 class="card-title   d-sm-flex small d-lg-none justify-content-center">Hô hấp - Phổi</h5>
                                   
                                 </div>
                               </div>
@@ -416,20 +456,23 @@
                               <div class="card" style="width: 20rem;">
                                 <img src="./assets/img/icon_chuyenKhoa/101655-ngoai-than-kinh.png" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                  <h5 class="card-title text-center">Ngoại thần kinh</h5>
+                                  <h5 class="card-title   d-none d-lg-flex justify-content-center ">Ngoại thần kinh</h5>
+                                  <h5 class="card-title   d-sm-flex small d-lg-none justify-content-center">Ngoại thần kinh</h5>
                                 </div>
                               </div>
                               <div class="card " style="width: 20rem;">
                                 <img src="./assets/img/icon_chuyenKhoa/101655-nam-hoc.png" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                  <h5 class="card-title text-center">Nam học</h5>
+                                  <h5 class="card-title   d-none d-lg-flex justify-content-center ">Nam học</h5>
+                                  <h5 class="card-title   d-sm-flex small d-lg-none justify-content-center">Nam học</h5>
                                   
                                 </div>
                               </div>
                               <div class="card" style="width: 20rem;">
                                 <img src="./assets/img/icon_chuyenKhoa/101638-mat.png" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                  <h5 class="card-title text-center">Chuyên khoa mắt</h5>
+                                  <h5 class="card-title   d-none d-lg-flex justify-content-center ">Chuyên khoa mắt</h5>
+                                  <h5 class="card-title   d-sm-flex small d-lg-none justify-content-center">Chuyên khoa mắt</h5>
                                   
                                 </div>
                               </div>
@@ -442,20 +485,23 @@
                               <div class="card" style="width: 20rem;">
                                 <img src="./assets/img/icon_chuyenKhoa/101739-than-tiet-nieu.png" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                  <h5 class="card-title text-center">Thận - Tiết niệu</h5>
+                                  <h5 class="card-title   d-none d-lg-flex justify-content-center ">Thận - Tiết niệu</h5>
+                                  <h5 class="card-title   d-sm-flex small d-lg-none justify-content-center">Thận - Tiết niệu</h5>
                                 </div>
                               </div>
                               <div class="card " style="width: 20rem;">
                                 <img src="./assets/img/icon_chuyenKhoa/101655-noi-khoa.png" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                  <h5 class="card-title text-center">Nội khoa</h5>
+                                  <h5 class="card-title   d-none d-lg-flex justify-content-center ">Nội khoa</h5>
+                                  <h5 class="card-title   d-sm-flex small d-lg-none justify-content-center">Nội khoa</h5>
                                   
                                 </div>
                               </div>
                               <div class="card" style="width: 20rem;">
                                 <img src="./assets/img/icon_chuyenKhoa/101655-nha-khoa.png" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                  <h5 class="card-title text-center">Nha khoa</h5>
+                                  <h5 class="card-title   d-none d-lg-flex justify-content-center ">Nha khoa</h5>
+                                  <h5 class="card-title   d-sm-flex small d-lg-none justify-content-center">Nha khoa</h5>
                                   
                                 </div>
                               </div>
@@ -468,20 +514,23 @@
                               <div class="card" style="width: 20rem;">
                                 <img src="./assets/img/icon_chuyenKhoa/101713-tieu-duong.png" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                  <h5 class="card-title text-center">Tiểu đường - Nội tiết</h5>
+                                  <h5 class="card-title   d-none d-lg-flex justify-content-center ">Tiểu đường - Nội tiết</h5>
+                                  <h5 class="card-title   d-sm-flex small d-lg-none justify-content-center">Tiểu đường - Nội tiết</h5>
                                 </div>
                               </div>
                               <div class="card " style="width: 20rem;">
                                 <img src="./assets/img/icon_chuyenKhoa/101713-phuc-hoi-chuc-nang.png" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                  <h5 class="card-title text-center">Phục hồi chức năng</h5>
+                                  <h5 class="card-title   d-none d-lg-flex justify-content-center ">Phục hồi chức năng</h5>
+                                  <h5 class="card-title   d-sm-flex small d-lg-none justify-content-center">Phục hồi chức năng</h5>
                                   
                                 </div>
                               </div>
                               <div class="card" style="width: 20rem;">
                                 <img src="./assets/img/icon_chuyenKhoa/101713-sieu-am-thai.png" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                  <h5 class="card-title text-center">Chụp cộng hưởng từ</h5>
+                                  <h5 class="card-title   d-none d-lg-flex justify-content-center ">Chụp cộng hưởng từ</h5>
+                                  <h5 class="card-title   d-sm-flex small d-lg-none justify-content-center">Chụp cộng hưởng từ</h5>
                                   
                                 </div>
                               </div>
@@ -494,20 +543,23 @@
                               <div class="card" style="width: 20rem;">
                                 <img src="./assets/img/icon_chuyenKhoa/101627-chup-cat-lop.png" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                  <h5 class="card-title text-center">Chụp cắt lớp vi tính</h5>
+                                  <h5 class="card-title   d-none d-lg-flex justify-content-center ">Chụp cắt lớp vi tính</h5>
+                                  <h5 class="card-title   d-sm-flex small d-lg-none justify-content-center">Chụp cắt lớp vi tính</h5>
                                 </div>
                               </div>
                               <div class="card " style="width: 20rem;">
                                 <img src="./assets/img/icon_chuyenKhoa/101655-noi-soi-tieu-hoa.png" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                  <h5 class="card-title text-center">Nội soi tiêu hóa</h5>
+                                  <h5 class="card-title   d-none d-lg-flex justify-content-center ">Nội soi tiêu hóa</h5>
+                                  <h5 class="card-title   d-sm-flex small d-lg-none justify-content-center">Nội soi tiêu hóa</h5>
                                   
                                 </div>
                               </div>
                               <div class="card" style="width: 20rem;">
                                 <img src="./assets/img/icon_chuyenKhoa/101739-ung-buou.png" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                  <h5 class="card-title text-center">Ưng bứu</h5>
+                                  <h5 class="card-title   d-none d-lg-flex justify-content-center ">Ưng bứu</h5>
+                                  <h5 class="card-title   d-sm-flex small d-lg-none justify-content-center">Ưng bứu</h5>
                                   
                                 </div>
                               </div>
@@ -520,20 +572,23 @@
                               <div class="card" style="width: 20rem;">
                                 <img src="./assets/img/icon_chuyenKhoa/101638-da-lieu-tham-my.png" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                  <h5 class="card-title text-center">Da liễu thẩm mỹ</h5>
+                                  <h5 class="card-title   d-none d-lg-flex justify-content-center ">Da liễu thẩm mỹ</h5>
+                                  <h5 class="card-title   d-sm-flex small d-lg-none justify-content-center">Da liễu thẩm mỹ</h5>
                                 </div>
                               </div>
                               <div class="card " style="width: 20rem;">
                                 <img src="./assets/img/icon_chuyenKhoa/101739-truyen-nhiem.png" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                  <h5 class="card-title text-center">Truyền nhiễm</h5>
+                                  <h5 class="card-title   d-none d-lg-flex justify-content-center ">Truyền nhiễm</h5>
+                                  <h5 class="card-title   d-sm-flex small d-lg-none justify-content-center">Truyền nhiễm</h5>
                                   
                                 </div>
                               </div>
                               <div class="card" style="width: 20rem;">
                                 <img src="./assets/img/icon_chuyenKhoa/101627-bac-si-gia-dinh.png" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                  <h5 class="card-title text-center">Bác sĩ gia đình</h5>
+                                  <h5 class="card-title   d-none d-lg-flex justify-content-center ">Bác sĩ gia đình</h5>
+                                  <h5 class="card-title   d-sm-flex small d-lg-none justify-content-center">Bác sĩ gia đình</h5>
                                   
                                 </div>
                               </div>
@@ -546,20 +601,23 @@
                               <div class="card" style="width: 20rem;">
                                 <img src="./assets/img/icon_chuyenKhoa/101713-tao-hinh-ham-mat.png" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                  <h5 class="card-title text-center">Tạo hình hàm mặt</h5>
+                                  <h5 class="card-title   d-none d-lg-flex justify-content-center ">Tạo hình hàm mặt</h5>
+                                  <h5 class="card-title   d-sm-flex small d-lg-none justify-content-center">Tạo hình hàm mặt</h5>
                                 </div>
                               </div>
                               <div class="card " style="width: 20rem;">
                                 <img src="./assets/img/icon_chuyenKhoa/101739-tu-van-tam-ly.png" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                  <h5 class="card-title text-center">Tư vấn, trị liệu tâm lí</h5>
+                                  <h5 class="card-title   d-none d-lg-flex justify-content-center ">Tư vấn, trị liệu tâm lí</h5>
+                                  <h5 class="card-title   d-sm-flex small d-lg-none justify-content-center">Tư vấn, trị liệu tâm lí</h5>
                                   
                                 </div>
                               </div>
                               <div class="card" style="width: 20rem;">
                                 <img src="./assets/img/icon_chuyenKhoa/101739-vo-sinh-hiem-muon.png" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                  <h5 class="card-title text-center">Vô sinh - Hiếm muộn</h5>
+                                  <h5 class="card-title   d-none d-lg-flex justify-content-center ">Vô sinh - Hiếm muộn</h5>
+                                  <h5 class="card-title   d-sm-flex small d-lg-none justify-content-center">Vô sinh - Hiếm muộn</h5>
                                   
                                 </div>
                               </div>
@@ -573,20 +631,23 @@
                               <div class="card" style="width: 20rem;">
                                 <img src="./assets/img/icon_chuyenKhoa/101627-chan-thuong-chinh-hinh.png" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                  <h5 class="card-title text-center">Chấn thương chỉnh hình</h5>
+                                  <h5 class="card-title   d-none d-lg-flex justify-content-center ">Chấn thương chỉnh hình</h5>
+                                  <h5 class="card-title   d-sm-flex small d-lg-none justify-content-center">Chấn thương chỉnh hình</h5>
                                 </div>
                               </div>
                               <div class="card " style="width: 20rem;">
                                 <img src="./assets/img/icon_chuyenKhoa/101655-nieng-rang.png" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                  <h5 class="card-title text-center">Niềng răng</h5>
+                                  <h5 class="card-title   d-none d-lg-flex justify-content-center ">Niềng răng</h5>
+                                  <h5 class="card-title   d-sm-flex small d-lg-none justify-content-center">Niềng răng</h5>
                                   
                                 </div>
                               </div>
                               <div class="card" style="width: 20rem;">
                                 <img src="./assets/img/icon_chuyenKhoa/101627-boc-rang-su.png" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                  <h5 class="card-title text-center">bọc răng sứ</h5>
+                                  <h5 class="card-title   d-none d-lg-flex justify-content-center ">bọc răng sứ</h5>
+                                  <h5 class="card-title   d-sm-flex small d-lg-none justify-content-center">bọc răng sứ</h5>
                                   
                                 </div>
                               </div>
@@ -598,20 +659,23 @@
                               <div class="card" style="width: 20rem;">
                                 <img src="./assets/img/icon_chuyenKhoa/101739-trong-rang.png" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                  <h5 class="card-title text-center">Trồng răng implant</h5>
+                                  <h5 class="card-title   d-none d-lg-flex justify-content-center ">Trồng răng implant</h5>
+                                  <h5 class="card-title   d-sm-flex small d-lg-none justify-content-center">Trồng răng implant</h5>
                                 </div>
                               </div>
                               <div class="card " style="width: 20rem;">
                                 <img src="./assets/img/icon_chuyenKhoa/101655-nho-rang-khon.png" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                  <h5 class="card-title text-center">Nhổ răng khôn</h5>
+                                  <h5 class="card-title   d-none d-lg-flex justify-content-center ">Nhổ răng khôn</h5>
+                                  <h5 class="card-title   d-sm-flex small d-lg-none justify-content-center">Nhổ răng khôn</h5>
                                   
                                 </div>
                               </div>
                               <div class="card" style="width: 20rem;">
                                 <img src="./assets/img/icon_chuyenKhoa/104709-nha-khoa-tong-quat.png" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                  <h5 class="card-title text-center">Nha khoa tổng quát</h5>
+                                  <h5 class="card-title   d-none d-lg-flex justify-content-center ">Nha khoa tổng quát</h5>
+                                  <h5 class="card-title   d-sm-flex small d-lg-none justify-content-center">Nha khoa tổng quát</h5>
                                   
                                 </div>
                               </div>
@@ -624,21 +688,25 @@
                               <div class="card" style="width: 20rem;">
                                 <img src="./assets/img/icon_chuyenKhoa/101655-nha-khoa-tre-em.png" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                  <h5 class="card-title text-center">Nha khoa trẻ em</h5>
+                                  <h5 class="card-title   d-none d-lg-flex justify-content-center ">Nha khoa trẻ em</h5>
+                                  <h5 class="card-title   d-sm-flex small d-lg-none justify-content-center">Nha khoa trẻ em</h5>
+                                  
                                 </div>
                               </div>
                               <div class="card " style="width: 20rem;">
                                 <img src="./assets/img/icon_chuyenKhoa/101739-tuyen-giap.png" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                  <h5 class="card-title text-center">Tuyến giáp</h5>
-                                  
+                               
+                                  <h5 class="card-title   d-none d-lg-flex justify-content-center ">Tuyến giáp</h5>
+                                  <h5 class="card-title   d-sm-flex small d-lg-none justify-content-center">Tuyến giáp</h5>
                                 </div>
                               </div>
                               <div class="card" style="width: 20rem;">
                                 <img src="./assets/img/icon_chuyenKhoa/115336-vu.png" class="card-img-top" alt="...">
                                 <div class="card-body">
-                                  <h5 class="card-title text-center">Chuyển khoa vú</h5>
-                                  
+                                  <h5 class="card-title   d-none d-lg-flex justify-content-center ">Chuyển khoa vú</h5>
+                                  <h5 class="card-title   d-sm-flex small d-lg-none justify-content-center">Chuyển khoa vú</h5>
+                              
                                 </div>
                               </div>
                               
@@ -668,21 +736,24 @@
                       <div class="card" style="width: 20rem;">
                         <div class="ratio ratio-16x9"><img src="./assets/img/icon_coSo/083122lo-go-viet-duc.jpg" class="card-img-top img-thumbnail" alt="..."></div>
                         <div class="card-body">
-                          <h5 class="card-title text-center">Bệnh Viện Hữu Nghị Việt Đức</h5>
+                          <h5 class="card-title text-center d-none d-lg-flex">Bệnh Viện Hữu Nghị Việt Đức</h5>
+                          <h5 class="card-title text-center d-sm-flex small d-lg-none">Bệnh Viện Hữu Nghị Việt Đức</h5>
                         </div>
                       </div>
                       <div class="card " style="width: 20rem;">
                        <div class="ratio ratio-16x9"> <img src="./assets/img/icon_coSo/103904-logo-thucuc.png" class="card-img-top img-thumbnail " alt="..."></div>
                         <div class="card-body">
-                          <h5 class="card-title text-center">Hệ thống Y tế thu cúc TCI</h5>
-                          
+                          <h5 class="card-title text-center d-none d-lg-flex">Hệ thống Y tế thu cúc TCI</h5>
+                          <h5 class="card-title text-center d-sm-flex small d-lg-none">Hệ thống Y tế thu cúc TCI</h5>
+
                         </div>
                       </div>
                       <div class="card" style="width: 20rem;">
                           <div class="ratio ratio-16x9"><img src="./assets/img/icon_coSo/155206-logo-y-duoc-1.jpg" class="card-img-top img-thumbnail" alt="..."></div>
-                                        <div class="card-body">
-                          <h5 class="card-title text-center">Phòng khám bệnh viện đại học Y dược 1</h5>
-                          
+                                        <div class="card-body"> 
+                          <h5 class=" card-title text-center d-none d-lg-flex">Phòng khám bệnh viện ĐH Y dược 1</h5>
+                          <h5 class="card-title text-center d-sm-flex small d-lg-none">Phòng khám bệnh viện ĐH Y dược 1</h5>
+
                         </div>
                       </div>
                       
@@ -694,22 +765,26 @@
                       <div class="card" style="width: 20rem;">
                         <div class="ratio ratio-16x9"><img src="./assets/img/icon_coSo/085056logobenhvien108.jpg" class="card-img-top img-thumbnail" alt="..."></div>
                         <div class="card-body" >
-                          <h5 class="card-title text-center">bệnh viện trung ương quân đội 108</h5>
+                          <h5 class="card-title text-center d-none d-lg-flex">bệnh viện trung ương quân đội 108</h5>
+                          <h5 class="card-title text-center d-sm-flex small d-lg-none">bệnh viện trung ương quân đội 108</h5>
+
                         </div>
                       </div>
                       <div class="card " style="width: 20rem;">
                        <div class="ratio ratio-16x9"> <img src="./assets/img/icon_coSo/153236-logo-hung-viet.jpg" class="card-img-top img-thumbnail" alt="..."></div>
                         <div class="card-body">
-                          <h5 class="card-title text-center">Bệnh viện ưng bưới Hưng Việt</h5>
-                          
+                          <h5 class="card-title text-center d-none d-lg-flex">Bệnh viện ưng bưới Hưng Việt</h5>
+                          <h5 class="card-title text-center d-sm-flex small d-lg-none">Bệnh viện ưng bưới Hưng Việt</h5>
+
                         </div>
                       </div>
                       <div class="card" style="width: 20rem;">
                         <!--  cần resize ảnh này -->
                         <div class="ratio ratio-16x9" ><img src="./assets/img/icon_coSo/104922-logo-med-tai-ha-noi--01.png" class="card-img-top img-thumbnail" alt="..."></div>
                         <div class="card-body">
-                          <h5 class="card-title text-center">Hệ thống y tế MEDLATEC</h5>
-                          
+                          <h5 class="card-title text-center d-none d-lg-flex">Hệ thống y tế MEDLATEC</h5>
+                          <h5 class="card-title text-center d-sm-flex small d-lg-none">Hệ thống y tế MEDLATEC</h5>
+
                         </div>
                       </div>
                       
@@ -721,20 +796,26 @@
                       <div class="card" style="width: 20rem;">
                         <div class="ratio ratio-16x9"><img src="./assets/img/icon_coSo/165735-logo-hong-phat.png" class="card-img-top img-thumbnail" alt="..."></div>
                         <div class="card-body">
-                          <h5 class="card-title text-center">Bệnh viện đa khoa hồng phát</h5>
+                          <h5 class="card-title text-center d-none d-lg-flex">Bệnh viện đa khoa hồng phát</h5>
+                          <h5 class="card-title text-center d-sm-flex small d-lg-none">Bệnh viện đa khoa hồng phát</h5>
+
                         </div>
                       </div>
                       <div class="card " style="width: 20rem;">
                        <div class="ratio ratio-16x9"> <img src="./assets/img/icon_coSo/114029-anh1.jpg" class="card-img-top img-thumbnail" alt="..."></div>
                         <div class="card-body">
-                          <h5 class="card-title text-center">Bệnh viện đa khoa An Việt</h5>
+                          <h5 class="card-title text-center d-none d-lg-flex">Bệnh viện đa khoa An Việt</h5>
+                          <h5 class="card-title text-center d-sm-flex small d-lg-none">Bệnh viện đa khoa An Việt</h5>
+
                           
                         </div>
                       </div>
                       <div class="card" style="width: 20rem;">
                         <div class="ratio ratio-16x9"><img src="./assets/img/icon_coSo/160343logo-nam-hoc-hn.jpg"  class="card-img-top img-thumbnail" alt="..."></div>
                         <div class="card-body">
-                          <h5 class="card-title text-center">Bệnh viện nam học và hiếm muộn Hà Nội</h5>
+                          <h5 class="card-title text-center d-none d-lg-flex">Bệnh viện nam học và hiếm muộn Hà Nội</h5>
+                          <h5 class="card-title text-center d-sm-flex small d-lg-none">Bệnh viện nam học và hiếm muộn Hà Nội</h5>
+
                         </div>
                       </div>
                       
@@ -754,27 +835,29 @@
      </div>
       <!-- gợi í của boookingcarre -->
       <div class="container">
-        <div class="container py-sm-5">
-          <h3>Gợi ý</h3>
+        <div class="container py-sm-5 mt-3">
+          <h3>Tips</h3>
           <div class="container mt-3 d-flex">
             <!-- img left -->
             <div class="me-5"> 
                 <img class="img-thumbnail rounded-pill " width="260" src="./assets/img/144801-3.png" alt=""> 
-               <h5 class="text-center mt-2">Được quan tâm</h5>
+               <h5 class="card-title  d-none d-lg-flex justify-content-center mt-3 ">Được quan tâm</h5>
+                          <h5 class="card-title text-center d-sm-flex small d-lg-none justify-content-center">Được quan tâm</h5>
             </div>
 
             <!-- img right -->
             <div>
               <img class=" img-thumbnail rounded-pill" width="260" src="./assets/img/144801-5.png" alt="">
-              <h5 class="text-center mt-2">Bài viết liên quan</h5>
+              <h5 class="card-title  d-none d-lg-flex justify-content-center mt-3 ">Bài viết liên quan</h5>
+                          <h5 class="card-title text-center d-sm-flex small d-lg-none justify-content-center">Bài viết liên quan</h5>
             </div>
           </div>
         </div>
       </div>
         <!-- Bác Sĩ hỏi Đáp -->
-      <div class="container">
+      <div class="container mt-3">
         <div class="container py-sm-5">
-          <h3>Bác sĩ hỏi đáp</h3>
+          <h3 >Question</h3>
           <div class="container mt-3 d-flex ">
             <!-- img left -->
             <div class="card" style="width: 15rem;">

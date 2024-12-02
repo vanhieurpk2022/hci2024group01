@@ -17,66 +17,68 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="./assets/css/myStyle.css" />
+    <link rel="stylesheet" href="./assets/css/setColor.css">
+
     <title>HeathCare</title>
-   
   </head>
   <body>
     <!--navBar -->
     <!--navBar -->
-     <!-- DashBroad -->
-   <div class="container " >
-    <nav class="navbar bg-body-tertiary">
-      <div class="container" style="color: var(--aqua-color);">
-        
-        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      <!-- navBar -->
-        <a class="navbar-brand ms-1 " href="./index.html"><img  width="125px" src="./assets/img/logo.png" alt=""></a>
-
-          <ul
-            class="navbar-nav me-auto mb-2 mb-lg-0 d-sm-flex flex-row ms-5 ms-md-0 order-md-0 order-1 mt-3 mt-lg-0"
+    <!-- DashBroad -->
+    <div class="container ">
+      <nav class="navbar bg-body-tertiary ">
+        <div class="container" style="color: var(--aqua-color)">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasNavbar"
+            aria-controls="offcanvasNavbar"
+            aria-label="Toggle navigation"
           >
-            <li class="nav-item me-2 me-md-2">
-              <a class="nav-link active" aria-current="page" href="./index.html"
-                >Home</a
-              >
-            </li>
-
-            <li class="nav-item me-2 me-md-2">
-              <a class="nav-link" href="./about.html">About</a>
-            </li>
-            <li class="nav-item me-2 me-md-2">
-              <a class="nav-link" href="#">Hospital</a>
-            </li>
-            <li class="nav-item me-2 me-md-2">
-              <a class="nav-link" href="#">Wellness</a>
-            </li>
-          </ul>
-          <form class="d-flex order-md-1 order-0" role="search">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!-- navBar -->
+            <a class="navbar-brand ms-1" href="./index.html"
+              ><img width="125px" src="./assets/img/logo.png" alt=""
+            /></a>
+  
+              <ul  class="list-unstyled nav-tabs nav-tabs-scroll border-0 mb-3 me-auto mb-2 mb-lg-0 d-flex flex-row  ms-auto order-lg-0 order-1 mt-3 mt-lg-0">
+                <li class="nav-item me-2 me-md-2 ">
+                  <a class="nav-link " aria-current="page" href="./index.html"
+                    >Home</a>
+                </li>
+    
+                <li class="nav-item me-2 me-md-2">
+                  <a class="nav-link active fw-semibold" href="./about.html"
+                    >About</a
+                  >
+                </li>
+                <li class="nav-item me-2 me-md-2">
+                  <a class="nav-link" href="./project.html">Project</a>
+                </li>
+                <li class="nav-item me-2 me-md-2">
+                  <a class="nav-link" href="#">Hospital</a>
+                </li>
+                
+                <li class="nav-item me-2 me-md-2">
+                  <a class="nav-link" href="#">Wellness</a>
+                </li>
+               
+              </ul>
+            
+          <form class="d-flex order-lg-1 order-2 d-xl-flex d-flex d-sm-none text-center" role="search">
             <!-- search khi chưa sm -->
             <div
-              class="d-flex justify-content-center align-items-center d-none d-lg-flex position-relative"
-            >
-              <i
-                class="d-none d-lg-flex fa-solid fa-magnifying-glass position-absolute start-0"
-                style="color: #41353d"
-                ;
-              ></i>
+              class="d-flex justify-content-center align-items-center  d-lg-flex  position-relative" >
+              <i class=" d-lg-flex fa-solid fa-magnifying-glass position-absolute start-0 ms-5 ms-md-0"style="color: #41353d";></i>
             </div>
-            <input
-              class="form-control form-control-search me-2 rounded-pill d-none d-lg-flex"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
+            <input class="form-control form-control-search me-2 rounded-pill ms-5 ms-md-0 border " type="search"placeholder="Search" aria-label="Search"/>
           </form>
-          <div
-            class="order-md-2 d-flex mt-lg-0 mt-sm-2 mt-sm-0 order-0 ms-5 mt-2 mt-sm-0 ms-sm-0"
-          >
+          <div class="order-lg-2 order-0 d-flex mt-lg-0  mt-sm-2 mt-sm-0  mt-2 mt-sm-0 ms-sm-3 ">
             <!-- search khi small -->
             <div
-              class="me-1 py-1 px-2 d-lg-none me-2 rounded-start rounded-end"
+              class="me-1 py-1 px-2 d-xl-none d-sm-flex d-none me-2 rounded-start rounded-end"
               style="background-color: azure"
             >
               <a href=""
@@ -88,10 +90,9 @@
               ></a>
             </div>
 
-            <div class="me-1">
-              <a href="" class="btn btn-primary">Sign up</a>
+            <div class="ms-auto ">
+              <a href="" class="px-3 btn d-flex flex-column text-center" style="color: var(--bookNow-color); background-color: #007BFF;" > <i class="fa-regular fa-clipboard"></i> Book now</a>
             </div>
-            <div class=""><a href="" class="btn btn-primary">Login</a></div>
           </div>
           <div
             class="offcanvas offcanvas-start"
@@ -124,42 +125,38 @@
                   >
                 </li>
                 <li class="nav-item">
-
                   <a class="nav-link" href="contact.html"
-
                     ><i class="fa-regular fa-handshake"></i> Contact</a
                   >
                 </li>
                 <li class="nav-item">
-
                   <a class="nav-link" href="business.html"
-
                     ><i class="fa-solid fa-building"></i> Business heath</a
                   >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#"
+                  <a class="nav-link" href="./digital.html"
                     ><i class="fa-solid fa-folder"></i> Digital Transformation
                     Package</a
                   >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#"
+                  <a class="nav-link" href="./Recruitment.html"
                     ><i class="fa-solid fa-users"></i> Recruitment</a
                   >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#"
+                  <a class="nav-link" href="./patient.html"
                     ><i class="fa-solid fa-hospital-user"></i> Patitent</a
                   >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#"
+                  <a class="nav-link" href="./doctor.html"
                     ><i class="fa-solid fa-user-doctor"></i> Doctor</a
                   >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#"
+                  <a class="nav-link" href="./roleOf.html"
                     ><i class="fa-solid fa-flag"></i> Role of bookingcare</a
                   >
                 </li>
@@ -188,11 +185,11 @@
       <div class="container mt-5">
         <h1 class="text-center">Wellcome to my group</h1>
 
-        <div class="card-group mt-5">
+        <div class="card-group mt-5 border">
           <div class="card">
             <img
-              src="./assets/img/avatar-svgrepo-com.svg"
-              class="card-img-top"
+              src="./assets/img/avatar.svg"
+              class="card-img-top  rounded ratio-4x3"
               alt="avatar"
             />
             <div
@@ -221,10 +218,8 @@
               </div>
             </div>
           </div>
-          <div class="card ms-2">
-
-            <img src="./assets/img/avtQ.jpg" class="card-img-top" alt="..." />
-
+          <div class="card ms-2 border">
+            <img src="./assets/img/avtQ.jpg" class="card-img-top rounded ratio-4x3" alt="..." />
 
             <div class="card-body">
               <h5 class="card-title text-center">Đỗ Minh Quốc</h5>
@@ -250,12 +245,8 @@
               </div>
             </div>
           </div>
-          <div class="card ms-2">
-            <img
-              src="./assets/img/avatar-svgrepo-com.svg"
-              class="card-img-top"
-              alt="..."
-            />
+          <div class="card ms-2 border">
+            <img src="./assets/img/avatar.svg" class="card-img-top  rounded ratio-4x3" alt="..." />
             <div class="card-body">
               <h5 class="card-title text-center">Đoàn Huy Cương</h5>
               <p class="text-center"><small>Member</small></p>
@@ -277,10 +268,10 @@
               </div>
             </div>
           </div>
-          <div class="card ms-2">
+          <div class="card ms-2 border">
             <img
               src="https://i.imgur.com/FQZew1m.png"
-              class="card-img-top"
+              class="card-img-top  rounded ratio-4x3"
               alt="..."
             />
             <div class="card-body">
@@ -305,12 +296,8 @@
               </div>
             </div>
           </div>
-          <div class="card ms-2">
-            <img
-              src="./assets/img/avatar-svgrepo-com.svg"
-              class="card-img-top"
-              alt="..."
-            />
+          <div class="card ms-2 border">
+            <img src="./assets/img/avatar.svg" class="card-img-top  rounded ratio-4x3" alt="..." />
             <div class="card-body">
               <h5 class="card-title text-center">Nguyễn Thành An</h5>
               <p class="text-center"><small>Member</small></p>
@@ -335,8 +322,9 @@
         </div>
       </div>
     </header>
-      <!-- Footer -->
-    <footer class="bg-dark text-center text-lg-start mt-4">
+    
+    <!-- Footer -->
+    <footer id="footer_id" class="bg-dark text-center text-lg-start">
       <div class="text-center p-3" style="color: #f6f6f6">
         © 2024 Bản quyền:
         <a class="text-light" href="#">HeathCare</a>
@@ -353,6 +341,7 @@
         </div>
       </div>
     </footer>
+
     <!-- nhung javascript -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

@@ -17,13 +17,10 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="./assets/css/myStyle.css" />
+    <link rel="stylesheet" href="./assets/css/setColor.css">
+
     <title>HeathCare</title>
-    <style>
-      /*  */
-      :root {
-        --aqua-color: #00ced1;
-      }
-    </style>
+
   </head>
   <body>
     <!-- DashBroad -->
@@ -42,69 +39,61 @@
           </button>
           <!-- navBar -->
           <a class="navbar-brand ms-1" href="./index.html"
-            ><img width="125px" src="./assets/img/logo.png" alt=""
-          /></a>
+          ><img width="125px" src="./assets/img/logo.png" alt=""
+        /></a>
 
-          <ul
-            class="navbar-nav me-auto mb-2 mb-lg-0 d-sm-flex flex-row ms-5 ms-md-0 order-md-0 order-1 mt-3 mt-lg-0"
-          >
-            <li class="nav-item me-2 me-md-2">
-              <a class="nav-link" aria-current="page" href="./index.html"
-                >Home</a
-              >
+          <ul  class="list-unstyled nav-tabs nav-tabs-scroll border-0 mb-3 me-auto mb-2 mb-lg-0 d-flex flex-row  ms-auto order-lg-0 order-1 mt-3 mt-lg-0">
+            <li class="nav-item me-2 me-md-2 ">
+              <a class="nav-link " aria-current="page" href="./index.html"
+                >Home</a>
             </li>
 
             <li class="nav-item me-2 me-md-2">
-              <a class="nav-link" href="./about.html">About</a>
+              <a class="nav-link " href="./about.html"
+                >About</a
+              >
+            </li>
+            <li class="nav-item me-2 me-md-2">
+              <a class="nav-link" href="./project.html">Project</a>
             </li>
             
             <li class="nav-item me-2 me-md-2">
               <a class="nav-link" href="#">Hospital</a>
             </li>
+            
             <li class="nav-item me-2 me-md-2">
               <a class="nav-link" href="#">Wellness</a>
             </li>
+           
           </ul>
-          <form class="d-flex order-md-1 order-0" role="search">
-            <!-- search khi chưa sm -->
-            <div
-              class="d-flex justify-content-center align-items-center d-none d-lg-flex position-relative"
-            >
-              <i
-                class="d-none d-lg-flex fa-solid fa-magnifying-glass position-absolute start-0"
-                style="color: #41353d"
-                ;
-              ></i>
-            </div>
-            <input
-              class="form-control form-control-search me-2 rounded-pill d-none d-lg-flex"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-          </form>
-          <div
-            class="order-md-2 d-flex mt-lg-0 mt-sm-2 mt-sm-0 order-0 ms-5 mt-2 mt-sm-0 ms-sm-0"
-          >
-            <!-- search khi small -->
-            <div
-              class="me-1 py-1 px-2 d-lg-none me-2 rounded-start rounded-end"
-              style="background-color: azure"
-            >
-              <a href=""
-                ><i
-                  class="fa-solid fa-magnifying-glass p-2"
-                  style="color: #41353d"
-                  ;
-                ></i
-              ></a>
-            </div>
+        
+      <form class="d-flex order-lg-1 order-2 d-xl-flex d-flex d-sm-none text-center" role="search">
+        <!-- search khi chưa sm -->
+        <div
+          class="d-flex justify-content-center align-items-center  d-lg-flex  position-relative" >
+          <i class=" d-lg-flex fa-solid fa-magnifying-glass position-absolute start-0 ms-5 ms-md-0"style="color: #41353d";></i>
+        </div>
+        <input class="form-control form-control-search me-2 rounded-pill ms-5 ms-md-0 border " type="search"placeholder="Search" aria-label="Search"/>
+      </form>
+      <div class="order-lg-2 order-0 d-flex mt-lg-0  mt-sm-2 mt-sm-0  mt-2 mt-sm-0 ms-sm-3 ">
+        <!-- search khi small -->
+        <div
+          class="me-1 py-1 px-2 d-xl-none d-sm-flex d-none me-2 rounded-start rounded-end"
+          style="background-color: azure"
+        >
+          <a href=""
+            ><i
+              class="fa-solid fa-magnifying-glass p-2"
+              style="color: #41353d"
+              ;
+            ></i
+          ></a>
+        </div>
 
-            <div class="me-1">
-              <a href="" class="btn btn-primary">Sign up</a>
-            </div>
-            <div class=""><a href="" class="btn btn-primary">Login</a></div>
-          </div>
+        <div class="ms-auto ">
+          <a href="" class="px-3 btn d-flex flex-column text-center" style="color: var(--bookNow-color); background-color: #007BFF;" > <i class="fa-regular fa-clipboard"></i> Book now</a>
+        </div>
+      </div>
           <div
             class="offcanvas offcanvas-start"
             tabindex="-1"
@@ -131,43 +120,43 @@
                   >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="handbook.html"
+                  <a class="nav-link" href="./handbook.html"
                     ><i class="fa-solid fa-book-medical"></i> Handbook</a
                   >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#"
+                  <a class="nav-link" href="./contact.html"
                     ><i class="fa-regular fa-handshake"></i> Contact</a
                   >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#"
+                  <a class="nav-link" href="./business.html"
                     ><i class="fa-solid fa-building"></i> Business heath</a
                   >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#"
+                  <a class="nav-link" href="./digital.html"
                     ><i class="fa-solid fa-folder"></i> Digital Transformation
                     Package</a
                   >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#"
+                  <a class="nav-link" href="./Recruitment.html"
                     ><i class="fa-solid fa-users"></i> Recruitment</a
                   >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#"
+                  <a class="nav-link" href="./patient.html"
                     ><i class="fa-solid fa-hospital-user"></i> Patitent</a
                   >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#"
+                  <a class="nav-link" href="./doctor.html"
                     ><i class="fa-solid fa-user-doctor"></i> Doctor</a
                   >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#"
+                  <a class="nav-link" href="./roleOf.html"
                     ><i class="fa-solid fa-flag"></i> Role of bookingcare</a
                   >
                 </li>

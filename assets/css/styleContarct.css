@@ -1,6 +1,5 @@
 body {
   font-family: Arial, sans-serif;
-  
 }
 .header {
   background-color: #1cd1cb;
@@ -73,7 +72,12 @@ body {
   text-decoration: none;
   border-radius: 15px;
   margin-top: 20px;
+
 }
+.contact-button:hover {
+  background-color: #e8c870;
+}
+
 
 .stats-item {
   margin-top: 30px;
@@ -142,6 +146,10 @@ body {
   padding: 15px 30px;
   border-radius: 50px;
 }
+.btn-custom:hover {
+  background-color: #ebcd7a;
+  color: #fff;
+}
 @media (max-width: 768px) {
   .main-section h1 {
     margin-top: 10px;
@@ -198,3 +206,193 @@ footer {
 footer a {
   text-decoration: none;
 }
+
+/* contact information */
+.form-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding-top: 20px;
+}
+.form-label-required::after {
+  content: " (bắt buộc)";
+  color: red;
+}
+.btn-submit {
+  background-color: #ffc107;
+  color: #fff;
+  font-weight: bold;
+}
+.btn-submit:hover {
+  background-color: #ebcd7a;
+  color: #fff;
+}
+:root {
+  --background-color: #00000000;
+  --bs-light-blue: #e3f2fd;
+  --bs-icon-blue: #2196f3;
+}
+* a {
+  text-decoration: none;
+}
+.icon-bg {
+  background: linear-gradient(120deg, #e3f2fd, #bbdefb);
+}
+
+.menu-item {
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+
+.menu-item:hover {
+  box-shadow: 0 5px 8px rgba(0, 0, 0, 0.1);
+}
+.form-control-search {
+  padding-left: 45px;
+}
+.fa-magnifying-glass {
+  padding-left: 25px;
+}
+
+.main-title {
+  color: #000;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.input-group {
+  background-color: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.input-group-text {
+  background-color: transparent;
+  border: none;
+}
+.quick-questions {
+  margin-top: 20px;
+}
+.quick-question {
+  background-color: #fff;
+  border-radius: 20px;
+  padding: 10px 15px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  display: inline-block;
+  font-size: 0.9rem;
+}
+.recommend_chatBox span {
+  font-size: 1.2rem;
+}
+
+@keyframes marquee {
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.recommend_chatBox {
+  height: 50px;
+}
+
+.rounded-box {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 25px;
+  padding: 0 15px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.icon-container {
+  flex-shrink: 0;
+  margin-right: 10px;
+}
+
+.marquee-container {
+  flex-grow: 1;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.marquee-content {
+  display: inline-block;
+  padding-left: 100%;
+  animation: marquee 24s linear infinite;
+}
+
+.marquee-content:hover {
+  animation-play-state: paused;
+}
+
+.nav_task_bar_small {
+  list-style: none;
+}
+@media (max-width: 768px) {
+  .invisible-md {
+    visibility: hidden;
+  }
+}
+
+@media (max-width: 992px) {
+  .invisible-lg {
+    visibility: hidden;
+  }
+}
+@media (max-width: 576px) {
+  .invisible-sm {
+    visibility: hidden;
+  }
+}
+
+#footer_id {
+  margin-top: 500px;
+}
+#text_area_Chat {
+  border: none;
+  width: 100%;
+  resize: none;
+  height: 500px;
+}
+.chatbot {
+  height: 510px;
+  list-style: none;
+}
+
+
+.nav-tabs-scroll {
+  overflow-x: auto;
+  flex-wrap: nowrap;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.nav-tabs-scroll::-webkit-scrollbar {
+  display: none;
+}
+
+.nav-tabs-scroll .nav-link {
+  white-space: nowrap;
+  border: none;
+  padding: 8px 16px;
+  color: #666;
+}
+
+.nav-tabs-scroll .nav-link.active {
+  background-color: #ffc107;
+  color: white;
+  border-radius: 20px;
+}
+
+.nav-tabs-scroll .nav-link:hover:not(.active) {
+  border: none;
+  color: #333;
+}
+
+@media (min-width: 578px) {
+  .nav-tabs-scroll {
+    justify-content: center;
+  }
+}
+

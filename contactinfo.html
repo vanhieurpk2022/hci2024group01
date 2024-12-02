@@ -16,15 +16,18 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <link rel="stylesheet" href="./assets/css/myStyle.css" />
-    <link rel="stylesheet" href="./assets/css/styleChat.css" />
-    <link rel="stylesheet" href="./assets/css/setColor.css">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+ 
+    <link rel="stylesheet" href="./assets/css/styleContarct.css" />
+    <link rel="stylesheet" href="./assets/css/setColor.css" />
 
-    <title>HeathCare</title>
-
+   
+    <title>Nhóm tác giả cẩm nang</title>
   </head>
   <body>
-    <!-- DashBroad -->
     <div class="container">
       <nav class="navbar bg-body-tertiary">
         <div class="container" style="color: var(--aqua-color)">
@@ -39,61 +42,79 @@
             <span class="navbar-toggler-icon"></span>
           </button>
           <!-- navBar -->
-          <a class="navbar-brand ms-1" href="./index.html"
-          ><img width="125px" src="./assets/img/logo.png" alt=""
-        /></a>
+          <a class="navbar-brand ms-1" href="#"
+            ><img width="125px" src="./assets/img/logo.png" alt=""
+          /></a>
 
-          <ul  class="list-unstyled nav-tabs nav-tabs-scroll border-0 mb-3 me-auto mb-2 mb-lg-0 d-flex flex-row  ms-auto order-lg-0 order-1 mt-3 mt-lg-0">
-            <li class="nav-item me-2 me-md-2 ">
-              <a class="nav-link " aria-current="page" href="./index.html"
-                >Home</a>
+          <ul
+            class="list-unstyled nav-tabs nav-tabs-scroll border-0 mb-3 me-auto mb-2 mb-lg-0 d-flex flex-row ms-auto order-lg-0 order-1 mt-3 mt-lg-0"
+          >
+            <li class="nav-item me-2 me-md-2">
+              <a class="nav-link " aria-current="page" href="index.html"
+                >Home</a
+              >
             </li>
 
             <li class="nav-item me-2 me-md-2">
-              <a class="nav-link " href="./about.html"
-                >About</a
-              >
+              <a class="nav-link" href="./about.html">About</a>
             </li>
+
             <li class="nav-item me-2 me-md-2">
               <a class="nav-link" href="./project.html">Project</a>
             </li>
             <li class="nav-item me-2 me-md-2">
               <a class="nav-link" href="#">Hospital</a>
             </li>
-            
+
             <li class="nav-item me-2 me-md-2">
               <a class="nav-link" href="#">Wellness</a>
             </li>
-           
           </ul>
-        
-      <form class="d-flex order-lg-1 order-2 d-xl-flex d-flex d-sm-none text-center" role="search">
-        <!-- search khi chưa sm -->
-        <div
-          class="d-flex justify-content-center align-items-center  d-lg-flex  position-relative" >
-          <i class=" d-lg-flex fa-solid fa-magnifying-glass position-absolute start-0 ms-5 ms-md-0"style="color: #41353d";></i>
-        </div>
-        <input class="form-control form-control-search me-2 rounded-pill ms-5 ms-md-0 border " type="search"placeholder="Search" aria-label="Search"/>
-      </form>
-      <div class="order-lg-2 order-0 d-flex mt-lg-0  mt-sm-2 mt-sm-0  mt-2 mt-sm-0 ms-sm-3 ">
-        <!-- search khi small -->
-        <div
-          class="me-1 py-1 px-2 d-xl-none d-sm-flex d-none me-2 rounded-start rounded-end"
-          style="background-color: azure"
-        >
-          <a href=""
-            ><i
-              class="fa-solid fa-magnifying-glass p-2"
-              style="color: #41353d"
-              ;
-            ></i
-          ></a>
-        </div>
 
-        <div class="ms-auto ">
-          <a href="" class="px-3 btn d-flex flex-column text-center" style="color: var(--bookNow-color); background-color: #007BFF;" > <i class="fa-regular fa-clipboard"></i> Book now</a>
-        </div>
-      </div>
+          <form
+            class="d-flex order-lg-1 order-2 d-xl-flex d-flex d-sm-none text-center"
+            role="search"
+          >
+
+            <!-- search khi chưa sm -->
+            <div
+              class="d-flex justify-content-center align-items-center d-lg-flex position-relative"
+            >
+              <i
+                class="d-lg-flex fa-solid fa-magnifying-glass position-absolute start-0 ms-5 ms-md-0"
+                style="color: #41353d"
+                ;
+              ></i>
+            </div>
+            <input
+              class="form-control form-control-search me-2 rounded-pill ms-5 ms-md-0 border"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+          </form>
+          <div
+            class="order-lg-2 order-0 d-flex mt-lg-0 mt-sm-2 mt-sm-0 mt-2 mt-sm-0 ms-sm-3"
+          >
+            <!-- search khi small -->
+            <div
+              class="me-1 py-1 px-2 d-xl-none d-sm-flex d-none me-2 rounded-start rounded-end"
+              style="background-color: azure"
+            >
+              <a href=""
+                ><i
+                  class="fa-solid fa-magnifying-glass p-2"
+                  style="color: #41353d"
+                  ;
+                ></i
+              ></a>
+            </div>
+
+            <div class="ms-auto ">
+          
+              <a href="" class="px-3 btn d-flex flex-column text-center" style="color: var(--bookNow-color); background-color: #007BFF;" > <i class="fa-regular fa-clipboard"></i> Book now</a>
+            </div>
+          </div>
           <div
             class="offcanvas offcanvas-start"
             tabindex="-1"
@@ -113,7 +134,8 @@
               <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                 <li class="nav-item">
                   <a
-                    class="fw-semibold nav-link active"
+
+                    class="nav-link "
                     aria-current="page"
                     href="./index.html"
                     ><i class="fa-solid fa-house"></i> Home</a
@@ -125,7 +147,7 @@
                   >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="./contact.html"
+                  <a class="nav-link" href="contact.html"
                     ><i class="fa-regular fa-handshake"></i> Contact</a
                   >
                 </li>
@@ -182,38 +204,85 @@
       </nav>
     </div>
 
-    <!-- Home  -->
-    <!-- header start -->
-    
-    <div class="chatbot container mt-5" >
-      <header><div class="container p-2"><h3 class="text-center">ChatBot</h3></div></header>
-      <ul class="chatbox">
-        <li class="chat incoming">
-          <span class="material-symbols-outlined"><i class="fa-solid fa-robot"></i> </span>
-          <p>Hi there <br />How can I help you today?</p>
-        </li>
-      </ul>
-      <div class="chat-input">
-        <div class="input-group" style="width:50px;">
-          <label class="input-group-text" for="inputGroupFile01"><i class="fa-solid fa-file-circle-plus"></i> </label>
-          <input type="file" class="form-control d-none" id="inputGroupFile01">
+    <div class="container form-container">
+      <h2 class="text-center">Hợp tác cùng HealthCare</h2>
+      <p class="text-center">
+        HealthCare rất hân hạnh được hợp tác với bác sĩ và cơ sở y tế. Vui lòng
+        gửi thông tin, chúng tôi sẽ liên hệ lại trong thời gian sớm nhất.
+      </p>
+
+      <form>
+        <div class="mb-3">
+          <label for="contactPerson" class="form-label form-label-required"
+            >Người liên hệ</label
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="contactPerson"
+            placeholder="(bắt buộc)"
+          />
         </div>
-        <textarea
-          placeholder="Enter a message..."
-          spellcheck="false"
-          required
-        ></textarea>
-        <span id="send-btn" class=" material-symbols-rounded "><i class="fa-solid fa-greater-than me-2"></i> </span>
-      </div>
-      
+
+        <div class="mb-3">
+          <label for="phone" class="form-label form-label-required"
+            >Số điện thoại</label 
+          >
+          <input
+            type="text"
+            class="form-control"
+            id="phone"
+            placeholder="(bắt buộc)"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="email" class="form-label">Địa chỉ email</label>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            placeholder="Nhập email của bạn"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="medicalFacility" class="form-label">Tên cơ sở y tế</label>
+          <input
+            type="text"
+            class="form-control"
+            id="medicalFacility"
+            placeholder="Bệnh viện, phòng khám, tổ chức, công ty"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="address" class="form-label">Địa chỉ</label>
+          <input
+            type="text"
+            class="form-control"
+            id="address"
+            placeholder="Nhập địa chỉ"
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="content" class="form-label">Nội dung</label>
+          <textarea
+            class="form-control"
+            id="content"
+            rows="4"
+            placeholder="Nhập nội dung"
+          ></textarea>
+        </div>
+
+        <button type="submit" class="btn btn-submit w-100">
+          Gửi thông tin
+        </button>
+      </form>
     </div>
-      
-      </div>
 
-
-    <!-- nhung javascript -->
-    <!-- Footer -->
-    <footer id="footer_id" class="bg-dark text-center text-lg-start">
+    <footer class="bg-dark text-center text-lg-start mt-4">
       <div class="text-center p-3" style="color: #f6f6f6">
         © 2024 Bản quyền:
         <a class="text-light" href="#">HeathCare</a>
@@ -230,12 +299,12 @@
         </div>
       </div>
     </footer>
+
+    <script src="assets/js/js.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-
-    <script src="./assets/javaScript/javaScriptIn.js" defer></script>
   </body>
 </html>

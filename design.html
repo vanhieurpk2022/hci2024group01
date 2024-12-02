@@ -12,9 +12,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./assets/css/myStyle.css" />
     <link rel="stylesheet" href="./assets/css/setColor.css">
+    <link rel="stylesheet" href="./assets/css/setColor.css">
 
     <title>HeathCare</title>
-  
+    <style>
+      /*  */
+      :root{
+        --aqua-color:#00CED1;
+      }
+    </style>
   </head>
   <body>
     <!-- DashBroad -->
@@ -42,7 +48,7 @@
             >
           </li>
           <li class="nav-item me-2 me-md-2">
-            <a class="nav-link" href="./project.html">Project</a>
+            <a class="nav-link active fw-semibold" href="./project.html">Project</a>
           </li>
           <li class="nav-item me-2 me-md-2">
             <a class="nav-link" href="#">Hospital</a>
@@ -89,7 +95,7 @@
             <div class="offcanvas-body">
               <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                 <li class="nav-item">
-                  <a class="nav-link " aria-current="page" href="./index.html"><i class="fa-solid fa-house"></i> Home</a>
+                  <a class="fw-semibold nav-link active" aria-current="page" href="./index.html"><i class=" fa-solid fa-house"></i> Home</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="./handbook.html"><i class="fa-solid fa-book-medical"></i> Handbook</a>
@@ -115,8 +121,8 @@
                 <li class="nav-item">
                   <a class="nav-link" href="./roleOf.html"><i class="fa-solid fa-flag"></i> Role of bookingcare</a>
                 </li>
-                <li class="nav-item ">
-                  <a class="nav-link active fw-semibold " href="./hotLine.html"><i class="fa-solid fa-phone"></i> Hotline</a>
+                <li class="nav-item">
+                  <a class="nav-link" href="./hotLine.html"><i class="fa-solid fa-phone"></i> Hotline</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="./fAQ.html"><i class="fa-solid fa-question"></i> FAQ</a>
@@ -131,53 +137,119 @@
         </div>
       </nav>
    </div>
-    
+    <div class="container">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container">
+              
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link " aria-current="page" href="./project.html">Requirement</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link active" href="./design.html">Design </a>
+                  </li>
+                 
+                 
+                
+            </div>
+          </nav>
+    </div>
 
     <!-- Home  -->
           <!-- header start -->
-          <header>
-            <div class="container mt-4 ">
-                
-                  <nav aria-label="breadcrumb ">
-                    <ol class="breadcrumb">
-                      <li class="breadcrumb-item ms-3"><a href="./index.html"><i class="fa-solid fa-house"></i> </a></li>
-                      <li class="breadcrumb-item active" aria-current="page">Hotline</li>
-                    </ol>
-                  </nav>
-                  <div class="container ">
-                        <h3>Liên hệ</h3>
-                      <div class="container d-flex flex-column" style="background-color: #FCFAF6;"> <h5>Nền tảng đặt khám chăm sóc sức khỏe</h5>
-                        <h5>Trực thuộc:</h5>
-                        <p>Nhóm thực hiện 01 - bộ môn Giao Tiếp Người Máy</p>
-                        <p>
-                            đây là đồ án môn học, không có tính thương mại, được dựa trên một website <a href="bookingcare.vn" target="_blank">bookingcare.vn </a> chỉ mang tính chất giáo dục, tăng trình độ, kinh nghiệm của sinh viên
-                        </p></div>
-                  </div>
+         <main>
+            <div class="container mt-4 table-responsive  ">
+              <h3>Design page</h3>
+                <table class="table table-bordered ">
+                    <thead>
+                        <tr >
+                            <th scope="col">STT</th>
+                            <th scope="col">Page</th>
+                            <th scope="col">Người hiện thực</th>
+                            <th scope="col">Thời gian dự kiến</th>
+                            <th scope="col">Trạng thái</th>
+                            <th scope="col">Kết quả</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Hotline,FAQ,Terms</td>
+                            <td>Vi Văn Hiếu</td>
+                            <td>....</td>
+                            <td>hoàn thành</td>
+                            <td>
+                                <a href="./hotLine.html">Hotline</a>,
+                                <a href="./fAQ.html">FAQ</a>,
+                                <a href="./terms.html">Terms</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Handbook,contact,business healthy</td>
+                            <td>Đỗ Minh Quốc</td>
+                            <td>...</td>
+                            <td>hoàn thành</td>
+                            <td>
+                                <a href="./handbook.html">Handbook</a>,
+                                <a href="./contact.html">contact</a>,
+                                <a href="./business.html">business healthy</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>digital transfrom...,recruiment</td>
+                            <td>Nguyễn Thành An</td>
+                            <td>hoàn thành</td>
+                            <td>...</td>
+                            <td><a href="./Recruitment.html">Recruitment</a>,
+                            <a href="./digital.html">digital</a></td>
+                        </tr>
+                        <tr>
+                            <th scope="row">4</th>
+                            <td>hospital visit,healthily</td>
+                            <td>Nguyễn Duy Khánh</td>
+                            <td>...</td>
+                            <td>...</td>
+                            <td>...</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">5</th>
+                                <td>patient,doctor,role of booking care</td>
+                                <td>Đoàn Huy Cương</td>
+                                <td>...</td>
+                                <td>...</td>
+                                <td>...</td>
+                            </tr>
+                    </tbody>
+                </table>
             </div>
-          </header>
-           <!-- Footer -->
-    <footer id="footer_id" class="bg-dark text-center text-lg-start ">
-      <div class="text-center p-3" style="color: #f6f6f6">
-        © 2024 Bản quyền:
-        <a class="text-light" href="#">HeathCare</a>
-        <div class="mt-2">
-          <a href="#" class="me-3 text-light">
-            <i class="fa-brands fa-facebook"></i>
-          </a>
-          <a href="#" class="me-3 text-light">
-            <i class="fa-brands fa-twitter"></i>
-          </a>
-          <a href="#" class="text-light">
-            <i class="fa-brands fa-instagram"></i>
-          </a>
-        </div>
-      </div>
-    </footer>
+         </main>
     <!-- nhung javascript -->
+     <!-- Footer -->
+     <footer id="footer_id" class="bg-dark text-center text-lg-start">
+        <div class="text-center p-3" style="color: #f6f6f6">
+          © 2024 Bản quyền:
+          <a class="text-light" href="#">HeathCare</a>
+          <div class="mt-2">
+            <a href="#" class="me-3 text-light">
+              <i class="fa-brands fa-facebook"></i>
+            </a>
+            <a href="#" class="me-3 text-light">
+              <i class="fa-brands fa-twitter"></i>
+            </a>
+            <a href="#" class="text-light">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+      </footer>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
+
+    <script src="./assets/javaScript/javaScriptIn.js"></script>
   </body>
 </html>
