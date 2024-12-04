@@ -17,6 +17,8 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="./assets/css/myStyle.css" />
+    <link rel="stylesheet" href="./assets/css/setColor.css">
+
     <title>HeathCare</title>
   </head>
   <body>
@@ -89,7 +91,7 @@
             </div>
 
             <div class="ms-auto ">
-              <a href="" class="px-3 btn d-flex flex-column text-center" style="color: black; background-color: #007BFF;" > <i class="fa-regular fa-clipboard"></i> Book now</a>
+              <a href="" class="px-3 btn d-flex flex-column text-center" style="color: var(--bookNow-color); background-color: #007BFF;" > <i class="fa-regular fa-clipboard"></i> Book now</a>
             </div>
           </div>
           <div
@@ -110,7 +112,10 @@
             <div class="offcanvas-body">
               <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                 <li class="nav-item">
-                  <a class="nav-link" aria-current="page" href="./index.html"
+                  <a
+                    class="nav-link active"
+                    aria-current="page"
+                    href="./index.html"
                     ><i class="fa-solid fa-house"></i> Home</a
                   >
                 </li>
@@ -120,38 +125,38 @@
                   >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#"
+                  <a class="nav-link" href="contact.html"
                     ><i class="fa-regular fa-handshake"></i> Contact</a
                   >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#"
+                  <a class="nav-link" href="business.html"
                     ><i class="fa-solid fa-building"></i> Business heath</a
                   >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#"
+                  <a class="nav-link" href="./digital.html"
                     ><i class="fa-solid fa-folder"></i> Digital Transformation
                     Package</a
                   >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#"
+                  <a class="nav-link" href="./Recruitment.html"
                     ><i class="fa-solid fa-users"></i> Recruitment</a
                   >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#"
+                  <a class="nav-link" href="./patient.html"
                     ><i class="fa-solid fa-hospital-user"></i> Patitent</a
                   >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#"
+                  <a class="nav-link" href="./doctor.html"
                     ><i class="fa-solid fa-user-doctor"></i> Doctor</a
                   >
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#"
+                  <a class="nav-link" href="./roleOf.html"
                     ><i class="fa-solid fa-flag"></i> Role of bookingcare</a
                   >
                 </li>
@@ -178,13 +183,13 @@
     </div>
     <header class="main-header_about">
       <div class="container mt-5">
-        <h1 class="text-center">Wellcome to my group 01</h1>
+        <h1 class="text-center">Wellcome to my group</h1>
 
         <div class="card-group mt-5 border">
           <div class="card">
             <img
               src="./assets/img/avatar.svg"
-              class="card-img-top"
+              class="card-img-top  rounded ratio-4x3"
               alt="avatar"
             />
             <div
@@ -214,7 +219,7 @@
             </div>
           </div>
           <div class="card ms-2 border">
-            <img src="./assets/img/avtQ.jpg" class="card-img-top" alt="..." />
+            <img src="./assets/img/avtQ.jpg" class="card-img-top rounded ratio-4x3" alt="..." />
 
             <div class="card-body">
               <h5 class="card-title text-center">Đỗ Minh Quốc</h5>
@@ -224,7 +229,7 @@
               </p>
               <div class="card_link d-flex justify-content-center">
                 <a
-                  href="https://mdquoc.github.io/MY_HCI/"
+                  href="https://mdquoc.github.io/MyProjec/"
                   target="_blank"
                   class="btn me-2 btn-success"
                   ><i
@@ -241,7 +246,7 @@
             </div>
           </div>
           <div class="card ms-2 border">
-            <img src="./assets/img/avatar.svg" class="card-img-top" alt="..." />
+            <img src="./assets/img/avatar.svg" class="card-img-top  rounded ratio-4x3" alt="..." />
             <div class="card-body">
               <h5 class="card-title text-center">Đoàn Huy Cương</h5>
               <p class="text-center"><small>Member</small></p>
@@ -249,10 +254,7 @@
                 Don’t dwell on dreams and ignore life.
               </p>
               <div class="card_link d-flex justify-content-center">
-                <a
-                  href="https://doanhuycuong1.github.io/HCI_DoanHuyCuong_23130035/"
-                  target="_blank"
-                  class="btn me-2 btn-success"
+                <a href="#" class="btn me-2 btn-success"
                   ><i
                     class="fa-brands fa-github"
                     style="width: 16px; height: 16px"
@@ -269,7 +271,7 @@
           <div class="card ms-2 border">
             <img
               src="https://i.imgur.com/FQZew1m.png"
-              class="card-img-top"
+              class="card-img-top  rounded ratio-4x3"
               alt="..."
             />
             <div class="card-body">
@@ -295,7 +297,7 @@
             </div>
           </div>
           <div class="card ms-2 border">
-            <img src="./assets/img/avatar.svg" class="card-img-top" alt="..." />
+            <img src="./assets/img/avatar.svg" class="card-img-top  rounded ratio-4x3" alt="..." />
             <div class="card-body">
               <h5 class="card-title text-center">Nguyễn Thành An</h5>
               <p class="text-center"><small>Member</small></p>
@@ -303,9 +305,7 @@
                 Don’t dwell on dreams and ignore life.
               </p>
               <div class="card_link d-flex justify-content-center">
-                <a
-                  href="https://thanhan1710.github.io/web/"
-                  class="btn me-2 btn-success"
+                <a href="#" class="btn me-2 btn-success"
                   ><i
                     class="fa-brands fa-github"
                     style="width: 16px; height: 16px"
@@ -341,6 +341,7 @@
         </div>
       </div>
     </footer>
+
     <!-- nhung javascript -->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"

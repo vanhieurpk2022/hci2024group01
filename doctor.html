@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./assets/css/myStyle.css" />
+    <link rel="stylesheet" href="./assets/css/setColor.css">
+
+    <title>HeathCare</title>
+    <style>
+       
+        #specialist-section, #doctor-section, #facility-section, #package-section {
+            display: none; /* Hide initially */
+        }
+    </style>
+</head>
+<body>
+     <!-- DashBroad -->
+     <div class="container " >
+        <nav class="navbar bg-body-tertiary">
+          <div class="container" style="color: var(--aqua-color);">
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          <!-- navBar -->
+          <a class="navbar-brand ms-1" href="./index.html"
+          ><img width="125px" src="./assets/img/logo.png" alt=""
+        /></a>
+    
+          <ul  class="list-unstyled nav-tabs nav-tabs-scroll border-0 mb-3 me-auto mb-2 mb-lg-0 d-flex flex-row  ms-auto order-lg-0 order-1 mt-3 mt-lg-0">
+            <li class="nav-item me-2 me-md-2 ">
+              <a class="nav-link " aria-current="page" href="./index.html"
+                >Home</a>
+            </li>
+    
+            <li class="nav-item me-2 me-md-2">
+              <a class="nav-link " href="./about.html"
+                >About</a
+              >
+            </li>
+            <li class="nav-item me-2 me-md-2">
+              <a class="nav-link" href="./project.html">Project</a>
+            </li>
+            <li class="nav-item me-2 me-md-2">
+              <a class="nav-link" href="#">Hospital</a>
+            </li>
+            
+            <li class="nav-item me-2 me-md-2">
+              <a class="nav-link" href="#">Wellness</a>
+            </li>
+           
+          </ul>
+        
+      <form class="d-flex order-lg-1 order-2 d-xl-flex d-flex d-sm-none text-center" role="search">
+        <!-- search khi chưa sm -->
+        <div
+          class="d-flex justify-content-center align-items-center  d-lg-flex  position-relative" >
+          <i class=" d-lg-flex fa-solid fa-magnifying-glass position-absolute start-0 ms-5 ms-md-0"style="color: #41353d";></i>
+        </div>
+        <input class="form-control form-control-search me-2 rounded-pill ms-5 ms-md-0 border " type="search"placeholder="Search" aria-label="Search"/>
+      </form>
+      <div class="order-lg-2 order-0 d-flex mt-lg-0  mt-sm-2 mt-sm-0  mt-2 mt-sm-0 ms-sm-3 ">
+        <!-- search khi small -->
+        <div
+          class="me-1 py-1 px-2 d-xl-none d-sm-flex d-none me-2 rounded-start rounded-end"
+          style="background-color: azure"
+        >
+          <a href=""
+            ><i
+              class="fa-solid fa-magnifying-glass p-2"
+              style="color: #41353d"
+              ;
+            ></i
+          ></a>
+        </div>
+    
+          <div class="ms-auto ">
+            
+            <a href="" class="px-3 btn d-flex flex-column text-center" style="color: var(--bookNow-color); background-color: #007BFF;" > <i class="fa-regular fa-clipboard"></i> Book now</a>
+          </div>
+      </div>
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title " id="offcanvasNavbarLabel">Menu</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                  <li class="nav-item">
+                    <a class=" nav-link " aria-current="page" href="./index.html"><i class=" fa-solid fa-house"></i> Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./handbook.html"><i class="fa-solid fa-book-medical"></i> Handbook</a>
+                  </li>
+                  <li class="nav-item">
+    
+                    <a class="nav-link" href="./contact.html"><i class="fa-regular fa-handshake"></i> Contact</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./business.html"><i class="fa-solid fa-building"></i> Business heath</a>
+    
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link fw-semibold active" href="./digital.html"><i class="fa-solid fa-folder"></i> Digital Transformation Package</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./Recruitment.html"><i class="fa-solid fa-users"></i> Recruitment</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./patient.html"><i class="fa-solid fa-hospital-user"></i> Patitent</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./doctor.html"><i class="fa-solid fa-user-doctor"></i> Doctor</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./roleOf.html"><i class="fa-solid fa-flag"></i> Role of bookingcare</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./hotLine.html"><i class="fa-solid fa-phone"></i> Hotline</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./fAQ.html"><i class="fa-solid fa-question"></i> FAQ</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./terms.html"><i class="fa-solid fa-scroll"></i> Terms</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+     </div>
+
+    <!-- Header -->
+    <header>
+        <div class="container mt-4">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item ms-3">
+                        <a href="/index.html"><i class="fa-solid fa-house"></i> </a>
+                    </li>
+                    <li class="breadcrumb-item active">Doctor</li>
+                </ol>
+            </nav>
+            <h3>Doctor</h3>
+            <div class="d-flex flex-column ">
+                <a href="#" id="toggle-specialists" class="fs-5 fw-bold" style="color: #45c3d2;">Chuyên khoa</a>
+                <a href="#" id="toggle-doctors" class="fs-5 fw-bold" style="color: #45c3d2;">Bác sĩ</a>
+                <a href="#" id="toggle-facilities" class="fs-5 fw-bold" style="color: #45c3d2;">Cơ sở y tế</a>
+                <a href="#" id="toggle-packages" class="fs-5 fw-bold" style="color: #45c3d2;">Gói khám</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Specialist Section -->
+    <section id="specialist-section" class="mt-4">
+        <div class="container">
+            <h3>Chuyên khoa</h3>
+            <div class="row">
+                <div class="col-md-3 col-sm-6 mb-3">
+                    <a href="#" class="text-dark text-decoration-none">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <i class="fa-solid fa-brain fa-3x text-primary"></i>
+                                <h5 class="card-title mt-3">Thần kinh</h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-3">
+                    <a href="#" class="text-dark text-decoration-none">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <i class="fa-solid fa-heart fa-3x text-primary"></i>
+                                <h5 class="card-title mt-3">Tim mạch</h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-3">
+                    <a href="#" class="text-dark text-decoration-none">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <i class="fa-solid fa-lungs fa-3x text-primary"></i>
+                                <h5 class="card-title mt-3">Hô hấp</h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-3">
+                    <a href="#" class="text-dark text-decoration-none">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <i class="fa-solid fa-gastrointestinal fa-3x text-primary"></i>
+                                <h5 class="card-title mt-3">Tiêu hóa</h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-3">
+                    <a href="#" class="text-dark text-decoration-none">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <i class="fa-solid fa-user-nurse fa-3x text-primary"></i>
+                                <h5 class="card-title mt-3">Nội tiết</h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-3">
+                    <a href="#" class="text-dark text-decoration-none">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <i class="fa-solid fa-bone fa-3x text-primary"></i>
+                                <h5 class="card-title mt-3">Chấn thương</h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-3">
+                    <a href="#" class="text-dark text-decoration-none">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <i class="fa-solid fa-brain fa-3x text-primary"></i>
+                                <h5 class="card-title mt-3">Tâm lý</h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-3">
+                    <a href="#" class="text-dark text-decoration-none">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <i class="fa-solid fa-user-md fa-3x text-primary"></i>
+                                <h5 class="card-title mt-3">Sản khoa</h5>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Doctor Section -->
+    <section id="doctor-section" class="mt-4">
+        <div class="container">
+            <h3>Bác sĩ</h3>
+            <div class="row">
+                <div class="col-md-3 col-sm-6 mb-3">
+                    <a href="#" class="text-dark text-decoration-none">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <i class="fa-solid fa-user-md fa-3x text-primary"></i>
+                                <h5 class="card-title mt-3">Bác sĩ Đinh Hữu Việt </h5>
+                                <p>Chuyên khoa: Nam học </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-3">
+                    <a href="#" class="text-dark text-decoration-none">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <i class="fa-solid fa-user-md fa-3x text-primary"></i>
+                                <h5 class="card-title mt-3">Bác sĩ Bùi Thị Minh Huệ</h5>
+                                <p>Chuyên khoa: Nhi khoa</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-3">
+                    <a href="#" class="text-dark text-decoration-none">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <i class="fa-solid fa-user-md fa-3x text-primary"></i>
+                                <h5 class="card-title mt-3">Bác sĩ Nguyễn Văn Hiển</h5>
+                                <p>Chuyên khoa: Tim mạch</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-3">
+                    <a href="#" class="text-dark text-decoration-none">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <i class="fa-solid fa-user-md fa-3x text-primary"></i>
+                                <h5 class="card-title mt-3">Bác sĩ Lê Trọng Hậu</h5>
+                                <p>Chuyên khoa: Hô hấp,Phổi</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Facility Section -->
+    <section id="facility-section" class="mt-4">
+        <div class="container">
+            <h3>Cơ sở y tế</h3>
+            <div class="row">
+                <div class="col-md-3 col-sm-6 mb-3">
+                    <a href="#" class="text-dark text-decoration-none">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <i class="fa-solid fa-hospital fa-3x text-primary"></i>
+                                <h5 class="card-title mt-3">Bệnh viện Đa Khoa Xuyên Á </h5>
+                                <p>Địa chỉ: 42 QL22, ấp Chợ, Củ Chi, Hồ Chí Minh</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-3">
+                    <a href="#" class="text-dark text-decoration-none">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <i class="fa-solid fa-hospital fa-3x text-primary"></i>
+                                <h5 class="card-title mt-3">Bệnh viện Đa Khoa Hồng Phát</h5>
+                                <p>Địa chỉ: 219 Lê Duẩn - Hai Bà Trưng - Hà Nội </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-3">
+                    <a href="#" class="text-dark text-decoration-none">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <i class="fa-solid fa-hospital fa-3x text-primary"></i>
+                                <h5 class="card-title mt-3">Phòng khám Đa Khoa Hạnh Phúc</h5>
+                                <p>Địa chỉ:424 Đ. 3 Tháng 2, Phường 12, Quận 10, Hồ Chí Minh</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-3">
+                    <a href="#" class="text-dark text-decoration-none">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <i class="fa-solid fa-hospital fa-3x text-primary"></i>
+                                <h5 class="card-title mt-3">Viện Tâm Lý Đời Sống(LPI)</h5>
+                                <p>Địa chỉ: LK24-TT1 khu nhà ở tại 96 - 96B Nguyễn Huy Tưởng, phường Thanh xuân, quận Thanh xuân, thành phố Hà Nội</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Package Section -->
+    <section id="package-section" class="mt-4">
+        <div class="container">
+            <h3>Gói khám</h3>
+            <div class="row">
+                <div class="col-md-3 col-sm-6 mb-3">
+                    <a href="#" class="text-dark text-decoration-none">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">Gói Khám Sức Khỏe Tổng Quát</h5>
+                                <p>Giá: 1,000,000 VNĐ</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-3">
+                    <a href="#" class="text-dark text-decoration-none">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">Gói Khám Tim Mạch</h5>
+                                <p>Giá: 1,500,000 VNĐ</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-3">
+                    <a href="#" class="text-dark text-decoration-none">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">Gói Khám Hô Hấp</h5>
+                                <p>Giá: 1,200,000 VNĐ</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-3 col-sm-6 mb-3">
+                    <a href="#" class="text-dark text-decoration-none">
+                        <div class="card h-100">
+                            <div class="card-body">
+                                <h5 class="card-title">Gói Khám Tiêu Hóa</h5>
+                                <p>Giá: 1,300,000 VNĐ</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer_id" class="bg-dark text-center text-lg-start mt-4">
+        <div class="text-center p-3" style="color: #f6f6f6">
+            © 2024 Bản quyền: <a class="text-light" href="#">HeathCare</a>
+            <div class="mt-2">
+                <a href="#" class="me-3 text-light"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" class="me-3 text-light"><i class="fa-brands fa-twitter"></i></a>
+                <a href="#" class="text-light"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>
+        // Function to hide all sections
+        function hideAllSections() {
+            const sections = ['specialist-section', 'doctor-section', 'facility-section', 'package-section'];
+            sections.forEach(section => {
+                document.getElementById(section).style.display = 'none';
+            });
+        }
+
+        document.getElementById('toggle-specialists').addEventListener('click', function(e) {
+            e.preventDefault(); // Prevent default anchor behavior
+            hideAllSections(); // Hide all sections
+            const specialists = document.getElementById('specialist-section');
+            specialists.style.display = 'block'; // Show specialists section
+        });
+
+        document.getElementById('toggle-doctors').addEventListener('click', function(e) {
+            e.preventDefault(); // Prevent default anchor behavior
+            hideAllSections(); // Hide all sections
+            const doctors = document.getElementById('doctor-section');
+            doctors.style.display = 'block'; // Show doctors section
+        });
+        
+        document.getElementById('toggle-facilities').addEventListener('click', function(e) {
+            e.preventDefault(); // Prevent default anchor behavior
+            hideAllSections(); // Hide all sections
+            const facilities = document.getElementById('facility-section');
+            facilities.style.display = 'block'; // Show facilities section
+        });
+        
+        document.getElementById('toggle-packages').addEventListener('click', function(e) {
+            e.preventDefault(); // Prevent default anchor behavior
+            hideAllSections(); // Hide all sections
+            const packages = document.getElementById('package-section');
+            packages.style.display = 'block'; // Show packages section
+        });
+    </script>
+</body>
+</html>

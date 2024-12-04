@@ -3,7 +3,9 @@ body {
   background-color: #f8f9fa;
 }
 .container {
-  max-width: 1200px;
+
+  max-width: 1315px;
+
 }
 
 /* Header */
@@ -72,7 +74,8 @@ body {
   cursor: pointer;
 }
 .search-icon:active {
-  color: #007bff; /* Màu xanh lam khi nhấn và giữ */
+  color: #007bff; 
+
 }
 @media (max-width: 768px) {
   .search-bar {
@@ -98,18 +101,28 @@ body {
 }
 
 .article-body {
-  padding: 15px;
-  margin: 0;
+  margin-left: 15px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+
 }
 
 .article-title {
   font-size: 18px;
   font-weight: 600;
   color: #333;
+
+  display: -webkit-box; 
+  -webkit-box-orient: vertical; 
+  -webkit-line-clamp: 2;
+  overflow: hidden; 
+  text-overflow: ellipsis; 
+  line-height: 1.2; 
 }
 /* Khung chứa ảnh */
 .image-frame {
-  width: 90%;
+  width: 100%;
+
   margin: 0;
   padding: 8px;
   background-color: #ffffff;
@@ -120,6 +133,8 @@ body {
   width: 100%;
 
   border-radius: 10px;
+  border-color: #45c3d2;
+
 }
 .category-section {
   margin: 20px 0;
@@ -140,3 +155,74 @@ footer {
 footer a {
   text-decoration: none;
 }
+
+
+/* Custom arrow icon styles */
+.custom-arrow-icon {
+  color: rgb(19, 200, 140);
+  font-size: 1.5rem;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  top: 45%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border: 2px solid white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+}
+
+.carousel-control-prev {
+  left: -20px;
+}
+
+.carousel-control-next {
+  right: -20px;
+}
+
+@media (max-width: 767px) {
+  .carousel-control-prev,
+  .carousel-control-next {
+    display: none !important; 
+  }
+
+  .pagination-container {
+    display: block !important; 
+  }
+}
+
+@media (min-width: 768px) {
+  .pagination-container {
+    display: none !important; 
+  }
+}
+
+
+.pagination .page-item {
+  margin: 0 2px; 
+}
+
+.pagination .page-link {
+  padding: 5px 10px;
+  border: 2px solid #45BEE5; 
+  border-radius: 5px; 
+  background-color: #fff; 
+  color: #45BEE5; 
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.pagination .page-link:hover {
+  background-color: #45BEE5;
+  color: #fcfcfc; 
+}
+
+.pagination .page-link.active {
+  background-color: #45BEE5; 
+  color: white; 
+  border: 2px solid #45BEE5;
+}
+

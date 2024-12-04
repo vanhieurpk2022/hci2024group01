@@ -11,6 +11,9 @@
     />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./assets/css/myStyle.css" />
+    <link rel="stylesheet" href="./assets/css/setColor.css">
+    <link rel="stylesheet" href="./assets/css/setColor.css">
+
     <title>HeathCare</title>
     <style>
       /*  */
@@ -81,7 +84,7 @@
       </div>
 
       <div class="ms-auto ">
-        <a href="" class="px-3 btn d-flex flex-column text-center" style="color: black; background-color: #007BFF;" > <i class="fa-regular fa-clipboard"></i> Book now</a>
+        <a href="" class="px-3 btn d-flex flex-column text-center" style="color: var(--bookNow-color); background-color: #007BFF;" > <i class="fa-regular fa-clipboard"></i> Book now</a>
       </div>
     </div>
           <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
@@ -95,28 +98,28 @@
                   <a class="fw-semibold nav-link active" aria-current="page" href="./index.html"><i class=" fa-solid fa-house"></i> Home</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="handbook.html"><i class="fa-solid fa-book-medical"></i> Handbook</a>
+                  <a class="nav-link" href="./handbook.html"><i class="fa-solid fa-book-medical"></i> Handbook</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#"><i class="fa-regular fa-handshake"></i> Contact</a>
+                  <a class="nav-link" href="./contact.html"><i class="fa-regular fa-handshake"></i> Contact</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#"><i class="fa-solid fa-building"></i> Business heath</a>
+                  <a class="nav-link" href="./business.html"><i class="fa-solid fa-building"></i> Business heath</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#"><i class="fa-solid fa-folder"></i> Digital Transformation Package</a>
+                  <a class="nav-link" href="./digital.html"><i class="fa-solid fa-folder"></i> Digital Transformation Package</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#"><i class="fa-solid fa-users"></i> Recruitment</a>
+                  <a class="nav-link" href="./Recruitment.html"><i class="fa-solid fa-users"></i> Recruitment</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#"><i class="fa-solid fa-hospital-user"></i> Patitent</a>
+                  <a class="nav-link" href="./patient.html"><i class="fa-solid fa-hospital-user"></i> Patitent</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#"><i class="fa-solid fa-user-doctor"></i> Doctor</a>
+                  <a class="nav-link" href="./doctor.html"><i class="fa-solid fa-user-doctor"></i> Doctor</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#"><i class="fa-solid fa-flag"></i> Role of bookingcare</a>
+                  <a class="nav-link" href="./roleOf.html"><i class="fa-solid fa-flag"></i> Role of bookingcare</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="./hotLine.html"><i class="fa-solid fa-phone"></i> Hotline</a>
@@ -155,28 +158,26 @@
     <!-- Home  -->
           <!-- header start -->
          <main>
-            <div class="container mt-4">
-                <table class="table table-bordered">
+            <div class="container mt-4 table-responsive  ">
+              <h3>Design page</h3>
+                <table class="table table-bordered ">
                     <thead>
-                        <tr>
-                            <th colspan="7" class="table-header">REQUIREMENT</th>
-                        </tr>
-                        <tr>
-                            <th>STT</th>
-                            <th>Page</th>
-                            <th>Người hiện thực</th>
-                            <th>Thời gian dự kiến</th>
-                            <th>Trạng thái</th>
-                            <th>Kết quả</th>
+                        <tr >
+                            <th scope="col">STT</th>
+                            <th scope="col">Page</th>
+                            <th scope="col">Người hiện thực</th>
+                            <th scope="col">Thời gian dự kiến</th>
+                            <th scope="col">Trạng thái</th>
+                            <th scope="col">Kết quả</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>1</td>
+                            <th scope="row">1</th>
                             <td>Hotline,FAQ,Terms</td>
                             <td>Vi Văn Hiếu</td>
                             <td>....</td>
-                            <td>Hoàn Thành</td>
+                            <td>hoàn thành</td>
                             <td>
                                 <a href="./hotLine.html">Hotline</a>,
                                 <a href="./fAQ.html">FAQ</a>,
@@ -184,27 +185,28 @@
                             </td>
                         </tr>
                         <tr>
-                            <td>2</td>
+                            <th scope="row">2</th>
                             <td>Handbook,contact,business healthy</td>
                             <td>Đỗ Minh Quốc</td>
                             <td>...</td>
-                            <td>Hoàn Thành</td>
+                            <td>hoàn thành</td>
                             <td>
                                 <a href="./handbook.html">Handbook</a>,
-                                <a href="#">contact</a>,
-                                <a href="#">business healthy</a>
+                                <a href="./contact.html">contact</a>,
+                                <a href="./business.html">business healthy</a>
                             </td>
                         </tr>
                         <tr>
-                            <td>3</td>
+                            <th scope="row">3</th>
                             <td>digital transfrom...,recruiment</td>
                             <td>Nguyễn Thành An</td>
+                            <td>hoàn thành</td>
                             <td>...</td>
-                            <td>...</td>
-                            <td>...</td>
+                            <td><a href="./Recruitment.html">Recruitment</a>,
+                            <a href="./digital.html">digital</a></td>
                         </tr>
                         <tr>
-                            <td>4</td>
+                            <th scope="row">4</th>
                             <td>hospital visit,healthily</td>
                             <td>Nguyễn Duy Khánh</td>
                             <td>...</td>
@@ -212,7 +214,7 @@
                             <td>...</td>
                             </tr>
                             <tr>
-                                <td>5</td>
+                                <th scope="row">5</th>
                                 <td>patient,doctor,role of booking care</td>
                                 <td>Đoàn Huy Cương</td>
                                 <td>...</td>
