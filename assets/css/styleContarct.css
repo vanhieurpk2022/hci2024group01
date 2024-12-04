@@ -389,10 +389,28 @@ footer a {
   border: none;
   color: #333;
 }
+.align-image {
+  height: 118%; 
+  object-fit: cover; 
+}
+textarea {
+  resize: none;
+}
+.btn:hover{
+  color: black;
+  background-color: #2196f3;
+}
 
 @media (min-width: 578px) {
   .nav-tabs-scroll {
     justify-content: center;
   }
+  
 }
 
+@media (max-width: 768px) {
+  .align-image {
+    height: 100%; 
+    padding-bottom: 30px;
+  }
+}
