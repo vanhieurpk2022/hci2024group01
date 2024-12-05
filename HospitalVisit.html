@@ -1,275 +1,558 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
+<html lang="en"><head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gói khám & Xét nghiệm</title>
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f5f5f5;
-      padding: 20px;
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-    }
-
-    .section {
-      margin-bottom: 40px;
-    }
-
-    .section-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 20px;
-    }
-
-    h2 {
-      font-size: 30px;
-      color: #333;
-    }
-
-    .see-more {
-      text-decoration: none;
-      color: #007bff;
-      font-size: 20px;
-      font-weight: bold;
-      transition: color 0.3s ease;
-    }
-
-    .see-more:hover {
-      color: #0056b3;
-    }
-
-    .cards {
-      display: flex;
-      gap: 20px;
-      flex-wrap: wrap;
-      justify-content: space-between;
-    }
-
-    .card {
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 15px;
-  text-align: center;
-  flex: 1;
-  max-width: 30%;
-  min-width: 250px;
-  height: 300px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  transition: all 0.3s ease; /* Thêm hiệu ứng chuyển tiếp */
-}
-.card:hover {
-  transform: translateY(-10px); /* Nâng thẻ lên 10px khi hover */
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Tăng cường bóng đổ khi hover */
-}
-    .card img {
-      width: 100%;
-      height: 200px;
-      object-fit: contain; /* Phóng to/thu nhỏ ảnh để vừa khung */
-      border-radius: 5px;
-      background-color: #ffffff; /* Hiển thị nền xám nếu có khoảng trống */
-    }
-    
-    .card1 img {
-  width: 100%;
-  height: 300px; /* Đảm bảo chiều cao cố định */
-  object-fit: cover; /* Đảm bảo ảnh không bị méo */
-  border-radius: 50%; /* Tạo hiệu ứng hình tròn */
-  background-color: #ffffff; /* Nền trắng khi ảnh chưa có */
-}
-.card1 p {
-  font-size: 18px;
-  color: #a5a4a4; /* Màu chữ tối để dễ đọc */
-  margin-top: 10px;
-   font-weight: normal; /*Làm cho chữ đậm hơn */
-  line-height: 1.4;
-  text-align: center; /* Căn giữa nội dung */
-}
-
-.card1 p:nth-child(2) {
-  font-size: 20px;
-  color: #000000; /* Màu chữ mờ hơn cho dòng dưới */
-  font-weight: bold; /* Dòng dưới có thể để nhẹ hơn */
-  line-height: 1.4;
-  margin-top: 5px;
-}
-/* Thêm hình ảnh làm background */
-.section:nth-child(3) {  /* Chỉ định phần bác sĩ nổi bật */
-  background-image: url('https://cdn.bookingcare.vn/fo/2023/11/01/140311-background5.png');  /* Thay đường dẫn ảnh */
-  background-size: cover;  /* Đảm bảo ảnh bao phủ toàn bộ diện tích */
-  background-position: center;  /* Căn giữa hình ảnh */
-  background-repeat: no-repeat;  /* Không lặp lại hình ảnh */
-  padding: 40px 20px;  /* Thêm khoảng cách padding cho đẹp */
-  border-radius: 8px;  /* Tạo hiệu ứng bo góc */
-}
-
-
-    .card p {
-  font-size: 22px;
-  color: #555;
-  margin-top: 10px;
-  flex-grow: 1;
-  display: -webkit-box; /* Sử dụng flex box */
-  -webkit-box-orient: vertical; /* Định hướng văn bản theo chiều dọc */
-  -webkit-line-clamp: 3; /* Giới hạn số dòng tối đa hiển thị */
-  overflow: hidden; /* Ẩn phần văn bản bị tràn */
-  text-overflow: ellipsis; /* Hiển thị dấu ba chấm khi văn bản quá dài */
-  line-height: 1.5;
-  font-weight: bold; /* Đặt font chữ in đậm */
-}
-
-    @media (max-width: 768px) {
-      .card {
-        max-width: 100%;
-        height: auto;
-      }
-
-      .section-header {
-        flex-direction: column;
-        align-items: flex-start;
-      }
-
-      .card img {
-        height: auto;
-      }
-    }
-  </style>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="./assets/css/myStyle.css">
+  <link rel="stylesheet" href="./assets/css/setColor.css">
+  <title>HeathCare</title>
+ 
 </head>
-
 <body>
-  <div class="container">
-    <section class="section">
-        <div class="section-header">
-          <h2>Cơ sở nổi bật</h2>
-          <a href="#" class="see-more">Xem thêm</a>
-        </div>
-        <div class="cards">
-          <div class="card">
-            <img src="https://cdn.bookingcare.vn/fo/2018/06/18/083122lo-go-viet-duc.jpg" alt="Gói khám cơ bản nam">
-            <p>Bệnh viện Hữu nghị Việt Đức</p>
-          </div>
-          <div class="card">
-            <img src="https://cdn.bookingcare.vn/fo/2019/03/11/152704logo-bvcr-moi.jpg" alt="Gói khám chuyên sâu nữ">
-            <p>Bệnh viện Chợ Rẫy</p>
-          </div>
-          <div class="card">
-            <img src="https://cdn.bookingcare.vn/fo/2022/08/26/092249-doctor-check.jpg" alt="Gói khám cơ bản nữ">
-            <p>Doctor Check - Tầm Soát Bệnh Để Sống Thọ Hơn</p>
-          </div>
-        </div>
-      </section> 
 
-      <section class="section">
-        <div class="section-header">
-          <h2>Chuyên khoa</h2>
-          <a href="#" class="see-more">Xem thêm</a>
-        </div>
-        <div class="cards">
-          <div class="card">
-            <img src="https://cdn.bookingcare.vn/fo/2023/12/26/101627-co-xuong-khop.png" alt="Gói khám cơ bản nam">
-            <p>Cơ xương khớp</p>
-          </div>
-          <div class="card">
-            <img src="https://cdn.bookingcare.vn/fo/2023/12/26/101739-than-kinh.png" alt="Gói khám chuyên sâu nữ">
-            <p>Thần kinh</p>
-          </div>
-          <div class="card">
-            <img src="https://cdn.bookingcare.vn/fo/2023/12/26/101713-tieu-hoa.png" alt="Gói khám cơ bản nữ">
-            <p>Tiêu hóa</p>
-          </div>
-        </div>
-      </section> 
+            <!-- Chuyên Khoa -->
+   <div class="container mt-5">
+    <div class="d-flex justify-content-between">
+      <h3>Cơ sở nổi bật</h3>
+<div class="p-2 "> <a href="" class="text-decoration-none fs-5">Xem thêm</a></div>
+</div>
+          <div class="container mt-4">
+            <div id="carouselExample_coSoYTe" class="carousel slide">
+              <div class="carousel-inner position-relative">
+                <div class="carousel-item active">
+                  <div class="d-flex flex-row justify-content-evenly align-items-center">
+                    <div class="card" style="width: 20rem;">
+                      <div class="ratio ratio-16x9"><img src="https://cdn.bookingcare.vn/fo/2018/06/18/083122lo-go-viet-duc.jpg" class="card-img-top img-thumbnail" alt="..."></div>
+                      <div class="card-body">
+                        <h5 class="card-title text-center d-none d-lg-flex">Bệnh Viện Hữu Nghị Việt Đức</h5>
+                        <h5 class="card-title text-center d-sm-flex small d-lg-none">Bệnh Viện Hữu Nghị Việt Đức</h5>
+                      </div>
+                    </div>
+                    <div class="card " style="width: 20rem;">
+                     <div class="ratio ratio-16x9"> <img src="https://cdn.bookingcare.vn/fo/2021/04/07/103904-logo-thucuc.png" class="card-img-top img-thumbnail " alt="..."></div>
+                      <div class="card-body">
+                        <h5 class="card-title text-center d-none d-lg-flex">Hệ thống Y tế thu cúc TCI</h5>
+                        <h5 class="card-title text-center d-sm-flex small d-lg-none">Hệ thống Y tế thu cúc TCI</h5>
 
-      <section class="section">
-        <div class="section-header">
-          <h2>Bác sĩ nổi bật</h2>
-          <a href="#" class="see-more">Xem thêm</a>
-        </div>
-        <div class="cards">
-          <div class="card1">
-            <img src="https://cdn.bookingcare.vn/fo/2021/04/07/174603-ts-bs-pham-chi-lang.jpg" alt="Gói khám cơ bản nam">
-            <p>Tiến sĩ, Bác sĩ Phạm Chí Lăng</p>
-            <p>Cơ Xương Khớp,Chấn thương chỉnh hình</p>
-          </div>
-          <div class="card1">
-            <img src="https://cdn.bookingcare.vn/fo/2019/03/04/180640bac-si-vu-thai-ha.jpg" alt="Gói khám chuyên sâu nữ">
-            <p>Tiến sĩ, Bác sĩ Vũ Thái Hà</p>
-            <p>Da liễu,Da liễu thẩm mỹ</p>
-          </div>
-          <div class="card1">
-            <img src="https://cdn.bookingcare.vn/fo/2022/08/15/165612-250--bac-si-noi-than-kinh-nguyen-tuong-vu15186.png" alt="Gói khám cơ bản nữ">
-            <p>Bác sĩ Chuyên khoa I Nguyễn Tường Vũ</p>
-            <p>Thần kinh,Ngoại thần kinh</p>
-          </div>
-        </div>
-      </section> 
+                      </div>
+                    </div>
+                    <div class="card" style="width: 20rem;">
+                        <div class="ratio ratio-16x9"><img src="https://cdn.bookingcare.vn/fo/2019/03/11/152704logo-bvcr-moi.jpg" class="card-img-top img-thumbnail" alt="..."></div>
+                                      <div class="card-body"> 
+                        <h5 class=" card-title text-center d-none d-lg-flex">Bệnh viện Chợ Rẫy</h5>
+                        <h5 class="card-title text-center d-sm-flex small d-lg-none">Bệnh viện Chợ Rẫy</h5>
 
-    <section class="section">
-      <div class="section-header">
-        <h2>Gói khám</h2>
-        <a href="#" class="see-more">Xem thêm</a>
-      </div>
-      <div class="cards">
-        <div class="card">
-          <img src="https://cdn.bookingcare.vn/fo/2019/09/12/093819goi-kham-suc-khoe-co-ban.jpg" alt="Gói khám cơ bản nam">
-          <p>Gói khám sức khỏe tổng quát cơ bản cho nam </p>
-        </div>
-        <div class="card">
-          <img src="https://cdn.bookingcare.vn/fo/2018/06/05/121331goi-kham-suc-khoe-toan-dien-nu.jpg" alt="Gói khám chuyên sâu nữ">
-          <p>Gói khám sức khỏe tổng quát chuyên sâu dành cho nữ </p>
-        </div>
-        <div class="card">
-          <img src="https://cdn.bookingcare.vn/fo/2019/09/12/093819goi-kham-suc-khoe-co-ban.jpg" alt="Gói khám cơ bản nữ">
-          <p>Gói khám sức khỏe tổng quát cơ bản cho nữ </p>
-        </div>
-      </div>
-    </section>
+                      </div>
+                    </div>
+                    
+                  </div>
+                      
+                </div>
+                <div class="carousel-item">
+                  <div class="d-flex flex-row justify-content-evenly">
+                    <div class="card" style="width: 20rem;">
+                      <div class="ratio ratio-16x9"><img src="https://cdn.bookingcare.vn/fo/2022/08/26/092249-doctor-check.jpg" class="card-img-top img-thumbnail" alt="..."></div>
+                      <div class="card-body">
+                        <h5 class="card-title text-center d-none d-lg-flex">Doctor Check - Tầm Soát Bệnh Để Sống Thọ Hơn</h5>
+                        <h5 class="card-title text-center d-sm-flex small d-lg-none">Doctor Check - Tầm Soát Bệnh Để Sống Thọ Hơn</h5>
 
-    <section class="section">
-      <div class="section-header">
-        <h2>Xét nghiệm</h2>
-        <a href="#" class="see-more">Xem thêm</a>
+                      </div>
+                    </div>
+                    <div class="card " style="width: 20rem;">
+                     <div class="ratio ratio-16x9"> <img src="https://cdn.bookingcare.vn/fo/2023/05/16/153236-logo-hung-viet.jpg" class="card-img-top img-thumbnail" alt="..."></div>
+                      <div class="card-body">
+                        <h5 class="card-title text-center d-none d-lg-flex">Bệnh viện ưng bưới Hưng Việt</h5>
+                        <h5 class="card-title text-center d-sm-flex small d-lg-none">Bệnh viện ưng bưới Hưng Việt</h5>
+
+                      </div>
+                    </div>
+                    <div class="card" style="width: 20rem;">
+                      <!--  cần resize ảnh này -->
+                      <div class="ratio ratio-16x9"><img src="https://cdn.bookingcare.vn/fo/2022/08/29/104922-logo-med-tai-ha-noi--01.png" class="card-img-top img-thumbnail" alt="..."></div>
+                      <div class="card-body">
+                        <h5 class="card-title text-center d-none d-lg-flex">Hệ thống y tế MEDLATEC</h5>
+                        <h5 class="card-title text-center d-sm-flex small d-lg-none">Hệ thống y tế MEDLATEC</h5>
+
+                      </div>
+                    </div>
+                    
+                    </div>
+                    
+                </div>
+                <div class="carousel-item">
+                  <div class="d-flex flex-row justify-content-evenly">
+                    <div class="card" style="width: 20rem;">
+                      <div class="ratio ratio-16x9"><img src="https://cdn.bookingcare.vn/fo/2022/01/28/165735-logo-hong-phat.png" class="card-img-top img-thumbnail" alt="..."></div>
+                      <div class="card-body">
+                        <h5 class="card-title text-center d-none d-lg-flex">Bệnh viện đa khoa hồng phát</h5>
+                        <h5 class="card-title text-center d-sm-flex small d-lg-none">Bệnh viện đa khoa hồng phát</h5>
+
+                      </div>
+                    </div>
+                    <div class="card " style="width: 20rem;">
+                     <div class="ratio ratio-16x9"> <img src="https://cdn.bookingcare.vn/fo/2024/07/18/114029-anh1.jpg" class="card-img-top img-thumbnail" alt="..."></div>
+                      <div class="card-body">
+                        <h5 class="card-title text-center d-none d-lg-flex">Bệnh viện đa khoa An Việt</h5>
+                        <h5 class="card-title text-center d-sm-flex small d-lg-none">Bệnh viện đa khoa An Việt</h5>
+
+                        
+                      </div>
+                    </div>
+                    <div class="card" style="width: 20rem;">
+                      <div class="ratio ratio-16x9"><img src="https://cdn.bookingcare.vn/fo/2019/11/13/160343logo-nam-hoc-hn.jpg" class="card-img-top img-thumbnail" alt="..."></div>
+                      <div class="card-body">
+                        <h5 class="card-title text-center d-none d-lg-flex">Bệnh viện nam học và hiếm muộn Hà Nội</h5>
+                        <h5 class="card-title text-center d-sm-flex small d-lg-none">Bệnh viện nam học và hiếm muộn Hà Nội</h5>
+                      </div>
+                    </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample_coSoYTe" data-bs-slide="prev">
+                  <span class="p-2 position-absolute start-0" style="color: black;" aria-hidden="true"><i class="fa-solid fa-arrow-left fs-4"></i></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample_coSoYTe" data-bs-slide="next">
+                  <span class="p-2 position-absolute end-0" style="color: black;" aria-hidden="true"><i class="fa-solid fa-arrow-right fs-4"></i> </span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+          </div>          
+   </div>
+        </div>
       </div>
-      <div class="cards">
-        <div class="card">
-          <img src="https://cdn.bookingcare.vn/fo/2022/11/08/175554-diag.png" alt="Diag Laboratories">
-          <p>Dịch vụ xét nghiệm của Trung tâm xét nghiệm Diag Laboratories</p>
+      <br>
+      <br>
+      <div class="container mt-3 mt-sm-0">
+        <div class="d-flex justify-content-between">
+                       <h3>Chuyên Khoa</h3>
+               <div class="p-2 "> <a href="" class="text-decoration-none fs-5">Xem thêm</a></div>
         </div>
-        <div class="card">
-          <img src="https://cdn.bookingcare.vn/fo/2023/01/18/090630-104922-logo-med-tai-ha-noi--01.png" alt="Medlatec">
-          <p>Dịch vụ lấy mẫu xét nghiệm tại nhà của Hệ thống y tế Medlatec</p>
+                       <div class="container mt-3 ">
+                         <div id="carouselExample" class="carousel slide">
+                           <div class="carousel-inner position-relative">
+                             <div class="carousel-item active">
+                               <div class="d-flex flex-row justify-content-evenly">
+                                 <div class="card" style="width: 20rem;">
+                                   <img src="https://cdn.bookingcare.vn/fo/2023/12/26/101627-co-xuong-khop.png" class="card-img-top" alt="...">
+                                   <div class="card-body ">
+                                     <h5 class="card-title   d-none d-lg-flex justify-content-center ">Cơ xương khớp</h5>
+                                     <h5 class="card-title   d-sm-flex small d-lg-none justify-content-center">Cơ xương khớp</h5>
+                                   </div>
+                                 </div>
+                                 <div class="card " style="width: 20rem;">
+                                   <img src="https://cdn.bookingcare.vn/fo/2023/12/26/101739-than-kinh.png" class="card-img-top" alt="...">
+                                   <div class="card-body">
+                           
+                                     
+                                     <h5 class="card-title   d-none d-lg-flex justify-content-center ">Thần kinh</h5>
+                                     <h5 class="card-title   d-sm-flex small d-lg-none justify-content-center">Thần kinh</h5>
+                                     
+                                   </div>
+                                 </div>
+                                 <div class="card" style="width: 20rem;">
+                                   <img src="https://cdn.bookingcare.vn/fo/2023/12/26/101713-tieu-hoa.png" class="card-img-top" alt="...">
+                                   <div class="card-body">
+                                     <h5 class="card-title   d-sm-flex small d-lg-none justify-content-center">Tiêu hóa</h5>
+                                     <h5 class="card-title   d-none d-lg-flex justify-content-center ">Tiêu hóa</h5>
+                                     
+                                   </div>
+                                 </div>
+                               </div>
+     
+                             </div>
+                             <div class="carousel-item">
+                               <div class="d-flex flex-row justify-content-evenly">
+                                 <div class="card" style="width: 20rem;">
+                                   <img src="https://cdn.bookingcare.vn/fo/2023/12/26/101713-tim-mach.png" class="card-img-top" alt="...">
+                                   <div class="card-body">
+                                     <h5 class="card-title   d-none d-lg-flex justify-content-center ">Tim mạch</h5>
+                                     <h5 class="card-title   d-sm-flex small d-lg-none justify-content-center">Tim mạch</h5>
+                                   </div>
+                                 </div>
+                                 <div class="card " style="width: 20rem;">
+                                   <img src="https://cdn.bookingcare.vn/fo/2023/12/26/101627-cot-song.png" class="card-img-top" alt="...">
+                                   <div class="card-body">
+                                     <h5 class="card-title   d-none d-lg-flex justify-content-center ">Cột sống</h5>
+                                     <h5 class="card-title   d-sm-flex small d-lg-none justify-content-center">Cột sống</h5>
+                                     
+                                   </div>
+                                 </div>
+                                 <div class="card" style="width: 20rem;">
+                                   <img src="https://cdn.bookingcare.vn/fo/2023/12/26/101713-tai-mui-hong.png" class="card-img-top" alt="...">
+                                   <div class="card-body">
+                                     <h5 class="card-title   d-none d-lg-flex justify-content-center ">Tai-Mũi-Họng</h5>
+                                     <h5 class="card-title   d-sm-flex small d-lg-none justify-content-center">Tai-Mũi-Họng</h5>
+                                   </div>
+                                 </div>
+                               </div>
+     
+                             </div>
+                             <div class="carousel-item">
+                               <div class="d-flex flex-row justify-content-evenly">
+                                 <div class="card" style="width: 20rem;">
+                                   <img src="https://cdn.bookingcare.vn/fo/2023/12/26/101627-cham-cuu.png" class="card-img-top" alt="...">
+                                   <div class="card-body">
+                                     <h5 class="card-title   d-none d-lg-flex justify-content-center ">Châm cứu</h5>
+                                     <h5 class="card-title   d-sm-flex small d-lg-none justify-content-center">Châm cứu</h5>
+                                   </div>
+                                 </div>
+                                 <div class="card " style="width: 20rem;">
+                                   <img src="https://cdn.bookingcare.vn/fo/2023/12/26/101713-san-phu-khoa.png" class="card-img-top" alt="...">
+                                   <div class="card-body">
+                                     <h5 class="card-title   d-none d-lg-flex justify-content-center ">Sản phụ khoa</h5>
+                                     <h5 class="card-title   d-sm-flex small d-lg-none justify-content-center">Sản phụ khoa</h5>
+                                     
+                                   </div>
+                                 </div>
+                                 <div class="card" style="width: 20rem;">
+                                   <img src="https://cdn.bookingcare.vn/fo/2023/12/26/101713-sieu-am-thai.png" class="card-img-top" alt="...">
+                                   <div class="card-body">
+                                     <h5 class="card-title   d-none d-lg-flex justify-content-center ">Siêu âm thai</h5>
+                                     <h5 class="card-title   d-sm-flex small d-lg-none justify-content-center">Siêu âm thai</h5>
+                                     
+                                   </div>
+                                 </div>
+                                 
+                                 </div>
+                                 
+                             </div>
+                             <div class="carousel-item">
+                               <div class="d-flex flex-row justify-content-evenly">
+                                 <div class="card" style="width: 20rem;">
+                                   <img src="https://cdn.bookingcare.vn/fo/2023/12/26/101655-nhi-khoa.png" class="card-img-top" alt="...">
+                                   <div class="card-body">
+                                     <h5 class="card-title   d-none d-lg-flex justify-content-center ">Nhi khoa</h5>
+                                     <h5 class="card-title   d-sm-flex small d-lg-none justify-content-center">Nhi khoa</h5>
+                                   </div>
+                                 </div>
+                                 <div class="card " style="width: 20rem;">
+                                   <img src="https://cdn.bookingcare.vn/fo/2023/12/26/101638-da-lieu.png" class="card-img-top" alt="...">
+                                   <div class="card-body">
+                                     <h5 class="card-title   d-none d-lg-flex justify-content-center ">Da liễu</h5>
+                                     <h5 class="card-title   d-sm-flex small d-lg-none justify-content-center">Da liễu</h5>
+                                     
+                                   </div>
+                                 </div>
+                                 <div class="card" style="width: 20rem;">
+                                   <img src="https://cdn.bookingcare.vn/fo/2023/12/26/101739-viem-gan.png" class="card-img-top" alt="...">
+                                   <div class="card-body">
+                                     <h5 class="card-title   d-none d-lg-flex justify-content-center ">Bệnh viêm gan</h5>
+                                     <h5 class="card-title   d-sm-flex small d-lg-none justify-content-center">Bệnh viêm gan</h5>
+                                     
+                                   </div>
+                                 </div>
+                                 
+                                 </div>
+                                 
+                             </div>
+                             <div class="carousel-item">
+                               <div class="d-flex flex-row justify-content-evenly">
+                                 <div class="card" style="width: 20rem;">
+                                   <img src="https://cdn.bookingcare.vn/fo/2023/12/26/101713-suc-khoe-tam-than.png" class="card-img-top" alt="...">
+                                   <div class="card-body">
+                                     <h5 class="card-title   d-none d-lg-flex justify-content-center ">Sức khỏe tâm thần</h5>
+                                     <h5 class="card-title   d-sm-flex small d-lg-none justify-content-center">Sức khỏe tâm thần</h5>
+                                   </div>
+                                 </div>
+                                 <div class="card " style="width: 20rem;">
+                                   <img src="https://cdn.bookingcare.vn/fo/2023/12/26/101638-di-ung-mien-dich.png" class="card-img-top" alt="...">
+                                   <div class="card-body">
+                                     <h5 class="card-title   d-none d-lg-flex justify-content-center ">Dị ứng miễn dịch</h5>
+                                     <h5 class="card-title   d-sm-flex small d-lg-none justify-content-center">Dị ứng miễn dịch</h5>
+                                     
+                                   </div>
+                                 </div>
+                                 <div class="card" style="width: 20rem;">
+                                   <img src="https://cdn.bookingcare.vn/fo/2023/12/26/101638-ho-hap-phoi.png" class="card-img-top" alt="...">
+                                   <div class="card-body">
+                                     <h5 class="card-title   d-none d-lg-flex justify-content-center ">Hô hấp - Phổi</h5>
+                                     <h5 class="card-title   d-sm-flex small d-lg-none justify-content-center">Hô hấp - Phổi</h5>
+                                     
+                                   </div>
+                                 </div>
+                                 
+                                 </div>
+                                 
+                             </div>
+                             <div class="carousel-item">
+                               <div class="d-flex flex-row justify-content-evenly">
+                                 <div class="card" style="width: 20rem;">
+                                   <img src="https://cdn.bookingcare.vn/fo/2023/12/26/101655-ngoai-than-kinh.png" class="card-img-top" alt="...">
+                                   <div class="card-body">
+                                     <h5 class="card-title   d-none d-lg-flex justify-content-center ">Ngoại thần kinh</h5>
+                                     <h5 class="card-title   d-sm-flex small d-lg-none justify-content-center">Ngoại thần kinh</h5>
+                                   </div>
+                                 </div>
+                                 <div class="card " style="width: 20rem;">
+                                   <img src="https://cdn.bookingcare.vn/fo/2023/12/26/101655-nam-hoc.png" class="card-img-top" alt="...">
+                                   <div class="card-body">
+                                     <h5 class="card-title   d-none d-lg-flex justify-content-center ">Nam học</h5>
+                                     <h5 class="card-title   d-sm-flex small d-lg-none justify-content-center">Nam học</h5>
+                                     
+                                   </div>
+                                 </div>
+                                 <div class="card" style="width: 20rem;">
+                                   <img src="https://cdn.bookingcare.vn/fo/2023/12/26/101655-nam-hoc.png" class="card-img-top" alt="...">
+                                   <div class="card-body">
+                                     <h5 class="card-title   d-none d-lg-flex justify-content-center ">Chuyên khoa mắt</h5>
+                                     <h5 class="card-title   d-sm-flex small d-lg-none justify-content-center">Chuyên khoa mắt</h5>
+                                     
+                                   </div>
+                                 </div>
+                                 
+                                 </div>
+                                 
+                             </div>
+                             <div class="carousel-item">
+                               <div class="d-flex flex-row justify-content-evenly">
+                                 <div class="card" style="width: 20rem;">
+                                   <img src="https://cdn.bookingcare.vn/fo/2023/12/26/101739-than-tiet-nieu.png" class="card-img-top" alt="...">
+                                   <div class="card-body">
+                                     <h5 class="card-title   d-none d-lg-flex justify-content-center ">Thận - Tiết niệu</h5>
+                                     <h5 class="card-title   d-sm-flex small d-lg-none justify-content-center">Thận - Tiết niệu</h5>
+                                   </div>
+                                 </div>
+                                 <div class="card " style="width: 20rem;">
+                                   <img src="https://cdn.bookingcare.vn/fo/2023/12/26/101655-noi-khoa.png" class="card-img-top" alt="...">
+                                   <div class="card-body">
+                                     <h5 class="card-title   d-none d-lg-flex justify-content-center ">Nội khoa</h5>
+                                     <h5 class="card-title   d-sm-flex small d-lg-none justify-content-center">Nội khoa</h5>
+                                     
+                                   </div>
+                                 </div>
+                                 <div class="card" style="width: 20rem;">
+                                   <img src="https://cdn.bookingcare.vn/fo/2023/12/26/104709-nha-khoa-tong-quat.png" class="card-img-top" alt="...">
+                                   <div class="card-body">
+                                     <h5 class="card-title   d-none d-lg-flex justify-content-center ">Nha khoa</h5>
+                                     <h5 class="card-title   d-sm-flex small d-lg-none justify-content-center">Nha khoa</h5>
+                                     
+                                   </div>
+                                 </div>
+                                 
+                                 </div>
+                                 
+                             </div>
+                            
+                           <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                             <span class="p-2 position-absolute start-0" style="color: black;" aria-hidden="true"><i class="fa-solid fa-arrow-left fs-4"></i></span>
+                             <span class="visually-hidden">Previous</span>
+                           </button>
+                           <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                             <span class="p-2 position-absolute end-0" style="color: black;" aria-hidden="true"><i class="fa-solid fa-arrow-right fs-4"></i> </span>
+                             <span class="visually-hidden">Next</span>
+                           </button>
+                         </div>
+                       </div>               
         </div>
-        <div class="card">
-          <img src="https://cdn.bookingcare.vn/fo/2017/11/28/103739xet-nghiem-mau.jpg" alt="Tầm soát ung thư">
-          <p>Gói xét nghiệm tầm soát dấu ấn ung thư nam </p>
-        </div>
-      </div>
-    </section>
+        <br>
+        <br>
+<!-- Bác sĩ nổi bật -->
+<div class="container mt-5" style="background-image: url('https://cdn.bookingcare.vn/fo/2023/11/01/140311-background5.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+  <div class="d-flex justify-content-between">
+    <h3>Bác sĩ nổi bật</h3>
+    <div class="p-2">
+      <a href="" class="text-decoration-none fs-5">Xem thêm</a>
+    </div>
   </div>
 
-  <script>
-    document.querySelectorAll('.see-more').forEach(button => {
-      button.addEventListener('click', (e) => {
-        e.preventDefault();
-        alert("Xem thêm chưa được kích hoạt.");
-      });
-    });
-  </script>
-</body>
+  <div class="container mt-4">
+    <div id="carouselExampleDoctors" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner position-relative">
+        <!-- Carousel item 1 -->
+        <div class="carousel-item active">
+          <div class="d-flex flex-row justify-content-evenly align-items-center">
+            <div class="card" style="width: 20rem; border: none; box-shadow: none; background-color: transparent;">
+              <div class="d-flex justify-content-center align-items-center">
+                <img src="https://cdn.bookingcare.vn/fo/2022/11/10/105537-2c696f68b3bd75e32cac.jpg" class="card-img-top rounded-circle" alt="Dr. John Doe" style="width: 150px; height: 150px; object-fit: cover;">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title text-center">Tiến sĩ, Bác sĩ Chuyên khoa II Lã Thị Bưởi</h5>
+                <p class="card-text text-center">Chuyên khoa: Sức khỏe tâm thần</p>
+              </div>
+            </div>
+            <div class="card" style="width: 20rem; border: none; box-shadow: none; background-color: transparent;">
+              <div class="d-flex justify-content-center align-items-center">
+                <img src="https://cdn.bookingcare.vn/fo/2022/07/19/154647-bs-nhan.png" class="card-img-top rounded-circle" alt="Dr. Jane Smith" style="width: 150px; height: 150px; object-fit: cover;">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title text-center">Thạc sĩ, Bác sĩ Nguyễn Thị Thanh Nhàn</h5>
+                <p class="card-text text-center">Chuyên khoa: Thần kinh</p>
+              </div>
+            </div>
+            <div class="card" style="width: 20rem; border: none; box-shadow: none; background-color: transparent;">
+              <div class="d-flex justify-content-center align-items-center">
+                <img src="https://cdn.bookingcare.vn/fo/2022/05/05/104945-nguyen-van-quynh-pgs.jpg" class="card-img-top rounded-circle" alt="Dr. Alice Brown" style="width: 150px; height: 150px; object-fit: cover;">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title text-center">Phó giáo sư, Tiến Sĩ, Bác sĩ CK II Nguyễn Văn Quýnh</h5>
+                <p class="card-text text-center">Chuyên khoa: Tim mạch</p>
+              </div>
+            </div>
+          </div>
+        </div>
 
+        <!-- Carousel item 2 -->
+        <div class="carousel-item">
+          <div class="d-flex flex-row justify-content-evenly">
+            <div class="card" style="width: 20rem; border: none; box-shadow: none; background-color: transparent;">
+              <div class="d-flex justify-content-center align-items-center">
+                <img src="https://cdn.bookingcare.vn/fo/2018/09/08/170344tien-si-bac-si-tran-thu-huong.jpg" class="card-img-top rounded-circle" alt="Dr. Robert Lee" style="width: 150px; height: 150px; object-fit: cover;">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title text-center">Tiến sĩ, Bác sĩ Trần Thu Hương</h5>
+                <p class="card-text text-center">Chuyên khoa: Nhi khoa,Thần kinh</p>
+              </div>
+            </div>
+            <div class="card" style="width: 20rem; border: none; box-shadow: none; background-color: transparent;">
+              <div class="d-flex justify-content-center align-items-center">
+                <img src="https://cdn.bookingcare.vn/fo/2017/12/22/155419nguyen-thi-kim-loan.jpg" class="card-img-top rounded-circle" alt="Dr. Maria Green" style="width: 150px; height: 150px; object-fit: cover;">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title text-center">Bác sĩ Chuyên khoa II Nguyễn Thị Kim Loan</h5>
+                <p class="card-text text-center">Chuyên khoa: Cơ Xương Khớp</p>
+              </div>
+            </div>
+            <div class="card" style="width: 20rem; border: none; box-shadow: none; background-color: transparent;">
+              <div class="d-flex justify-content-center align-items-center">
+                <img src="https://cdn.bookingcare.vn/fo/2022/08/20/185235-z36534081663342ecf0c4ed5f0d436d452c92c98f5417c.jpg" class="card-img-top rounded-circle" alt="Dr. Tom White" style="width: 150px; height: 150px; object-fit: cover;">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title text-center">Bác sĩ Chuyên khoa I Võ Thị Ngọc Thu</h5>
+                <p class="card-text text-center">Chuyên khoa: Thần kinh,Nội khoa</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Điều khiển carousel: Nút Previous và Next -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDoctors" data-bs-slide="prev">
+        <span class="p-2 position-absolute start-0" style="color: black;" aria-hidden="true">
+          <i class="fa-solid fa-arrow-left fs-4"></i>
+        </span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDoctors" data-bs-slide="next">
+        <span class="p-2 position-absolute end-0" style="color: black;" aria-hidden="true">
+          <i class="fa-solid fa-arrow-right fs-4"></i>
+        </span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+</div>
+
+           <!-- Gói khám -->
+           <div class="container mt-5">
+            <div class="d-flex justify-content-between">
+              <h3>Gói khám</h3>
+        <div class="p-2 "> <a href="" class="text-decoration-none fs-5">Xem thêm</a></div>
+        </div>
+                  <div class="container mt-4">
+                    <div id="carouselExample1" class="carousel slide">
+                      <div class="carousel-inner position-relative">
+                        <div class="carousel-item active">
+                          <div class="d-flex flex-row justify-content-evenly align-items-center">
+                            <div class="card" style="width: 20rem;">
+                              <div class="ratio ratio-16x9"><img src="https://cdn.bookingcare.vn/fo/2019/09/12/093819goi-kham-suc-khoe-co-ban.jpg" class="card-img-top img-thumbnail" alt="..."></div>
+                              <div class="card-body">
+                                <h5 class="card-title text-center d-none d-lg-flex">Gói khám sức khỏe tổng quát cơ bản cho nữ (PKYD1F)</h5>
+                                <h5 class="card-title text-center d-sm-flex small d-lg-none">Gói khám sức khỏe tổng quát cơ bản cho nữ (PKYD1F)</h5>
+                              </div>
+                            </div>
+                            <div class="card " style="width: 20rem;">
+                             <div class="ratio ratio-16x9"> <img src="https://cdn.bookingcare.vn/fo/2019/09/12/093819goi-kham-suc-khoe-co-ban.jpg" class="card-img-top img-thumbnail " alt="..."></div>
+                              <div class="card-body">
+                                <h5 class="card-title text-center d-none d-lg-flex">Gói khám sức khỏe tổng quát cơ bản cho nam (PKYD1M)</h5>
+                                <h5 class="card-title text-center d-sm-flex small d-lg-none">Gói khám sức khỏe tổng quát cơ bản cho nam (PKYD1M)</h5>
+        
+                              </div>
+                            </div>
+                            <div class="card" style="width: 20rem;">
+                                <div class="ratio ratio-16x9"><img src="https://cdn.bookingcare.vn/fo/2018/06/05/114709goi-kham-suc-khoe-toan-dien-nam.jpg" class="card-img-top img-thumbnail" alt="..."></div>
+                                              <div class="card-body"> 
+                                <h5 class=" card-title text-center d-none d-lg-flex">Gói khám sức khỏe tổng quát chuyên sâu cho nam (PKYD4M)</h5>
+                                <h5 class="card-title text-center d-sm-flex small d-lg-none">Gói khám sức khỏe tổng quát chuyên sâu cho nam (PKYD4M)</h5>
+        
+                              </div>
+                            </div>
+                            
+                          </div>
+                              
+                        </div>
+                        <div class="carousel-item">
+                          <div class="d-flex flex-row justify-content-evenly">
+                            <div class="card" style="width: 20rem;">
+                              <div class="ratio ratio-16x9"><img src="https://cdn.bookingcare.vn/fo/2018/06/05/121331goi-kham-suc-khoe-toan-dien-nu.jpg" class="card-img-top img-thumbnail" alt="..."></div>
+                              <div class="card-body">
+                                <h5 class="card-title text-center d-none d-lg-flex">Gói khám sức khỏe tổng quát chuyên sâu dành cho nữ (PKYD4F)</h5>
+                                <h5 class="card-title text-center d-sm-flex small d-lg-none">Gói khám sức khỏe tổng quát chuyên sâu dành cho nữ (PKYD4F)</h5>
+        
+                              </div>
+                            </div>
+                            <div class="card " style="width: 20rem;">
+                             <div class="ratio ratio-16x9"> <img src="https://cdn.bookingcare.vn/fo/2019/11/04/135610goi-kham-suc-khoe-nang-cao.jpg" class="card-img-top img-thumbnail" alt="..."></div>
+                              <div class="card-body">
+                                <h5 class="card-title text-center d-none d-lg-flex">Gói khám sức khỏe tổng quát nâng cao dành cho nam (PKYD3M)</h5>
+                                <h5 class="card-title text-center d-sm-flex small d-lg-none">Gói khám sức khỏe tổng quát nâng cao dành cho nam (PKYD3M)</h5>
+        
+                              </div>
+                            </div>
+                            <div class="card" style="width: 20rem;">
+                              <!--  cần resize ảnh này -->
+                              <div class="ratio ratio-16x9"><img src="https://cdn.bookingcare.vn/fo/2019/09/11/150352goi-kham-dinh-ki-tam-soat-ung-thu-co-ban-nu.jpg" class="card-img-top img-thumbnail" alt="..."></div>
+                              <div class="card-body">
+                                <h5 class="card-title text-center d-none d-lg-flex">Gói khám sức khỏe tổng quát nâng cao dành cho nữ (PKYD3F)</h5>
+                                <h5 class="card-title text-center d-sm-flex small d-lg-none">Gói khám sức khỏe tổng quát nâng cao dành cho nữ (PKYD3F)</h5>
+        
+                              </div>
+                            </div>
+                            
+                            </div>
+                            
+                        </div>
+                        <div class="carousel-item">
+                          <div class="d-flex flex-row justify-content-evenly">
+                            <div class="card" style="width: 20rem;">
+                              <div class="ratio ratio-16x9"><img src="https://cdn.bookingcare.vn/fo/2020/09/09/235248-tam-soat-ung-thu-nam.jpg" class="card-img-top img-thumbnail" alt="..."></div>
+                              <div class="card-body">
+                                <h5 class="card-title text-center d-none d-lg-flex">Gói khám tổng quát tiêu chuẩn dành cho nam (SG2M)</h5>
+                                <h5 class="card-title text-center d-sm-flex small d-lg-none">Gói khám tổng quát tiêu chuẩn dành cho nam (SG2M)</h5>
+        
+                              </div>
+                            </div>
+                            <div class="card " style="width: 20rem;">
+                             <div class="ratio ratio-16x9"> <img src="https://cdn.bookingcare.vn/fo/2020/09/09/213041-goi-kham-nu-chuyen-sau-1.jpg" class="card-img-top img-thumbnail" alt="..."></div>
+                              <div class="card-body">
+                                <h5 class="card-title text-center d-none d-lg-flex">Gói khám tổng quát tiêu chuẩn dành cho nữ (SG2F)</h5>
+                                <h5 class="card-title text-center d-sm-flex small d-lg-none">Gói khám tổng quát tiêu chuẩn dành cho nữ (SG2F)</h5>
+        
+                                
+                              </div>
+                            </div>
+                            <div class="card" style="width: 20rem;">
+                              <div class="ratio ratio-16x9"><img src="https://cdn.bookingcare.vn/fo/2022/05/30/094819-thn-nam.jpeg" class="card-img-top img-thumbnail" alt="..."></div>
+                              <div class="card-body">
+                                <h5 class="card-title text-center d-none d-lg-flex">Gói khám sức khỏe tiền hôn nhân cho Nam (NHHM8M)</h5>
+                                <h5 class="card-title text-center d-sm-flex small d-lg-none">Gói khám sức khỏe tiền hôn nhân cho Nam (NHHM8M)</h5>
+                              </div>
+                            </div>
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample1" data-bs-slide="prev">
+                          <span class="p-2 position-absolute start-0" style="color: black;" aria-hidden="true"><i class="fa-solid fa-arrow-left fs-4"></i></span>
+                          <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample1" data-bs-slide="next">
+                          <span class="p-2 position-absolute end-0" style="color: black;" aria-hidden="true"><i class="fa-solid fa-arrow-right fs-4"></i> </span>
+                          <span class="visually-hidden">Next</span>
+                        </button>
+                  </div>          
+           </div>
+                </div>
+              </div>
+  <!-- nhung javascript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="./assets/javaScript/javaScriptIn.js"></script>
+</body>
 </html>
