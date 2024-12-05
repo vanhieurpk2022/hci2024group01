@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./assets/css/myStyle.css" />
     <link rel="stylesheet" href="./assets/css/setColor.css">
+    <link rel="stylesheet" href="./assets/css/styleChat.css">
     <title>HeathCare</title>
    
   </head>
@@ -136,7 +137,7 @@
    <!-- Update to new deploy -->
     <!-- Home  -->
           <!-- header start -->
-           <header class="main-header py-4 " style="background-color: #87CEEB;">
+           <!-- <header class="main-header py-4 " style="background-color: #87CEEB;">
             <div class="container ">
               <h1 class="main-title">Nơi khởi nguồn sức khỏe</h1>
               
@@ -199,6 +200,20 @@
           </div>
           </div>
           
+           </header> -->
+
+          <!-- New Header -->
+           <header>
+            <div class="header_main">
+              <div class="background_image"></div>
+              <div class="header_title  "> 
+                <h1>Nền tảng sức khỏe toàn diện</h1>
+                <h5><small>Chăm sóc tiện lợi, nhanh chóng tiện kiệm thời gian</small></h5>
+                <button class="btn_timhieu mt-3 ms-4">Tìm hiểu ngay</button>
+              </div>
+              </div>
+            </div>
+           
            </header>
            <main class="main-container">
             <div class="container py-sm-5">
@@ -878,6 +893,32 @@
         </div>
       </div>
     </main>
+
+    <div>
+  
+      <button class="chatbot-toggler">
+        <span class="material-symbols-rounded"></span>
+        <span class="material-symbols-outlined">close</span>
+      </button>
+      <div class="chatbot">
+        <header>
+          <h2>Chatbot</h2>
+          <span class="close-btn material-symbols-outlined">close</span>
+        </header>
+        <ul class="chatbox">
+          <li class="chat incoming">
+            <span class="material-symbols-outlined"></span>
+            <p>Hi there <br>How can I help you today?</p>
+          </li>
+        </ul>
+        <div class="chat-input">
+          <textarea placeholder="Enter a message..." spellcheck="false" required></textarea>
+          <span id="send-btn" class="material-symbols-rounded">send</span>
+        </div>
+      </div>
+
+    </div>
+
     <!-- nhung javascript -->
      <!-- Footer -->
     <footer class="bg-dark text-center text-lg-start mt-4">
