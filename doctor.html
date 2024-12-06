@@ -14,6 +14,123 @@
         #specialist-section, #doctor-section, #facility-section, #package-section {
             display: none; /* Hide initially */
         }
+        .container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.image {
+    width: 100%; 
+    height: 300px; 
+    object-fit: cover; 
+    object-position: top; 
+}
+
+.text-overlay {
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    right: 0; 
+    bottom: 0; 
+    background-color: rgba(0, 0, 0, 0.5); 
+    color: white;
+    padding: 20px; 
+}
+
+.text-overlay h2 {
+    margin: 0; 
+    font-size: 24px; 
+}
+
+.text-overlay p {
+    margin: 10px 0; 
+}
+
+.link {
+    color: #ffcc00; 
+    text-decoration: none; 
+    font-weight: bold; 
+}
+
+.text-overlay {
+    display: flex;
+    flex-direction: column; 
+    justify-content: flex-end; 
+    align-items: flex-start; 
+}
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 20px; 
+    padding: 20px;
+}
+
+.card {
+    background-color: white; 
+    border-radius: 8px; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
+    overflow: hidden;
+    transition: transform 0.2s; 
+}
+
+.card:hover {
+    transform: translateY(-5px); 
+}
+
+.card-image {
+    width: 100%; 
+    height: 250px;
+    object-fit: cover; 
+}
+
+.card-content {
+    padding: 15px; 
+}
+
+.card-title {
+    font-size: 18px; 
+    margin: 0 0 10px; 
+}
+
+.card-description {
+    font-size: 14px; 
+    color: #555; 
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000; 
+    left: 0;
+    top: 0;
+    width: 100%; 
+    height: 100%; 
+    overflow: auto; 
+    background-color: rgb(0,0,0); 
+    background-color: rgba(0,0,0,0.4); 
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; 
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
     </style>
 </head>
 <body>
@@ -151,6 +268,79 @@
                 <a href="#" id="toggle-doctors" class="fs-5 fw-bold" style="color: #45c3d2;">Bác sĩ</a>
                 <a href="#" id="toggle-facilities" class="fs-5 fw-bold" style="color: #45c3d2;">Cơ sở y tế</a>
                 <a href="#" id="toggle-packages" class="fs-5 fw-bold" style="color: #45c3d2;">Gói khám</a>
+            </div>
+        </div>
+        <div class="container">
+        <img src="https://vnn-imgs-a1.vgcloud.vn/img2.infonet.vn/w490/Uploaded/2020/pjauldz/2018_03_18/ictnews_bookingcare_1.jpg?width=0&s=a4QvblNPf1NF3yQn7lRj8w" alt="Chèn Hình Ảnh" class="image">
+        <div class="text-overlay">
+            <h1>Dành cho bác sĩ</h1>
+            <h5>Xây dựng ứng dụng tương tác online. Tăng sự lòng bệnh nhân và quản lý hiệu quả.</h5>
+            <a href="#" style="color: #ffcc00; text-decoration: none;">LIÊN KẾT HỢP TÁC</a>
+        </div>
+    </div>
+
+    <div class="card-container">
+        <div class="card" onclick="openModal('content1')">
+            <img src="https://cdn.bookingcare.vn/fo/w1080/2017/09/05/231104giao-tiep-bac-si-benh-nhan-2.jpg" alt="Card Image 1" class="card-image">
+            <div class="card-content">
+                <h3 class="card-title">Giao tiếp giữa bác sĩ và bệnh nhân dưới góc nhìn truyền thông trách nhiệm</h3>
+                <p class="card-description">Bác sĩ lắng nghe một cách sâu sắc và giải thích một cách rõ ràng, dễ hiểu. Bệnh nhân giải thích vấn đề của mình một cách rõ ràng, mạch lạc. Lắng nghe, thấu hiểu</p>
+            </div>
+        </div>
+        <div class="card" onclick="openModal('content2')">
+            <img src="https://cdn.bookingcare.vn/fo/w1200/2022/11/13/132939-10x-content-seo-y-te.png" alt="Card Image 2" class="card-image">
+            <div class="card-content">
+                <h3 class="card-title">10X Content là gì? Cách xây dựng Content SEO Y tế theo 10X Content</h3>
+                <p class="card-description">Sản xuất nội dung thực sự chất lượng theo 10X Content là cách bệnh viện, phòng khám có thể áp dụng để có được nội dung SEO y tế chất lượng, lên top Goo</p>
+            </div>
+        </div>
+        <div class="card" onclick="openModal('content3')">
+            <img src="https://cdn.bookingcare.vn/fo/w1200/2022/11/10/175657-cach-su-dung-google-keyword-planner.png" alt="Card Image 3" class="card-image">
+            <div class="card-content">
+                <h3 class="card-title">Cách sử dụng Google Keyword Planner để chọn từ khóa bài viết</h3>
+                <p class="card-description">Với các đơn vị đang muốn sản xuất Content SEO y tế, quan tâm đến việc sử dụng Google Keyword Planner để chọn từ khóa</p>
+            </div>
+        </div>
+        <div class="card" onclick="openModal('content4')">
+            <img src="https://cdn.bookingcare.vn/fo/w828/2022/11/09/172027-module-thiet-ke-website-phong-kham.jpg" alt="Card Image 3" class="card-image">
+            <div class="card-content">
+                <h3 class="card-title">Các Module quan trọng trong thiết kế Website phòng khám</h3>
+                <p class="card-description">Bài viết dưới đây sẽ gợi ý cho bạn một số cách triển khai nội dung hướng đến người dùng trên website của bệnh viện, phòng khám.</p>
+            </div>
+        </div>
+        <div class="card" onclick="openModal('content5')">
+            <img src="https://cdn.bookingcare.vn/fo/w1080/2022/11/08/134643-marketing-phong-kham-1.png" alt="Card Image 3" class="card-image">
+            <div class="card-content">
+                <h3 class="card-title">Marketing phòng khám - Phần 1: Chiến lược tập trung vào chất lượng khám chữa bệnh</h3>
+                <p class="card-description">Trong Marketing phòng khám, để tạo được lợi thế cạnh tranh với các cơ sở y tế tư nhân khác, thu hút khách hàng hãy bắt đầu từ</p>
+            </div>
+        </div>
+        <div class="card" onclick="openModal('content6')">
+            <img src="https://cdn.bookingcare.vn/fo/w828/2022/11/06/172415-sang-kien-giam-thoi-gian-cho-trong-benh-vien.png" alt="Card Image 3" class="card-image">
+            <div class="card-content">
+                <h3 class="card-title">7 sáng kiến giúp giảm thời gian chờ trong bệnh viện, phòng khám</h3>
+                <p class="card-description">Các đơn vị có thể tham khảo, áp dụng các sáng kiến giảm thời gian chờ trong bệnh viện, phòng khám dưới đây để hạn chế thời gian chờ cho khách hàng, nâng cao tr</p>
+            </div>
+        </div>
+        <div class="card" onclick="openModal('content7')">
+            <img src="https://cdn.bookingcare.vn/fo/w828/2022/11/04/150002-tinh-nang-dung-thu-bookingcare-dx.png" alt="Card Image 3" class="card-image">
+            <div class="card-content">
+                <h3 class="card-title">Dùng thử BookingCare_DX bản miễn phí, có những tính năng gì?</h3>
+                <p class="card-description">Để giúp bệnh viện, phòng khám dễ dàng trải nghiệm Giải pháp Chuyển đổi số BookingCare_DX, BookingCare sẵn sàng</p>
+            </div>
+        </div>
+        <div class="card" onclick="openModal('content8')">
+            <img src="https://cdn.bookingcare.vn/fo/w640/2022/10/13/174911-chuyen-doi-so-bookingcare-dx.png" alt="Card Image 3" class="card-image">
+            <div class="card-content">
+                <h3 class="card-title">4 Lợi ích Giải pháp Chuyển đổi số Phòng khám BookingCare_DX</h3>
+                <p class="card-description">Với Giải pháp Chuyển đổi số Phòng khám BookingCare_DX, đơn vị có thể rút ngắn thời gian chuyển đổi số, đem lại hiệu quả</p>
+            </div>
+        </div>
+        <div class="card" onclick="openModal('content9')">
+            <img src="https://cdn.bookingcare.vn/fo/w640/2022/10/11/120624-lean-startup-marketing-phong-kham.png" alt="Card Image 3" class="card-image">
+            <div class="card-content">
+                <h3 class="card-title">Lean Startup là gì? Ứng dụng trong Marketing phòng khám</h3>
+                <p class="card-description">Cùng BookingCare tìm hiểu về Lean Startup là gì? Tại sao bệnh viện, phòng khám nên ứng dụng mô hình này và làm</p>
             </div>
         </div>
     </header>
@@ -448,6 +638,45 @@
             const packages = document.getElementById('package-section');
             packages.style.display = 'block'; // Show packages section
         });
+        function openModal(contentId) {
+            const modal = document.getElementById('myModal');
+            const modalBody = document.getElementById('modal-body');
+        
+            // Tải nội dung tương ứng vào modal
+            if (contentId === 'content1') {
+                modalBody.innerHTML = `
+                    <h2>Nội dung chính</h2>
+                    <p>Giao tiếp giữa bác sĩ và bệnh nhân dưới góc nhìn truyền thống...</p>
+                    <img src="YOUR_IMAGE_URL_1" alt="Nội dung 1" style="width:100%;">
+                `;
+            } else if (contentId === 'content2') {
+                modalBody.innerHTML = `
+                    <h2>Nội dung chính</h2>
+                    <p>10X Content là gì?... </p>
+                    <img src="YOUR_IMAGE_URL_2" alt="Nội dung 2" style="width:100%;">
+                `;
+            } else if (contentId === 'content3') {
+                modalBody.innerHTML = `
+                    <h2>Nội dung chính</h2>
+                    <p>Cách sử dụng Google Keyword Planner để chọn từ khóa viết...</p>
+                    <img src="YOUR_IMAGE_URL_3" alt="Nội dung 3" style="width:100%;">
+                `;
+            }
+        
+            modal.style.display = "block"; // Hiển thị modal
+        }
+        
+        function closeModal() {
+            document.getElementById('myModal').style.display = "none"; // Ẩn modal
+        }
+        
+        // Đóng modal khi click ra ngoài
+        window.onclick = function(event) {
+            const modal = document.getElementById('myModal');
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
     </script>
 </body>
 </html>
