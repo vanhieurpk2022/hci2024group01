@@ -1,363 +1,569 @@
 <!DOCTYPE html>
-<html lang="vi">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Heathily - Giao diện chăm sóc sức khỏe</title>
-    <style>
-        /* Thiết lập màu sắc cơ bản */
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #f7f9fc; /* Màu nền nhẹ nhàng */
-            color: #333; /* Màu chữ tối nhẹ */
-            margin: 0;
-            padding: 0;
-        }
-
-        /* Header */
-        header {
-            background-color: #6ec1e4; /* Màu xanh dương pastel nhẹ */
-            color: white;
-            padding: 20px;
-            text-align: center;
-            border-bottom: 2px solid #d3e4e1;
-        }
-
-        header h1 {
-            font-size: 2.5rem;
-            margin: 0;
-        }
-
-        /* Điều hướng menu */
-        nav ul {
-            display: flex;
-            justify-content: center;
-            list-style: none;
-            background-color: #4f9dc7; /* Xanh dương đậm hơn một chút */
-            margin: 0;
-            padding: 10px;
-            border-top: 2px solid #e1e9f1;
-        }
-
-        nav ul li {
-            margin: 0 20px;
-        }
-
-        nav ul li a {
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 1.1rem;
-        }
-
-        nav ul li a:hover {
-            color: #e1f4ff;
-            text-decoration: underline;
-        }
-
-        /* Nội dung chính */
-        .content {
-            display: none;
-            padding: 20px;
-            margin-top: 20px;
-            background-color: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            border: 1px solid #e5e5e5;
-        }
-
-        .content.active {
-            display: block;
-        }
-
-        h2 {
-            text-align: center;
-            font-size: 2rem;
-            margin-bottom: 20px;
-            color: #333;
-        }
-
-        /* Mẫu trang chủ */
-        .home-content {
-            text-align: center;
-        }
-
-        .home-content h3 {
-            color: #4f9dc7; /* Màu xanh dương */
-            font-size: 1.8rem;
-        }
-
-        /* Chế độ ăn uống */
-        .diet-summary {
-            text-align: center;
-            margin-top: 20px;
-        }
-
-        .diet-summary input {
-            padding: 12px;
-            margin-right: 10px;
-            width: 250px;
-            border-radius: 5px;
-            border: 1px solid #ddd;
-            background-color: #f7f7f7; /* Màu nền nhẹ cho ô nhập liệu */
-        }
-
-        .diet-summary button {
-            padding: 12px 20px;
-            background-color: #6ec1e4;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .diet-summary button:hover {
-            background-color: #4f9dc7; /* Màu nhấn nhẹ */
-        }
-
-        .diet-summary p {
-            margin-top: 20px;
-            font-size: 1.2rem;
-        }
-
-        /* Bài tập */
-        .exercise-summary select, .exercise-summary button {
-            padding: 12px;
-            font-size: 1rem;
-            border-radius: 5px;
-            border: 1px solid #ddd;
-            background-color: #f7f7f7;
-            transition: background-color 0.3s ease;
-        }
-
-        .exercise-summary button {
-            background-color: #6ec1e4;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-
-        .exercise-summary button:hover {
-            background-color: #4f9dc7;
-        }
-
-        .exercise-summary p {
-            margin-top: 20px;
-            font-size: 1.2rem;
-        }
-
-        /* Theo dõi sức khỏe */
-        .health-summary {
-            display: flex;
-            justify-content: space-around;
-            margin-top: 20px;
-        }
-
-        .health-summary div {
-            text-align: center;
-            width: 150px;
-            padding: 20px;
-            background-color: #f7f7f7;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            border: 1px solid #e5e5e5;
-        }
-
-        .health-summary div h3 {
-            font-size: 1.2rem;
-            margin-bottom: 10px;
-        }
-
-        .health-summary div p {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: #4caf50; /* Màu xanh lá cây */
-        }
-
-        /* Cài đặt */
-        .settings-summary input {
-            padding: 12px;
-            margin: 10px;
-            border-radius: 5px;
-            width: 100%;
-            border: 1px solid #ddd;
-            background-color: #f7f7f7;
-        }
-
-        .settings-summary button {
-            background-color: #6ec1e4;
-            color: white;
-            border: none;
-            padding: 12px 20px;
-            border-radius: 5px;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .settings-summary button:hover {
-            background-color: #4f9dc7;
-        }
-
-        footer {
-            text-align: center;
-            background-color: #4f9dc7;
-            color: white;
-            padding: 15px;
-            margin-top: 30px;
-        }
-    </style>
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer">
+  <link rel="stylesheet" href="./assets/css/myStyle.css">
+  <link rel="stylesheet" href="./assets/css/setColor.css">
+  <title>HeathCare</title>
+ 
 </head>
 <body>
-    <header>
-        <h1>Heathily</h1>
-        <nav>
-            <ul>
-                <li><a href="javascript:void(0)" onclick="showContent('home')">Trang chủ</a></li>
-                <li><a href="javascript:void(0)" onclick="showContent('diet')">Chế độ ăn uống</a></li>
-                <li><a href="javascript:void(0)" onclick="showContent('exercise')">Bài tập</a></li>
-                <li><a href="javascript:void(0)" onclick="showContent('health')">Theo dõi sức khỏe</a></li>
-                <li><a href="javascript:void(0)" onclick="showContent('settings')">Cài đặt</a></li>
-            </ul>
-        </nav>
-    </header>
+  <div class="container mt-5">
+    <div class="text-center">
+        <img src="https://cdn.bookingcare.vn/fo/2023/11/02/142138-song-khoe-suot-doi-1.png" alt="Featured Image" class="img-fluid" />
+    </div>
+</div>
+            <!-- Bài viết mới nhất -->
+   <div class="container mt-5">
+    <div class="d-flex justify-content-between">
+      <h3>Bài viết mới nhất</h3>
+<div class="p-2 "> <a href="" class="text-decoration-none fs-5">Xem thêm</a></div>
+</div>
+          <div class="container mt-4">
+            <div id="carouselExample_coSoYTe" class="carousel slide">
+              <div class="carousel-inner position-relative">
+                <div class="carousel-item active">
+                  <div class="d-flex flex-row justify-content-evenly align-items-center">
+                    <div class="card" style="width: 20rem;">
+                      <div class="ratio ratio-16x9"><img src="https://cdn.bookingcare.vn/fo/2024/04/08/204045-tiem-filler-moi-la-gi.png" class="card-img-top img-thumbnail" alt="..."></div>
+                      <div class="card-body">
+                        <h5 class="card-title text-center d-none d-lg-flex">Tiêm filler môi là gì? Những điều cần biết khi tiêm filler môi</h5>
+                        <h5 class="card-title text-center d-sm-flex small d-lg-none">Tiêm filler môi là gì? Những điều cần biết khi tiêm filler môi</h5>
+                      </div>
+                    </div>
+                    <div class="card " style="width: 20rem;">
+                     <div class="ratio ratio-16x9"> <img src="https://cdn.bookingcare.vn/fo/2024/04/08/210917-tiem-filler-cam-la-gi.png" class="card-img-top img-thumbnail " alt="..."></div>
+                      <div class="card-body">
+                        <h5 class="card-title text-center d-none d-lg-flex">Tiêm filler cằm là gì? Có nên tiêm filler cằm không?</h5>
+                        <h5 class="card-title text-center d-sm-flex small d-lg-none">Tiêm filler cằm là gì? Có nên tiêm filler cằm không?</h5>
 
-    <main>
-        <!-- Trang chủ -->
-        <section class="content home active">
-            <div class="home-content">
-                <h2>Chào mừng đến với Heathily</h2>
-                <h3>Hãy bắt đầu hành trình chăm sóc sức khỏe của bạn ngay hôm nay!</h3>
-            </div>
-        </section>
+                      </div>
+                    </div>
+                    <div class="card" style="width: 20rem;">
+                        <div class="ratio ratio-16x9"><img src="https://cdn.bookingcare.vn/fo/2024/03/27/101510-tiembotoxgonhamnhungdieucanbiet.png" class="card-img-top img-thumbnail" alt="..."></div>
+                                      <div class="card-body"> 
+                        <h5 class=" card-title text-center d-none d-lg-flex">Tìm hiểu về tiêm botox gọn hàm</h5>
+                        <h5 class="card-title text-center d-sm-flex small d-lg-none">Tìm hiểu về tiêm botox gọn hàm</h5>
 
-        <!-- Chế độ ăn uống -->
-        <section class="content diet">
-            <h2>Chế độ ăn uống</h2>
-            <div class="diet-summary">
-                <input type="text" id="meal" placeholder="Nhập chế độ ăn uống hôm nay">
-                <button onclick="updateDiet()">Cập nhật chế độ ăn uống</button>
-                <p id="diet-result"></p>
-            </div>
-        </section>
+                      </div>
+                    </div>
+                    <div class="card" style="width: 20rem;">
+                      <div class="ratio ratio-16x9"><img src="https://cdn.bookingcare.vn/fo/2024/07/06/111802-viem-xoang-co-lay-khong.jpg" class="card-img-top img-thumbnail" alt="..."></div>
+                                    <div class="card-body"> 
+                      <h5 class=" card-title text-center d-none d-lg-flex">Hỏi đáp: Bệnh viêm xoang có lây không? </h5>
+                      <h5 class="card-title text-center d-sm-flex small d-lg-none">Hỏi đáp: Bệnh viêm xoang có lây không? </h5>
 
-        <!-- Bài tập -->
-        <section class="content exercise">
-            <h2>Bài tập</h2>
-            <div class="exercise-summary">
-                <p>Chọn mục tiêu tập luyện của bạn:</p>
-                <select id="exercise-type">
-                    <option value="giảm cân">Giảm cân</option>
-                    <option value="tăng cơ">Tăng cơ</option>
-                    <option value="duy trì sức khỏe">Duy trì sức khỏe</option>
-                </select>
-                <button onclick="getExerciseRecommendation()">Lấy gợi ý bài tập</button>
-                <p id="exercise-result"></p>
-            </div>
-        </section>
-
-        <!-- Theo dõi sức khỏe -->
-        <section class="content health">
-            <h2>Tổng quan sức khỏe</h2>
-            <div class="health-summary">
-                <div>
-                    <h3>Cân nặng</h3>
-                    <p id="weight">70kg</p>
+                    </div>
+                  </div>
+                  </div>
+                      
                 </div>
-                <div>
-                    <h3>Chỉ số BMI</h3>
-                    <p id="bmi">23.5</p>
+                <div class="carousel-item">
+                  <div class="d-flex flex-row justify-content-evenly">
+                    <div class="card" style="width: 20rem;">
+                      <div class="ratio ratio-16x9"><img src="https://cdn.bookingcare.vn/fo/2024/07/06/114328-tre-sot-tren-38-do-co-nen-uong-ha-sot.jpg" class="card-img-top img-thumbnail" alt="..."></div>
+                      <div class="card-body">
+                        <h5 class="card-title text-center d-none d-lg-flex">Giải đáp: Trẻ sốt 38 độ có nên uống hạ sốt? </h5>
+                        <h5 class="card-title text-center d-sm-flex small d-lg-none">Giải đáp: Trẻ sốt 38 độ có nên uống hạ sốt? </h5>
+
+                      </div>
+                    </div>
+                    <div class="card " style="width: 20rem;">
+                     <div class="ratio ratio-16x9"> <img src="https://cdn.bookingcare.vn/fo/2024/08/12/094906-benh-mua-mua.png" class="card-img-top img-thumbnail" alt="..."></div>
+                      <div class="card-body">
+                        <h5 class="card-title text-center d-none d-lg-flex">Top 5 bệnh thường gặp trong mùa mưa</h5>
+                        <h5 class="card-title text-center d-sm-flex small d-lg-none">Top 5 bệnh thường gặp trong mùa mưa</h5>
+
+                      </div>
+                    </div>
+                    <div class="card" style="width: 20rem;">
+                      <!--  cần resize ảnh này -->
+                      <div class="ratio ratio-16x9"><img src="https://cdn.bookingcare.vn/fo/2024/04/03/145406-rang--khon-dang-moc-4.png" class="card-img-top img-thumbnail" alt="..."></div>
+                      <div class="card-body">
+                        <h5 class="card-title text-center d-none d-lg-flex">Hướng dẫn cách chăm sóc răng miệng khi cắm Implant</h5>
+                        <h5 class="card-title text-center d-sm-flex small d-lg-none">Hướng dẫn cách chăm sóc răng miệng khi cắm Implant</h5>
+                      </div>
+                    </div>
+                    <div class="card" style="width: 20rem;">
+                      <div class="ratio ratio-16x9"><img src="https://cdn.bookingcare.vn/fo/2024/04/03/145400-rang--khon-dang-moc-3.png" class="card-img-top img-thumbnail" alt="..."></div>
+                      <div class="card-body">
+                        <h5 class="card-title text-center d-none d-lg-flex">Tổng hợp các thông tin về trồng răng Implant</h5>
+                        <h5 class="card-title text-center d-sm-flex small d-lg-none">Tổng hợp các thông tin về trồng răng Implant</h5>
+
+                      </div>
+                    </div>
+                    </div>
+                    
                 </div>
-                <div>
-                    <h3>Giấc ngủ</h3>
-                    <p id="sleep">7.5 giờ</p>
+                <div class="carousel-item">
+                  <div class="d-flex flex-row justify-content-evenly">
+                    <div class="card" style="width: 20rem;">
+                      <div class="ratio ratio-16x9"><img src="https://cdn.bookingcare.vn/fo/2024/03/27/204258-dieu-can-biet-ve-rang-khon.png" class="card-img-top img-thumbnail" alt="..."></div>
+                      <div class="card-body">
+                        <h5 class="card-title text-center d-none d-lg-flex">Dấu hiệu nhiễm trùng sau khi nhổ răng khôn</h5>
+                        <h5 class="card-title text-center d-sm-flex small d-lg-none">Dấu hiệu nhiễm trùng sau khi nhổ răng khôn</h5>
+
+                      </div>
+                    </div>
+                    <div class="card " style="width: 20rem;">
+                     <div class="ratio ratio-16x9"> <img src="https://cdn.bookingcare.vn/fo/2024/03/27/204318-giam-dau-khi-moc-rang-khon.png" class="card-img-top img-thumbnail" alt="..."></div>
+                      <div class="card-body">
+                        <h5 class="card-title text-center d-none d-lg-flex">Có nên nhổ răng khôn không? Nhổ răng khôn có nguy hiểm không? </h5>
+                        <h5 class="card-title text-center d-sm-flex small d-lg-none">Có nên nhổ răng khôn không? Nhổ răng khôn có nguy hiểm không? </h5>
+
+                        
+                      </div>
+                    </div>
+                    <div class="card" style="width: 20rem;">
+                      <div class="ratio ratio-16x9"><img src="https://cdn.bookingcare.vn/fo/2024/04/03/145356-rang--khon-dang-moc-2.png" class="card-img-top img-thumbnail" alt="..."></div>
+                      <div class="card-body">
+                        <h5 class="card-title text-center d-none d-lg-flex">Giải đáp: Trồng răng Implant có đau không?</h5>
+                        <h5 class="card-title text-center d-sm-flex small d-lg-none">Giải đáp: Trồng răng Implant có đau không?</h5>
+                      </div>
+                    </div>
+                    <div class="card" style="width: 20rem;">
+                      <div class="ratio ratio-16x9"><img src="https://cdn.bookingcare.vn/fo/2024/07/06/110649-hp-viem-loet-trao-nguoc-da-day-thuc-quan.jpg" class="card-img-top img-thumbnail" alt="..."></div>
+                      <div class="card-body">
+                        <h5 class="card-title text-center d-none d-lg-flex">Mối quan hệ HP và viêm loét – trào ngược dạ dày thực quản</h5>
+                        <h5 class="card-title text-center d-sm-flex small d-lg-none">Mối quan hệ HP và viêm loét – trào ngược dạ dày thực quản</h5>
+                      </div>
+                    </div>
+                    </div>
                 </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample_coSoYTe" data-bs-slide="prev">
+                  <span class="p-2 position-absolute start-0" style="color: black;" aria-hidden="true"><i class="fa-solid fa-arrow-left fs-4"></i></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample_coSoYTe" data-bs-slide="next">
+                  <span class="p-2 position-absolute end-0" style="color: black;" aria-hidden="true"><i class="fa-solid fa-arrow-right fs-4"></i> </span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+          </div>          
+   </div>
+        </div>
+      </div>
+      <br>
+      <br>
+
+                  <!-- Bài viết nổi bật -->
+   <div class="container mt-5">
+    <div class="d-flex justify-content-between">
+      <h3>Bài viết nổi bật</h3>
+<div class="p-2 "> <a href="" class="text-decoration-none fs-5">Xem thêm</a></div>
+</div>
+          <div class="container mt-4">
+            <div id="carouselExample4" class="carousel slide">
+              <div class="carousel-inner position-relative">
+                <div class="carousel-item active">
+                  <div class="d-flex flex-row justify-content-evenly align-items-center">
+                    <div class="card" style="width: 20rem;">
+                      <div class="ratio ratio-16x9"><img src="https://cdn.bookingcare.vn/fo/2023/07/25/162624-mo-mau-cao.png" class="card-img-top img-thumbnail" alt="..."></div>
+                      <div class="card-body">
+                        <h5 class="card-title text-center d-none d-lg-flex">Rối loạn lipid máu: triệu chứng, nguyên nhân và cách điều trị</h5>
+                        <h5 class="card-title text-center d-sm-flex small d-lg-none">Rối loạn lipid máu: triệu chứng, nguyên nhân và cách điều trị</h5>
+                      </div>
+                    </div>
+                    <div class="card " style="width: 23rem;">
+                     <div class="ratio ratio-16x9"> <img src="https://cdn.bookingcare.vn/fo/2023/08/11/100438-thuc-don-7-ngay.jpg" class="card-img-top img-thumbnail " alt="..."></div>
+                      <div class="card-body">
+                        <h5 class="card-title text-center d-none d-lg-flex">Thực đơn 7 ngày cho người bệnh tiểu đường</h5>
+                        <h5 class="card-title text-center d-sm-flex small d-lg-none">Thực đơn 7 ngày cho người bệnh tiểu đường</h5>
+
+                      </div>
+                    </div>
+                    <div class="card" style="width: 20rem;">
+                        <div class="ratio ratio-16x9"><img src="https://cdn.bookingcare.vn/fo/2023/08/05/090054-cach-chua-benh-tieu-duong.png" class="card-img-top img-thumbnail" alt="..."></div>
+                                      <div class="card-body"> 
+                        <h5 class=" card-title text-center d-none d-lg-flex">Cách chữa Đái Tháo Đường hiệu quả theo phương pháp kiềng ba chân</h5>
+                        <h5 class="card-title text-center d-sm-flex small d-lg-none">Cách chữa Đái Tháo Đường hiệu quả theo phương pháp kiềng ba chân</h5>
+
+                      </div>
+                    </div>
+                    <div class="card" style="width: 20rem;">
+                      <div class="ratio ratio-16x9"><img src="https://cdn.bookingcare.vn/fo/2023/07/31/095842-copy-of-anh-cover.png" class="card-img-top img-thumbnail" alt="..."></div>
+                                    <div class="card-body"> 
+                      <h5 class=" card-title text-center d-none d-lg-flex">5 biến chứng điển hình của bệnh tiểu đường và cách phòng ngừa</h5>
+                      <h5 class="card-title text-center d-sm-flex small d-lg-none">5 biến chứng điển hình của bệnh tiểu đường và cách phòng ngừa</h5>
+
+                    </div>
+                  </div>
+                  </div>
+                      
+                </div>
+                <div class="carousel-item">
+                  <div class="d-flex flex-row justify-content-evenly">
+                    <div class="card" style="width: 20rem;">
+                      <div class="ratio ratio-16x9"><img src="https://cdn.bookingcare.vn/fo/2024/07/06/112849-tre-sot-di-sot-lai-nhieu-lan.jpg" class="card-img-top img-thumbnail" alt="..."></div>
+                      <div class="card-body">
+                        <h5 class="card-title text-center d-none d-lg-flex">Trẻ sốt đi sốt lại nhiều lần trong ngày có sao không?</h5>
+                        <h5 class="card-title text-center d-sm-flex small d-lg-none">Trẻ sốt đi sốt lại nhiều lần trong ngày có sao không?</h5>
+
+                      </div>
+                    </div>
+                    <div class="card " style="width: 20rem;">
+                     <div class="ratio ratio-16x9"> <img src="https://cdn.bookingcare.vn/fo/2024/07/06/123109-nhan-biet-vi-tri-dau-soi-than.jpg" class="card-img-top img-thumbnail" alt="..."></div>
+                      <div class="card-body">
+                        <h5 class="card-title text-center d-none d-lg-flex">Nhận biết vị trí đau sỏi thận </h5>
+                        <h5 class="card-title text-center d-sm-flex small d-lg-none">Nhận biết vị trí đau sỏi thận </h5>
+
+                      </div>
+                    </div>
+                    <div class="card" style="width: 20rem;">
+                      <!--  cần resize ảnh này -->
+                      <div class="ratio ratio-16x9"><img src="https://cdn.bookingcare.vn/fo/2024/07/06/141804-chay-nuoc-mui-trong-nhu-nuoc.jpg" class="card-img-top img-thumbnail" alt="..."></div>
+                      <div class="card-body">
+                        <h5 class="card-title text-center d-none d-lg-flex">Chảy nước mũi trong như nước và cách khắc phục</h5>
+                        <h5 class="card-title text-center d-sm-flex small d-lg-none">Chảy nước mũi trong như nước và cách khắc phục</h5>
+                      </div>
+                    </div>
+                    <div class="card" style="width: 20rem;">
+                      <div class="ratio ratio-16x9"><img src="https://cdn.bookingcare.vn/fo/2024/07/06/141804-xo-gan-song-duoc-bao-lau.jpg" class="card-img-top img-thumbnail" alt="..."></div>
+                      <div class="card-body">
+                        <h5 class="card-title text-center d-none d-lg-flex">Giải đáp câu hỏi: Xơ gan sống được bao lâu?</h5>
+                        <h5 class="card-title text-center d-sm-flex small d-lg-none">Giải đáp câu hỏi: Xơ gan sống được bao lâu?</h5>
+                      </div>
+                    </div>
+                    </div>                   
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample4" data-bs-slide="prev">
+                  <span class="p-2 position-absolute start-0" style="color: black;" aria-hidden="true"><i class="fa-solid fa-arrow-left fs-4"></i></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample4" data-bs-slide="next">
+                  <span class="p-2 position-absolute end-0" style="color: black;" aria-hidden="true"><i class="fa-solid fa-arrow-right fs-4"></i> </span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+          </div>          
+   </div>
+        </div>
+      </div>
+      <br> 
+
+      <div class="container mt-5" style="background-image: url('https://cdn.bookingcare.vn/fo/2023/11/01/140311-background5.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+  <div class="d-flex justify-content-between">
+    <h3>Cộng đồng</h3>
+    <div class="p-2">
+      <a href="" class="text-decoration-none fs-5">Xem thêm</a>
+    </div>
+  </div>
+
+              <div class="container mt-4">
+                <div id="carouselExample1" class="carousel slide">
+                  <div class="carousel-inner position-relative">
+                    <div class="carousel-item active">
+                      <div class="d-flex flex-row justify-content-evenly align-items-center">
+                        <div class="card" style="width: 20rem;">
+                          <div class="ratio ratio-16x9"><img src="https://cdn.bookingcare.vn/fo/2023/11/01/155237-1.png" class="card-img-top img-thumbnail" alt="..."></div>
+                          <div class="card-body">
+                            <h5 class="card-title text-center d-none d-lg-flex">BookingCare - Y tế sức khỏe toàn diện</h5>
+                            <h5 class="card-title text-center d-sm-flex small d-lg-none">BookingCare - Y tế sức khỏe toàn diện</h5>
+                          </div>
+                        </div>
+                        <div class="card " style="width: 20rem;">
+                         <div class="ratio ratio-16x9"> <img src="https://cdn.bookingcare.vn/fo/2023/11/01/155238-2.png" class="card-img-top img-thumbnail " alt="..."></div>
+                          <div class="card-body">
+                            <h5 class="card-title text-center d-none d-lg-flex">Review Bệnh viện - Phòng khám - Bác sĩ giỏi</h5>
+                            <h5 class="card-title text-center d-sm-flex small d-lg-none">Review Bệnh viện - Phòng khám - Bác sĩ giỏi</h5>
+    
+                          </div>
+                        </div>
+                        <div class="card" style="width: 20rem;">
+                            <div class="ratio ratio-16x9"><img src="https://cdn.bookingcare.vn/fo/2023/11/01/141147-congdongtieuduong.jpg" class="card-img-top img-thumbnail" alt="..."></div>
+                                          <div class="card-body"> 
+                            <h5 class=" card-title text-center d-none d-lg-flex">Sống khỏe cùng bệnh Tiểu đường</h5>
+                            <h5 class="card-title text-center d-sm-flex small d-lg-none">Sống khỏe cùng bệnh Tiểu đường</h5>
+    
+                          </div>
+                        </div>
+                        
+                      </div>
+                          
+                    </div>
+                    <div class="carousel-item">
+                      <div class="d-flex flex-row justify-content-evenly">
+                        <div class="card" style="width: 22.6rem;">
+                          <div class="ratio ratio-16x9"><img src="https://cdn.bookingcare.vn/fo/2023/11/01/141458-congdongtinhthan.jpeg" class="card-img-top img-thumbnail" alt="..."></div>
+                          <div class="card-body">
+                            <h5 class="card-title text-center d-none d-lg-flex">Tư vấn Tâm lý - Tâm thần</h5>
+                            <h5 class="card-title text-center d-sm-flex small d-lg-none">Tư vấn Tâm lý - Tâm thần</h5>
+    
+                          </div>
+                        </div>
+                        <div class="card " style="width: 22.6rem;">
+                         <div class="ratio ratio-16x9"> <img src="https://cdn.bookingcare.vn/fo/2023/11/01/141131-congdongnhakhoa.jpeg" class="card-img-top img-thumbnail" alt="..."></div>
+                          <div class="card-body">
+                            <h5 class="card-title text-center d-none d-lg-flex">Chuyên trang Nha khoa</h5>
+                            <h5 class="card-title text-center d-sm-flex small d-lg-none">Chuyên trang Nha khoa</h5>   
+                          </div>
+                        </div>   
+                        </div>                       
+                    </div>                   
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample1" data-bs-slide="prev">
+                      <span class="p-2 position-absolute start-0" style="color: black;" aria-hidden="true"><i class="fa-solid fa-arrow-left fs-4"></i></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExample1" data-bs-slide="next">
+                      <span class="p-2 position-absolute end-0" style="color: black;" aria-hidden="true"><i class="fa-solid fa-arrow-right fs-4"></i> </span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+              </div>          
+       </div>
             </div>
-            <div class="input-form">
-                <h3>Cập nhật thông tin sức khỏe</h3>
-                <input type="number" id="input-weight" placeholder="Nhập cân nặng (kg)" />
-                <input type="number" id="input-bmi" placeholder="Nhập chỉ số BMI" />
-                <input type="number" id="input-sleep" placeholder="Nhập giấc ngủ (giờ)" />
-                <button onclick="updateHealthData()">Cập nhật</button>
+          </div>
+          <br>
+<!-- Danh mục sống khoẻ -->
+<div class="container mt-5">
+  <div class="d-flex justify-content-between">
+    <h3>Danh mục sống khoẻ</h3>
+    <div class="p-2"> <a href="" class="text-decoration-none fs-5">Xem thêm</a></div>
+  </div>
+  
+  <div class="container mt-4">
+    <div id="carouselExample6" class="carousel slide">
+      <div class="carousel-inner position-relative">
+        
+        <!-- Carousel Item 1 (Chứa 6 card) -->
+        <div class="carousel-item active">
+          <div class="d-flex flex-row justify-content-evenly align-items-center">
+            <!-- Card 1 -->
+            <div class="card" style="width: 10rem; height: 15rem;">
+              <div class="ratio ratio-1x1">
+                <img src="https://cdn.bookingcare.vn/fo/2023/09/04/170853-benh-huyet-ap-cao.jpg" class="card-img-top img-thumbnail rounded-circle" alt="...">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title text-center d-none d-lg-flex">Tăng huyết áp</h5>
+                <h5 class="card-title text-center d-sm-flex small d-lg-none">Tăng huyết áp</h5>
+              </div>
             </div>
-        </section>
 
-        <!-- Cài đặt -->
-        <section class="content settings">
-            <h2>Cài đặt</h2>
-            <div class="settings-summary">
-                <p>Thiết lập các nhắc nhở hoặc thay đổi thông tin cá nhân tại đây.</p>
-                <input type="text" id="reminder" placeholder="Nhắc nhở uống nước">
-                <button onclick="updateReminder()">Cập nhật nhắc nhở</button>
-                <p id="reminder-result"></p>
+            <!-- Card 2 -->
+            <div class="card" style="width: 10rem; height: 15rem;">
+              <div class="ratio ratio-1x1">
+                <img src="https://cdn.bookingcare.vn/fo/2023/09/04/170853-benh-tieu-duong.jpg" class="card-img-top img-thumbnail rounded-circle" alt="...">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title text-center d-none d-lg-flex">Tiểu đường</h5>
+                <h5 class="card-title text-center d-sm-flex small d-lg-none">Tiểu đường</h5>
+              </div>
             </div>
-        </section>
-    </main>
 
-    <footer>
-        <p>&copy; 2024 Heathily. Tất cả quyền được bảo lưu.</p>
-    </footer>
+            <!-- Card 3 -->
+            <div class="card" style="width: 10rem; height: 15rem;">
+              <div class="ratio ratio-1x1">
+                <img src="https://cdn.bookingcare.vn/fo/2023/09/04/171201-benh-viem-da-day.jpg" class="card-img-top img-thumbnail rounded-circle" alt="...">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title text-center d-none d-lg-flex">Viêm dạ dày</h5>
+                <h5 class="card-title text-center d-sm-flex small d-lg-none">Viêm dạ dày</h5>
+              </div>
+            </div>
 
-    <script>
-        // Hàm thay đổi nội dung khi nhấn vào menu
-        function showContent(page) {
-            var contents = document.querySelectorAll('.content');
-            contents.forEach(function(content) {
-                content.classList.remove('active');
-            });
+            <!-- Card 4 -->
+            <div class="card" style="width: 10rem; height: 15rem;">
+              <div class="ratio ratio-1x1">
+                <img src="https://cdn.bookingcare.vn/fo/2023/09/04/170853-benh-mo-mau-cao.jpg" class="card-img-top img-thumbnail rounded-circle" alt="...">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title text-center d-none d-lg-flex">Mỡ máu cao</h5>
+                <h5 class="card-title text-center d-sm-flex small d-lg-none">Mỡ máu cao</h5>
+              </div>
+            </div>
 
-            var activeContent = document.querySelector('.' + page);
-            activeContent.classList.add('active');
-        }
+            <!-- Card 5 -->
+            <div class="card" style="width: 10rem; height: 15rem;">
+              <div class="ratio ratio-1x1">
+                <img src="https://cdn.bookingcare.vn/fo/2023/11/06/172430-dau-mat-do.jpg" class="card-img-top img-thumbnail rounded-circle" alt="...">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title text-center d-none d-lg-flex">Đau mắt đỏ</h5>
+                <h5 class="card-title text-center d-sm-flex small d-lg-none">Đau mắt đỏ</h5>
+              </div>
+            </div>
 
-        // Cập nhật chế độ ăn uống
-        function updateDiet() {
-            var meal = document.getElementById("meal").value;
-            if (meal) {
-                document.getElementById("diet-result").textContent = "Chế độ ăn uống hôm nay: " + meal;
-            }
-        }
+            <!-- Card 6 -->
+            <div class="card" style="width: 10rem; height: 15rem;">
+              <div class="ratio ratio-1x1">
+                <img src="https://cdn.bookingcare.vn/fo/2023/11/06/171950-sot-xuat-huyet.jpg" class="card-img-top img-thumbnail rounded-circle" alt="...">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title text-center d-none d-lg-flex">Sốt xuất huyết</h5>
+                <h5 class="card-title text-center d-sm-flex small d-lg-none">Sốt xuất huyết</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Nếu cần thêm nhóm carousel, bạn có thể thêm vào ở đây -->
+        <div class="carousel-item">
+          <div class="d-flex flex-row justify-content-evenly align-items-center">
+            <!-- Thêm 6 card vào đây nếu cần -->
+          </div>
+        </div>
+      </div>
 
-        // Lấy gợi ý bài tập
-        function getExerciseRecommendation() {
-            var exerciseType = document.getElementById("exercise-type").value;
-            var recommendation = "";
-            switch (exerciseType) {
-                case "giảm cân":
-                    recommendation = "Bài tập giảm cân: Chạy bộ, nhảy dây, đạp xe.";
-                    break;
-                case "tăng cơ":
-                    recommendation = "Bài tập tăng cơ: Tập tạ, chống đẩy, kéo xà.";
-                    break;
-                case "duy trì sức khỏe":
-                    recommendation = "Bài tập duy trì sức khỏe: Yoga, đi bộ, bơi lội.";
-                    break;
-            }
-            document.getElementById("exercise-result").textContent = recommendation;
-        }
+    </div>
+  </div>
+</div>
 
-        // Cập nhật thông tin sức khỏe
-        function updateHealthData() {
-            var weight = document.getElementById("input-weight").value;
-            var bmi = document.getElementById("input-bmi").value;
-            var sleep = document.getElementById("input-sleep").value;
+        <br>
+        <br>
+        <!-- Tác giả nội dung -->
+<div class="container mt-5" style="background-image: url('https://cdn.bookingcare.vn/fo/2023/11/01/140311-background5.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
+  <div class="d-flex justify-content-between">
+    <h3>Tác giả nội dung</h3>
+    <div class="p-2">
+      <a href="" class="text-decoration-none fs-5">Xem thêm</a>
+    </div>
+  </div>
 
-            if (weight) document.getElementById("weight").textContent = weight + "kg";
-            if (bmi) document.getElementById("bmi").textContent = bmi;
-            if (sleep) document.getElementById("sleep").textContent = sleep + " giờ";
+  <div class="container mt-4">
+    <div id="carouselExampleDoctors" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner position-relative">
+        <!-- Carousel item 1 -->
+        <div class="carousel-item active">
+          <div class="d-flex flex-row justify-content-evenly align-items-center">
+            <div class="card" style="width: 20rem; border: none; box-shadow: none; background-color: transparent;">
+              <div class="d-flex justify-content-center align-items-center">
+                <img src="https://cdn.bookingcare.vn/fo/2022/12/05/160247-bs-hai-an.jpg" class="card-img-top rounded-circle" alt="Dr. John Doe" style="width: 150px; height: 150px; object-fit: cover;">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title text-center">Bác sĩ Chuyên khoa I Nguyễn Hải An</h5>
+              </div>
+            </div>
+            <div class="card" style="width: 20rem; border: none; box-shadow: none; background-color: transparent;">
+              <div class="d-flex justify-content-center align-items-center">
+                <img src="https://cdn.bookingcare.vn/fo/2023/09/15/085353-bs-nguyen-thi-huyen.jpg" class="card-img-top rounded-circle" alt="Dr. Jane Smith" style="width: 150px; height: 150px; object-fit: cover;">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title text-center">Bác sĩ Chuyên khoa I Nguyễn Thị Huyền</h5>
+              </div>
+            </div>
+            <div class="card" style="width: 20rem; border: none; box-shadow: none; background-color: transparent;">
+              <div class="d-flex justify-content-center align-items-center">
+                <img src="https://cdn.bookingcare.vn/fo/2024/05/23/110638-bac-si-tran-hue-nhi-khoa.png" class="card-img-top rounded-circle" alt="Dr. Alice Brown" style="width: 150px; height: 150px; object-fit: cover;">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title text-center">Bác sĩ Trần Thị Huế</h5>
+              </div>
+            </div>
+            <div class="card" style="width: 20rem; border: none; box-shadow: none; background-color: transparent;">
+              <div class="d-flex justify-content-center align-items-center">
+                <img src="https://cdn.bookingcare.vn/fo/2024/04/24/150958-bac-si-nguyen-le-hung-rang-ham-mat.png" class="card-img-top rounded-circle" alt="Dr. Jane Smith" style="width: 150px; height: 150px; object-fit: cover;">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title text-center">Tiến sĩ, Bác sĩ Nguyễn Lê Hùng</h5>
+              </div>
+            </div>
+          </div>
+        </div>
 
-            alert("Thông tin sức khỏe đã được cập nhật!");
-        }
+        <!-- Carousel item 2 -->
+        <div class="carousel-item">
+          <div class="d-flex flex-row justify-content-evenly">
+            <div class="card" style="width: 20rem; border: none; box-shadow: none; background-color: transparent;">
+              <div class="d-flex justify-content-center align-items-center">
+                <img src="https://cdn.bookingcare.vn/fo/2023/11/17/094855-bs-nguyen-minh-quynh.jpg" class="card-img-top rounded-circle" alt="Dr. Robert Lee" style="width: 150px; height: 150px; object-fit: cover;">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title text-center">Thạc sĩ, Bác sĩ Nguyễn Minh Quỳnh</h5>
+              </div>
+            </div>
+            <div class="card" style="width: 20rem; border: none; box-shadow: none; background-color: transparent;">
+              <div class="d-flex justify-content-center align-items-center">
+                <img src="https://cdn.bookingcare.vn/fo/2023/10/23/113605-bac-si-pham-huu-tung-nam-khoa.jpg" class="card-img-top rounded-circle" alt="Dr. Maria Green" style="width: 150px; height: 150px; object-fit: cover;">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title text-center">Thạc sĩ, Bác sĩ Phạm Hữu Tùng</h5>
+              </div>
+            </div>
+            <div class="card" style="width: 20rem; border: none; box-shadow: none; background-color: transparent;">
+              <div class="d-flex justify-content-center align-items-center">
+                <img src="https://cdn.bookingcare.vn/fo/2023/06/01/162050-bs-hua-thuy-vi.png" class="card-img-top rounded-circle" alt="Dr. Tom White" style="width: 150px; height: 150px; object-fit: cover;">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title text-center">Thạc sĩ, Bác sĩ Hứa Thúy Vi</h5>
+              </div>
+            </div>
+            <div class="card" style="width: 20rem; border: none; box-shadow: none; background-color: transparent;">
+              <div class="d-flex justify-content-center align-items-center">
+                <img src="https://cdn.bookingcare.vn/fo/2023/08/04/164556-bac-si-bui-dinh-viet.jpg" class="card-img-top rounded-circle" alt="Dr. Tom White" style="width: 150px; height: 150px; object-fit: cover;">
+              </div>
+              <div class="card-body">
+                <h5 class="card-title text-center">Bác sĩ Bùi Đình Việt </h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+<br>
+     
+          
+      <!-- Điều khiển carousel: Nút Previous và Next -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDoctors" data-bs-slide="prev">
+        <span class="p-2 position-absolute start-0" style="color: black;" aria-hidden="true">
+          <i class="fa-solid fa-arrow-left fs-4"></i>
+        </span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDoctors" data-bs-slide="next">
+        <span class="p-2 position-absolute end-0" style="color: black;" aria-hidden="true">
+          <i class="fa-solid fa-arrow-right fs-4"></i>
+        </span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+</div>
+        <!-- Bài viết mới nhất -->
+<div class="container mt-5">
+  <div class="d-flex justify-content-between">
+      <h3></h3>
+      <div class="p-2">
+          <a href="" class="text-decoration-none fs-5"></a>
+      </div>
+  </div>
 
-        // Cập nhật nhắc nhở uống nước
-        function updateReminder() {
-            var reminder = document.getElementById("reminder").value;
-            if (reminder) {
-                document.getElementById("reminder-result").textContent = "Nhắc nhở: " + reminder;
-            }
-        }
-    </script>
+  <div class="container mt-4">
+      <div id="carouselExample_coSoYTe" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner position-relative">
+              <div class="carousel-item active">
+                  <div class="d-flex flex-row justify-content-evenly align-items-center">
+                      <!-- Card 1 -->
+                      <div class="card d-flex flex-row" style="width: 30rem; height: 6rem;">
+                          <!-- Hình ảnh nằm bên trái với tỷ lệ 1x1 -->
+                          <div class="ratio ratio-1x1" style="width: 6rem; height: 6rem;">
+                              <img src="https://i.imgur.com/JebiYoW.png" class="card-img-top img-thumbnail" alt="...">
+                          </div>
+                          <!-- Chữ căn giữa -->
+                          <div class="card-body d-flex justify-content-center align-items-center">
+                            <h5 class="card-title text-center fs-3">Quy trình xây dựng nội dung</h5>
+                        </div>
+                      </div>
+
+                      <!-- Card 2 -->
+                      <div class="card d-flex flex-row" style="width: 30rem; height: 6rem;">
+                          <!-- Hình ảnh nằm bên trái với tỷ lệ 1x1 -->
+                          <div class="ratio ratio-1x1" style="width: 6rem; height: 6rem;">
+                              <img src="https://i.imgur.com/i4ZR22D.png" class="card-img-top img-thumbnail" alt="...">
+                          </div>
+                          <!-- Chữ căn giữa -->
+                          <div class="card-body d-flex justify-content-center align-items-center">
+                            <h5 class="card-title text-center fs-3">Bác sĩ hợp tác viết bài</h5>
+                        </div>
+                      </div>
+                  </div>
+              </div>
+          </div>          
+      </div>
+  </div>
+</div>
+
+
+          
+  <!-- nhung javascript -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="./assets/javaScript/javaScriptIn.js"></script>
 </body>
 </html>
