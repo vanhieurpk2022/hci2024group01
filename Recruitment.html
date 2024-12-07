@@ -17,10 +17,17 @@
 
     <title>HeathCare</title>
   
+ <style>
+      /*  */
+      :root{
+        --aqua-color:#00CED1;
+        --navbar-color:blue;
+      }
+    </style>
   </head>
   <body>
     <!-- DashBroad -->
-    <div class="container ">
+   <div class="container " >
       <nav class="navbar bg-body-tertiary">
         <div class="container" style="color: var(--aqua-color);">
           
@@ -28,62 +35,35 @@
             <span class="navbar-toggler-icon"></span>
           </button>
         <!-- navBar -->
-        <a class="navbar-brand ms-1" href="./index.html"
-        ><img width="125px" src="./assets/img/logo.png" alt=""
-      /></a>
+          <a class="navbar-brand ms-1 " href="#"><img  width="125px" src="./assets/img/logo.png" alt=""></a>
 
-        <ul  class="list-unstyled nav-tabs nav-tabs-scroll border-0 mb-3 me-auto mb-2 mb-lg-0 d-flex flex-row  ms-auto order-lg-0 order-1 mt-3 mt-lg-0">
-          <li class="nav-item me-2 me-md-2 ">
-            <a class="nav-link " aria-current="page" href="./index.html"
-              >Home</a>
-          </li>
-
-          <li class="nav-item me-2 me-md-2">
-            <a class="nav-link " href="./about.html"
-              >About</a
-            >
-          </li>
-          <li class="nav-item me-2 me-md-2">
-            <a class="nav-link" href="./project.html">Project</a>
-          </li>
-          <li class="nav-item me-2 me-md-2">
-            <a class="nav-link" href="#">Hospital</a>
-          </li>
           
-          <li class="nav-item me-2 me-md-2">
-            <a class="nav-link" href="#">Wellness</a>
-          </li>
-         
-        </ul>
-      
-    <form class="d-flex order-lg-1 order-2 d-xl-flex d-flex d-sm-none text-center" role="search">
-      <!-- search khi chưa sm -->
-      <div
-        class="d-flex justify-content-center align-items-center  d-lg-flex  position-relative" >
-        <i class=" d-lg-flex fa-solid fa-magnifying-glass position-absolute start-0 ms-5 ms-md-0"style="color: #41353d";></i>
-      </div>
-      <input class="form-control form-control-search me-2 rounded-pill ms-5 ms-md-0 border " type="search"placeholder="Search" aria-label="Search"/>
-    </form>
-    <div class="order-lg-2 order-0 d-flex mt-lg-0  mt-sm-2 mt-sm-0  mt-2 mt-sm-0 ms-sm-3 ">
-      <!-- search khi small -->
-      <div
-        class="me-1 py-1 px-2 d-xl-none d-sm-flex d-none me-2 rounded-start rounded-end"
-        style="background-color: azure"
-      >
-        <a href=""
-          ><i
-            class="fa-solid fa-magnifying-glass p-2"
-            style="color: #41353d"
-            ;
-          ></i
-        ></a>
-      </div>
+              <ul class="navbar-nav  me-auto mb-2 mb-lg-0 d-sm-flex flex-row ms-5 ms-md-0 order-md-0 order-1 mt-3 mt-lg-0">
+                <li class="nav-item me-2 me-md-2 ">
+                  <a class="nav-link active " aria-current="page" href="./index.html">Home</a>
+                </li>
+               
+                <li class="nav-item me-2 me-md-2">
+                  <a class="nav-link " href="./about.html">About</a>
+                </li>
+                <li class="nav-item me-2 me-md-2">
+                  <a class="nav-link " href="#">Hospital</a>
+                </li>
+                <li class="nav-item me-2 me-md-2">
+                  <a class="nav-link " href="#">Wellness</a>
+                </li>
+              </ul>
+          <form class="d-flex  order-md-1 order-0" role="search">
+            <!-- search khi chưa sm -->
+            <div class="d-flex justify-content-center align-items-center d-none d-lg-flex  position-relative "><i class="d-none d-lg-flex fa-solid fa-magnifying-glass position-absolute start-0  "style="color: #41353d";></i></div>
+            <input class="form-control form-control-search me-2 rounded-pill d-none d-lg-flex   " type="search" placeholder="Search" aria-label="Search">
+          </form>
+          <div class="order-md-2 d-flex mt-lg-0 mt-sm-2 mt-sm-0 order-0 ms-5 mt-2 mt-sm-0 ms-sm-0">
+            <!-- search khi small -->
+            <div class="me-1 py-1 px-2 d-lg-none me-2 rounded-start rounded-end" style="background-color: azure;"><a href=""><i class="fa-solid fa-magnifying-glass p-2 "style="color: #41353d";></i></a></div>
 
-        <div class="ms-auto ">
-          
-          <a href="" class="px-3 btn d-flex flex-column text-center" style="color: var(--bookNow-color); background-color: #007BFF;" > <i class="fa-regular fa-clipboard"></i> Book now</a>
-        </div>
-    </div>
+            
+          </div>
           <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
             <div class="offcanvas-header">
               <h5 class="offcanvas-title " id="offcanvasNavbarLabel">Menu</h5>
@@ -92,10 +72,10 @@
             <div class="offcanvas-body">
               <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                 <li class="nav-item">
-                  <a class=" nav-link " aria-current="page" href="./index.html"><i class=" fa-solid fa-house"></i> Home</a>
+                  <a class="nav-link active" aria-current="page" href="./index.html"><i class="fa-solid fa-house"></i> Home</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="./handbook.html"><i class="fa-solid fa-book-medical"></i> Handbook</a>
+                  <a class="nav-link" href="handbook.html"><i class="fa-solid fa-book-medical"></i> Handbook</a>
                 </li>
                 <li class="nav-item">
 
@@ -106,19 +86,19 @@
 
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="./digital.html"><i class="fa-solid fa-folder"></i> Digital Transformation Package</a>
+                  <a class="nav-link" href="#"><i class="fa-solid fa-folder"></i> Digital Transformation Package</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link active fw-semibold" href="#"><i class="fa-solid fa-users"></i> Recruitment</a>
+                  <a class="nav-link" href="#"><i class="fa-solid fa-users"></i> Recruitment</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="./patient.html"><i class="fa-solid fa-hospital-user"></i> Patitent</a>
+                  <a class="nav-link" href="#"><i class="fa-solid fa-hospital-user"></i> Patitent</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="./doctor.html"><i class="fa-solid fa-user-doctor"></i> Doctor</a>
+                  <a class="nav-link" href="#"><i class="fa-solid fa-user-doctor"></i> Doctor</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="./roleOf.html"><i class="fa-solid fa-flag"></i> Role of bookingcare</a>
+                  <a class="nav-link" href="#"><i class="fa-solid fa-flag"></i> Role of bookingcare</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="./hotLine.html"><i class="fa-solid fa-phone"></i> Hotline</a>
@@ -140,312 +120,310 @@
     <!-- Home  -->
           <!-- header start -->
         <!-- Job Vacancies Section -->
-    <div class="container mt-3">
-      <section class=" job-section ">
-          
-      
-          <section class="banner">
-              <h1>Đến vì công việc, Gắn kết vì sứ mệnh</h1>
-              
-          </section>
-      
-          <section class="content text-start">
-              <h2 class="text-start">Sứ mệnh</h2>
-              <p>Ứng dụng công nghệ tiên phong (AI/IoT) mang dịch vụ Y tế chăm sóc sức khỏe tin cậy với chi phí hợp lý đến từng người, từng nhà trên khắp Việt Nam.</p>
-      
-              <h2 class="text-start">Tầm nhìn</h2>
-              <p>Nền tảng công nghệ Y tế chăm sóc sức khỏe toàn diện hàng đầu Việt Nam và vươn tầm khu vực.</p>
-      
-              <h2 class="text-start">Giá trị cốt lõi</h2>
-              <div class="values text-start">
-                  <div class="value-item">1. Môi trường sáng tạo, đổi mới: BookingCare luôn coi trọng sự khác biệt trong mỗi sản phẩm để tạo ra giá trị thực sự hữu ích cho người dùng, khách hàng và cộng đồng.</div>
-                  <div class="value-item">2. Phát triển năng lực theo ASK:
-                      Nhân sự của BookingCare được định hình bộ Tam giác năng lực ASK (thái độ, kiến thức, kỹ năng) để có thể độc lập tư duy và phát triển sự nghiệp trong bất kỳ môi trường nào.</div>
-                  <div class="value-item">3. Văn hóa học tập không ngừng:
-                      Ở BookingCare "hành đi đôi với học”. Đội ngũ là những người trẻ dám dấn thân, thực chiến trong công việc nhưng có tinh thần học tập không ngừng.</div>
-                  <div class="value-item">4. Trao quyền:
-                      Ở BookingCare, mỗi thành viên được trao quyền chủ động trong công việc. Từ việc chủ động thiết lập mục tiêu, thiết lập kế hoạch công việc cho đến chủ động trao đổi khó khăn trong quá trình làm việc.</div>
-              </div>
-          </section>
-          <div class="container mt-3 mt-sm-0">
-              <div class="d-flex justify-content-between mt-3">
-                             <h3>Vị trí tuyển dụng</h3>
-                     
-              </div>
-                             <div class="container mt-3">
-                               <div id="carouselExample" class="carousel slide">
-                                 <div class="carousel-inner position-relative">
-                                   <div class="carousel-item active">
-                                     <div class="d-flex flex-row justify-content-evenly">
-                                       <div class="card" style="width: 20rem;">
-                                         <a  href="handbook.html" target="_blank" >
-                                         <img src="https://th.bing.com/th/id/R.8e34464cd3a4c75301fa1fbf809940b6?rik=yHppRY5oFQ6Iog&pid=ImgRaw&r=0" class="card-img-top" alt="...">
-                                      </a>
-                                         <div class="card-body">
-                                           <h5 class="card-title text-center">Vị trí Content Marketing</h5>
-                                         </div>
-                                       </div>
-                                       <div class="card " style="width: 20rem;">
-                                          <a  href="handbook.html" target="_blank" >
-                                         <img src="https://cdn.bookingcare.vn/fo/2023/07/20/135540-tuyen-dung-thuc-tap-sinh-cx-1.jpg" class="card-img-top" alt="...">
-                                      </a>
-                                         <div class="card-body">
-                                           <h5 class="card-title text-center">BookingCare tìm kiếm các vị trí Senior</h5>
-                                           
-                                         </div>
-                                       </div>
-                                       <div class="card" style="width: 20rem;">
-                                          <a  href="handbook.html" target="_blank" >
-                                         <img src="https://th.bing.com/th/id/OIP.Wl85gUFnLTSA9t0r2YFfGQHaD4?rs=1&pid=ImgDetMain" class="card-img-top" alt="...">
-                                      </a>
-                                         <div class="card-body">
-                                         
-                                          <h5 class="card-title text-center">Vị trí Phát triển kinh doanh B2B</h5>
-                                           
-                                         </div>
-                                       </div>
-                                     </div>
-         
-                                   </div>
-                                   <div class="carousel-item">
-                                     <div class="d-flex flex-row justify-content-evenly">
-                                       <div class="card" style="width: 20rem;">
-                                          <a  href="handbook.html" target="_blank" >
-                                         <img src="https://cdn.bookingcare.vn/fo/w1080/2022/11/15/123357-3.png" class="card-img-top" alt="...">
-                                      </a>
-                                         <div class="card-body">
-                                      
-                                          <h5 class="card-title text-center">Vị trí Chuyên viên tuyển dụng</h5>
-                                         </div>
-                                       </div>
-                                       <div class="card " style="width: 20rem;">
-                                          <a  href="handbook.html" target="_blank" >
-                                         <img src="https://cdn.bookingcare.vn/fo/w1080/2022/11/15/144258-full-stack-1200--628-px-1.png" class="card-img-top" alt="...">
-                                      </a>
-                                         <div class="card-body">
-                                           <h5 class="card-title text-center">Vị trí Fullstack Developer</h5>
-                                           
-                                         </div>
-                                       </div>
-                                       <div class="card" style="width: 20rem;">
-                                          <a  href="handbook.html" target="_blank" >
-                                         <img src="https://cdn.bookingcare.vn/fo/w1080/2022/11/15/120936-1.png" class="card-img-top" alt="...">
-                                      </a>
-                                         <div class="card-body">
-                                           <h5 class="card-title text-center">Vị trí Nâng cao Trải nghiệm khách hàng</h5>
-                                           
-                                         </div>
-                                       </div>
-                                     </div>
-         
-                                   </div>
-                                   
-                                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                                   <span class="p-2 position-absolute start-0" style="color: black;" aria-hidden="true"><i class="fa-solid fa-arrow-left fs-4"></i></span>
-                                   <span class="visually-hidden">Previous</span>
-                                 </button>
-                                 <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                                   <span class="p-2 position-absolute end-0" style="color: black;" aria-hidden="true"><i class="fa-solid fa-arrow-right fs-4"></i> </span>
-                                   <span class="visually-hidden">Next</span>
-                                 </button>
-                               </div>
-                             </div>
-                              
-              </div>
-              <div class="container mt-5">
-                     <h3>Cơ sở y tế</h3>
-                     <div class="container mt-4">
-                       <div id="carouselExample_coSoYTe" class="carousel slide">
-                         <div class="carousel-inner position-relative">
-                           <div class="carousel-item active">
-                             <div class="d-flex flex-row justify-content-evenly align-items-center">
-                               <div class="card" style="width: 20rem;">
-                                  <a  href="doctor.html" target="_blank" >
-                                 <div class="ratio ratio-16x9"><img src="https://cdn.bookingcare.vn/fo/w828/2024/10/01/111450-tuyen-dung-thuc-tap-sinh-cx-12.jpg" class="card-img-top img-thumbnail" alt="..."></div>
-                              </a>
-                                 <div class="card-body">
-                                   <h5 class="card-title text-center d-none d-lg-flex">Hành trình cách mạng hóa chăm sóc sức khỏe với AI</h5>
-                                   <h5 class="card-title text-center d-sm-flex small d-lg-none">Hành trình cách mạng hóa chăm sóc sức khỏe với AI</h5>
-                                 </div>
-                               </div>
-                               <div class="card " style="width: 20rem;">
-                                  <a  href="doctor.html" target="_blank" >
-                                <div class="ratio ratio-16x9"> <img src="https://cdn.bookingcare.vn/fo/w828/2024/09/27/230701-tuyen-dung-thuc-tap-sinh-cx-1.png" class="card-img-top img-thumbnail " alt="..."></div>
-                              </a>
-                                <div class="card-body">
-                                   <h5 class="card-title text-center d-none d-lg-flex">Xây dựng Văn hóa học tập ở BookingCare</h5>
-                                   <h5 class="card-title text-center d-sm-flex small d-lg-none">Xây dựng Văn hóa học tập ở BookingCare</h5>
-         
-                                 </div>
-                               </div>
-                               <div class="card" style="width: 20rem;">
-                                  <a  href="doctor.html" target="_blank" >
-                                   <div class="ratio ratio-16x9"><img src="https://cdn.bookingcare.vn/fo/w828/2024/09/30/172551-tuyen-dung-thuc-tap-sinh-cx-10.jpg" class="card-img-top img-thumbnail" alt="..."></div>
-                                  </a>
-                                   <div class="card-body">
-                                   <h5 class=" card-title text-center d-none d-lg-flex">Quy trình xây dựng nội dung của BookingCare</h5>
-                                   <h5 class="card-title text-center d-sm-flex small d-lg-none">Quy trình xây dựng nội dung của BookingCare</h5>
-         
-                                 </div>
-                               </div>
-                               
-                             </div>
-                                 
-                           </div>
-                           <div class="carousel-item">
-                             <div class="d-flex flex-row justify-content-evenly">
-                               <div class="card" style="width: 20rem;">
-                                  <a  href="doctor.html" target="_blank" >
-                                 <div class="ratio ratio-16x9"><img src="https://cdn.bookingcare.vn/fo/w828/2024/09/27/170550-tuyen-dung-thuc-tap-sinh-cx-8.jpg" class="card-img-top img-thumbnail" alt="..."></div>
-                              </a>
-                                 <div class="card-body" >
-                                   <h5 class="card-title text-center d-none d-lg-flex">Điều gì làm nội dung của BookingCare khác biệt?</h5>
-                                   <h5 class="card-title text-center d-sm-flex small d-lg-none">Điều gì làm nội dung của BookingCare khác biệt?</h5>
-         
-                                 </div>
-                               </div>
-                               <div class="card " style="width: 20rem;">
-                                  <a  href="doctor.html" target="_blank" >
-                                <div class="ratio ratio-16x9"> <img src="https://cdn.bookingcare.vn/fo/w828/2024/09/04/140823-tuyen-dung-thuc-tap-sinh-cx-5.jpg  "class="card-img-top img-thumbnail" alt="..."></div>
-                              </a>
-                                <div class="card-body">
-                                   <h5 class="card-title text-center d-none d-lg-flex">Quy trình phát triển sản phẩm của BookingCare</h5>
-                                   <h5 class="card-title text-center d-sm-flex small d-lg-none">Quy trình phát triển sản phẩm của BookingCare</h5>
-         
-                                 </div>
-                               </div>
-                               <div class="card" style="width: 20rem;">
-                                  <a  href="doctor.html" target="_blank" >
-                                 <div class="ratio ratio-16x9" ><img src="https://cdn.bookingcare.vn/fo/w828/2024/08/30/172651-tuyen-dung-thuc-tap-sinh-cx-3.jpg" class="card-img-top img-thumbnail" alt="..."></div>
-                              </a>
-                                 <div class="card-body">
-                                   <h5 class="card-title text-center d-none d-lg-flex">"Con người phù hợp" - Triết lý tuyển dụng của BookingCare</h5>
-                                   <h5 class="card-title text-center d-sm-flex small d-lg-none">"Con người phù hợp" - Triết lý tuyển dụng của BookingCare</h5>
-         
-                                 </div>
-                               </div>
-                               
-                               </div>
-                               
-                           </div>
-                           <div class="carousel-item">
-                             <div class="d-flex flex-row justify-content-evenly">
-                               <div class="card" style="width: 20rem;">
-                                  <a  href="doctor.html" target="_blank" >
-                                 <div class="ratio ratio-16x9"><img src="https://cdn.bookingcare.vn/fo/w828/2024/08/29/145356-tuyen-dung-thuc-tap-sinh-cx.jpg" class="card-img-top img-thumbnail" alt="..."></div>
-                              </a>
-                                 <div class="card-body">
-                                   <h5 class="card-title text-center d-none d-lg-flex">Quy trình phỏng vấn tại BookingCare</h5>
-                                   <h5 class="card-title text-center d-sm-flex small d-lg-none">Quy trình phỏng vấn tại BookingCare</h5>
-         
-                                 </div>
-                               </div>
-                               <div class="card " style="width: 20rem;">
-                                  <a  href="doctor.html" target="_blank" >
-                                <div class="ratio ratio-16x9"> <img src="https://cdn.bookingcare.vn/fo/w828/2024/08/01/140851-tuyen-dung-thuc-tap-sinh-cx-13.jpg" class="card-img-top img-thumbnail" alt="..."></div>
-                              </a>
-                                <div class="card-body">
-                                   <h5 class="card-title text-center d-none d-lg-flex">Tầm quan trọng của Học tập suốt đời - Lifelong learning</h5>
-                                   <h5 class="card-title text-center d-sm-flex small d-lg-none">Tầm quan trọng của Học tập suốt đời - Lifelong learning</h5>
-         
-                                   
-                                 </div>
-                               </div>
-                               <div class="card" style="width: 20rem;">
-                                  <a  href="doctor.html" target="_blank" >
-                                 <div class="ratio ratio-16x9"><img src="https://cdn.bookingcare.vn/fo/w828/2024/07/19/170428-tuyen-dung-thuc-tap-sinh-cx-10.jpg"  class="card-img-top img-thumbnail" alt="..."></div>
-                              </a>
-                                 <div class="card-body">
-                                   <h5 class="card-title text-center d-none d-lg-flex">Báo cáo công việc theo phương pháp 3Ps</h5>
-                                   <h5 class="card-title text-center d-sm-flex small d-lg-none">Báo cáo công việc theo phương pháp 3Ps</h5>
-         
-                                 </div>
-                               </div>
-                               
-                               <div class="card" style="width: 20rem;">
-                                  <a  href="doctor.html" target="_blank" >
-                                  <div class="ratio ratio-16x9"><img src="https://cdn.bookingcare.vn/fo/w828/2024/07/18/163154-tuyen-dung-thuc-tap-sinh-cx-2.jpg"  class="card-img-top img-thumbnail" alt="..."></div>
-                              </a>
-                                  <div class="card-body">
-                                    <h5 class="card-title text-center d-none d-lg-flex">Những điều cần lưu ý khi đọc Offer Letter</h5>
-                                    <h5 class="card-title text-center d-sm-flex small d-lg-none">Những điều cần lưu ý khi đọc Offer Letter</h5>
-          
-                                  </div>
-                                </div>
-                                
-                               </div>
-                               
-                           </div>
-                           <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample_coSoYTe" data-bs-slide="prev">
-                             <span class="p-2 position-absolute start-0" style="color: black;" aria-hidden="true"><i class="fa-solid fa-arrow-left fs-4"></i></span>
-                             <span class="visually-hidden">Previous</span>
-                           </button>
-                           <button class="carousel-control-next" type="button" data-bs-target="#carouselExample_coSoYTe" data-bs-slide="next">
-                             <span class="p-2 position-absolute end-0" style="color: black;" aria-hidden="true"><i class="fa-solid fa-arrow-right fs-4"></i> </span>
-                             <span class="visually-hidden">Next</span>
-                           </button>
-                     </div>
-                      
-              </div>
-      
-      
-      <div id="confirmationModal" class="modal">
-          <div class="modal-content">
-              <span class="close" onclick="closeModal()">&times;</span>
-              <h2>Confirmation</h2>
-              <header>
-                  <h1>Digital BookingCare</h1>
-                  <p>Đặt lịch chăm sóc sức khỏe online nhanh chóng và tiện lợi</p>
-              </header>
-          
-              <div class="container">
-                  <section class="services">
-                      <div class="service">
-                          <h3>Khám Bác Sĩ</h3>
-                          <p>Đặt lịch khám với bác sĩ chuyên khoa nhanh chóng và thuận tiện.</p>
-                          <button class="book-appointment" onclick="openForm('Khám Bác Sĩ')">Đặt lịch</button>
-                      </div>
-                      <div class="service">
-                          <h3>Xét Nghiệm</h3>
-                          <p>Đặt lịch xét nghiệm với kết quả nhanh chóng và chính xác.</p>
-                          <button class="book-appointment" onclick="openForm('Xét Nghiệm')">Đặt lịch</button>
-                      </div>
-                      <div class="service">
-                          <h3>Khám Sức Khỏe Tổng Quát</h3>
-                          <p>Kiểm tra sức khỏe toàn diện để theo dõi tình trạng sức khỏe của bạn.</p>
-                          <button class="book-appointment" onclick="openForm('Khám Sức Khỏe Tổng Quát')">Đặt lịch</button>
-                      </div>
-                  </section>
-          
-                  <div class="form-container" id="appointmentForm" style="display:none;">
-                      <h2>Đặt Lịch Hẹn</h2>
-                      <form id="bookingForm">
-                          <label for="name">Họ và tên</label>
-                          <input type="text" id="name" name="name" required>
-          
-                          <label for="service">Dịch vụ</label>
-                          <input type="text" id="service" name="service" readonly required>
-          
-                          <label for="date">Ngày</label>
-                          <input type="date" id="date" name="date" required>
-          
-                          <label for="time">Giờ</label>
-                          <input type="time" id="time" name="time" required>
-          
-                          <input type="submit" value="Xác nhận Đặt Lịch">
-                      </form>
-                  </div>
-              </div>
-              <div class="modal-buttons">
-                  <button class="cancel-btn" onclick="closeModal()">Cancel</button>
-                  <button class="confirm-btn" onclick="confirmAction()">Confirm</button>
-              </div>
+    <section class="job-section">
+        <nav aria-label="breadcrumb ">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item ms-3">
+                <a href="/index.html"><i class="fa-solid fa-house"></i> </a>
+              </li>
+              <li class="breadcrumb-item active">Recruitment</li>
+            </ol>
+          </nav>
+        <header>
+            <div class="logo">BookingCare</div>
+           
+        </header>
+    
+        <section class="banner">
+            <h1>Đến vì công việc, Gắn kết vì sứ mệnh</h1>
+            
+        </section>
+    
+        <section class="content">
+            <h2>Sứ mệnh</h2>
+            <p>Ứng dụng công nghệ tiên phong (AI/IoT) mang dịch vụ Y tế chăm sóc sức khỏe tin cậy với chi phí hợp lý đến từng người, từng nhà trên khắp Việt Nam.</p>
+    
+            <h2>Tầm nhìn</h2>
+            <p>Nền tảng công nghệ Y tế chăm sóc sức khỏe toàn diện hàng đầu Việt Nam và vươn tầm khu vực.</p>
+    
+            <h2>Giá trị cốt lõi</h2>
+            <div class="values">
+                <div class="value-item">1. Môi trường sáng tạo, đổi mới: BookingCare luôn coi trọng sự khác biệt trong mỗi sản phẩm để tạo ra giá trị thực sự hữu ích cho người dùng, khách hàng và cộng đồng.</div>
+                <div class="value-item">2. Phát triển năng lực theo ASK:
+                    Nhân sự của BookingCare được định hình bộ Tam giác năng lực ASK (thái độ, kiến thức, kỹ năng) để có thể độc lập tư duy và phát triển sự nghiệp trong bất kỳ môi trường nào.</div>
+                <div class="value-item">3. Văn hóa học tập không ngừng:
+                    Ở BookingCare "hành đi đôi với học”. Đội ngũ là những người trẻ dám dấn thân, thực chiến trong công việc nhưng có tinh thần học tập không ngừng.</div>
+                <div class="value-item">4. Trao quyền:
+                    Ở BookingCare, mỗi thành viên được trao quyền chủ động trong công việc. Từ việc chủ động thiết lập mục tiêu, thiết lập kế hoạch công việc cho đến chủ động trao đổi khó khăn trong quá trình làm việc.</div>
+            </div>
+        </section>
+        <section class="job-section">
+            <h3>Chuyện BookingCare</h3>
+  
+   
+            <div class="card " style="width: 20rem;">
+                       
+                <div class="ratio ratio-16x9"> <img src="https://cdn.bookingcare.vn/fo/w1080/2024/06/25/093925-tuyen-dung-thuc-tap-sinh-cx-11.jpg" class="card-img-top img-thumbnail " alt="..."></div>
+                 <div class="card-body">
+                   <h5 class="card-title text-center">Vị trí Content Marketing  </h5>
+                   
+                 </div>
+
+               <div class="extra-content">
+                   
+               </div>
+               <button class="contact-button" onclick="openNewTab()">Xem thêm</button>
+           </div>
+           <div class="card " style="width: 20rem;">
+                       
+            <div class="ratio ratio-16x9"> <img src="https://cdn.bookingcare.vn/fo/w1080/2023/07/20/135540-tuyen-dung-thuc-tap-sinh-cx-1.jpg" class="card-img-top img-thumbnail " alt="..."></div>
+             <div class="card-body">
+               <h5 class="card-title text-center">BookingCare tìm kiếm các vị trí Senior</h5>
+               
+             </div>
+
+           <div class="extra-content">
+               
+           </div>
+           <button class="contact-button" onclick="openNewTab()">Xem thêm</button>
+       </div>
+       <div class="card " style="width: 20rem;">
+                       
+        <div class="ratio ratio-16x9"> <img src="https://cdn.bookingcare.vn/fo/w1080/2023/07/13/111451-tuyen-dung-thuc-tap-sinh-cx.png" class="card-img-top img-thumbnail " alt="..."></div>
+         <div class="card-body">
+           <h5 class="card-title text-center">Vị trí Phát triển kinh doanh B2B</h5>
+           
+         </div>
+
+       <div class="extra-content">
+           
+       </div>
+       <button class="contact-button" onclick="openNewTab()">Xem thêm</button>
+   </div>
+            
           </div>
-      </div>
-          <!-- BookingCare Stories Section -->
-    </div>
+              
+        </div>
+        <div class="carousel-item">
+          <div class="d-flex flex-row justify-content-evenly">
+            <div class="card " style="width: 20rem;">
+                       
+                <div class="ratio ratio-16x9"> <img src="https://cdn.bookingcare.vn/fo/w1080/2022/11/15/123357-3.png" class="card-img-top img-thumbnail " alt="..."></div>
+                 <div class="card-body">
+                   <h5 class="card-title text-center">Vị trí Chuyên viên tuyển dụng</h5>
+                   
+                 </div>
+
+               <div class="extra-content">
+                   
+               </div>
+               <button class="contact-button" onclick="openNewTab()">Xem thêm</button>
+           </div>
+           <div class="card " style="width: 20rem;">
+                       
+            <div class="ratio ratio-16x9"> <img src="https://cdn.bookingcare.vn/fo/w1080/2022/11/15/144258-full-stack-1200--628-px-1.png" class="card-img-top img-thumbnail " alt="..."></div>
+             <div class="card-body">
+               <h5 class="card-title text-center">Vị trí Fullstack Developer </h5>
+               
+             </div>
+
+           <div class="extra-content">
+               
+           </div>
+           <button class="contact-button" onclick="openNewTab()">Xem thêm</button>
+       </div>
+       <div class="card " style="width: 20rem;">
+                       
+        <div class="ratio ratio-16x9"> <img src="https://cdn.bookingcare.vn/fo/w1080/2022/11/15/120936-1.png" class="card-img-top img-thumbnail " alt="..."></div>
+         <div class="card-body">
+           <h5 class="card-title text-center">Các vị trí Senior</h5>
+           
+         </div>
+
+       <div class="extra-content">
+           
+       </div>
+       <button class="contact-button" onclick="openNewTab()">Vị trí Nâng cao Trải nghiệm khách hàng</button>
+   </div>
+            </div>
+            
+        </div>
+        
+            
+        </div>
        
-        <footer class="footer mt-5">
+            </div>
+            
+            <!-- Updated "Ứng Tuyển Ngay" Button -->
+            <button class="submit-btn" onclick="openConfirmationModal()">ứng tuyển ngay</button>
+        </section>
+    <!-- Modal -->
+    <div id="confirmationModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>Confirmation</h2>
+            <header>
+                <h1>Digital BookingCare</h1>
+                <p>Đặt lịch chăm sóc sức khỏe online nhanh chóng và tiện lợi</p>
+            </header>
+        
+            <div class="container">
+                <section class="services">
+                    <div class="service">
+                        <h3>Khám Bác Sĩ</h3>
+                        <p>Đặt lịch khám với bác sĩ chuyên khoa nhanh chóng và thuận tiện.</p>
+                        <button class="book-appointment" onclick="openForm('Khám Bác Sĩ')">Đặt lịch</button>
+                    </div>
+                    <div class="service">
+                        <h3>Xét Nghiệm</h3>
+                        <p>Đặt lịch xét nghiệm với kết quả nhanh chóng và chính xác.</p>
+                        <button class="book-appointment" onclick="openForm('Xét Nghiệm')">Đặt lịch</button>
+                    </div>
+                    <div class="service">
+                        <h3>Khám Sức Khỏe Tổng Quát</h3>
+                        <p>Kiểm tra sức khỏe toàn diện để theo dõi tình trạng sức khỏe của bạn.</p>
+                        <button class="book-appointment" onclick="openForm('Khám Sức Khỏe Tổng Quát')">Đặt lịch</button>
+                    </div>
+                </section>
+        
+                <div class="form-container" id="appointmentForm" style="display:none;">
+                    <h2>Đặt Lịch Hẹn</h2>
+                    <form id="bookingForm">
+                        <label for="name">Họ và tên</label>
+                        <input type="text" id="name" name="name" required>
+        
+                        <label for="service">Dịch vụ</label>
+                        <input type="text" id="service" name="service" readonly required>
+        
+                        <label for="date">Ngày</label>
+                        <input type="date" id="date" name="date" required>
+        
+                        <label for="time">Giờ</label>
+                        <input type="time" id="time" name="time" required>
+        
+                        <input type="submit" value="Xác nhận Đặt Lịch">
+                    </form>
+                </div>
+            </div>
+            <div class="modal-buttons">
+                <button class="cancel-btn" onclick="closeModal()">Cancel</button>
+                <button class="confirm-btn" onclick="confirmAction()">Confirm</button>
+            </div>
+        </div>
+    </div>
+        <!-- BookingCare Stories Section -->
+        <section class="stories-section">
+            <h3>Chuyện BookingCare</h3>
+  <div class="container mt-4">
+    <div id="carouselExample_coSoYTe" class="carousel slide">
+      <div class="carousel-inner position-relative">
+        <div class="carousel-item active">
+          <div class="d-flex flex-row justify-content-evenly align-items-center">
+            <div class="card" style="width: 20rem;">
+                <a  href="handbook.html" target="_blank" >
+              <div class="ratio ratio-16x9"><img src="https://cdn.bookingcare.vn/fo/w828/2024/10/01/111450-tuyen-dung-thuc-tap-sinh-cx-12.jpg" class="card-img-top img-thumbnail" alt="..."></div>
+              <div class="card-body">
+                <h5 class="card-title text-center">Hành trình cách mạng hóa chăm sóc sức khỏe với AI</h5>
+              </div>
+             </a>
+            </div>
+            <div class="card " style="width: 20rem;">
+                <a  href="handbook.html" target="_blank" >
+             <div class="ratio ratio-16x9"> <img src="https://cdn.bookingcare.vn/fo/w828/2024/09/27/230701-tuyen-dung-thuc-tap-sinh-cx-1.png" class="card-img-top img-thumbnail " alt="..."></div>
+              <div class="card-body">
+                <h5 class="card-title text-center">Xây dựng Văn hóa học tập ở BookingCare</h5>
+                
+              </div>
+             </a>
+            </div>
+            <div class="card" style="width: 20rem;">
+                <a  href="handbook.html" target="_blank" >
+                <div class="ratio ratio-16x9"><img src="https://cdn.bookingcare.vn/fo/w828/2024/09/30/172551-tuyen-dung-thuc-tap-sinh-cx-10.jpg" class="card-img-top img-thumbnail" alt="..."></div>
+                              <div class="card-body">
+                <h5 class="card-title text-center">Quy trình xây dựng nội dung của BookingCare</h5>
+                
+              </div>
+                </a>
+            </div>
+            
+          </div>
+              
+        </div>
+        <div class="carousel-item">
+          <div class="d-flex flex-row justify-content-evenly">
+            <div class="card" style="width: 20rem;">
+                <a  href="handbook.html" target="_blank" >
+              <div class="ratio ratio-16x9"><img src="https://cdn.bookingcare.vn/fo/w828/2024/09/27/170550-tuyen-dung-thuc-tap-sinh-cx-8.jpg" class="card-img-top img-thumbnail" alt="..."></div>
+              <div class="card-body" >
+                <h5 class="card-title text-center">Điều gì làm nội dung của BookingCare khác biệt?</h5>
+              </div>
+             </a>
+            </div>
+            <div class="card " style="width: 20rem;">
+                <a  href="handbook.html" target="_blank" >
+             <div class="ratio ratio-16x9"> <img src="https://cdn.bookingcare.vn/fo/w828/2024/09/04/140823-tuyen-dung-thuc-tap-sinh-cx-5.jpg" class="card-img-top img-thumbnail" alt="..."></div>
+              <div class="card-body">
+                <h5 class="card-title text-center">Quy trình phát triển sản phẩm của BookingCare</h5>
+                
+              </div>
+                </a>
+            </div>
+            <div class="card" style="width: 20rem;">
+                <a  href="handbook.html" target="_blank" >
+              <div class="ratio ratio-16x9" ><img src="https://cdn.bookingcare.vn/fo/w828/2024/08/30/172651-tuyen-dung-thuc-tap-sinh-cx-3.jpg" class="card-img-top img-thumbnail" alt="..."></div>
+              <div class="card-body">
+                <h5 class="card-title text-center">"Con người phù hợp" - Triết lý tuyển dụng của BookingCare</h5>
+                
+              </div>
+                </a>
+            </div>
+            
+            </div>
+            
+        </div>
+        <div class="carousel-item">
+          <div class="d-flex flex-row justify-content-evenly">
+            <div class="card" style="width: 20rem;">
+                <a  href="handbook.html" target="_blank" >
+              <div class="ratio ratio-16x9"><img src="https://cdn.bookingcare.vn/fo/w828/2024/08/29/145356-tuyen-dung-thuc-tap-sinh-cx.jpg" class="card-img-top img-thumbnail" alt="..."></div>
+              <div class="card-body">
+                <h5 class="card-title text-center">Quy trình phỏng vấn tại BookingCare</h5>
+              </div>
+                </a>
+            </div>
+            <div class="card " style="width: 20rem;">
+                <a  href="handbook.html" target="_blank" >
+             <div class="ratio ratio-16x9"> <img src="https://cdn.bookingcare.vn/fo/w828/2024/08/01/140851-tuyen-dung-thuc-tap-sinh-cx-13.jpg" class="card-img-top img-thumbnail" alt="..."></div>
+              <div class="card-body">
+                <h5 class="card-title text-center">Tầm quan trọng của Học tập suốt đời - Lifelong learning</h5>
+                
+              </div>
+                </a>
+            </div>
+            <div class="card" style="width: 20rem;">
+                <a  href="handbook.html" target="_blank" >
+              <div class="ratio ratio-16x9"><img src="https://cdn.bookingcare.vn/fo/w828/2024/07/19/170428-tuyen-dung-thuc-tap-sinh-cx-10.jpg"  class="card-img-top img-thumbnail" alt="..."></div>
+              <div class="card-body">
+                <h5 class="card-title text-center">Báo cáo công việc theo phương pháp 3Ps</h5>
+              </div>
+                </a>
+            </div>
+            
+            </div>
+            
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample_coSoYTe" data-bs-slide="prev">
+          <span class="p-2 position-absolute start-0" style="color: black;" aria-hidden="true"><i class="fa-solid fa-arrow-left fs-4"></i></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample_coSoYTe" data-bs-slide="next">
+          <span class="p-2 position-absolute end-0" style="color: black;" aria-hidden="true"><i class="fa-solid fa-arrow-right fs-4"></i> </span>
+          <span class="visually-hidden">Next</span>
+        </button>
+            </div>
+           
+        </section>
+        <footer class="footer">
             <div class="footer-container">
                 <div class="footer-section">
                     <h2><span class="logo">Booking</span><span class="logo-highlight">Care</span></h2>
