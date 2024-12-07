@@ -50,43 +50,59 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+  const setupCarouselPagination = (carouselId, paginationId) => {
+    const paginationLinks = document.querySelectorAll(
+      `#${paginationId} .page-link`
+    );
+    const carousel = document.querySelector(`#${carouselId}`);
 
-
-  document.addEventListener('DOMContentLoaded', function () {
-    const setupCarouselPagination = (carouselId, paginationId) => {
-      const paginationLinks = document.querySelectorAll(`#${paginationId} .page-link`);
-      const carousel = document.querySelector(`#${carouselId}`);
-
-      // Function to update the active pagination link
-      function updateActiveLink() {
-        const activeIndex = [...carousel.querySelectorAll('.carousel-item')].findIndex(item => item.classList.contains('active'));
-        paginationLinks.forEach((link, index) => {
-          link.classList.toggle('active', index === activeIndex);
-        });
-      }
-
-      // Add click event to pagination links
-      paginationLinks.forEach((link) => {
-        link.addEventListener('click', function (event) {
-          event.preventDefault();
-          const slideTo = this.getAttribute('data-slide-to');
-          const carouselInstance = new bootstrap.Carousel(carousel);
-          carouselInstance.to(slideTo);
-          updateActiveLink();
-        });
+    // Function to update the active pagination link
+    function updateActiveLink() {
+      const activeIndex = [
+        ...carousel.querySelectorAll(".carousel-item"),
+      ].findIndex((item) => item.classList.contains("active"));
+      paginationLinks.forEach((link, index) => {
+        link.classList.toggle("active", index === activeIndex);
       });
+    }
 
-      // Add event listener for carousel slide events
-      carousel.addEventListener('slid.bs.carousel', updateActiveLink); 
+    // Add click event to pagination links
+    paginationLinks.forEach((link) => {
+      link.addEventListener("click", function (event) {
+        event.preventDefault();
+        const slideTo = this.getAttribute("data-slide-to");
+        const carouselInstance = new bootstrap.Carousel(carousel);
+        carouselInstance.to(slideTo);
+        updateActiveLink();
+      });
+    });
 
-      // Initial call to set the active link
-      updateActiveLink();
-    };
+    // Add event listener for carousel slide events
+    carousel.addEventListener("slid.bs.carousel", updateActiveLink);
 
-    // Setup pagination for both carousels
-    setupCarouselPagination('articleCarousel', 'paginationCarousel');
-    setupCarouselPagination('articleCarousel1', 'paginationCarousel1');
-  });
-  
-  
- 
+    // Initial call to set the active link
+    updateActiveLink();
+  };
+
+  // Setup pagination for both carousels
+  setupCarouselPagination("articleCarousel", "paginationCarousel");
+  setupCarouselPagination("articleCarousel1", "paginationCarousel1");
+});
+
+var mybutton = document.getElementById("scrollToTopBtn");
+
+// Khi người dùng cuộn xuống 20px từ trên cùng của tài liệu, hiển thị nút
+window.onscroll = function () {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+};
+
+// Khi người dùng nhấn nút, cuộn trang về trên cùng
+mybutton.onclick = function () {
+  document.body.scrollTop = 0; // Cuộn đến đầu trang (cho Safari)
+  document.documentElement.scrollTop = 0; // Cuộn đến đầu trang (cho Chrome, Firefox, IE và Opera)
+};

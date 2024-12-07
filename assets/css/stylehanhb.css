@@ -3,9 +3,7 @@ body {
   background-color: #f8f9fa;
 }
 .container {
-
   max-width: 1315px;
-
 }
 
 /* Header */
@@ -15,7 +13,7 @@ body {
   display: flex;
   align-items: center;
   font-size: 10px;
-  color: #333;
+  color: #45c3d2;
   margin: 20px 0;
 }
 
@@ -74,8 +72,7 @@ body {
   cursor: pointer;
 }
 .search-icon:active {
-  color: #007bff; 
-
+  color: #007bff;
 }
 @media (max-width: 768px) {
   .search-bar {
@@ -104,7 +101,6 @@ body {
   margin-left: 15px;
   margin-bottom: 10px;
   margin-right: 10px;
-
 }
 
 .article-title {
@@ -112,12 +108,12 @@ body {
   font-weight: 600;
   color: #333;
 
-  display: -webkit-box; 
-  -webkit-box-orient: vertical; 
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
-  overflow: hidden; 
-  text-overflow: ellipsis; 
-  line-height: 1.2; 
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-height: 1.2;
 }
 /* Khung chứa ảnh */
 .image-frame {
@@ -134,7 +130,6 @@ body {
 
   border-radius: 10px;
   border-color: #45c3d2;
-
 }
 .category-section {
   margin: 20px 0;
@@ -147,6 +142,11 @@ body {
   border-radius: 30px;
   padding: 10px 20px;
   text-align: center;
+  transition: background-color 0.3s ease;
+}
+.btn-custom:hover {
+  background-color: #008a9c;
+  color: white;
 }
 footer {
   padding: 20px 0;
@@ -155,7 +155,6 @@ footer {
 footer a {
   text-decoration: none;
 }
-
 
 /* Custom arrow icon styles */
 .custom-arrow-icon {
@@ -187,42 +186,155 @@ footer a {
 @media (max-width: 767px) {
   .carousel-control-prev,
   .carousel-control-next {
-    display: none !important; 
+    display: none !important;
   }
 
   .pagination-container {
-    display: block !important; 
+    display: block !important;
   }
 }
 
 @media (min-width: 768px) {
   .pagination-container {
-    display: none !important; 
+    display: none !important;
   }
 }
 
-
 .pagination .page-item {
-  margin: 0 2px; 
+  margin: 0 2px;
 }
 
 .pagination .page-link {
   padding: 5px 10px;
-  border: 2px solid #45BEE5; 
-  border-radius: 5px; 
-  background-color: #fff; 
-  color: #45BEE5; 
+  border: 2px solid #45bee5;
+  border-radius: 5px;
+  background-color: #fff;
+  color: #45bee5;
   transition: background-color 0.3s, color 0.3s;
 }
 
 .pagination .page-link:hover {
-  background-color: #45BEE5;
-  color: #fcfcfc; 
+  background-color: #45bee5;
+  color: #fcfcfc;
 }
 
 .pagination .page-link.active {
-  background-color: #45BEE5; 
-  color: white; 
-  border: 2px solid #45BEE5;
+  background-color: #45bee5;
+  color: white;
+  border: 2px solid #45bee5;
 }
 
+#scrollToTopBtn:hover {
+  background-color: #39a6cb;
+}
+
+#scrollToTopBtn i {
+  font-size: 22px;
+  font-weight: bold;
+}
+#scrollToTopBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #45bee5;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 0;
+  font-size: 24px;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  transition: background-color 0.3s ease;
+}
+* {
+  margin: 0px;
+  padding: 0px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+body,
+input,
+button,
+option,
+textarea,
+label,
+select,
+legend,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  font: 14px / 1.5 "Montserrat", sans-serif;
+  outline: none;
+}
+p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  unicode-bidi: isolate;
+}
+.tacgia {
+  font-size: 16px;
+  padding: 15px 0;
+}
+.tacgia h2 {
+  border-top: 1px solid #eee;
+  padding-top: 10px;
+  font-size: 20px;
+  margin: 10px 0;
+}
+.tacgia h3,
+.covan h3 {
+  font-size: 16px;
+  margin: 10px 0;
+}
+.covan h4 {
+  font: 14px / 1.5 "Montserrat", sans-serif;
+}
+.covan h2 {
+  border-top: 1px solid #eee;
+  padding-top: 10px;
+  font-size: 20px;
+  margin: 10px 0;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+.covan img {
+  position: absolute;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  border: 1px solid #eee;
+}
+.covan ul li {
+  margin-left: 5px;
+  margin: 15px;
+  font: 15px / 1.5 "Montserrat", sans-serif;
+}
+@media (max-width: 460px) {
+  .tacgia {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+  .covan img {
+    width: 80px;
+    height: 80px;
+  }
+}
