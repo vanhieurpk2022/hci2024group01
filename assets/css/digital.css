@@ -1,159 +1,190 @@
+/* Basic Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
 }
 
 body {
-    background: linear-gradient(to bottom right, #d1f4ff, #f7ffd4);
-    padding: 20px;
+    font-family: Arial, sans-serif;
 }
 
-h2 {
-    color: #1877f2;
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #ffa500;
+}
+
+.navbar a {
+    margin-left: 1.5rem;
+    text-decoration: none;
+    color: #333;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px;
+    color: white;
     text-align: center;
-    margin-bottom: 20px;
+    height: 500px; /* Chiều cao toàn màn hình */
+    background-image: url('../img/pexels-artempodrez-6823602.jpg'); /* Thay bằng URL ảnh nền */
+    background-size: cover;
+    background-position: center;
+    
 }
 
-button {
-    cursor: pointer;
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Màu đen với độ trong suốt */
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2; /* Đảm bảo nội dung nằm trên lớp phủ */
+}
+
+.contact-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #007bff;
     border: none;
     border-radius: 5px;
-    padding: 10px 15px;
-    color: #f5e90d;
-    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
-.btn {
-    background-color: #ff9f29;
+.contact-button:hover {
+    background-color: #0056b3;
 }
 
-.apply-btn, .see-more-btn {
-    background-color: #1877f2;
-    display: block;
-    margin: 20px auto;
+.hero h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
 }
 
-/* Job Vacancies Section */
-.job-section {
+.hero p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.hero-button {
+    background-color: #ffa500;
+    color: #fff;
+    padding: 0.5rem 1.5rem;
+    border: none;
+    cursor: pointer;
+}
+
+/* Features Section */
+.features {
+    padding: 2rem;
+    background-color: #f8f8f8;
     text-align: center;
 }
-.job-section .content {
-    margin-top: 2rem;
+
+.features h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
 }
 
-.values-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.5rem;
+.feature-cards {
+    display: flex;
+    justify-content: space-around;
     margin-top: 1.5rem;
 }
 
-.value-item {
-    background-color: #f9f9f9;
+.card {
+    background-color: #fff;
     padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: left;
+    width: 30%;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-.value-item h3 {
-    margin-bottom: 0.5rem;
+.card h3 {
     font-size: 1.2rem;
     color: #333;
 }
 
-.value-item p {
+.card p {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.contact-button {
+    margin-top: 1.5rem;
+    padding: 0.5rem 1.5rem;
+    background-color: #ffa500;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+/* Package Section */
+.package {
+    padding: 2rem;
+    text-align: center;
+}
+
+.package h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.package-content {
+    background-color: #e0f7fa;
+    padding: 1.5rem;
+    margin-top: 1rem;
+}
+
+.package-content h3 {
+    font-size: 1.2rem;
+}
+
+.package-content ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 1rem;
+}
+
+.package-content li {
     font-size: 1rem;
-    color: #555;
-    line-height: 1.5;
+    margin: 0.5rem 0;
 }
 
-.job-cards {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
-}
-
-.job-card {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    width: 250px;
+/* Footer */
+.footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1.5rem;
     text-align: center;
 }
 
-/* BookingCare Stories Section */
-.stories-section {
-    margin-top: 50px;
-    text-align: center;
+.footer-links a {
+    margin: 0 0.5rem;
+    color: #fff;
+    text-decoration: none;
 }
-
-.story-cards {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.story-card {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    width: 200px;
-    text-align: center;
-}
-
-/* Extra Content Styling */
-.extra-content {
-    display: none;
-    color: #555;
-    margin-top: 10px;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .job-cards, .story-cards {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .job-card, .story-card {
-        width: 80%;
-    }
-}
-/* Optional: Style for the new button */
-.new-button {
-    margin-top: 10px;
-    padding: 10px 20px;
-    color: #44b7ec;
-    background-color: #28a745;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    display: block;
-}
-.submit-btn {
-    background-color: #007bff;
-    color: white;
-    padding: 15px 30px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 16px;
-    margin: 20px;
-}
-
-.submit-btn:hover {
-    background-color: #0056b3;
-}
-
-/* Modal Styles */
+/* Modal Background */
 .modal {
     display: none;
     position: fixed;
@@ -162,176 +193,55 @@ button {
     top: 0;
     width: 100%;
     height: 100%;
+    overflow: auto;
     background-color: rgba(0, 0, 0, 0.4);
-    padding-top: 60px;
 }
 
+/* Modal Content Box */
 .modal-content {
     background-color: #fefefe;
-    margin: 5% auto;
+    margin: 10% auto;
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
     max-width: 500px;
-    text-align: center;
-    border-radius: 10px;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
 
-.modal-content h2 {
-    color: #007bff;
-}
-
-.modal-content p {
-    color: #333;
-}
-
+/* Close Button */
 .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
-    cursor: pointer;
-}
-
-.modal-buttons {
-    margin-top: 20px;
-}
-
-.modal-buttons button {
-    padding: 10px 20px;
-    border-radius: 5px;
-    border: none;
-    margin: 10px;
-    cursor: pointer;
-}
-
-.cancel-btn {
-    background-color: #ccc;
-}
-
-.confirm-btn {
-    background-color: #28a745;
-    color: white;
-}
-
-.cancel-btn:hover {
-    background-color: #bbb;
-}
-
-.confirm-btn:hover {
-    background-color: #218838;
-}
-/* Footer Styling */
-.footer {
-    background-color: #f5f5f5;
-    padding: 40px 20px;
-    font-family: Arial, sans-serif;
-    color: #333;
-}
-
-.footer-container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-.footer-section,
-.footer-links,
-.footer-contact {
-    width: 30%;
-    min-width: 250px;
-}
-
-.footer-section h2 {
+    position: absolute;
+    top: 10px;
+    right: 20px;
     font-size: 24px;
-    color: #ffcc00;
+    cursor: pointer;
 }
 
-.footer-section .logo {
-    color: #333;
-    font-weight: bold;
-}
-
-.footer-section .logo-highlight {
-    color: #ffcc00;
-}
-
-.footer-links a {
+/* Form Styling */
+#contactForm label {
     display: block;
-    color: #00bcd4;
-    margin: 5px 0;
-    text-decoration: none;
+    margin-top: 10px;
 }
 
-.footer-links a:hover {
-    text-decoration: underline;
+#contactForm input,
+#contactForm textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
-.footer-contact p {
-    margin: 10px 0;
-    line-height: 1.5;
-}
-:root {
-    --aqua-color: #00CED1;
-    --navbar-color: #007BFF;
-}
-
-.navbar-brand img {
-    width: 125px;
+#contactForm button {
+    background-color: #ffa500;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
 }
 
-.form-control-search {
-    width: 250px;
-}
-
-.banner h1 {
-    text-align: center;
-    color: var(--aqua-color);
-    margin-top: 20px;
-}
-
-.values {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-}
-
-.value-item {
-    background-color: #f8f9fa;
-    padding: 15px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.job-section .card {
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.carousel-control-prev, .carousel-control-next {
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 50%;
-}
-
-.carousel-control-prev i, .carousel-control-next i {
-    color: var(--navbar-color);
-}
-
-@media (max-width: 768px) {
-    .form-control-search {
-        display: none;
-    }
-
-    .values {
-        grid-template-columns: 1fr;
-    }
+#contactForm button:hover {
+    background-color: #ff8c00;
 }
