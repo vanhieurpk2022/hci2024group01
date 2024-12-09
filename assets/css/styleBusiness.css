@@ -14,7 +14,7 @@ body {
 }
 
 .top-header {
-  background-color: #40e0d0;
+  background-color: #87CEEB;
   position: sticky;
   top: 0;
   z-index: 1000;
@@ -74,6 +74,7 @@ body:has(.top-header) {
 h3 {
   margin: 0 10px;
   color: white;
+  font-weight: bold;;
 }
 .header-container {
   display: flex;
@@ -128,18 +129,6 @@ footer {
 footer a {
   text-decoration: none;
 }
-@media (max-width: 768px) {
-  .nav-link {
-    font-size: 15px;
-    white-space: nowrap;
-  }
-  h3 {
-    font-size: 15px;
-  }
-  .back-button i {
-    margin-right: 10px;
-  }
-}
 .btn {
   background-color: #ffc00e;
   color: white;
@@ -156,3 +145,21 @@ footer a {
 .btn:hover {
   transform: scale(1.05); 
 }
+@media (max-width: 768px) {
+  .nav-link {
+    font-size: 15px;
+    white-space: nowrap;
+  }
+  h3 {
+    font-size:15px;
+  }
+  .back-button i {
+    margin-right: 10px;
+  }
+  
+  .btn {
+    font-size: 20px;
+    
+  }
+}
+
