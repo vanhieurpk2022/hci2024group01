@@ -91,6 +91,8 @@ body {
   background-color: #ffffff;
 }
 
+
+
 .article-card img {
   width: 100%;
   border-top-left-radius: 10px;
@@ -114,6 +116,13 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
   line-height: 1.2;
+}
+.article-title:hover {
+  text-overflow: none;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+
+
 }
 /* Khung chứa ảnh */
 .image-frame {
