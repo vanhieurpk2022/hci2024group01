@@ -12,8 +12,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./assets/css/myStyle.css" />
     <link rel="stylesheet" href="./assets/css/setColor.css">
-    <link rel="stylesheet" href="./assets/css/styleChat.css">
     <link rel="stylesheet" href="./assets/css/footer.css">
+    <link rel="stylesheet" href="./assets/css/booknow.css">
     <title>HeathCare</title>
    
   </head>
@@ -163,12 +163,140 @@
    </div>
     
 
+   <main class="maincontainer_book">  
+  <div class="container">
+      <nav aria-label="breadcrumb ">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item ms-3">
+            <a href="./index.html"><i class="fa-solid fa-house"></i> </a>
+          </li>
+          <li class="breadcrumb-item active">appointment schedule</li>
+        </ol>
+      </nav>
+      <h4>Appointment schedule</h4>
 
+      <div class="container ">
+        <p class="d-inline-flex gap-1 mt-3 ">
+            <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+              <i class="fa-solid fa-plus"></i>
+            </a>
+        </p>
+        <div class="collapse border" id="collapseExample">
+            <div class="container form-container formnhapBook">
+                    <div class="row">
+                      <div class="col-md-6">
+                        <label class="form-label required-field">guest</label>
+                        <div class="search-container">
+                          <input type="text" class="form-control border" placeholder="Search by case code, phone number, full name...
+                          ">
+                       </div>
+                       
+                       <label class="form-label required-field mt-3">doctor</label>
+                       <select class="form-select">
+                           <option selected>doctor</option>
+                           <option >doctor A</option>
+                           <option >doctor B</option>
+                           <option >doctor C</option>
+                       </select>
+                      </div>
+
+                      <div class="col-md-6">
+                        <label class="form-label required-field">phone</label>
+                        <div class="search-container">
+                          <input type="text" class="form-control border" placeholder="Phone number">
+                       </div>
+
+                       <label class="form-label mt-3">classify</label>
+                        <select class="form-select">
+                            <option selected>New examination</option>
+                            <option >old examination
+                            </option>
+                        </select>
+                      </div>
+                    </div>
+
+
+                      <div class="mt-4 d-flex justify-content-around">
+                        <div class="form-check form-check-inline">
+                            <label class="form-check-label">book
+                              <input class="form-check-input" type="radio" name="appointmentType" checked></label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            
+                            <label class="form-check-label">Arise
+                              <input class="form-check-input" type="radio" name="appointmentType">
+                            </label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <label class="form-check-label">Expected
+                              <input class="form-check-input" type="radio" name="appointmentType">
+
+                            </label>
+                        </div>
+                    </div>
+
+
+
+                      <div class="mt-3 d-flex flex-row"><label class="form-label required-field me-3 ">time</label></div>
+
+                      <div class="row ">
+                        <div class="col-md-4"><input type="date" class="form-control border" value="2023-11-29">
+                        </div>
+                        <div class="col-md-4">   
+                          <input type="time" class="form-control border" value="10:00">
+
+                        </div>
+                        <div class="col-md-4">
+
+                          <select class="form-select">
+                            <option selected>15 phút</option>
+                        </select>
+                        </div>
+
+                        <!-- text area -->
+
+                        <div class="mt-3">
+                          <label class="form-label">note</label>
+                          <textarea class="form-control border " style="resize: none;" rows="3" placeholder="note..."></textarea>
+                      </div>
+
+                      <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+                        <button class="btn btn-success px-4" type="submit">add</button>
+                        <button class="btn btn-danger px-4" type="button">cancel</button>
+                    </div>
+                  </div>
+                    
+            </div>
+        </div>
+    </div>
+
+
+  </div>
+   </main>
+
+   <div class="table-container d-flex justify-content-center align-items-center" style="margin-top: 5%;">
+    <table class="booking-table">
+        <thead>
+            <tr >
+                <th >guest</th>
+                <th >phone</th>
+                <th >doctor</th>
+                <th >Classify</th>
+                <th >status</th>
+                <th >time</th>
+                <th >comment</th>
+            </tr>
+        </thead>
+        <tbody>
+            <td colspan="7" class="text-center opacity-75" style="color: rgb(116, 44, 44);">bạn chưa có lịch hẹn nào</td>
+        </tbody>
+    </table>
+</div>
       
 
     <!-- nhung javascript -->
      <!-- Footer -->
-     <footer class="footer" style="margin-top: 900px;">
+     <footer class="footer" style="margin-top: 750px;">
       <div class="container">
           <div class="row gy-4">
               <div class="col-lg-3 col-md-6">
@@ -239,32 +367,7 @@
       </div>
   </footer>
 
-  <!-- chat bot -->
-  <div>
-  
-    <button class="chatbot-toggler">
-      <span class="material-symbols-rounded"> <i class="fa-solid fa-robot"></i> </span>
-      <span class="material-symbols-outlined">close</span>
-    </button>
-    <div class="chatbot">
-      <header>
-        <h2>Chatbot</h2>
-        
-        <span class="close-btn material-symbols-outlined">close</span>
-      </header>
-      <ul class="chatbox">
-        <li class="chat incoming">
-          <span class="material-symbols-outlined"><i class="fa-solid fa-robot"> </i></span>
-          <p>Hi there <br>How can I help you today?</p>
-        </li>
-      </ul>
-      <div class="chat-input">
-        <textarea placeholder="Enter a message..." spellcheck="false" required></textarea>
-        <span id="send-btn" class="material-symbols-rounded">send</span>
-      </div>
-    </div>
-
-  </div>
+ 
 
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
