@@ -13,12 +13,13 @@
     <link rel="stylesheet" href="./assets/css/myStyle.css" />
     <link rel="stylesheet" href="./assets/css/setColor.css">
     <link rel="stylesheet" href="./assets/css/styleChat.css">
+    <link rel="stylesheet" href="./assets/css/footer.css">
     <title>HeathCare</title>
    
   </head>
   <body>
     <!-- DashBroad -->
-   <div class="container " >
+   <div class="container sticky-top" >
       <nav class="navbar bg-body-tertiary">
         <div class="container" style="color: var(--aqua-color);">
           
@@ -203,121 +204,218 @@
            </header> -->
 
           <!-- New Header -->
-           <header>
-            <div class="header_main">
-              <div class="background_image"></div>
-              <div class="header_title  "> 
-                <h1>Nền tảng sức khỏe toàn diện</h1>
-                <h5><small>Chăm sóc tiện lợi, nhanh chóng tiện kiệm thời gian</small></h5>
-                <button class="btn_timhieu mt-3 ms-4">Tìm hiểu ngay</button>
+           <header class="header_main_container">
+            <!-- <div class="background_image" >
+              <div class="container justify-content-center " >
+                 <div class="d-flex align-items-center flex-column">
+                   <h3 style="color: #003553;">Good Health Is The Root Of All Heppiness</h3>
+                   <small class="fs-5 opacity-75">Convenient care, quick and time-saving.</small>
+                   
+                 </div>
+                <div class="d-flex justify-content-center mt-4"> <button class="btn btn-info px-4 fs-5">Learn more</button></div>
+                <div class="d-flex flex-row justify-content-around mt-5">
+                  <div class=" shadow-sm">
+                    <h5 class=" text-center">Quality Care</h5>
+                    <p class="">Providing top-notch medical services for everyone.</p>
+                  </div>
+                    <div class="  shadow-sm">
+                        <h5 class=" text-center">24/7 Support</h5>
+                        <p class="">Round-the-clock support for your health concerns.</p>
+                      </div>
+                </div>
+                <div class="mt-5 d-flex justify-content-center">
+                  <div class="d-flex ms-4 align-items-center">
+                    <p class="ms-3 mt-0 opacity-75"></p><p class="text_deco_hero">50k</p> <span class="ms-2 opacity-75">Total patient</span> <p class="text_deco_hero ms-3">70+</p> <span class="ms-2 opacity-75">Branch</span><p></p>
+                </div>
+                </div>
+                </div>
+            </div> -->
+            
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators" >
+                  <button  type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                  <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class="background_image container" >
+                      <div class="container justify-content-center "  >
+                         <div class="d-flex align-items-center flex-column d-none d-md-flex py-5"  >
+                           <h3 style="color: #003553;">Good health is the root of all heppiness</h3>
+                           <small class="fs-5 opacity-75">Convenient care, quick and time-saving.</small>
+                           
+                         </div>
+                         <!--  màn hình nhỏ -->
+                      <div class="d-flex d-md-none">
+                        <div style="margin-left: 15%; margin-top: 2%;"  class=" ">
+                          <h5 style="color: #003553;">Good health is the root of all heppiness</h5>
+                          <small class=" opacity-75 ms-5">Convenient care, quick and time-saving.</small>
+                        </div>
+                      </div>
+
+                        <div class="d-none d-md-flex justify-content-center "> <button class="btn btn-info px-4 fs-5">Learn more</button></div>
+                        <div class="d-flex d-md-none justify-content-center mt-0"> <button class="btn btn-info px-2 ">Learn more</button></div>
+
+                        <div class="d-none d-md-flex flex-row justify-content-around mt-5">
+                          <div class=" shadow-sm">
+                            <h5 class=" text-center">Quality care</h5>
+                            <p class="">Providing top-notch medical services for everyone.</p>
+                          </div>
+                            <div class="  shadow-sm">
+                                <h5 class=" text-center">24/7 Support</h5>
+                                <p class="">Round-the-clock support for your health concerns.</p>
+                              </div>
+                        </div>
+                        <!-- Màn hình nhỏ -->
+                        
+                        <div class="mt-5 d-flex justify-content-center">
+                          <!-- <div class="d-flex ms-4 align-items-center">
+                            <p class="ms-3 mt-0 opacity-75"></p><p class="text_deco_hero">50k</p> <span class="ms-2 opacity-75">Total patient</span> <p class="text_deco_hero ms-3">70+</p> <span class="ms-2 opacity-75">Branch</span><p></p>
+                        </div> -->
+                        </div>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="background_image_02 container" >
+                      <div class="d-none d-md-flex">
+                        <div style="margin-left: 15%; margin-top: 7%;"  class=" ">
+                          <h3 style="color: #003553;">A trusted medical team <br>  modern healthcare services</h3>
+                          <small class="fs-5 opacity-75 ms-5">Providing Excellence in Patient Care</small>
+                        </div>
+                      </div>
+                      <!--  màn hình nhỏ -->
+                      <div class="d-flex d-md-none">
+                        <div style="margin-left: 15%; margin-top: 7%;"  class=" ">
+                          <h5 style="color: #003553;">A Trusted Medical Team <br> Modern Healthcare Services</h5>
+                          <small class=" opacity-75 ms-5">Providing Excellence in Patient Care</small>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="background_image_03 container" >
+                      <div style="margin-left: 35%;" >
+                      </div>
+                  </div>
+                </div>
+              
               </div>
-              </div>
-            </div>
-           
            </header>
            <main class="main-container">
-            <div class="container py-sm-5">
-              <h3>For you</h3>
-              <div class="container mt-3 d-flex">
-                <!-- img left -->
-                <div class="me-5"> 
-                    <img class="img-thumbnail rounded-pill " width="260" src="./assets/img/140537-chuyen-khoa.png" alt=""> 
-                   <h5 class="text-center mt-2">Specialty</h5>
-                </div>
-  
-                <!-- img right -->
-                <div>
-                  <img class=" img-thumbnail rounded-pill" width="260"  src="./assets/img/12122-bai-viet.png" alt="">
-                  <h5 class="text-center mt-2">Blog</h5>
-                </div>
+            <div class="container py-sm-5 d-flex flex-column justify-content-center align-items-center">
+              <div class="border border-2 rounded-5 px-3"><small >Partner with</small>
               </div>
+            <div class="d-flex flex-row">
+              <div class="mt-3 d-flex flex-column align-content-center justify-content-center">
+                <div class="text-center"> <img src="./assets/img/icon_coSo/nhidong1.webp" class="img-thumbnail" alt=""></div>
+                <small>Bệnh viện nhi đồng 1</small>
+              </div>
+              <div class="ms-5 mt-3 d-flex flex-column align-content-center justify-content-center">
+                <div class="text-center"> <img src="./assets/img/icon_coSo/dhyduoctphcm.webp" class="img-thumbnail" alt=""></div>
+                <small>Đại học y dược tphcm</small>
+              </div>
+              <div class="ms-5 mt-3 d-flex flex-column align-content-center justify-content-center">
+                <div class="text-center"> <img src="./assets/img/icon_coSo/benhvientrunguong.webp" class="img-thumbnail" alt=""></div>
+                <small>Bệnh viện trung ương</small>
+              </div>
+            </div>
             </div>
            <!-- Dịch Vụ Toàn Diện -->
-           <div class="container  py-sm-5 mt-5 mt-sm-0"> 
-            <h3>Service</h3>
-              <div class="container row mt-3 ">
-                  <div class="col-sm-6" style="background-color: var(--background-color) !important;">
-                    <div class="rounded-pill menu-item bg-white p-3  d-flex align-items-center gap-3 border border-1 border border-1">
-                      <div class="icon-bg align-items-center justify-content-center d-flex p-2 rounded-start rounded-end ms-0 ms-sm-3 "><i class="fas fa-hospital fs-1"></i></div>
-                      <span class="fs-4 ms-3 ">Khám chuyên khoa</span>
-                      
-                              
+      <main class="main_container_02">
+             <div class="container  py-sm-5 mt-5 mt-sm-0"> 
+             <div class="d-flex flex-column justify-content-center align-items-center">
+                <div class="border border-2 rounded-5 px-3"><small >Service</small></div>
+                <h3>Health Care Solutions</h3>
+             </div>
+  
+               <div class="container py-5" >
+                <div class="row g-4">
+                    <!-- Cardiology -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="specialty-card">
+                            <div class="icon-circle">
+                                <i class="fas fa-heartbeat"></i>
+                            </div>
+                            <h3 class="card-title">Cardiology</h3>
+                            <p class="card-text">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
+                            <a href="#" class="btn btn-primary read-more">Read More</a>
+                        </div>
                     </div>
-                  </div>
-                  <div class="col-sm-6 mt-3 mt-sm-0" style="background-color: var(--background-color) !important;">
-                    <div class="rounded-pill menu-item bg-white p-3 d-flex align-items-center gap-3 border border-1">
-                      <div class="icon-bg align-items-center justify-content-center d-flex p-2 rounded-start rounded-end ms-0 ms-sm-3"><i class="fas fa-mobile-alt fs-1"></i></div>
-                      <span class="fs-4 ms-3 ">Khám chuyên khoa</span>
+        
+                    <!-- Pulmonary -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="specialty-card">
+                            <div class="icon-circle">
+                                <i class="fas fa-lungs"></i>
+                            </div>
+                            <h3 class="card-title">Pulmonary</h3>
+                            <p class="card-text">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
+                            <a href="#" class="btn btn-primary read-more">Read More</a>
+                        </div>
                     </div>
-                  </div>
+        
+                    <!-- Neurology -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="specialty-card">
+                            <div class="icon-circle">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <h3 class="card-title">Neurology</h3>
+                            <p class="card-text">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
+                            <a href="#" class="btn btn-primary read-more">Read More</a>
+                        </div>
+                    </div>
+        
+                    <!-- Orthopedics -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="specialty-card">
+                            <div class="icon-circle">
+                                <i class="fas fa-wheelchair"></i>
+                            </div>
+                            <h3 class="card-title">Orthopedics</h3>
+                            <p class="card-text">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
+                            <a href="#" class="btn btn-primary read-more">Read More</a>
+                        </div>
+                    </div>
+        
+                    <!-- Dental Surgery -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="specialty-card">
+                            <div class="icon-circle">
+                                <i class="fas fa-tooth"></i>
+                            </div>
+                            <h3 class="card-title">Dental Surgery</h3>
+                            <p class="card-text">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
+                            <a href="#" class="btn btn-primary read-more">Read More</a>
+                        </div>
+                    </div>
+        
+                    <!-- Laboratory -->
+                    <div class="col-md-6 col-lg-4">
+                        <div class="specialty-card">
+                            <div class="icon-circle">
+                                <i class="fas fa-flask"></i>
+                            </div>
+                            <h3 class="card-title">Laboratory</h3>
+                            <p class="card-text">Erat ipsum justo amet duo et elitr dolor, est duo duo eos lorem sed diam stet diam sed stet.</p>
+                            <a href="#" class="btn btn-primary read-more">Read More</a>
+                        </div>
+                    </div>
+                </div>
                  
-              </div>
-              <div class="container row mt-sm-3 mt-3">
-                <div class="col-sm-6" style="background-color: var(--background-color) !important;">
-                  <div class="rounded-pill menu-item bg-white p-3 d-flex align-items-center gap-3 border border-1">
-                    <div class="icon-bg align-items-center justify-content-center d-flex p-2 rounded-start rounded-end ms-0 ms-sm-3"><i class="fas fa-clipboard-list fs-1"></i></div>
-                    <span class="fs-4 ms-3 ">Khám chuyên khoa</span>
-                  </div>
-                </div>
-                <div class="col-sm-6 mt-3 mt-sm-0" style="background-color: var(--background-color) !important;">
-                  <div class="rounded-pill menu-item bg-white p-3 d-flex align-items-center gap-3 border border-1">
-                    <div class="icon-bg align-items-center justify-content-center d-flex p-2 rounded-start rounded-end ms-0 ms-sm-3"><i class="fas fa-flask fs-1"></i></i></div>
-                    <span class="fs-4 ms-3 ">Khám chuyên khoa</span>
-                  </div>
-                </div>
-               
-            </div>
-            <div class="container row mt-3">
-              <div class="col-sm-6" style="background-color: var(--background-color) !important;">
-                <div class="rounded-pill menu-item bg-white p-3 d-flex align-items-center gap-3 border border-1">
-                  <div class="icon-bg align-items-center justify-content-center d-flex p-2 rounded-start rounded-end ms-0 ms-sm-3"><i class="fas fa-brain fs-1"></i></div>
-                  <span class="fs-4  ms-3 ">Khám chuyên khoa</span>
-                </div>
-              </div>
-              <div class="col-sm-6 mt-3 mt-sm-0" style="background-color: var(--background-color) !important;">
-                <div class="rounded-pill menu-item bg-white p-3 d-flex align-items-center gap-3 border border-1">
-                  <div class="icon-bg align-items-center justify-content-center d-flex p-2 rounded-start rounded-end ms-0 ms-sm-3"><i class="fas fa-tooth fs-1"></i></i></div>
-                  <span class="fs-4 ms-3 ">Khám chuyên khoa</span>
-                </div>
-              </div>
              
-          </div>
-          <div class="container row mt-3">
-            <div class="col-sm-6" style="background-color: var(--background-color) !important;">
-              <div class="rounded-pill menu-item bg-white p-3 d-flex align-items-center gap-3 border border-1">
-                <div class="icon-bg align-items-center justify-content-center d-flex p-2 rounded-start rounded-end ms-0 ms-sm-3"><i class="fas fa-procedures fs-1"></i></div>
-                <span class="fs-4 ms-3 ">Khám chuyên khoa</span>
-              </div>
-            </div>
-            <div class="col-sm-6 mt-3 mt-sm-0" style="background-color: var(--background-color) !important;">
-              <div class="rounded-pill menu-item bg-white p-3 d-flex align-items-center gap-3 border border-1">
-                <div class="icon-bg align-items-center justify-content-center d-flex p-2 rounded-start rounded-end ms-0 ms-sm-3"><i class="fas fa-heartbeat fs-1"></i></i></div>
-                <span class="fs-4 ms-3 ">Khám chuyên khoa</span>
-              </div>
-            </div>
-           
+         
         </div>
-        <div class="container row mt-3">
-          <div class="col-sm-6" style="background-color: var(--background-color) !important;">
-            <div class="rounded-pill menu-item bg-white p-3 d-flex align-items-center gap-3 border border-1">
-              <div class="icon-bg align-items-center justify-content-center d-flex p-2 rounded-start rounded-end ms-0 ms-sm-3"><i class="fas fa-file-medical fs-1"></i></div>
-              <span class="fs-4 ms-3 ">Khám chuyên khoa</span>
-            </div>
-          </div>
-          <div class="col-sm-6 mt-3 mt-sm-0" style="background-color: var(--background-color) !important;">
-            <div class="rounded-pill menu-item bg-white p-3 d-flex align-items-center gap-3 border border-1">
-              <div class="icon-bg align-items-center justify-content-center d-flex p-2 rounded-start rounded-end ms-0 ms-sm-3"><i class="fas fa-first-aid fs-1"></i></i></div>
-              <span class="fs-4 ms-3 ">Khám chuyên khoa</span>
-            </div>
-          </div>
-      </div>
     </div>
-</div>
+            </div>
+      </main>
               <!-- Chuyên Khoa -->
    <div class="container mt-3 mt-sm-0">
+    <div class="border border-2 rounded-5 px-3 text-center"><h3 class=" px-3 rounded-5" >Specialty</h3>
      <div class="d-flex justify-content-between">
-                    <h3>Specialty</h3>
-            <div class="p-2 "> <a href="" class="text-decoration-none fs-5">Xem thêm</a></div>
+            <div class="p-2 ms-auto"> <a href="" class="text-decoration-none fs-5">details</a></div>
      </div>
                     <div class="container mt-3 ">
                       <div id="carouselExample" class="carousel slide">
@@ -741,168 +839,549 @@
                     </div>
                      
      </div>
-     <div class="container mt-5">
-            <h3>Cơ sở y tế</h3>
-            <div class="container mt-4">
-              <div id="carouselExample_coSoYTe" class="carousel slide">
-                <div class="carousel-inner position-relative">
-                  <div class="carousel-item active">
-                    <div class="d-flex flex-row justify-content-evenly align-items-center">
-                      <div class="card" style="width: 20rem;">
-                        <div class="ratio ratio-16x9"><img src="./assets/img/icon_coSo/083122lo-go-viet-duc.jpg" class="card-img-top img-thumbnail" alt="..."></div>
-                        <div class="card-body">
-                          <h5 class="card-title text-center d-none d-lg-flex">Bệnh Viện Hữu Nghị Việt Đức</h5>
-                          <h5 class="card-title text-center d-sm-flex small d-lg-none">Bệnh Viện Hữu Nghị Việt Đức</h5>
-                        </div>
-                      </div>
-                      <div class="card " style="width: 20rem;">
-                       <div class="ratio ratio-16x9"> <img src="./assets/img/icon_coSo/103904-logo-thucuc.png" class="card-img-top img-thumbnail " alt="..."></div>
-                        <div class="card-body">
-                          <h5 class="card-title text-center d-none d-lg-flex">Hệ thống Y tế thu cúc TCI</h5>
-                          <h5 class="card-title text-center d-sm-flex small d-lg-none">Hệ thống Y tế thu cúc TCI</h5>
+       <!--  chăm sóc toàn diện -->
+       <section class="service-section">
+        <!-- Previous HTML remains the same until service-tabs -->
+        <div class="container">
+            <h2 class="text-center mb-4">Comprehensive Health Care</h2>
+            
+            <div class="navbar justify-content-center">
+                <div class="service-tabs text-center">
+                    <button class="service-tab active rounded nav-item" data-tab="health" style="color: white;">Sức khỏe</button>
+                    <button class="service-tab nav-item" data-tab="test">Xét nghiệm</button>
+                    <button class="service-tab nav-item" data-tab="vaccine">Tiêm chủng</button>
+                </div>
+            </div>
+    
+            <!-- Tab Content -->
+            <div class="tab-content">
+                <!-- Health Tab Content -->
+                <div class="tab-pane active" id="health">
+                    <div class="row">
+                        <!-- Your existing health service cards -->
+                        <!-- (Previous cards HTML remains the same) -->
 
-                        </div>
+                           <!-- Service Card 1 -->
+                <div class="col-lg-3 col-md-6 mb-4">
+                  <div class="service-card h-100 d-flex flex-column">
+                      <div class="img-wrapper">
+                          <img src="./assets/img/icon_dichvu/chamsocsuckhoetainha.webp" class="card-img" alt="Khám tại nhà">
                       </div>
-                      <div class="card" style="width: 20rem;">
-                          <div class="ratio ratio-16x9"><img src="./assets/img/icon_coSo/155206-logo-y-duoc-1.jpg" class="card-img-top img-thumbnail" alt="..."></div>
-                                        <div class="card-body"> 
-                          <h5 class=" card-title text-center d-none d-lg-flex">Phòng khám bệnh viện ĐH Y dược 1</h5>
-                          <h5 class="card-title text-center d-sm-flex small d-lg-none">Phòng khám bệnh viện ĐH Y dược 1</h5>
+                      <div class="p-3 d-flex flex-column flex-grow-1">
+                          <h5>General health check-up package at home</h5>
+                          <div class="hospital-name">
+                              <i class="fas fa-hospital"></i>
+                              Medlatec Binh Phuoc Testing Center
+                          </div>
+                          <div class="mt-2">
+                              <span class="service-price">530.000đ</span>
+                              <span class="old-price">580.000đ</span>
+                          </div>
+                          <div class="mt-auto">
+                              <button class="book-btn mt-3">Book</button>
+                          </div>
+                      </div>
+                  </div>
+              </div>
 
-                        </div>
-                      </div>
-                      
+              <!-- Service Card 2 -->
+              <div class="col-lg-3 col-md-6 mb-4">
+                <div class="service-card h-100 d-flex flex-column">
+                    <div class="card-badge">REFUND</div>
+                    <div class="img-wrapper">
+                        <img src="./assets/img/icon_dichvu/suckhoenhanviendoanhgnghiep.webp" class="card-img" alt="Khám sức khỏe lao động">
                     </div>
-                        
-                  </div>
-                  <div class="carousel-item">
-                    <div class="d-flex flex-row justify-content-evenly">
-                      <div class="card" style="width: 20rem;">
-                        <div class="ratio ratio-16x9"><img src="./assets/img/icon_coSo/085056logobenhvien108.jpg" class="card-img-top img-thumbnail" alt="..."></div>
-                        <div class="card-body" >
-                          <h5 class="card-title text-center d-none d-lg-flex">bệnh viện trung ương quân đội 108</h5>
-                          <h5 class="card-title text-center d-sm-flex small d-lg-none">bệnh viện trung ương quân đội 108</h5>
-
+                    <div class="p-3 d-flex flex-column flex-grow-1">
+                        <h5>Labor Health Examination Package Involving Foreign Elements</h5>
+                        <div class="hospital-name">
+                            <i class="fas fa-hospital"></i>Hoan My Saigon General Clinic
                         </div>
-                      </div>
-                      <div class="card " style="width: 20rem;">
-                       <div class="ratio ratio-16x9"> <img src="./assets/img/icon_coSo/153236-logo-hung-viet.jpg" class="card-img-top img-thumbnail" alt="..."></div>
-                        <div class="card-body">
-                          <h5 class="card-title text-center d-none d-lg-flex">Bệnh viện ưng bưới Hưng Việt</h5>
-                          <h5 class="card-title text-center d-sm-flex small d-lg-none">Bệnh viện ưng bưới Hưng Việt</h5>
-
+                        <div class="mt-2">
+                            <span class="service-price">2.593.000đ</span>
+                            <span class="old-price">3.168.000đ</span>
                         </div>
-                      </div>
-                      <div class="card" style="width: 20rem;">
-                        <!--  cần resize ảnh này -->
-                        <div class="ratio ratio-16x9" ><img src="./assets/img/icon_coSo/104922-logo-med-tai-ha-noi--01.png" class="card-img-top img-thumbnail" alt="..."></div>
-                        <div class="card-body">
-                          <h5 class="card-title text-center d-none d-lg-flex">Hệ thống y tế MEDLATEC</h5>
-                          <h5 class="card-title text-center d-sm-flex small d-lg-none">Hệ thống y tế MEDLATEC</h5>
-
+                        <div class="mt-auto">
+                            <button class="book-btn mt-3">Book</button>
                         </div>
-                      </div>
-                      
-                      </div>
-                      
-                  </div>
-                  <div class="carousel-item">
-                    <div class="d-flex flex-row justify-content-evenly">
-                      <div class="card" style="width: 20rem;">
-                        <div class="ratio ratio-16x9"><img src="./assets/img/icon_coSo/165735-logo-hong-phat.png" class="card-img-top img-thumbnail" alt="..."></div>
-                        <div class="card-body">
-                          <h5 class="card-title text-center d-none d-lg-flex">Bệnh viện đa khoa hồng phát</h5>
-                          <h5 class="card-title text-center d-sm-flex small d-lg-none">Bệnh viện đa khoa hồng phát</h5>
-
-                        </div>
-                      </div>
-                      <div class="card " style="width: 20rem;">
-                       <div class="ratio ratio-16x9"> <img src="./assets/img/icon_coSo/114029-anh1.jpg" class="card-img-top img-thumbnail" alt="..."></div>
-                        <div class="card-body">
-                          <h5 class="card-title text-center d-none d-lg-flex">Bệnh viện đa khoa An Việt</h5>
-                          <h5 class="card-title text-center d-sm-flex small d-lg-none">Bệnh viện đa khoa An Việt</h5>
-
-                          
-                        </div>
-                      </div>
-                      <div class="card" style="width: 20rem;">
-                        <div class="ratio ratio-16x9"><img src="./assets/img/icon_coSo/160343logo-nam-hoc-hn.jpg"  class="card-img-top img-thumbnail" alt="..."></div>
-                        <div class="card-body">
-                          <h5 class="card-title text-center d-none d-lg-flex">Bệnh viện nam học và hiếm muộn Hà Nội</h5>
-                          <h5 class="card-title text-center d-sm-flex small d-lg-none">Bệnh viện nam học và hiếm muộn Hà Nội</h5>
-
-                        </div>
-                      </div>
-                      
-                      </div>
-                      
-                  </div>
-                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample_coSoYTe" data-bs-slide="prev">
-                    <span class="p-2 position-absolute start-0" style="color: black;" aria-hidden="true"><i class="fa-solid fa-arrow-left fs-4"></i></span>
-                    <span class="visually-hidden">Previous</span>
-                  </button>
-                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample_coSoYTe" data-bs-slide="next">
-                    <span class="p-2 position-absolute end-0" style="color: black;" aria-hidden="true"><i class="fa-solid fa-arrow-right fs-4"></i> </span>
-                    <span class="visually-hidden">Next</span>
-                  </button>
-            </div>
-             
-     </div>
-      <!-- gợi í của boookingcarre -->
-      <div class="container">
-        <div class="container py-sm-5 mt-3">
-          <h3>Tips</h3>
-          <div class="container mt-3 d-flex">
-            <!-- img left -->
-            <div class="me-5"> 
-                <img class="img-thumbnail rounded-pill " width="260" src="./assets/img/144801-3.png" alt=""> 
-               <h5 class="card-title  d-none d-lg-flex justify-content-center mt-3 ">Được quan tâm</h5>
-                          <h5 class="card-title text-center d-sm-flex small d-lg-none justify-content-center">Được quan tâm</h5>
+                    </div>
+                </div>
             </div>
 
-            <!-- img right -->
-            <div>
-              <img class=" img-thumbnail rounded-pill" width="260" src="./assets/img/144801-5.png" alt="">
-              <h5 class="card-title  d-none d-lg-flex justify-content-center mt-3 ">Bài viết liên quan</h5>
-                          <h5 class="card-title text-center d-sm-flex small d-lg-none justify-content-center">Bài viết liên quan</h5>
-            </div>
-          </div>
-        </div>
-      </div>
-        <!-- Bác Sĩ hỏi Đáp -->
-      <div class="container mt-3">
-        <div class="container py-sm-5">
-          <h3 >Question</h3>
-          <div class="container mt-3 d-flex ">
-            <!-- img left -->
-            <div class="card" style="width: 15rem;">
-              <img src="./assets/img/141028-hoidapcongdong.jpeg"  class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title text-center">Hỏi bác sĩ miễn phí</h5>
+             <!-- Service Card 3 -->
+             <div class="col-lg-3 col-md-6 mb-4">
+              <div class="service-card h-100 d-flex flex-column">
+                  <div class="card-badge">REFUND</div>
+                  <div class="img-wrapper">
+                      <img src="./assets/img/icon_dichvu/ed9930dd-069f-4e80-ba68-276edc93c5ac-kham-suc-khoe-xin-viec-1.webp" class="card-img" alt="Khám sức khỏe lao động">
+                  </div>
+                  <div class="p-3 d-flex flex-column flex-grow-1">
+                      <h5>Health check for job application</h5>
+                      <div class="hospital-name">
+                          <i class="fas fa-hospital"></i>Hoan My Saigon General Clinic
+                      </div>
+                      <div class="mt-2">
+                          <span class="service-price">380.000đ</span>
+                      </div>
+                      <div class="mt-auto">
+                          <button class="book-btn mt-3">Book</button>
+                      </div>
+                  </div>
               </div>
-            </div>
-
-            <!-- img right -->
-            <div class="card ms-5" style="width: 18rem;">
-              <img src="./assets/img/150322-z5375466237591689132201a679526eaab9274b8cd39a9 (1).jpg"  class="card-img-top" alt="...">
-              <div class="card-body">
-                <h5 class="card-title text-center">Cẩm nang hỏi đáp </h5>
-              </div>
-            </div>
           </div>
+           <!-- Service Card 4 -->
+           <div class="col-lg-3 col-md-6 mb-4">
+            <div class="service-card h-100 d-flex flex-column">
+                <div class="card-badge">REFUND</div>
+                <div class="img-wrapper">
+                    <img src="./assets/img/icon_dichvu/b2300e56-a631-4715-a86f-e1e6319ff6b4-gan.webp" class="card-img" alt="Khám sức khỏe lao động">
+                </div>
+                <div class="p-3 d-flex flex-column flex-grow-1">
+                    <h5>control liver function</h5>
+                    <div class="hospital-name">
+                        <i class="fas fa-hospital"></i>French polyclinic
+                    </div>
+                    <div class="mt-2">
+                        <span class="service-price">935.000đ</span>
+                    </div>
+                    <div class="mt-auto">
+                        <button class="book-btn mt-3">Book</button>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
+                    </div>
+                </div>
+    
+                <!-- Test Tab Content -->
+                <div class="tab-pane" id="test">
+                    <div class="row">
+                        <!-- Add your test service cards here -->
+                        <div class="col-lg-3 col-md-6 mb-4">
+                          <div class="service-card h-100 d-flex flex-column">
+                              <div class="img-wrapper">
+                                  <img src="./assets/img/icon_dichvu/xetnghiem01.webp" class="card-img" alt="Khám tại nhà">
+                              </div>
+                              <div class="p-3 d-flex flex-column flex-grow-1">
+                                  <h5>Basic Biochemical At-Home Test Package </h5>
+                                  <div class="hospital-name">
+                                      <i class="fas fa-hospital"></i>
+                                      Medlatec Binh Phuoc Testing Center
+                                  </div>
+                                  <div class="mt-2">
+                                      <span class="service-price">830.000đ</span>
+                                  </div>
+                                  <div class="mt-auto">
+                                      <button class="book-btn mt-3">Book</button>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      
+                      <!-- service -->
+                      <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="service-card h-100 d-flex flex-column">
+                            <div class="img-wrapper">
+                                <img src="./assets/img/icon_dichvu/xetnghiem02.webp" class="card-img" alt="Khám tại nhà">
+                            </div>
+                            <div class="p-3 d-flex flex-column flex-grow-1">
+                                <h5>Genetic Testing - Comprehensive Package for Intensive Screening & Female Cancer</h5>
+                                <div class="hospital-name">
+                                    <i class="fas fa-hospital"></i>
+                                    Medlatec Binh Phuoc Testing Center
+                                </div>
+                                <div class="mt-2">
+                                    <span class="service-price">8.530.000đ</span>
+                                </div>
+                                <div class="mt-auto">
+                                    <button class="book-btn mt-3">Book</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                     <!-- service -->
+                     <div class="col-lg-3 col-md-6 mb-4">
+                      <div class="service-card h-100 d-flex flex-column">
+                          <div class="img-wrapper">
+                              <img src="./assets/img/icon_dichvu/xetnghiem03.webp" class="card-img" alt="Khám tại nhà">
+                          </div>
+                          <div class="p-3 d-flex flex-column flex-grow-1">
+                              <h5>Hepatitis test package - advanced (6 tests)
+                              </h5>
+                              <div class="hospital-name">
+                                  <i class="fas fa-hospital"></i>
+                                  Medlatec Binh Phuoc Testing Center
+                              </div>
+                              <div class="mt-2">
+                                  <span class="service-price">1.530.000đ</span>
+                              </div>
+                              <div class="mt-auto">
+                                  <button class="book-btn mt-3">Book</button>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+
+                   <!-- service -->
+                   <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="service-card h-100 d-flex flex-column">
+                        <div class="img-wrapper">
+                            <img src="./assets/img/icon_dichvu/xetnghiem04.webp" class="card-img" alt="Khám tại nhà">
+                        </div>
+                        <div class="p-3 d-flex flex-column flex-grow-1">
+                            <h5>Female reproductive health test package - advanced (6 tests)</h5>
+                            <div class="hospital-name">
+                                <i class="fas fa-hospital"></i>
+                                Medlatec Binh Phuoc Testing Center
+                            </div>
+                            <div class="mt-2">
+                                <span class="service-price">1.330.000đ</span>
+                            </div>
+                            <div class="mt-auto">
+                                <button class="book-btn mt-3">Book</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                
+                    </div>
+                </div>
+    
+                <!-- Vaccine Tab Content -->
+                <div class="tab-pane" id="vaccine">
+                    <div class="row">
+                        <!-- Add your vaccine service cards here -->
+
+                        <div class="col-lg-3 col-md-6 mb-4">
+                          <div class="service-card h-100 d-flex flex-column">
+                              <div class="img-wrapper">
+                                  <img src="./assets/img/icon_dichvu/tiemchung.webp" class="card-img" alt="Khám tại nhà">
+                              </div>
+                              <div class="p-3 d-flex flex-column flex-grow-1">
+                                  <h5>4-in-1 vaccination - Diphtheria - Pertussis - Tetanus - Polio - TETRAXIM (France)</h5>
+                                  <div class="hospital-name">
+                                      <i class="fas fa-hospital"></i>
+                                      Medlatec Binh Phuoc Testing Center
+                                  </div>
+                                  <div class="mt-2">
+                                      <span class="service-price">530.000đ</span>
+                                  </div>
+                                  <div class="mt-auto">
+                                      <button class="book-btn mt-3">Book</button>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+
+
+                      <div class="col-lg-3 col-md-6 mb-4">
+                        <div class="service-card h-100 d-flex flex-column">
+                            <div class="img-wrapper">
+                                <img src="./assets/img/icon_dichvu/tiemchung.webp" class="card-img" alt="Khám tại nhà">
+                            </div>
+                            <div class="p-3 d-flex flex-column flex-grow-1">
+                                <h5>Rabies vaccination - Verorab 0.5ml (TB, TTD) - France
+                                </h5>
+                                <div class="hospital-name">
+                                    <i class="fas fa-hospital"></i>
+                                    Medlatec Binh Phuoc Testing Center
+                                </div>
+                                <div class="mt-2">
+                                    <span class="service-price">830.000đ</span>
+                                </div>
+                                <div class="mt-auto">
+                                    <button class="book-btn mt-3">Book</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-lg-3 col-md-6 mb-4">
+                      <div class="service-card h-100 d-flex flex-column">
+                          <div class="img-wrapper">
+                              <img src="./assets/img/icon_dichvu/tiemchung.webp" class="card-img" alt="Khám tại nhà">
+                          </div>
+                          <div class="p-3 d-flex flex-column flex-grow-1">
+                              <h5>
+                                Hepatitis B vaccination - Heberbiovac 1ml (Cuba)</h5>
+                              <div class="hospital-name">
+                                  <i class="fas fa-hospital"></i>
+                                  Medlatec Binh Phuoc Testing Center
+                              </div>
+                              <div class="mt-2">
+                                  <span class="service-price">8330.000đ</span>
+                              </div>
+                              <div class="mt-auto">
+                                  <button class="book-btn mt-3">Book</button>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+
+
+                  <div class="col-lg-3 col-md-6 mb-4">
+                    <div class="service-card h-100 d-flex flex-column">
+                        <div class="img-wrapper">
+                            <img src="./assets/img/icon_dichvu/tiemchung02.webp" class="card-img" alt="Khám tại nhà">
+                        </div>
+                        <div class="p-3 d-flex flex-column flex-grow-1">
+                            <h5>  Vaccination Prevents cervical cancer, genital papillomas, and genital warts
+                            </h5>
+                            <div class="hospital-name">
+                                <i class="fas fa-hospital"></i>
+                                Medlatec Binh Phuoc Testing Center
+                            </div>
+                            <div class="mt-2">
+                                <span class="service-price">930.000đ</span>
+                            </div>
+                            <div class="mt-auto">
+                                <button class="book-btn mt-3">Book</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      
+        <!-- statics -->
+        <section class="statistics-section">
+          <div class="container">
+              <h2 class="section-title">Statitics </h2>
+              
+              <div class="statistics-container">
+                  <div class="row">
+                      <!-- Lượt khám -->
+                      <div class="col-6 col-md-4 col-lg-2">
+                          <div class="stat-item">
+                              <div class="stat-icon">
+                                  <svg width="40" height="40" fill="currentColor" viewBox="0 0 24 24">
+                                      <path d="M19 8C20.6569 8 22 6.65685 22 5C22 3.34315 20.6569 2 19 2C17.3431 2 16 3.34315 16 5C16 6.65685 17.3431 8 19 8ZM19 10C21.7614 10 24 7.76142 24 5C24 2.23858 21.7614 0 19 0C16.2386 0 14 2.23858 14 5C14 7.76142 16.2386 10 19 10Z"/>
+                                  </svg>
+                              </div>
+                              <div class="stat-number">3.0M+</div>
+                              <div class="stat-label">visit</div>
+                          </div>
+                      </div>
+  
+                      <!-- Cơ sở y tế -->
+                      <div class="col-6 col-md-4 col-lg-2">
+                          <div class="stat-item">
+                              <div class="stat-icon">
+                                  <svg width="40" height="40" fill="currentColor" viewBox="0 0 24 24">
+                                      <path d="M12 0L0 10V24H24V10L12 0ZM10 22H2V12H10V22ZM22 22H12V12H22V22Z"/>
+                                  </svg>
+                              </div>
+                              <div class="stat-number">300+</div>
+                              <div class="stat-label">branch</div>
+                          </div>
+                      </div>
+  
+                      <!-- Bệnh viện -->
+                      <div class="col-6 col-md-4 col-lg-2">
+                          <div class="stat-item">
+                              <div class="stat-icon">
+                                  <svg width="40" height="40" fill="currentColor" viewBox="0 0 24 24">
+                                      <path d="M23 6L12 0L1 6V8H23V6ZM2 9V19H6V13H10V19H22V9H2ZM12 10H14V12H16V14H14V16H12V14H10V12H12V10Z"/>
+                                  </svg>
+                              </div>
+                              <div class="stat-number">50+</div>
+                              <div class="stat-label">Hospital</div>
+                          </div>
+                      </div>
+  
+                      <!-- Bác sĩ -->
+                      <div class="col-6 col-md-4 col-lg-2">
+                          <div class="stat-item">
+                              <div class="stat-icon">
+                                  <svg width="40" height="40" fill="currentColor" viewBox="0 0 24 24">
+                                      <path d="M12 12C14.21 12 16 10.21 16 8C16 5.79 14.21 4 12 4C9.79 4 8 5.79 8 8C8 10.21 9.79 12 12 12ZM12 14C9.33 14 4 15.34 4 18V20H20V18C20 15.34 14.67 14 12 14Z"/>
+                                  </svg>
+                              </div>
+                              <div class="stat-number">1000+</div>
+                              <div class="stat-label">Expert Doctors</div>
+                          </div>
+                      </div>
+  
+                      <!-- Lượt truy cập tháng -->
+                      <div class="col-6 col-md-4 col-lg-2">
+                          <div class="stat-item">
+                              <div class="stat-icon">
+                                  <svg width="40" height="40" fill="currentColor" viewBox="0 0 24 24">
+                                      <path d="M12 2L2 7L12 12L22 7L12 2ZM2 17L12 22L22 17V7L12 12L2 7V17Z"/>
+                                  </svg>
+                              </div>
+                              <div class="stat-number">850K+</div>
+                              <div class="stat-label">Visits per month</div>
+                          </div>
+                      </div>
+  
+                      <!-- Lượt truy cập trong ngày -->
+                      <div class="col-6 col-md-4 col-lg-2">
+                          <div class="stat-item">
+                              <div class="stat-icon">
+                                  <svg width="40" height="40" fill="currentColor" viewBox="0 0 24 24">
+                                      <path d="M12 4.5C7 4.5 2.73 7.61 1 12C2.73 16.39 7 19.5 12 19.5C17 19.5 21.27 16.39 23 12C21.27 7.61 17 4.5 12 4.5ZM12 17C9.24 17 7 14.76 7 12C7 9.24 9.24 7 12 7C14.76 7 17 9.24 17 12C17 14.76 14.76 17 12 17ZM12 9C10.34 9 9 10.34 9 12C9 13.66 10.34 15 12 15C13.66 15 15 13.66 15 12C15 10.34 13.66 9 12 9Z"/>
+                                  </svg>
+                              </div>
+                              <div class="stat-number">28.3K+</div>
+                              <div class="stat-label">Visits during the day </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </section>
+
+
+
+
+        <!-- gợi í của boookingcarre -->
+      <main class="main_news_05">
+        
+          <div class="container " style="margin-top: 5%;">
+              <div class="d-flex flex-row justify-content-center mb-4">
+                  <h4 class="text-center border border-2 px-3 rounded-5">News</h4>
+              </div>
+              <div class="row g-4">
+                  <div class="col-md-4">
+                      <div class="card h-100">
+                          <div style="height: 400px; overflow: hidden;">
+                              <img src="./assets/img/Icon_Blog/nhung-loai-xe-cuu-thuong-o-viet-nam.jpeg" class="card-img-top  " alt="..." style="object-fit: cover;">
+                          </div>
+                          <div class="card-body d-flex flex-column">
+                              <h5 class="card-title">Schedule an appointment to explore and enjoy benefits from HealthCare</h5>
+                              <p class="card-text flex-grow-1">Are you living in Vung Tau and need medical examination and treatment at the top prestigious medical facilities in Ho Chi Minh City? You are worried and tired because of long waiting times and inconvenient transportation. Understanding your concern.</p>
+                              <p class="card-text"><small class="text-body-secondary">28/11/2024, 05:21- Từ Nguyên</small></p>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="col-md-8">
+                      <div class="row g-4">
+                          <div class="col-6">
+                              <div class="card h-100">
+                                  <div style="height: 200px; overflow: hidden;">
+                                      <img src="./assets/img/Icon_Blog/1730346303088_be63b5ca4e.webp" class="card-img-top  img-thumbnail" alt="..." style="object-fit: cover;">
+                                  </div>
+                                  <div class="card-body d-flex flex-column">
+                                      <h6 class="card-title">Respiratory diseases in children: signs and causes</h6>
+                                      <p class="card-text mt-auto"><small class="text-body-secondary">28/11/2024, 05:21- Từ Nguyên</small></p>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-6">
+                              <div class="card h-100">
+                                  <div style="height: 200px; overflow: hidden;">
+                                      <img src="./assets/img/Icon_Blog/1734158499242_ed1dfb2b6a.webp" class="card-img-top  img-thumbnail" alt="..." style="object-fit: cover;">
+                                  </div>
+                                  <div class="card-body d-flex flex-column">
+                                      <h6 class="card-title">Department of Oncology, Gia Dinh People's Hospital</h6>
+                                      <p class="card-text mt-auto"><small class="text-body-secondary">28/11/2024, 05:21- Từ Nguyên</small></p>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div class="row g-4 mt-4">
+                          <div class="col-6">
+                              <div class="card h-100">
+                                  <div style="height: 200px; overflow: hidden;">
+                                      <img src="./assets/img/Icon_Blog/topic_5235bb12ac31476fa3f1acf5076110ca_a32b841e03.webp" class="card-img-top img-thumbnail" alt="..." style="object-fit: cover;">
+                                  </div>
+                                  <div class="card-body d-flex flex-column">
+                                      <h6 class="card-title">Schedule an appointment to explore and enjoy benefits from HealthCare</h6>
+                                      <p class="card-text mt-auto"><small class="text-body-secondary">28/11/2024, 05:21- Từ Nguyên</small></p>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-6">
+                              <div class="card h-100">
+                                  <div style="height: 200px; overflow: hidden;">
+                                      <img src="./assets/img/Icon_Blog/1733885496375_532b488f54.webp" class="card-img-top img-thumbnail" alt="..." style="object-fit: cover; flex-grow: 1;">
+                                  </div>
+                                  <div class="card-body d-flex flex-column ">
+                                      <h6 class="card-title">Nutritional consultation for your baby online with a doctor through Medpro</h6>
+                                      <p class="card-text mt-auto"><small class="text-body-secondary">28/11/2024, 05:21- Từ Nguyên</small></p>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+              <div class="d-flex flex-row justify-content-center align-content-center mt-4">
+                  <a class="fs-5 see-more-link" href="./handbook.html">See more >></a>
+              </div>
+          </div>
+      </main>
     </main>
+      <!-- Thống kê -->
+      
+        <!-- Bác Sĩ hỏi Đáp -->
+        <section class="testimonial-section">
+          <div class="container">
+              <h2 class="section-title">Feedback</h2>
+              
+              <div class="testimonial-container">
+                  <button class="scroll-button left" onclick="scroll(-350)">
+                      <i class="fas fa-chevron-left"></i>
+                  </button>
+  
+                  <div class="testimonial-track">
+                      <!-- Testimonial 1 -->
+                      <div class="testimonial-card">
+                          <p class="testimonial-text">Đặt lịch xét nghiệm bên này rất gọn, có ngày giờ cụ thể luôn lên là được xét nghiệm liền không rườm rà gì mấy. An tâm đặt cho gia đình, có cả xét nghiệm tận nhà, không mất thời gian.</p>
+                          <div class="customer-info">
+                              <img src="./assets/img/avatar_01.png" alt="Nhân Nguyễn" class="customer-image">
+                              <p class="customer-name">Nhân Nguyễn</p>
+                          </div>
+                      </div>
+  
+                      <!-- Testimonial 2 -->
+                      <div class="testimonial-card">
+                          <p class="testimonial-text">Dịch vụ tư vấn bác sĩ qua video tiện thật. Mình bị stress, không muốn gặp đám đông nên mình tìm hiểu tư vấn khám từ xa với bác sĩ tâm lý ở bên đây. Thực sự quá tiện, bác sĩ tư vấn cũng rất chi tiết, nhẹ nhàng. Mình thấy đáng tiền lắm nha.</p>
+                          <div class="customer-info">
+                              <img src="./assets/img/avatar_01.png" alt="Mai Vy" class="customer-image">
+                              <p class="customer-name">Mai Vy</p>
+                          </div>
+                      </div>
+  
+                      <!-- Testimonial 3 -->
+                      <div class="testimonial-card">
+                          <p class="testimonial-text">Lần đầu tải Healthcare về xài, thấy dễ và rất tiện lợi. Đi làm bận rộn như mình đặt trước ở đây có chọn ngày giờ thì khỏi mất thời gian tới xếp hàng đợi ở bệnh viện. Chưa kể có thể lấy số đặt khám tại các bệnh viện như Y Dược 1 2 3, Da liễu, Mắt TPHCM...</p>
+                          <div class="customer-info">
+                              <img src="./assets/img/avatar_01.png" alt="Mộc Trà" class="customer-image">
+                              <p class="customer-name">Mộc Trà</p>
+                          </div>
+                      </div>
+                  </div>
+  
+                  <button class="scroll-button right" onclick="scroll(350)">
+                      <i class="fas fa-chevron-right"></i>
+                  </button>
+              </div>
+          </div>
+      </section>
+  
+    </main>
+    
+    <a href="#" id="scrollToTop" class="btn btn-primary arrow_up  " style="display: none;">
+      <i class="fa-solid fa-arrow-up py-2"></i> <!-- Icon Bootstrap -->
+    </a>
+
+
 
     <div>
   
       <button class="chatbot-toggler">
-        <span class="material-symbols-rounded"></span>
+        <span class="material-symbols-rounded"> <i class="fa-solid fa-robot"></i> </span>
         <span class="material-symbols-outlined">close</span>
       </button>
       <div class="chatbot">
         <header>
           <h2>Chatbot</h2>
+          
           <span class="close-btn material-symbols-outlined">close</span>
         </header>
         <ul class="chatbox">
@@ -921,23 +1400,79 @@
 
     <!-- nhung javascript -->
      <!-- Footer -->
-    <footer class="bg-dark text-center text-lg-start mt-4">
-      <div class="text-center p-3" style="color: #f6f6f6">
-        © 2024 Bản quyền:
-        <a class="text-light" href="#">HeathCare</a>
-        <div class="mt-2">
-          <a href="#" class="me-3 text-light">
-            <i class="fa-brands fa-facebook"></i>
-          </a>
-          <a href="#" class="me-3 text-light">
-            <i class="fa-brands fa-twitter"></i>
-          </a>
-          <a href="#" class="text-light">
-            <i class="fa-brands fa-instagram"></i>
-          </a>
-        </div>
+     <footer class="footer">
+      <div class="container">
+          <div class="row gy-4">
+              <div class="col-lg-3 col-md-6">
+                  <h4>Address</h4>
+                  <ul class="footer-contact">
+                      <li>
+                          <i class="bi bi-geo-alt"></i>
+                          Linh trung, thu duc tphcm
+                      </li>
+                      <li>
+                          <i class="bi bi-telephone"></i>
+                          +012 345 67890
+                      </li>
+                      <li>
+                          <i class="bi bi-envelope"></i>
+                          hci_group01_NLu@st.hcmuaf.edu.vn
+                      </li>
+                  </ul>
+                  <div class="social-links">
+                      <a href="#"><i class="bi bi-twitter"></i></a>
+                      <a href="#"><i class="bi bi-facebook"></i></a>
+                      <a href="#"><i class="bi bi-youtube"></i></a>
+                      <a href="#"><i class="bi bi-linkedin"></i></a>
+                  </div>
+              </div>
+  
+              <div class="col-lg-3 col-md-6">
+                  <h4>Services</h4>
+                  <ul class="footer-links">
+                      <li><a href="#"><i class="bi bi-chevron-right"></i> Cardiology</a></li>
+                      <li><a href="#"><i class="bi bi-chevron-right"></i> Pulmonary</a></li>
+                      <li><a href="#"><i class="bi bi-chevron-right"></i> Neurology</a></li>
+                      <li><a href="#"><i class="bi bi-chevron-right"></i> Orthopedics</a></li>
+                      <li><a href="#"><i class="bi bi-chevron-right"></i> Laboratory</a></li>
+                  </ul>
+              </div>
+  
+              <div class="col-lg-3 col-md-6">
+                  <h4>Quick Links</h4>
+                  <ul class="footer-links">
+                      <li><a href="#"><i class="bi bi-chevron-right"></i> About Us</a></li>
+                      <li><a href="./contact.html"><i class="bi bi-chevron-right"></i> Contact Us</a></li>
+                      <li><a href="#"><i class="bi bi-chevron-right"></i> Our Services</a></li>
+                      <li><a href="#"><i class="bi bi-chevron-right"></i> Terms & Conditions</a></li>
+                      <li><a href="#"><i class="bi bi-chevron-right"></i> Support</a></li>
+                  </ul>
+              </div>
+  
+              <div class="col-lg-3 col-md-6">
+                  <h4>Newsletter</h4>
+                  <p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
+                  <div class="newsletter-input">
+                      <input type="email" class="form-control" placeholder="Your email">
+                      <button class="btn btn-primary">SignUp</button>
+                  </div>
+              </div>
+          </div>
+  
+          <div class="footer-bottom">
+              <div class="row">
+                  <div class="col-md-6 text-center text-md-start">
+                      <p class="mb-md-0">© Your Site Name, All Rights Reserved.</p>
+                  </div>
+                  <div class="col-md-6 text-center text-md-end">
+                      <p class="mb-0">Designed by HTML Codex</p>
+                  </div>
+              </div>
+          </div>
       </div>
-    </footer>
+  </footer>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"

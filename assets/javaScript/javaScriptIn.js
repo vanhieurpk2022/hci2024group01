@@ -92,3 +92,47 @@ chatInput.addEventListener("keydown", (e) => {
 sendChatBtn.addEventListener("click", handleChat);
 closeBtn.addEventListener("click", () => document.body.classList.remove("show-chatbot"));
 chatbotToggler.addEventListener("click", () => document.body.classList.toggle("show-chatbot"));
+
+document.addEventListener('DOMContentLoaded', function() {
+  const tabs = document.querySelectorAll('.service-tab');
+  
+  tabs.forEach(tab => {
+      tab.addEventListener('click', function() {
+          // Remove active class from all tabs
+          tabs.forEach(t => {
+              t.classList.remove('active');
+              t.style.color = '';
+          });
+
+          // Add active class to clicked tab
+          this.classList.add('active');
+          this.style.color = 'white';
+
+          // Hide all tab panes
+          const tabPanes = document.querySelectorAll('.tab-pane');
+          tabPanes.forEach(pane => pane.classList.remove('active'));
+
+          // Show the selected tab pane
+          const targetTab = this.getAttribute('data-tab');
+          document.getElementById(targetTab).classList.add('active');
+      });
+  });
+});
+
+// Hiện nút khi cuộn xuống
+window.addEventListener("scroll", function () {
+  const scrollToTop = document.getElementById("scrollToTop");
+  if (window.scrollY > 200) {
+    scrollToTop.style.display = "block";
+    scrollToTop.style.opacity = "1";
+  } else {
+    scrollToTop.style.opacity = "0";
+    setTimeout(() => (scrollToTop.style.display = "none"), 300); // Chờ hiệu ứng mờ
+  }
+});
+
+// Cuộn lên đầu khi bấm nút
+document.getElementById("scrollToTop").addEventListener("click", function (e) {
+  e.preventDefault();
+  window.scrollTo({ top: 0, behavior: "smooth" });
+});
