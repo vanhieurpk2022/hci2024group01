@@ -9,18 +9,15 @@
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./assets/css/myStyle.css" />
     <link rel="stylesheet" href="./assets/css/setColor.css">
+    <link rel="stylesheet" href="./assets/css/styleChat.css">
     <link rel="stylesheet" href="./assets/css/footer.css">
-    <link rel="stylesheet" href="./assets/css/feedback.css">
     <title>HeathCare</title>
    
   </head>
   <body>
-
-
     <div class="" style="background-color: #EFF5FF;">
       <div class="d-none d-md-flex">
         <div class="container d-flex flex-row ">
@@ -62,7 +59,7 @@
 
         <ul  class="list-unstyled nav-tabs nav-tabs-scroll border-0 mb-3 me-auto mb-2 mb-lg-0 d-flex flex-row  ms-auto order-lg-0 order-1 mt-3 mt-lg-0">
           <li class="nav-item me-2 me-md-2 ">
-            <a class="nav-link " aria-current="page" href="./index.html"
+            <a class="nav-link" aria-current="page" href="./index.html"
               >Home</a>
           </li>
 
@@ -71,7 +68,7 @@
               >About</a
             >
           </li>
-      
+         
           <li class="nav-item me-2 me-md-2">
             <a class="nav-link" href="#">Hospital</a>
           </li>
@@ -107,7 +104,7 @@
 
         <div class="ms-auto ">
           
-          <a href="./booknow.html" class="px-3 btn d-flex flex-column text-center" style="color:  var(--bookNow-color); background-color: #007BFF;" > <i class="fa-regular fa-clipboard"></i> Book now</a>
+          <a href="" class="px-3 btn d-flex flex-column text-center" style="color:  var(--bookNow-color); background-color: #007BFF;" > <i class="fa-regular fa-clipboard"></i> Book now</a>
         </div>
     </div>
           <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
@@ -118,7 +115,7 @@
             <div class="offcanvas-body">
               <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                 <li class="nav-item">
-                  <a class="fw-semibold nav-link " aria-current="page" href="./index.html"><i class=" fa-solid fa-house"></i> Home</a>
+                  <a class="fw-semibold nav-link active" aria-current="page" href="./index.html"><i class=" fa-solid fa-house"></i> Home</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="./handbook.html"><i class="fa-solid fa-book-medical"></i> Handbook</a>
@@ -156,8 +153,8 @@
                   <a class="nav-link" href="./terms.html"><i class="fa-solid fa-scroll"></i> Terms</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active " href="./feedback.html"><i class="fa-solid fa-message"></i> Feedback</a>
-                  </li>
+                  <a class="nav-link " href="./feedback.html"><i class="fa-solid fa-message"></i> Feedback</a>
+                </li>
               </ul>
             </div>
           </div>
@@ -165,92 +162,13 @@
       </nav>
    </div>
     
-   <main>
-    <div class="header d-flex flex-row justify-content-center">
-        <i class="bi bi-chat-right-text me-3"></i> 
-        <h5>Feedback</h5>
-    </div>
-
-    <div class="container mt-4">
-        <form>
-            <div class="mb-3">
-                <label class="form-label">Classify</label>
-                <select class="form-select">
-                    <option selected>choose</option>
-                    <option>Comment</option>
-                    <option>Complaints</option>
-                    <option>Report error
-                    </option>
-                </select>
-            </div>
-
-            <div class="mb-3">
-                <label class="form-label ">Topic <span class="required">*</span></label>
-                <input type="text" class="form-control border" required>
-            </div>
-
-            <div class="mb-3">
-                <label class="form-label">Content <span class="required">*</span></label>
-                <div class="editor-toolbar">
-                    <button type="button"><i class="bi bi-type"></i></button>
-                    <button type="button"><i class="bi bi-arrow-counterclockwise"></i></button>
-                    <button type="button"><i class="bi bi-arrow-clockwise"></i></button>
-                    <button type="button"><i class="bi bi-type-bold"></i></button>
-                    <button type="button"><i class="bi bi-type-italic"></i></button>
-                    <button type="button"><i class="bi bi-type-underline"></i></button>
-                    <button type="button"><i class="bi bi-text-left"></i></button>
-                    <button type="button"><i class="bi bi-list-ul"></i></button>
-                    <button type="button"><i class="bi bi-list-ol"></i></button>
-                    <button type="button"><i class="bi bi-image"></i></button>
-                    <button type="button"><i class="bi bi-film"></i></button>
-                    <button type="button"><i class="bi bi-quote"></i></button>
-                    <button type="button"><i class="bi bi-link-45deg"></i></button>
-                    <button type="button"><i class="bi bi-table"></i></button>
-                </div>
-                <div class="editor-content">
-                    <textarea class="form-control border-0" rows="8" required></textarea>
-                </div>
-            </div>
-
-            <div class="text-center mb-4 ">
-                <button type="submit" class="btn btn-success" onclick="alert('cảm ơn bạn đã góp ý')">send </button>
-            </div>
-        </form>
-
-        <div class="content-header">
-            <i class="bi bi-chat-right-text"></i> commented content
-
-        </div>
-
-        <div class="table-responsive mt-3">
-            <table class="table table-bordered">
-                <thead class="table-header">
-                    <tr>
-                        <th>Topic</th>
-                        <th>content</th>
-                        <th>reply</th>
-                        <th>Date sent                        </th>
-                        <th>Response date                        </th>
-                        <th>See</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td colspan="6" class="text-center">No data found</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </div>
-
-   </main>
 
 
+      
 
-  
     <!-- nhung javascript -->
      <!-- Footer -->
-     <footer class="footer" style="margin-top: 700px;">
+     <footer class="footer" style="margin-top: 900px;">
       <div class="container">
           <div class="row gy-4">
               <div class="col-lg-3 col-md-6">
@@ -320,6 +238,35 @@
           </div>
       </div>
   </footer>
+
+  <!-- chat bot -->
+  <div>
+  
+    <button class="chatbot-toggler">
+      <span class="material-symbols-rounded"> <i class="fa-solid fa-robot"></i> </span>
+      <span class="material-symbols-outlined">close</span>
+    </button>
+    <div class="chatbot">
+      <header>
+        <h2>Chatbot</h2>
+        
+        <span class="close-btn material-symbols-outlined">close</span>
+      </header>
+      <ul class="chatbox">
+        <li class="chat incoming">
+          <span class="material-symbols-outlined"><i class="fa-solid fa-robot"> </i></span>
+          <p>Hi there <br>How can I help you today?</p>
+        </li>
+      </ul>
+      <div class="chat-input">
+        <textarea placeholder="Enter a message..." spellcheck="false" required></textarea>
+        <span id="send-btn" class="material-symbols-rounded">send</span>
+      </div>
+    </div>
+
+  </div>
+
+
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
 
     <script
