@@ -174,22 +174,23 @@
     <div class="container mt-4">
         <form>
             <div class="mb-3">
-                <label class="form-label">Phân loại</label>
+                <label class="form-label">Classify</label>
                 <select class="form-select">
-                    <option selected>Chọn phân loại</option>
-                    <option>Góp ý</option>
-                    <option>Khiếu nại</option>
-                    <option>Báo lỗi</option>
+                    <option selected>choose</option>
+                    <option>Comment</option>
+                    <option>Complaints</option>
+                    <option>Report error
+                    </option>
                 </select>
             </div>
 
             <div class="mb-3">
-                <label class="form-label ">Chủ đề <span class="required">*</span></label>
+                <label class="form-label ">Topic <span class="required">*</span></label>
                 <input type="text" class="form-control border" required>
             </div>
 
             <div class="mb-3">
-                <label class="form-label">Nội dung <span class="required">*</span></label>
+                <label class="form-label">Content <span class="required">*</span></label>
                 <div class="editor-toolbar">
                     <button type="button"><i class="bi bi-type"></i></button>
                     <button type="button"><i class="bi bi-arrow-counterclockwise"></i></button>
@@ -212,29 +213,30 @@
             </div>
 
             <div class="text-center mb-4 ">
-                <button type="submit" class="btn btn-success" onclick="alert('cảm ơn bạn đã góp ý')">Gửi góp ý</button>
+                <button type="submit" class="btn btn-success" onclick="alert('cảm ơn bạn đã góp ý')">send </button>
             </div>
         </form>
 
         <div class="content-header">
-            <i class="bi bi-chat-right-text"></i> NỘI DUNG ĐÃ GÓP Ý
+            <i class="bi bi-chat-right-text"></i> commented content
+
         </div>
 
         <div class="table-responsive mt-3">
             <table class="table table-bordered">
                 <thead class="table-header">
                     <tr>
-                        <th>Chủ đề</th>
-                        <th>Nội dung</th>
-                        <th>Trả lời</th>
-                        <th>Ngày gửi</th>
-                        <th>Ngày trả lời</th>
-                        <th>Xem</th>
+                        <th>Topic</th>
+                        <th>content</th>
+                        <th>reply</th>
+                        <th>Date sent                        </th>
+                        <th>Response date                        </th>
+                        <th>See</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td colspan="6" class="text-center">Không tìm thấy dữ liệu</td>
+                        <td colspan="6" class="text-center">No data found</td>
                     </tr>
                 </tbody>
             </table>
