@@ -1,0 +1,38 @@
+.table-container {
+    margin: 20px;
+    overflow-x: auto;
+}
+.booking-table {
+    width: 80%;
+    border-collapse: collapse;
+}
+.booking-table th {
+    background-color: #acb0b4;
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #dee2e6;
+}
+.booking-table td {
+    padding: 8px;
+    border: 1px solid #dee2e6;
+}
+.status-cell {
+    display: flex;
+    gap: 10px;
+}
+.time-cell {
+    display: flex;
+    gap: 5px;
+}
+.action-buttons {
+    display: flex;
+    gap: 5px;
+}
+.btn-add {
+    background-color: #198754;
+    color: white;
+}
+.btn-cancel {
+    background-color: #dc3545;
+    color: white;
+}

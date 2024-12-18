@@ -1,0 +1,35 @@
+.header {
+    background-color: #64B9E5;
+    color: white;
+    padding: 10px 20px;
+}
+.content-header {
+    background-color: #64B9E5;
+    color: white;
+    padding: 10px 20px;
+    margin-top: 20px;
+}
+.editor-toolbar {
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-bottom: none;
+    background-color: #f8f9fa;
+}
+.editor-toolbar button {
+    margin-right: 5px;
+    padding: 5px 10px;
+    background: none;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+}
+.editor-content {
+    border: 1px solid #ddd;
+    min-height: 200px;
+    padding: 10px;
+}
+.table-header {
+    background-color: #e8f5e9;
+}
+.required {
+    color: red;
+}
