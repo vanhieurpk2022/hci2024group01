@@ -5,9 +5,7 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: Arial, sans-serif;
-}
+
 
 /* Header */
 .header {
@@ -26,7 +24,6 @@ body {
 }
 
 .navbar a {
-    margin-left: 1.5rem;
     text-decoration: none;
     color: #333;
 }

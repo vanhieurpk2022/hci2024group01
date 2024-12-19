@@ -1,14 +1,6 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
-}
 
-body {
-    background: linear-gradient(to bottom right, #d1f4ff, #f7ffd4);
-    padding: 20px;
-}
+
+
 
 h2 {
     color: #1877f2;
