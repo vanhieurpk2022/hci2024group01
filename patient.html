@@ -17,123 +17,9 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="./assets/css/myStyle.css" />
+    <link rel="stylesheet" href="patient.css" />
     <title>HeathCare</title>
-    <style>
-      :root {
-        --aqua-color: #00ced1;
-      }
-      /* Patient Section Styles */
-.patient-info {
-    color: #333;
-}
-
-.patient-info h4 {
-    color: var(--aqua-color);
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 20px;
-}
-
-.patient-info .row .col-md-4 p {
-    background-color: #f8f9fa; /* Light background for contrast */
-    padding: 15px;
-    border-radius: 8px;
-    margin-bottom: 15px;
-    font-size: 1rem;
-    color: #555;
-    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-/* BookingCare Benefits Cards */
-.patient-info .card {
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    padding: 15px;
-}
-
-.patient-info .card-body {
-    text-align: center;
-}
-
-.patient-info .card-body i {
-    color: #ff7b54; /* Icon color */
-    margin-bottom: 10px;
-}
-
-.patient-info .card-title {
-    font-weight: bold;
-    color: var(--aqua-color);
-    margin-top: 10px;
-    font-size: 1.2rem;
-}
-
-.patient-info .card-text {
-    color: #666;
-    font-size: 0.95rem;
-}
-
-/* General Styling */
-.container {
-    max-width: 1200px;
-}
-
-.box {
-            width: 100%;
-            margin: 10px auto;
-            padding: 20px;
-            background-color: #ffffff;
-            border: 1px solid #ddd;
-            border-radius: 8px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            box-sizing: border-box;
-        }
-
-        .box h3 {
-            margin: 0 0 10px;
-            font-size: 1.5em;
-            color: #333;
-        }
-
-        .time-slot {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
-            gap: 10px;
-        }
-
-        .time-slot div {
-            background-color: #ffffff;
-            color: #333;
-            font-size: 0.9em;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            height: 40px;
-            border-radius: 4px;
-            border: 1px solid #ddd;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-            cursor: pointer;
-            transition: background-color 0.3s, color 0.3s;
-        }
-
-        /* Khi ô được chọn */
-        .time-slot div.selected {
-            background-color: #007bff;
-            color: white;
-        }
-
-        /* Thêm hiệu ứng hover */
-        .time-slot div:hover {
-            background-color: #f0f8ff;
-        }
-
-        /* Thông báo */
-        .message {
-            margin-top: 15px;
-            font-size: 1em;
-            color: green;
-            display: none; /* Ẩn thông báo mặc định */
-        }
-    </style>
+    
     
 </head>
 <body>
@@ -202,25 +88,25 @@
                   <a class="nav-link" href="handbook.html"><i class="fa-solid fa-book-medical"></i> Handbook</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#"><i class="fa-regular fa-handshake"></i> Contact</a>
+                  <a class="nav-link" href="./contact.html"><i class="fa-regular fa-handshake"></i> Contact</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#"><i class="fa-solid fa-building"></i> Business Health</a>
+                  <a class="nav-link" href="./business.html"><i class="fa-solid fa-building"></i> Business Health</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#"><i class="fa-solid fa-folder"></i> Digital Transformation Package</a>
+                  <a class="nav-link" href="./digital.html"><i class="fa-solid fa-folder"></i> Digital Transformation Package</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#"><i class="fa-solid fa-users"></i> Recruitment</a>
+                  <a class="nav-link" href="./Recruitment.html"><i class="fa-solid fa-users"></i> Recruitment</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#"><i class="fa-solid fa-hospital-user"></i> Patient</a>
+                  <a class="nav-link" href="./patient.html"><i class="fa-solid fa-hospital-user"></i> Patient</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#"><i class="fa-solid fa-user-doctor"></i> Doctor</a>
+                  <a class="nav-link" href="./doctor.html"><i class="fa-solid fa-user-doctor"></i> Doctor</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#"><i class="fa-solid fa-flag"></i> Role of BookingCare</a>
+                  <a class="nav-link" href="./roleOf.html"><i class="fa-solid fa-flag"></i> Role of BookingCare</a>
                 </li>
                 <li class="nav-item">
                   <a class="nav-link" href="#"><i class="fa-solid fa-phone"></i> Hotline</a>
@@ -462,27 +348,6 @@
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
       crossorigin="anonymous"
     ></script>
-    <script>
-      
-      const timeSlots = document.querySelectorAll('.time-slot div');
-      const message = document.getElementById('success-message');
-
-      timeSlots.forEach(slot => {
-          slot.addEventListener('click', () => {
-              
-              timeSlots.forEach(s => s.classList.remove('selected'));
-             
-              slot.classList.add('selected');
-              
-             
-              message.style.display = 'block';
-
-              
-              setTimeout(() => {
-                  message.style.display = 'none';
-              }, 2000);
-          });
-      });
-  </script>
+    <script src="patient.js"></script>
 </body>
 </html>
