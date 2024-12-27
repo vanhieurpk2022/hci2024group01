@@ -7,138 +7,9 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
     <link rel="stylesheet" href="./assets/css/myStyle.css" />
     <link rel="stylesheet" href="./assets/css/setColor.css">
+    <link rel="stylesheet" href="doctors.css">
     <title>HeathCare</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f8f9fa;
-        }
-
-        .navbar-custom {
-            background-color: #e8f8f6;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-
-        .main-banner {
-            position: relative;
-            text-align: center;
-            color: white;
-        }
-
-        .main-banner img {
-            width: 100%;
-            height: auto;
-            max-height: 250px;
-            object-fit: cover;
-        }
-
-        .banner-text {
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-        }
-
-        .content-section {
-            display: flex;
-            gap: 20px;
-            margin-top: -25px;
-            z-index: 1;
-            position: relative;
-            padding: 20px 0;
-        }
-
-        .main-content {
-            flex: 3;
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-        }
-
-        .sidebar {
-            flex: 1;
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            max-height: 300px;
-            overflow-y: auto;
-        }
-
-        .image-section {
-            text-align: center;
-            margin: 20px 0;
-        }
-
-        .new-sidebar {
-            margin-top: 20px;
-            padding: 20px;
-            border-radius: 8px;
-            background-color: #ffffff;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            max-height: 300px;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-            position: relative;
-        }
-
-        .explore-header {
-            display: flex;
-            align-items: center;
-            border-bottom: 1px solid #ddd;
-            padding-bottom: 10px;
-        }
-
-        .explore-header img {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-        }
-
-        .explore-body p {
-            font-size: 14px;
-            margin: 10px 0;
-        }
-
-        .explore-footer {
-            margin-top: auto;
-        }
-
-        .explore-footer input {
-            flex-grow: 1;
-        }
-
-        .explore-footer button {
-            padding: 10px;
-        }
-
-        .main-content {
-            flex: 3;
-            background: white;
-            padding: 20px;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-            max-height: 600px;
-            overflow-y: auto;
-            scroll-behavior: smooth;
-        }
-        .custom-text {
-            color: #fbff03;
-        }
-        .highlight {
-            color: #0392ff;
-             
-        }
-    </style>
+    
 </head>
 <body>
      <!-- DashBroad -->
@@ -340,27 +211,6 @@
       
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <script>document.querySelector('.new-sidebar').addEventListener('wheel', function(e) {
-      const mainContent = document.querySelector('.main-content');
-      
-      // If scrolling down on the sidebar, scroll the main content up
-      if (e.deltaY > 0) {
-          mainContent.scrollBy({
-              top: 30,  // Adjust the scroll amount to your preference
-              behavior: 'smooth'
-          });
-      }
-      // If scrolling up on the sidebar, scroll the main content down
-      else {
-          mainContent.scrollBy({
-              top: -30,  // Adjust the scroll amount to your preference
-              behavior: 'smooth'
-          });
-      }
-  
-      // Prevent the default scroll behavior for the sidebar
-      e.preventDefault();
-  });
-  </script>
+    <script src="doctors.js"></script>
 </body>
 </html>
