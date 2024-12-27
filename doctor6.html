@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <link rel="stylesheet" href="./assets/css/myStyle.css" />
+    <link rel="stylesheet" href="./assets/css/setColor.css">
+    <title>HeathCare</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+
+        .navbar-custom {
+            background-color: #e8f8f6;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .main-banner {
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+
+        .main-banner img {
+            width: 100%;
+            height: auto;
+            max-height: 250px;
+            object-fit: cover;
+        }
+
+        .banner-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .content-section {
+            display: flex;
+            gap: 20px;
+            margin-top: -25px;
+            z-index: 1;
+            position: relative;
+            padding: 20px 0;
+        }
+
+        .main-content {
+            flex: 3;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .sidebar {
+            flex: 1;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            max-height: 300px;
+            overflow-y: auto;
+        }
+
+        .image-section {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .new-sidebar {
+            margin-top: 20px;
+            padding: 20px;
+            border-radius: 8px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            max-height: 300px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            position: relative;
+        }
+
+        .explore-header {
+            display: flex;
+            align-items: center;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 10px;
+        }
+
+        .explore-header img {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+        }
+
+        .explore-body p {
+            font-size: 14px;
+            margin: 10px 0;
+        }
+
+        .explore-footer {
+            margin-top: auto;
+        }
+
+        .explore-footer input {
+            flex-grow: 1;
+        }
+
+        .explore-footer button {
+            padding: 10px;
+        }
+
+        .main-content {
+            flex: 3;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            max-height: 600px;
+            overflow-y: auto;
+            scroll-behavior: smooth;
+        }
+        .custom-text {
+            color: #fbff03;
+        }
+        .highlight {
+            color: #0392ff;
+             
+        }
+    </style>
+</head>
+<body>
+     <!-- DashBroad -->
+     <div class="container " >
+        <nav class="navbar bg-body-tertiary">
+          <div class="container" style="color: var(--aqua-color);">
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          <!-- navBar -->
+          <a class="navbar-brand ms-1" href="./index.html"
+          ><img width="125px" src="./assets/img/logo.png" alt=""
+        /></a>
+    
+          <ul  class="list-unstyled nav-tabs nav-tabs-scroll border-0 mb-3 me-auto mb-2 mb-lg-0 d-flex flex-row  ms-auto order-lg-0 order-1 mt-3 mt-lg-0">
+            <li class="nav-item me-2 me-md-2 ">
+              <a class="nav-link " aria-current="page" href="./index.html"
+                >Home</a>
+            </li>
+    
+            <li class="nav-item me-2 me-md-2">
+              <a class="nav-link " href="./about.html"
+                >About</a
+              >
+            </li>
+            <li class="nav-item me-2 me-md-2">
+              <a class="nav-link" href="./project.html">Project</a>
+            </li>
+            <li class="nav-item me-2 me-md-2">
+              <a class="nav-link" href="#">Hospital</a>
+            </li>
+            
+            <li class="nav-item me-2 me-md-2">
+              <a class="nav-link" href="#">Wellness</a>
+            </li>
+           
+          </ul>
+        
+      <form class="d-flex order-lg-1 order-2 d-xl-flex d-flex d-sm-none text-center" role="search">
+        <!-- search khi chưa sm -->
+        <div
+          class="d-flex justify-content-center align-items-center  d-lg-flex  position-relative" >
+          <i class=" d-lg-flex fa-solid fa-magnifying-glass position-absolute start-0 ms-5 ms-md-0"style="color: #41353d";></i>
+        </div>
+        <input class="form-control form-control-search me-2 rounded-pill ms-5 ms-md-0 border " type="search"placeholder="Search" aria-label="Search"/>
+      </form>
+      <div class="order-lg-2 order-0 d-flex mt-lg-0  mt-sm-2 mt-sm-0  mt-2 mt-sm-0 ms-sm-3 ">
+        <!-- search khi small -->
+        <div
+          class="me-1 py-1 px-2 d-xl-none d-sm-flex d-none me-2 rounded-start rounded-end"
+          style="background-color: azure"
+        >
+          <a href=""
+            ><i
+              class="fa-solid fa-magnifying-glass p-2"
+              style="color: #41353d"
+              ;
+            ></i
+          ></a>
+        </div>
+    
+          <div class="ms-auto ">
+            
+            <a href="" class="px-3 btn d-flex flex-column text-center" style="color: var(--bookNow-color); background-color: #007BFF;" > <i class="fa-regular fa-clipboard"></i> Book now</a>
+          </div>
+      </div>
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title " id="offcanvasNavbarLabel">Menu</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                  <li class="nav-item">
+                    <a class=" nav-link " aria-current="page" href="./index.html"><i class=" fa-solid fa-house"></i> Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./handbook.html"><i class="fa-solid fa-book-medical"></i> Handbook</a>
+                  </li>
+                  <li class="nav-item">
+    
+                    <a class="nav-link" href="./contact.html"><i class="fa-regular fa-handshake"></i> Contact</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./business.html"><i class="fa-solid fa-building"></i> Business heath</a>
+    
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link fw-semibold active" href="./digital.html"><i class="fa-solid fa-folder"></i> Digital Transformation Package</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./Recruitment.html"><i class="fa-solid fa-users"></i> Recruitment</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./patient.html"><i class="fa-solid fa-hospital-user"></i> Patitent</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./doctor.html"><i class="fa-solid fa-user-doctor"></i> Doctor</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./roleOf.html"><i class="fa-solid fa-flag"></i> Role of bookingcare</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./hotLine.html"><i class="fa-solid fa-phone"></i> Hotline</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./fAQ.html"><i class="fa-solid fa-question"></i> FAQ</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./terms.html"><i class="fa-solid fa-scroll"></i> Terms</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+     </div>
+
+    </nav>
+
+    <!-- Main Banner -->
+    <div class="main-banner">
+        <img src="https://vnn-imgs-a1.vgcloud.vn/img2.infonet.vn/w490/Uploaded/2020/pjauldz/2018_03_18/ictnews_bookingcare_1.jpg?width=0&s=a4QvblNPf1NF3yQn7lRj8w" alt="Giao tiếp giữa bác sĩ và bệnh nhân" class="img-fluid">
+    </div>
+
+    <!-- Content Section -->
+    <div class="container content-section">
+        <!-- Main Content -->
+        <div class="main-content">
+            <h1><strong>7 sáng kiến giúp giảm thời gian chờ trong bệnh viện, phòng khám</strong></h1>
+            <img src="https://cdn.bookingcare.vn/fo/w828/2022/11/06/172415-sang-kien-giam-thoi-gian-cho-trong-benh-vien.png" alt="Placeholder Image for Large Section" class="img-fluid">
+            <p>Ngoài việc nâng cao chất lượng điều trị, chú trọng vào chuyên môn với đội ngũ bác sĩ giỏi, đầu tư trang thiết bị hiện đại, yếu tố quan trọng không thể không quan tâm để nâng cao trải nghiệm thăm khám của khách hàng là giảm thời gian chờ đợi. Nhìn chung, hầu hết các cơ sở y tế hiện nay, đặc biệt là bệnh viện đều lớn "đau đầu" về vấn đề này. </p>
+            <p>Có một số sáng kiến để giảm thời gian chờ tại bệnh viện, dưới đây là 7 cách cơ bản đơn vị có thể tham khảo và áp dụng. </p>
+            <p class="custom-text"><strong>"Loại bỏ hoàn toàn thời gian chờ đợi tại bệnh viện, phòng khám có thể là một mục tiêu bất khả thi, nhưng việc hạn chế đến mức thấp nhất khoảng thời gian này là điều có thể. </strong></p>
+            <p><strong>Thực trạng chờ khám tại cơ sở y tế khám chữa bệnh </strong></p>
+            <p>Bệnh nhân, người nhà luôn phải chờ đợi quá lâu để được thăm khám, đặc biệt là ở các bệnh viện tuyến trên là thực trạng y tế nhiều năm qua.</p>
+            <p>Theo một nghiên cứu cho thấy, bệnh nhân ở Bệnh viện Việt Đức phải chờ từ 30 đến 76 phút để được khám. Tại nhiều bệnh viện, phòng khám tư con số này thấp hơn nhưng khách hàng vẫn mất một khoản thời gian trống nhất định.</p>
+            <p>Với khách hàng ngày nay, bên cạnh chất lượng điều trị, nhiều người ưu tiên lựa chọn địa chỉ khám, chữa bệnh có trải nghiệm dịch vụ tốt, không mất nhiều thời gian chờ đợi, nhân viên y tế chuyên nghiệp, nhiệt tình,...</p>
+            <p>Hơn nữa, số lượng cơ sở y tế khám chữa bệnh tư nhân ngày càng tăng lên, nâng cao chất lượng dịch vụ chăm sóc sức khỏe đáp ứng (hoặc vượt quá) mong đợi của khách hàng sẽ là một lợi thế cạnh trạnh.</p>
+            <p>Các đơn vị có thể bắt đầu ngay bây giờ từ việc áp dụng các sáng kiến giảm thời gian chờ tại bệnh viện, phòng khám để trải nghiệm đi khám của khách hàng hài lòng hơn.</p>
+            <p><strong>7 sáng kiến giảm thời gian chờ trong bệnh viện, phòng khám</strong></p>
+            <p>7 sáng kiến mà BookingCare đưa ra dưới đây được tham khảo dựa trên các đơn vị đang áp dụng hiệu quả và một số tài liệu, bài báo. Chủ phòng khám, người làm quản lý có thể tham khảo và áp dụng.</p>
+            <p><strong>1. Đặt lịch trực tuyến làm giảm thời gian chờ</strong></p>
+            <p>Quy trình khám chữa bệnh truyền thống là bệnh nhân phải đến bệnh viện, phòng khám mới có thể lấy số, làm thủ tục và chờ đến lượt. Các bước này thường mất nhiều thời gian. Hơn nữa chưa kể nếu người bệnh đến muộn với số lượng lớn bệnh nhân đã chờ sẵn trước đó, thời gian chờ đợi sẽ không thể nói trước là bao lâu. </p>
+            <p>Giải pháp đặt lịch trực tuyến trước sẽ phát huy hiệu. Đơn vị có thể cập nhật lịch khám, giờ khám theo ngày của bác sĩ lên Website hoặc xây dựng ứng dụng đặt lịch để khách hàng nắm bắt được các thông tin và chủ động đặt lịch hẹn online.</p>
+            <p>Khi đặt lịch trước, người bệnh sẽ được chọn giờ khám, có trước số khám. Đến ngày hẹn, người bệnh đến báo đã đặt trước và vào thăm khám trong thời gian đã hẹn, không mất thời gian chờ đợi lâu. </p>
+            <p>Hơn nữa, với việc triển khai đặt lịch khám trước, đơn vị có thể thống kê số lượng bệnh nhân, sự tăng giảm theo ngày, từ đó giới hạn số lượt khám chữa bệnh từng ngày để đảm bảo chất lượng dịch vụ.</p>
+             <img src="https://cdn.bookingcare.vn/fo/w1200/2022/10/28/173620-chon-gio-dat-lich-tai-phong-kham-vip12.png" alt="Placeholder Image for Large Section" class="img-fluid">
+             <p><strong>2. Hoàn thành thủ tục giấy tờ trước khi thăm khám</strong></p>
+             <p>Khi đặt lịch trước, khách hàng đã điền sẵn thông tin. Về phía bệnh viện, phòng khám do vậy sẽ chỉ cần in phiếu khám mà không cần mất thời gian kê khai lại, tốn thời gian của cả người bệnh và nhân viên y tế tiếp đón.</p>
+             <p>Lưu ý đơn vị nên thiết kế form đặt lịch cần đầy đủ thông tin đơn vị yêu cầu, tránh thiếu sót thông tin phải bổ sung tại viện.</p>
+             <p><strong>3. Hướng dẫn quy trình khám bệnh cho khách hàng</strong></p>
+             <p>Một trong những nguyên nhân dẫn đến thời gian chờ đợi lâu xuất phát từ việc người bệnh thiếu thông tin hướng dẫn, thiếu người hướng dẫn ban đầu cũng như các bước của quy trình khám bệnh.</p>
+             <p>Vì thế, ngay từ khâu tiếp đón ban đầu hay trong các bước xét nghiệm, chụp chiếu nên có nhân viên hướng dẫn, di chuyển đến phòng nào trước để tiết kiệm thời gian,... </p>
+             <p><strong>4. Triển khai chăm sóc sức khỏe từ xa qua video</strong></p>
+             <p>Để giảm bớt lượng bệnh nhân trực tiếp, với những bệnh lý có thể thăm khám từ xa qua video hay khách hàng đã thăm khám tại bệnh viện, có hồ sơ,... đơn vị có thể triển khai chăm sóc sức khỏe từ xa qua video. </p>
+             <p><strong>5. Thông báo về thời gian chờ đợi</strong></p>
+             <p>Nhìn chung, người bệnh cũng sẽ thông cảm và hiểu rằng đôi khi cũng có những việc đột xuất, tình huống cấp cứu,... dẫn đến thời gian chờ của họ có thể lâu. Tuy nhiên, việc chờ lâu mà không được thông báo trước hay thông báo về thời gian sẽ được vào khám dễ khiến khách hàng bực tức.</p>
+             <p>80% người bệnh biết họ sẽ cảm thấy bớt bực bội hơn nếu đơn giản là được thông báo trước về thời gian chờ đợi của mình. </p>
+             <p>Đặc biệt trong trường hợp bác sĩ nghỉ khám hãy thông báo để bệnh nhân đỡ tốn thời gian di chuyển. </p>
+             <p><strong>6. Thiết kế không gian chờ thoải mái</strong></p>
+             <p>Nếu phải chờ đợi, hãy đảm bảo không gian phòng chờ thoải mái, dễ chịu cho bệnh nhân. Ít nhất là phải có đủ chỗ ngồi cho người bệnh, người nhà. Bạn có thể chuẩn bị sẵn nước, trà, cà phê miễn phí hoặc có Wifi, tạp chí, TV. </p>
+             <p><strong>7. Khảo sát khách hàng</strong></p>
+             <p>Không phải bệnh viện, phòng khám nào cũng xác định được người bệnh đang tốn nhiều thời gian ở khâu nào, do việc gì. Hãy đưa ra một bản khảo sát đơn giản cho người bệnh để thu thập phản hồi thực tế, từ đó có sáng kiến hiệu quả nhất cho đơn vị của mình. </p>
+             <p><strong>Chuyển đổi số giảm thời gian chờ tại bệnh viện, phòng khám</strong></p>
+             <p>Với xu hướng chuyển số số y tế ngày càng được quan tâm hiện nay, đầu tư công nghệ để giảm thời gian chờ khám bệnh là hướng đi hiệu quả nhất. Chuyển đổi số không chỉ có người bệnh được hưởng lợi mà phòng khám cũng tối ưu quy trình vận hành, chi phí vận hành, nâng cao chất lượng khám chữa bệnh. </p>
+             <p>Tuy nhiên, nhiều bệnh viện, phòng khám Việt Nam vẫn chưa thể tiếp cận với công nghệ thông tin một cách hiệu quả. Nhiều đơn vị chưa triển khai ứng dụng công nghệ vì không tìm được giải pháp đáp ứng đúng nhu cầu, hoạt động của đơn vị. </p>
+             <p>Từ thực tế hợp tác với hơn 200 bệnh viện, phòng khám, BookingCare - Nền tàng chăm sóc sức khỏe toàn diện, tiên phong trong mảng đặt lịch khám đã cho ra mắt Giải pháp Chuyển đổi số Toàn diện cho Y tế Chăm sóc sức khỏe <span class="highlight">BookingCare_DX.</span> </p>
+             <p>BookingCare_DX ứng dụng công nghệ tiên phong được phát triển theo mô hình Nền tảng như một dịch vụ (Platform as a service - PaaS) bao gồm Website, ứng dụng di động (Mobile App) và phần mềm quản trị, tích hợp 3 trong 1 nền tảng tiện ích dễ dùng. Giải pháp được thiết kế linh hoạt, các đơn vị có thể tự lựa chọn các tính năng phù hợp nhất. </p>
+             <p>Với các đơn vị muốn giảm thời gian chờ trong bệnh viện, phòng khám, có thể tham khảo tính năng đặt lịch trước trên Website/ đặt lịch qua App, nhắc lịch qua SMS/App, kết nối API đến phần mềm quản lý bệnh viện,...</p>
+             <p class="custom-text"><strong>"Bệnh viện phòng khám có nhu cầu có thể <span class="highlight">để lại thông tin</span> để được BookingCare liên hệ tư vấn cụ thể.</strong> </p>
+             <p><strong>Tạm kết</strong></p>
+             <p>Người bệnh thường có xu hướng theo 1 bác sĩ thăm khám, điều trị nhưng sự kiên nhẫn chờ đợi có giới hạn. Để bệnh viện, phòng khám giữ chân khách hàng cần nâng cao trải nghiệm thăm khám bắt đầu từ việc giảm, tối ưu thời gian chờ. Hy vọng những sáng kiến giảm thời gian chờ trên sẽ hữu ích cho đơn vị. </p>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="sidebar-container">
+          <!-- Sidebar 1 -->
+          <div class="sidebar">
+              <h4>Nội dung chính</h4>
+              <ul class="list-group">
+             <p><span class="highlight">Thực trạng chờ khám tại cơ sở y tế khám chữa bệnh </span></p>
+             <p><span class="highlight">7 sáng kiến giảm thời gian chờ trong bệnh viện, phòng khám</span></p>
+             <p><span class="highlight">1. Đặt lịch trực tuyến làm giảm thời gian chờ</span></p>
+             <p><span class="highlight">2. Hoàn thành thủ tục giấy tờ trước khi thăm khám</span></p>
+             <p><span class="highlight">3. Hướng dẫn quy trình khám bệnh cho khách hàng</span></p>
+             <p><span class="highlight">4. Triển khai chăm sóc sức khỏe từ xa qua video</span></p>
+             <p><span class="highlight">5. Thông báo về thời gian chờ đợi</span></p>
+             <p><span class="highlight">6. Thiết kế không gian chờ thoải mái</span></p>
+             <p><span class="highlight">7. Khảo sát khách hàng</span></p>
+             <p><span class="highlight">Chuyển đổi số giảm thời gian chờ tại bệnh viện, phòng khám</span></p>
+             <p><span class="highlight">Tạm kết</span></p>
+                
+              </ul>
+              <a href="#" class="btn btn-success mt-3">Liên hệ hợp tác</a>
+          </div>
+      
+          <!-- Sidebar 2 -->
+          <div class="sidebar new-sidebar">
+              <div class="explore-header d-flex align-items-center">
+                  <img src="https://cdn.bookingcare.vn/fo/2024/04/25/142829-ai-assistant.png" alt="Icon" class="me-2">
+                  <h5>Khám phá thêm</h5>
+              </div>
+              <div class="explore-body text-center">
+                  <p>Hỏi - đáp thông tin y tế, sức khỏe cùng Trợ lý AI của BookingCare</p>
+                  <button class="btn btn-primary">Bắt đầu</button>
+              </div>
+              <div class="explore-footer d-flex align-items-center">
+                  <input type="text" class="form-control" placeholder="Đặt câu hỏi với Trợ lý AI">
+                  <button class="btn btn-warning ms-2"><i class="fa-solid fa-paper-plane"></i></button>
+              </div>
+          </div>
+      </div>
+      
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script>document.querySelector('.new-sidebar').addEventListener('wheel', function(e) {
+      const mainContent = document.querySelector('.main-content');
+      
+      // If scrolling down on the sidebar, scroll the main content up
+      if (e.deltaY > 0) {
+          mainContent.scrollBy({
+              top: 30,  // Adjust the scroll amount to your preference
+              behavior: 'smooth'
+          });
+      }
+      // If scrolling up on the sidebar, scroll the main content down
+      else {
+          mainContent.scrollBy({
+              top: -30,  // Adjust the scroll amount to your preference
+              behavior: 'smooth'
+          });
+      }
+  
+      // Prevent the default scroll behavior for the sidebar
+      e.preventDefault();
+  });
+  </script>
+</body>
+</html>
