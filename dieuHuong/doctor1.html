@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <link rel="stylesheet" href="./assets/css/myStyle.css" />
+    <link rel="stylesheet" href="./assets/css/setColor.css">
+    <link rel="stylesheet" href="doctors.css">
+    <title>HeathCare</title>
+    
+</head>
+<body>
+     <!-- DashBroad -->
+     <div class="container " >
+        <nav class="navbar bg-body-tertiary">
+          <div class="container" style="color: var(--aqua-color);">
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          <!-- navBar -->
+          <a class="navbar-brand ms-1" href="./index.html"
+          ><img width="125px" src="./assets/img/logo.png" alt=""
+        /></a>
+    
+          <ul  class="list-unstyled nav-tabs nav-tabs-scroll border-0 mb-3 me-auto mb-2 mb-lg-0 d-flex flex-row  ms-auto order-lg-0 order-1 mt-3 mt-lg-0">
+            <li class="nav-item me-2 me-md-2 ">
+              <a class="nav-link " aria-current="page" href="./index.html"
+                >Home</a>
+            </li>
+    
+            <li class="nav-item me-2 me-md-2">
+              <a class="nav-link " href="./about.html"
+                >About</a
+              >
+            </li>
+            <li class="nav-item me-2 me-md-2">
+              <a class="nav-link" href="./project.html">Project</a>
+            </li>
+            <li class="nav-item me-2 me-md-2">
+              <a class="nav-link" href="#">Hospital</a>
+            </li>
+            
+            <li class="nav-item me-2 me-md-2">
+              <a class="nav-link" href="#">Wellness</a>
+            </li>
+           
+          </ul>
+        
+      <form class="d-flex order-lg-1 order-2 d-xl-flex d-flex d-sm-none text-center" role="search">
+        <!-- search khi chưa sm -->
+        <div
+          class="d-flex justify-content-center align-items-center  d-lg-flex  position-relative" >
+          <i class=" d-lg-flex fa-solid fa-magnifying-glass position-absolute start-0 ms-5 ms-md-0"style="color: #41353d";></i>
+        </div>
+        <input class="form-control form-control-search me-2 rounded-pill ms-5 ms-md-0 border " type="search"placeholder="Search" aria-label="Search"/>
+      </form>
+      <div class="order-lg-2 order-0 d-flex mt-lg-0  mt-sm-2 mt-sm-0  mt-2 mt-sm-0 ms-sm-3 ">
+        <!-- search khi small -->
+        <div
+          class="me-1 py-1 px-2 d-xl-none d-sm-flex d-none me-2 rounded-start rounded-end"
+          style="background-color: azure"
+        >
+          <a href=""
+            ><i
+              class="fa-solid fa-magnifying-glass p-2"
+              style="color: #41353d"
+              ;
+            ></i
+          ></a>
+        </div>
+    
+          <div class="ms-auto ">
+            
+            <a href="" class="px-3 btn d-flex flex-column text-center" style="color: var(--bookNow-color); background-color: #007BFF;" > <i class="fa-regular fa-clipboard"></i> Book now</a>
+          </div>
+      </div>
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title " id="offcanvasNavbarLabel">Menu</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                  <li class="nav-item">
+                    <a class=" nav-link " aria-current="page" href="./index.html"><i class=" fa-solid fa-house"></i> Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./handbook.html"><i class="fa-solid fa-book-medical"></i> Handbook</a>
+                  </li>
+                  <li class="nav-item">
+    
+                    <a class="nav-link" href="./contact.html"><i class="fa-regular fa-handshake"></i> Contact</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./business.html"><i class="fa-solid fa-building"></i> Business heath</a>
+    
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link fw-semibold active" href="./digital.html"><i class="fa-solid fa-folder"></i> Digital Transformation Package</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./Recruitment.html"><i class="fa-solid fa-users"></i> Recruitment</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./patient.html"><i class="fa-solid fa-hospital-user"></i> Patitent</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./doctor.html"><i class="fa-solid fa-user-doctor"></i> Doctor</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./roleOf.html"><i class="fa-solid fa-flag"></i> Role of bookingcare</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./hotLine.html"><i class="fa-solid fa-phone"></i> Hotline</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./fAQ.html"><i class="fa-solid fa-question"></i> FAQ</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./terms.html"><i class="fa-solid fa-scroll"></i> Terms</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+     </div>
+
+    </nav>
+
+    <!-- Main Banner -->
+    <div class="main-banner">
+        <img src="https://vnn-imgs-a1.vgcloud.vn/img2.infonet.vn/w490/Uploaded/2020/pjauldz/2018_03_18/ictnews_bookingcare_1.jpg?width=0&s=a4QvblNPf1NF3yQn7lRj8w" alt="Giao tiếp giữa bác sĩ và bệnh nhân" class="img-fluid">
+    </div>
+
+    <!-- Content Section -->
+    <div class="container content-section">
+        <!-- Main Content -->
+        <div class="main-content">
+            <img src="https://cdn.bookingcare.vn/fo/w1080/2017/09/05/231104giao-tiep-bac-si-benh-nhan-2.jpg" alt="Placeholder Image for Large Section" class="img-fluid">
+            <h1>Giao tiếp giữa bác sĩ và bệnh nhân dưới góc nhìn truyền thông chánh niệm</h1>
+            <p><Strong>Bác sĩ lắng nghe một cách sâu sắc và giải thích một cách rõ ràng, dễ hiểu. Bệnh nhân giải thích vấn đề của mình một cách rõ ràng, mạch lạc. Lắng nghe, thấu hiểu những dặn dò của bác sĩ để hợp tác trong khám và điều trị đạt hiệu quả.</Strong></p>
+            <h3>Truyền thông chánh niệm là gì?</h3>
+            <p>Theo Thiền sư Thích Nhất Hạnh, <strong>truyền thông chánh niệm</strong> nghĩa là ý thức những gì ta đang nói và sử dụng ngôn ngữ hòa ái, có ý thức, là lắng nghe người khác một cách sâu sắc để hiểu được những điều đang nghe và cả những điều không nói. Chúng ta có thể dùng phương pháp này trong bất kỳ lúc nào, ở đâu, trong tình huống nào.</p>
+            <p><strong>"Truyền thông chánh niệm"</strong>có thể áp dụng trong giao tiếp giữa bác sĩ và bệnh nhân. Đó là khi cả bác sĩ và bệnh nhân cùng giao tiếp chân thành, sâu sắc và có ý thức. Bác sĩ lắng nghe một cách sâu sắc và giải thích một cách rõ ràng, dễ hiểu. Bệnh nhân giải thích vấn đề của mình một cách rõ ràng, mạch lạc. Lắng nghe, thấu hiểu những dặn dò của bác sĩ để hợp tác trong khám và điều trị đạt hiệu quả.</p>
+
+            
+            <img src="https://cdn.bookingcare.vn/fo/w1200/2018/03/07/111112lang-nghe.jpg" alt="Placeholder Image for Large Section" class="img-fluid">
+            <p>Là một hệ thống hỗ trợ kết nối bệnh nhân và bác sĩ, chúng tôi thường xuyên nhận được nhiều ý kiến góp ý từ hai phía. Trong số đó, nhiều là ý kiến về giao tiếp giữa bác sĩ với bệnh nhân trong khám chữa bệnh. Những chia sẻ dưới đây, mà suy cho cùng, để đạt kết quả cao là cần áp dụng<Strong> truyền thông chánh niệm.</Strong></p>
+            <p><Strong>Trường hợp 1: Sự thân thiện, cởi mở</Strong></p>
+            <p>Khi đi khám, bệnh nhân luôn mong nhận được sự thân thiện, ân cần của bác sĩ. Tuy nhiên, vì nhiều lý do, trong một số trường hợp bác sĩ chưa thân thiện, ân cần làm cho việc trao đổi giữa bác sĩ và bệnh chưa được cởi mở, chân thành. </p>
+            <p>"Ánh mắt, nụ cười bằng mười thang thuốc bổ". Bác sĩ chỉ cần như vậy, bệnh nhân đã cảm thấy khỏe hẳn lên rồi.</p>
+            <p><Strong>Trường hợp 2: Sự lắng nghe, thấu hiểu</Strong></p>
+            <p>Trong quá trình thăm khám, bác sĩ lắng nghe và đã giải thích kỹ lưỡng nhưng bệnh nhân không hiểu. Một số người bệnh chỉ cố gắng trình bày về vấn đề của mình mà không chịu lắng nghe những lời khuyên, dặn dò của bác sĩ.</p>
+            <p>Để việc thăm khám hiệu quả cần sự lắng nghe và chia sẻ từ cả hai phía bác sĩ và bệnh nhân. Nếu thiếu đi sự đối thoại chân thành hai chiều thì kết quả khám chữa bệnh sẽ không hiệu quả như mong muốn.</p>
+
+            <img src="https://cdn.bookingcare.vn/fo/w1200/2018/03/07/110334bac-si-va-benh-nhan.jpg" alt="Placeholder Image for Large Section" class="img-fluid">
+            <p><Strong>Trường hợp 3: Giải thích, tư vấn</Strong></p>
+            <p>Có trường hợp bệnh nhân chia sẻ rằng, bác sĩ chưa giải thích, tư vấn đầy đủ những vấn đề mà bệnh nhân mong muốn hoặc chưa căn dặn đầy đủ tác dụng phụ của thuốc có thể xảy ra trong quá trình điều trị. Vì vậy, không ít bệnh nhân đã không tiếp tục điều trị, mà tìm phương án khác. Trong khi đó, bác sĩ cho rằng phương án điều trị đó là hiệu quả với tình trạng của người bệnh.</p>
+            <p>Đối thoại trên tinh thần lắng nghe và thấu hiểu giữa hai bên là rất quan trọng. Bác sĩ hiểu rõ tình trạng của bệnh nhân để có phương án điều trị hiệu quả. Bệnh nhân hiểu được phương án điều trị của bác sĩ để yên tâm hợp tác tốt hơn. Với sự thấu hiểu và đối thoại chân thành giữa hai bên thì việc khám chữa bệnh sẽ đạt hiệu quả cao.</p>
+            <p><Strong>Trường hợp 4: Tái khám đúng hẹn</Strong></p>
+            <p>Trong quá trình đi khám, đôi khi bệnh nhân không lắng nghe để ghi nhớ những dặn dò của bác sĩ. Họ quên hoặc không hiểu hết những căn dặn của bác sĩ để hợp tác trong quá trình điều tri, theo dõi và tái khám đúng hẹn. Hệ quả là bệnh không được điều trị hiệu quả, mà có thể còn trầm trọng hơn.</p>
+            <p>Không tái khám theo hẹn là một trong số những vấn đề phổ biến biến nhất mà người bệnh mắc phải. Sau một thời gian điều trị, bệnh nhân có tiến triển tốt lên thì không đi khám lại theo hẹn. Điều này làm cho bệnh nhân không được điều trị dứt điểm mà bệnh có thể nặng nề hơn. Sau đó, Bác sĩ cũng sẽ vất vả hơn nhiều để tìm phương án điều trị hiệu quả cho bệnh nhân tái phát.</p>
+            <p><Strong>Giao tiếp người bệnh là trung tâm (Patient – Centered)</Strong></p>
+            <p>Để kết quả khám chữa bệnh đạt kết quả cao, thì ngoài vai trò của bác sĩ giỏi, trang thiết bị hiện đại, qui trình tổ chức tốt thì vai trò của giao tiếp hiệu quả giữa bác sĩ và bệnh nhân là rất quan trọng. Giao tiếp cũng là một trong những công cụ cơ bản để xây dựng mối quan hệ thầy thuốc và bệnh nhân.</p>
+            
+            <img src="https://cdn.bookingcare.vn/fo/w1200/2016/12/22/125927photodune-12269206-parents-healthcare-concept-s.jpg" alt="Placeholder Image for Large Section" class="img-fluid">
+            <p>Theo Pgs.Ts Nguyễn Sinh Phúc, trong giao tiếp người bệnh là trung tâm, bác sĩ đặt người bệnh với những vấn đề của họ làm trọng tâm. Trong quá trình thăm khám, thầy thuốc còn quan tâm, chia sẻ với người bệnh cả những vấn đề, những khó khăn trong cuộc sống mà người bệnh gặp phải trong quá trình bị bệnh. Câu hỏi mà bác sĩ hay dùng là câu hỏi mở. Bên cạnh đó, bác sĩ thường dùng những từ ngữ dễ hiểu, không lạm dụng thuật ngữ chuyên môn.</p>
+            <p>Trên quan điểm của truyền thông chánh niệm, cách giao tiếp này sẽ chỉ thực sự phát huy hiệu quả cao nhất khi có tương tác hai chiều. Có nghĩa là bệnh nhân cũng cần biết lắng nghe, chia sẻ và hợp tác tốt với bác sĩ trong cả quá trình khám và điều trị bệnh tật.</p>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="sidebar-container">
+          <!-- Sidebar 1 -->
+          <div class="sidebar">
+              <h4>Nội dung chính</h4>
+              <ul class="list-group">
+                <p><Strong>Truyền thông chánh niệm là gì?</Strong></p>
+                <p>Trường hợp 1: Sự thân thiện, cởi mở</p>
+                <p>Trường hợp 2: Sự lắng nghe, thấu hiểu</p>
+                <p>Trường hợp 3: Giải thích, tư vấn</p>
+                <p>Trường hợp 4: Tái khám đúng hẹn</p>
+                  
+                <p><Strong>Giao tiếp người bệnh là trung tâm(Patient-Centered )</Strong></p>
+              </ul>
+              <a href="#" class="btn btn-success mt-3">Liên hệ hợp tác</a>
+          </div>
+      
+          <!-- Sidebar 2 -->
+          <div class="sidebar new-sidebar">
+              <div class="explore-header d-flex align-items-center">
+                  <img src="https://cdn.bookingcare.vn/fo/2024/04/25/142829-ai-assistant.png" alt="Icon" class="me-2">
+                  <h5>Khám phá thêm</h5>
+              </div>
+              <div class="explore-body text-center">
+                  <p>Hỏi - đáp thông tin y tế, sức khỏe cùng Trợ lý AI của BookingCare</p>
+                  <button class="btn btn-primary">Bắt đầu</button>
+              </div>
+              <div class="explore-footer d-flex align-items-center">
+                  <input type="text" class="form-control" placeholder="Đặt câu hỏi với Trợ lý AI">
+                  <button class="btn btn-warning ms-2"><i class="fa-solid fa-paper-plane"></i></button>
+              </div>
+          </div>
+      </div>
+      
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="doctors.js"></script>
+</body>
+</html>
