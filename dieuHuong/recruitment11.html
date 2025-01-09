@@ -1,0 +1,243 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <link rel="stylesheet" href="./assets/css/myStyle.css" />
+    <link rel="stylesheet" href="./assets/css/setColor.css">
+    <title>HeathCare</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+
+        .header {
+            background-color: #007BFF;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .container {
+            display: flex;
+            flex-grow: 1;
+            width: 100%;
+        }
+
+        .large-section {
+            flex: 3;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border-right: 1px solid #ccc;
+            overflow-y: auto;
+        }
+
+        .small-section {
+            flex: 1;
+            padding: 20px;
+            background-color: #fff;
+            overflow-y: auto;
+        }
+
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 16px;
+            line-height: 1.5;
+            color: #555;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            margin-top: 20px;
+        }
+ 
+    </style>
+</head>
+<body>
+     <!-- DashBroad -->
+     <div class="container " >
+        <nav class="navbar bg-body-tertiary">
+          <div class="container" style="color: var(--aqua-color);">
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          <!-- navBar -->
+          <a class="navbar-brand ms-1" href="./index.html"
+          ><img width="125px" src="./assets/img/logo.png" alt=""
+        /></a>
+    
+          <ul  class="list-unstyled nav-tabs nav-tabs-scroll border-0 mb-3 me-auto mb-2 mb-lg-0 d-flex flex-row  ms-auto order-lg-0 order-1 mt-3 mt-lg-0">
+            <li class="nav-item me-2 me-md-2 ">
+              <a class="nav-link " aria-current="page" href="./index.html"
+                >Home</a>
+            </li>
+    
+            <li class="nav-item me-2 me-md-2">
+              <a class="nav-link " href="./about.html"
+                >About</a
+              >
+            </li>
+            <li class="nav-item me-2 me-md-2">
+              <a class="nav-link" href="./project.html">Project</a>
+            </li>
+            <li class="nav-item me-2 me-md-2">
+              <a class="nav-link" href="#">Hospital</a>
+            </li>
+            
+            <li class="nav-item me-2 me-md-2">
+              <a class="nav-link" href="#">Wellness</a>
+            </li>
+           
+          </ul>
+        
+      <form class="d-flex order-lg-1 order-2 d-xl-flex d-flex d-sm-none text-center" role="search">
+        <!-- search khi chưa sm -->
+        <div
+          class="d-flex justify-content-center align-items-center  d-lg-flex  position-relative" >
+          <i class=" d-lg-flex fa-solid fa-magnifying-glass position-absolute start-0 ms-5 ms-md-0"style="color: #41353d";></i>
+        </div>
+        <input class="form-control form-control-search me-2 rounded-pill ms-5 ms-md-0 border " type="search"placeholder="Search" aria-label="Search"/>
+      </form>
+      <div class="order-lg-2 order-0 d-flex mt-lg-0  mt-sm-2 mt-sm-0  mt-2 mt-sm-0 ms-sm-3 ">
+        <!-- search khi small -->
+        <div
+          class="me-1 py-1 px-2 d-xl-none d-sm-flex d-none me-2 rounded-start rounded-end"
+          style="background-color: rgb(255, 240, 240)"
+        >
+          <a href=""
+            ><i
+              class="fa-solid fa-magnifying-glass p-2"
+              style="color: #41353d"
+              ;
+            ></i
+          ></a>
+        </div>
+    
+          <div class="ms-auto ">
+            
+            <a href="" class="px-3 btn d-flex flex-column text-center" style="color: var(--bookNow-color); background-color: #007BFF;" > <i class="fa-regular fa-clipboard"></i> Book now</a>
+          </div>
+      </div>
+            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+              <div class="offcanvas-header">
+                <h5 class="offcanvas-title " id="offcanvasNavbarLabel">Menu</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              </div>
+              <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                  <li class="nav-item">
+                    <a class=" nav-link " aria-current="page" href="./index.html"><i class=" fa-solid fa-house"></i> Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./handbook.html"><i class="fa-solid fa-book-medical"></i> Handbook</a>
+                  </li>
+                  <li class="nav-item">
+    
+                    <a class="nav-link" href="./contact.html"><i class="fa-regular fa-handshake"></i> Contact</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./business.html"><i class="fa-solid fa-building"></i> Business heath</a>
+    
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link fw-semibold active" href="./digital.html"><i class="fa-solid fa-folder"></i> Digital Transformation Package</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./Recruitment.html"><i class="fa-solid fa-users"></i> Recruitment</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./patient.html"><i class="fa-solid fa-hospital-user"></i> Patitent</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./doctor.html"><i class="fa-solid fa-user-doctor"></i> Doctor</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./roleOf.html"><i class="fa-solid fa-flag"></i> Role of bookingcare</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./hotLine.html"><i class="fa-solid fa-phone"></i> Hotline</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./fAQ.html"><i class="fa-solid fa-question"></i> FAQ</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="./terms.html"><i class="fa-solid fa-scroll"></i> Terms</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </nav>
+     </div>
+     <header>
+        <div class="container mt-4">
+          <nav aria-label="breadcrumb ">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item ms-3">
+                <a href="/index.html"><i class="fa-solid fa-house"></i> </a>
+              </li>
+              <li class="breadcrumb-item active">Recruitment</li>
+            </ol>
+          </nav>
+        </header>
+
+    <!-- DashBoard -->
+    <div class="container">
+        <!-- Phần lớn -->
+        <div class="large-section">
+            <img src="https://cdn.bookingcare.vn/fo/w828/2024/09/04/140823-tuyen-dung-thuc-tap-sinh-cx-5.jpg" alt="Placeholder Image for Large Section">
+            <h1>1. Cấu trúc 7 bước chi tiết và linh hoạt của BookingCare</h1>
+        
+            <p>Điểm nổi bật đầu tiên trong quy trình của BookingCare là cấu trúc 7 bước được định nghĩa rõ ràng. Từ phân tích yêu cầu cơ bản đến theo dõi sau khi ra mắt, mỗi bước đều được thiết kế để đảm bảo hạn chế sai sót ở bất kỳ khía cạnh quan trọng nào của quá trình phát triển. Sự chi tiết này giúp đội ngũ có thể nắm bắt và thực hiện công việc một cách có hệ thống, đồng thời vẫn duy trì được tính linh hoạt cần thiết để đáp ứng với những thay đổi nhanh chóng của thị trường.</p>
+            
+            <h2>2. Phối hợp chặt chẽ giữa các bộ phận</h2>
+            <p>Sự phối hợp chặt chẽ giữa các bộ phận, đặc biệt là giữa đội ngũ Nghiên cứu người dùng (BA), phát triển (Dev) và kiểm thử (Tester), là một yếu tố quan trọng trong quá trình phát triển sản phẩm. Việc phối hợp với nhau ngay từ giai đoạn đầu giúp đảm bảo rằng các yêu cầu kỹ thuật và kế hoạch kiểm thử được xây dựng song song, tạo nền tảng vững chắc cho quá trình phát triển sau này.</p>
+            
+            <h2>3. Mô hình sprint hai tuần</h2>
+            <p>Việc áp dụng mô hình sprint hai tuần cho mỗi tính năng là một điểm nổi bật trong quy trình của BookingCare. Điều này không chỉ giúp duy trì tốc độ phát triển nhanh mà còn tạo ra một nhịp điệu làm việc ổn định, giúp đội ngũ tập trung và đạt hiệu quả cao hơn trong từng giai đoạn ngắn.</p>
+            
+            <h2>4. Ưu tiên hóa tính năng dựa trên tác động</h2>
+            <p>BookingCare đặc biệt chú trọng việc sắp xếp các tính năng theo thứ tự ưu tiên và mức độ tác động. Cách tiếp cận này đảm bảo rằng những tính năng quan trọng nhất, có ảnh hưởng lớn nhất đến người dùng và mục tiêu kinh doanh, sẽ được phát triển trước. Điều này giúp tối ưu hóa nguồn lực và mang lại giá trị nhanh chóng cho sản phẩm.</p>
+            
+            <h2>5. Quy trình theo dõi sau ra mắt</h2>
+            <p>Chúng tôi không kết thúc quy trình ở giai đoạn ra mắt sản phẩm. Việc theo dõi sản phẩm thể hiện cam kết của công ty trong việc liên tục cải tiến sản phẩm. Bằng cách theo dõi chặt chẽ các chỉ số tác động và phản hồi từ người dùng, từ đó chúng tôi có thể nhanh chóng điều chỉnh và tối ưu hóa sản phẩm, đảm bảo luôn đáp ứng được nhu cầu thực tế của thị trường.</p>
+            
+            <h2>6. Cân bằng giữa cấu trúc và linh hoạt</h2>
+            <p>Điểm khác biệt cuối cùng trong Quy trình phát triển sản phẩm của BookingCare là khả năng cân bằng giữa một cấu trúc rõ ràng và tính linh hoạt cần thiết. Mặc dù có 7 bước cụ thể, quy trình vẫn cho phép sự điều chỉnh và tùy biến để phù hợp với từng dự án cụ thể. Điều này giúp đội ngũ có thể làm việc trong một khuôn khổ có tổ chức nhưng vẫn đủ linh hoạt để đối phó với những thách thức không lường trước được.</p>
+            
+            <p>Quy trình phát triển sản phẩm của BookingCare không chỉ là một công cụ quản lý dự án hiệu quả mà còn là minh chứng rõ nét cho sự đổi mới không ngừng và tinh thần đồng đội của chúng tôi. Mỗi sprint, mỗi cuộc họp, mỗi dòng code chúng tôi viết đều thể hiện sự đoàn kết và cam kết của toàn đội. Chúng tôi cùng nhau vượt qua những thách thức, học hỏi từ những sai lầm và không ngừng cải tiến để cùng nhau thực hiện hóa sứ mệnh mang đến những sản phẩm tốt nhất cho khách hàng.</p>
+        </div>
+    
+        <!-- Phần nhỏ -->
+        <div class="small-section">
+            <h1>Nội Dung Chính</h1>
+            <p>1. Chất lượng nội dung - Chìa khóa giúp BookingCare ontop Google</p>
+            <p>2. Phối hợp chặt chẽ giữa các bộ phận</p>
+            <p>3. Mô hình sprint hai tuần</p>
+            <p>4. Ưu tiên hóa tính năng dựa trên tác động</p>
+            <p>5. Quy trình theo dõi sau ra mắt</p>
+            <p>6. Cân bằng giữa cấu trúc và linh hoạt</p>
+        </div>
+    </div>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</html>
