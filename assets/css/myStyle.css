@@ -710,9 +710,10 @@
   justify-content: center;
   max-height: 120px;
   display: flex;
-  overflow-x: auto;
+  overflow-x: auto; 
+  overflow: hidden;
 }
-
+  
 .benhvien_01::-webkit-scrollbar{
   width: 0;
 }
