@@ -1,35 +1,261 @@
-.header {
-    background-color: #64B9E5;
-    color: white;
-    padding: 10px 20px;
+:root {
+    --custom-primary-color: #0d6efd;
+    --custom-border-radius: 25px;
+    --custom-input-bg: #ffffff;
+    --custom-shadow-color: rgba(0, 0, 0, 0.1);
+    --custom-transition-speed: 0.3s;
 }
-.content-header {
-    background-color: #64B9E5;
+
+
+
+.custom-feedback-container {
+    max-width: 900px;
+    background: white;
+    padding: 2.5rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.custom-title {
+    text-align: center;
+    color: var(--custom-primary-color);
+    margin-bottom: 2.5rem;
+}
+
+.custom-title h3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-top: 15px;
+}
+
+.custom-rocket-icon {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto;
+    animation: custom-float 3s ease-in-out infinite;
+}
+
+@keyframes custom-float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+}
+
+.custom-form-layout {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.custom-input-group {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.custom-form-control {
+    width: 100%;
+    padding: 12px 20px;
+    border: 1.5px solid #e0e0e0;
+    border-radius: var(--custom-border-radius);
+    background: var(--custom-input-bg);
+    transition: all var(--custom-transition-speed);
+    font-size: 0.95rem;
+}
+
+.custom-form-control:focus {
+    border-color: var(--custom-primary-color);
+    box-shadow: 0 0 0 4px rgba(13, 110, 253, 0.1);
+    outline: none;
+}
+
+.custom-question-text {
+    color: #666;
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.custom-radio-group {
+    display: flex;
+    gap: 25px;
+    margin: 10px 0;
+}
+
+.custom-radio-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+.custom-radio-label input[type="radio"] {
+    appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #ddd;
+    border-radius: 50%;
+    margin-right: 8px;
+    position: relative;
+    transition: all var(--custom-transition-speed);
+}
+
+.custom-radio-label input[type="radio"]:checked {
+    border-color: var(--custom-primary-color);
+}
+
+.custom-radio-label input[type="radio"]:checked::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    background-color: var(--custom-primary-color);
+    border-radius: 50%;
+    animation: custom-scale-in 0.2s ease-in-out;
+}
+
+@keyframes custom-scale-in {
+    from { transform: translate(-50%, -50%) scale(0); }
+    to { transform: translate(-50%, -50%) scale(1); }
+}
+
+.custom-rating-circles {
+    display: flex;
+    gap: 8px;
+    margin: 12px 0;
+}
+
+.custom-rating-circle {
+    width: 24px;
+    height: 24px;
+    border: 2px solid #ddd;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all var(--custom-transition-speed);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    color: transparent;
+}
+
+.custom-rating-circle:hover {
+    border-color: var(--custom-primary-color);
+    transform: scale(1.1);
+}
+
+.custom-rating-circle.active {
+    background-color: var(--custom-primary-color);
+    border-color: var(--custom-primary-color);
     color: white;
-    padding: 10px 20px;
+}
+
+textarea.custom-form-control {
+    min-height: 120px;
+    resize: vertical;
+    grid-column: 1 / -1;
+}
+
+.custom-btn-send {
+    background: linear-gradient(to right, #c2c2c2, #b0b0b0);
+    color: #333;
+    border: none;
+    padding: 12px 40px;
+    border-radius: 25px;
+    font-weight: 500;
+    transition: all var(--custom-transition-speed);
+    width: 250px;
+    margin: 20px auto 0;
+    display: block;
+}
+
+.custom-btn-send:hover {
+    background: linear-gradient(to right, #0d6efd, #0b5ed7);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(13, 110, 253, 0.3);
+}
+
+.custom-input-error {
+    border-color: #dc3545 !important;
+}
+
+.custom-error-message {
+    color: #dc3545;
+    font-size: 0.8rem;
+    margin-top: 5px;
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .custom-form-layout {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .custom-feedback-container {
+        padding: 1.5rem;
+    }
+
+    .custom-title h3 {
+        font-size: 1.5rem;
+    }
+
+    .custom-radio-group {
+        gap: 15px;
+    }
+
+    .custom-rating-circles {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+/* Animation for form submission */
+@keyframes custom-success-animation {
+    0% { transform: scale(0.8); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.custom-success-message {
+    display: none;
+    text-align: center;
+    color: #28a745;
     margin-top: 20px;
+    animation: custom-success-animation 0.5s ease-out;
 }
-.editor-toolbar {
-    border: 1px solid #ddd;
-    padding: 10px;
-    border-bottom: none;
-    background-color: #f8f9fa;
+
+/* Floating labels */
+.custom-input-group {
+    position: relative;
 }
-.editor-toolbar button {
-    margin-right: 5px;
-    padding: 5px 10px;
-    background: none;
-    border: 1px solid #ddd;
-    border-radius: 3px;
+
+.custom-form-control::placeholder {
+    color: transparent;
+    transition: all var(--custom-transition-speed);
 }
-.editor-content {
-    border: 1px solid #ddd;
-    min-height: 200px;
-    padding: 10px;
+
+.custom-form-control:focus::placeholder {
+    color: #999;
 }
-.table-header {
-    background-color: #e8f5e9;
+
+.custom-floating-label {
+    position: absolute;
+    top: 50%;
+    left: 20px;
+    transform: translateY(-50%);
+    background-color: white;
+    padding: 0 5px;
+    color: #999;
+    transition: all var(--custom-transition-speed);
+    pointer-events: none;
 }
-.required {
-    color: red;
+
+.custom-form-control:focus + .custom-floating-label,
+.custom-form-control:not(:placeholder-shown) + .custom-floating-label {
+    top: 0;
+    font-size: 0.8rem;
+    color: var(--custom-primary-color);
 }
