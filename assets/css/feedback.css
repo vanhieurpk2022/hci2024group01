@@ -166,7 +166,7 @@ textarea.custom-form-control {
     border-radius: 25px;
     font-weight: 500;
     transition: all var(--custom-transition-speed);
-    width: 180px;
+    width: 250px;
     margin: 20px auto 0;
     display: block;
 }
