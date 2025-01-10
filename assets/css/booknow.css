@@ -1,38 +1,378 @@
-.table-container {
-    margin: 20px;
-    overflow-x: auto;
+:root {
+    --primary-blue: #0078c5;
+    --secondary-blue: #E5F0F9;
+    --border-blue: #A5CCE8;
+    --confirm-green: #45B76E;
+    --hover-green: #3da562;
+    --text-gray: #637381;
+    --required-red: #FF4D4F;
 }
-.booking-table {
-    width: 80%;
-    border-collapse: collapse;
+    .banner {
+            position: relative;
+            height: 300px;
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+            url('../img/360_F_80357750_7GeHX2Hh8XJKPv8jK5dMcIA9Rxejyxpw.jpg');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .banner-title {
+            color: white;
+            font-size: 2.5rem;
+            font-weight: 700;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .action-buttons {
+            position: absolute;
+            bottom: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            gap: 2px;
+            width: 90%;
+            max-width: 600px;
+        }
+
+        .action-button {
+            flex: 1;
+            padding: 15px 20px;
+            text-align: center;
+            color: white;
+            border: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            transition: all 0.3s ease;
+        }
+
+        .action-button:hover {
+            transform: translateY(-3px);
+            text-decoration: none;
+            color: white;
+        }
+
+        .consult {
+            background-color: #0088CC;
+        }
+
+        .booking {
+            background-color: #F4A460;
+        }
+
+        .find-doctor {
+            background-color: #66CDAA;
+        }
+
+        .action-button i {
+            font-size: 1.2rem;
+        }
+
+        @media (max-width: 768px) {
+            .action-buttons {
+                flex-direction: column;
+                bottom: -90px;
+            }
+
+            .banner {
+                height: 400px;
+            }
+
+            .banner-title {
+                font-size: 2rem;
+                padding: 0 20px;
+            }
+        }
+body {
+    background-color: #F8FAFB;
 }
-.booking-table th {
-    background-color: #acb0b4;
-    padding: 12px;
-    text-align: left;
-    border: 1px solid #dee2e6;
+
+ /* ... các style khác giữ nguyên ... */
+
+    /* Thêm các style mới cho input */
+    .form-select, 
+    .form-control {
+        border-color: var(--border-blue);
+        color: var(--text-gray);
+        background-color: #F8F9FA; /* Màu nền xám mặc định */
+    }
+
+    .form-select:focus, 
+    .form-control:focus {
+        border-color: var(--primary-blue);
+        box-shadow: 0 0 0 0.2rem rgba(0,102,179,0.25);
+        background-color: white; /* Khi focus thì chuyển nền thành màu trắng */
+    }
+
+    /* Style cho placeholder */
+    .form-select::placeholder,
+    .form-control::placeholder {
+        color: #9EA5AB;
+    }
+
+    /* Style cho select options */
+    .form-select option {
+        background-color: white;
+    }
+
+    /* Style đặc biệt cho textarea */
+    textarea.form-control {
+        background-color: #F8F9FA;
+    }
+
+    /* Style cho trạng thái hover */
+    .form-select:hover,
+    .form-control:hover {
+        background-color: #F3F4F6;
+    }
+
+    /* Style cho trạng thái disabled */
+    .form-select:disabled,
+    .form-control:disabled {
+        background-color: #E9ECEF;
+        cursor: not-allowed;
+    }
+.form-container {
+    margin: 20px auto;
+    padding: 20px;
+    background-color: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
 }
-.booking-table td {
-    padding: 8px;
-    border: 1px solid #dee2e6;
+
+.section-title {
+    background-color: white;
+    padding: 10px 0;
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--primary-blue);
 }
-.status-cell {
+
+.label_color {
+    color: var(    --primary-blue   ) !important;
+    font-weight: 700 !important; 
+    
+}
+
+.form-label {
+    color: var(--text-gray);
+    font-weight: 500;
+}
+
+.form-select, .form-control {
+    border-color: var(--border-blue);
+    color: var(--text-gray);
+}
+
+.form-select:focus, .form-control:focus {
+    border-color: var(--primary-blue);
+    box-shadow: 0 0 0 0.2rem rgba(0,102,179,0.25);
+}
+
+.appointment-dates {
     display: flex;
     gap: 10px;
+    margin-bottom: 15px;
 }
-.time-cell {
+
+.date-box {
+    border: 1px solid var(--border-blue);
+    padding: 10px;
+    text-align: center;
+    min-width: 80px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.date-box:hover {
+    background-color: var(--secondary-blue);
+}
+
+.date-box.active {
+    background-color: var(--primary-blue);
+    color: white;
+    border-color: var(--primary-blue);
+}
+
+.required::after {
+    content: "*";
+    color: var(--required-red);
+    margin-left: 2px;
+}
+
+.note {
+    font-size: 0.85rem;
+    color: var(--text-gray);
+    margin-top: 5px;
+    font-style: italic;
+}
+
+.confirm-btn {
+    background-color: var(--confirm-green);
+    color: white;
+    border: none;
+    padding: 12px 50px;
+    border-radius: 25px;
+    font-weight: 500;
+    transition: all 0.3s;
+}
+
+.confirm-btn:hover {
+    background-color: var(--hover-green);
+    transform: translateY(-1px);
+    box-shadow: 0 2px 5px rgba(69,183,110,0.3);
+}
+
+.form-check-input:checked {
+    background-color: var(--primary-blue);
+    border-color: var(--primary-blue);
+}
+
+.form-check-label {
+    color: var(--text-gray);
+}
+
+a {
+    color: var(--primary-blue);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Custom radio button styles */
+.gender-group {
     display: flex;
+    gap: 15px;
+}
+
+.gender-option {
+    display: flex;
+    align-items: center;
     gap: 5px;
 }
-.action-buttons {
+
+.gender-option input[type="radio"] {
+    accent-color: var(--primary-blue);
+}
+
+/* Custom styles for disabled states */
+.form-control:disabled, 
+.form-select:disabled {
+    background-color: #f8f9fa;
+    cursor: not-allowed;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .form-container {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    .appointment-dates {
+        flex-wrap: wrap;
+    }
+
+    .date-box {
+        flex: 1 1 calc(50% - 5px);
+    }
+}
+.hotline-modal {
+    max-width: 400px;
+    margin: 20px auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 20px;
+    position: relative;
+}
+
+.hotline-header {
     display: flex;
-    gap: 5px;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
 }
-.btn-add {
-    background-color: #198754;
-    color: white;
+
+.hotline-title {
+    font-size: 20px;
+    color: #0066cc;
+    font-weight: bold;
 }
-.btn-cancel {
-    background-color: #dc3545;
+
+.close-button {
+    border: none;
+    background: none;
+    font-size: 20px;
+    color: #666;
+}
+
+.hotline-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.hotline-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.location {
+    color: #333;
+}
+
+.phone-number {
+    color: #0066cc;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.app-download {
+    margin-top: 20px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.app-text {
+    color: #666;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.download-button {
+    background: #0066cc;
     color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.customer-service {
+    margin-top: 15px;
+    padding: 10px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.submit-button {
+    background: #0066cc;
+    color: white;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 5px;
+    width: 100%;
 }
