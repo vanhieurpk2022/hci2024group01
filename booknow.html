@@ -20,6 +20,71 @@
    
   </head>
   <body>
+   <!-- Modal -->
+   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+       
+        <div class="modal-body">
+                <div class="hotline-header">
+                    <div class="hotline-title">Hotline</div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+
+                </div>
+        
+                <ul class="hotline-list">
+                    <li class="hotline-item">
+                        <span class="location">Vinmec Times City</span>
+                        <a href="tel:02439743556" class="phone-number">0243 9743 556</a>
+                    </li>
+                    <li class="hotline-item">
+                        <span class="location">Vinmec Central Park</span>
+                        <a href="tel:02836221166" class="phone-number">0283 6221 166</a>
+                    </li>
+                    <li class="hotline-item">
+                        <span class="location">Vinmec Đà Nẵng</span>
+                        <a href="tel:02363711111" class="phone-number">0236 3711 111</a>
+                    </li>
+                    <li class="hotline-item">
+                        <span class="location">Vinmec Nha Trang</span>
+                        <a href="tel:02583900168" class="phone-number">0258 3900 168</a>
+                    </li>
+                    <li class="hotline-item">
+                        <span class="location">Vinmec Hải Phòng</span>
+                        <a href="tel:02257309888" class="phone-number">0225 7309 888</a>
+                    </li>
+                    <li class="hotline-item">
+                        <span class="location">Vinmec Hạ Long</span>
+                        <a href="tel:02033828188" class="phone-number">0203 3828 188</a>
+                    </li>
+                    <li class="hotline-item">
+                        <span class="location">Vinmec Phú Quốc</span>
+                        <a href="tel:02973985588" class="phone-number">0297 3985 588</a>
+                    </li>
+                    <li class="hotline-item">
+                        <span class="location">Tư vấn dịch vụ</span>
+                        <a href="tel:02439756789" class="phone-number">0243 9756 789</a>
+                    </li>
+                    <li class="hotline-item">
+                        <span class="location">Trung tâm Công nghệ cao</span>
+                        <a href="tel:0936246199" class="phone-number">0936 246 199</a>
+                    </li>
+                </ul>
+        
+            
+                <div class="customer-service">
+                    <div class="app-text">
+                        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%230066cc' class='bi bi-headset' viewBox='0 0 16 16'%3E%3Cpath d='M8 1a5 5 0 0 0-5 5v1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a6 6 0 1 1 12 0v6a2.5 2.5 0 0 1-2.5 2.5H9.366a1 1 0 0 1-.866.5h-1a1 1 0 1 1 0-2h1a1 1 0 0 1 .866.5H11.5A1.5 1.5 0 0 0 13 12h-1a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h1V6a5 5 0 0 0-5-5z'/%3E%3C/svg%3E" style="margin-right: 8px;">
+                        24/7 Customers Service
+                    </div>
+                    <button class="submit-button">Submit</button>
+                </div>
+        </div>
+      
+      </div>
+    </div>
+  </div> 
+
     <div class="" style="background-color: #EFF5FF;">
       <div class="d-none d-md-flex">
         <div class="container d-flex flex-row ">
@@ -164,142 +229,181 @@
       </nav>
    </div>
     
-
-   <main class="maincontainer_book">  
-  <div class="container">
-      <nav aria-label="breadcrumb ">
-        <ol class="breadcrumb">
-          <li class="breadcrumb-item ms-3">
-            <a href="./index.html"><i class="fa-solid fa-house"></i> </a>
-          </li>
-          <li class="breadcrumb-item active">appointment schedule</li>
-        </ol>
-      </nav>
-      <h4>Appointment schedule</h4>
-
-      <div class="container ">
-        <p class="d-inline-flex gap-1 mt-3 ">
-            <a class="btn btn-primary" data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
-              <i class="fa-solid fa-plus"></i>
-            </a>
-        </p>
-        <div class="collapse border" id="collapseExample">
-            <div class="container form-container formnhapBook">
-                    <div class="row">
-                      <div class="col-md-6">
-                        <label class="form-label required-field">guest</label>
-                        <div class="search-container">
-                          <input type="text" class="form-control border" placeholder="Search by case code, phone number, full name...
-                          ">
-                       </div>
-                       
-                       <label class="form-label required-field mt-3">doctor</label>
-                       <select class="form-select">
-                           <option selected>doctor</option>
-                           <option >doctor A</option>
-                           <option >doctor B</option>
-                           <option >doctor C</option>
-                       </select>
-                      </div>
-
-                      <div class="col-md-6">
-                        <label class="form-label required-field">phone</label>
-                        <div class="search-container">
-                          <input type="text" class="form-control border" placeholder="Phone number">
-                       </div>
-
-                       <label class="form-label mt-3">classify</label>
-                        <select class="form-select">
-                            <option selected>New examination</option>
-                            <option >old examination
-                            </option>
-                        </select>
-                      </div>
-                    </div>
-
-
-                      <div class="mt-4 d-flex justify-content-around">
-                        <div class="form-check form-check-inline">
-                            <label class="form-check-label">book
-                              <input class="form-check-input" type="radio" name="appointmentType" checked></label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            
-                            <label class="form-check-label">Arise
-                              <input class="form-check-input" type="radio" name="appointmentType">
-                            </label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                            <label class="form-check-label">Expected
-                              <input class="form-check-input" type="radio" name="appointmentType">
-
-                            </label>
-                        </div>
-                    </div>
-
-
-
-                      <div class="mt-3 d-flex flex-row"><label class="form-label required-field me-3 ">time</label></div>
-
-                      <div class="row ">
-                        <div class="col-md-4"><input type="date" class="form-control border" value="2023-11-29">
-                        </div>
-                        <div class="col-md-4">   
-                          <input type="time" class="form-control border" value="10:00">
-
-                        </div>
-                        <div class="col-md-4">
-
-                          <select class="form-select">
-                            <option selected>15 phút</option>
-                        </select>
-                        </div>
-
-                        
-                        <!-- text area -->
-
-                        <div class="mt-3">
-                          <label class="form-label">note</label>
-                          <textarea class="form-control border " style="resize: none;" rows="3" placeholder="note..."></textarea>
-                      </div>
-
-                      <div class="d-grid gap-2 d-md-flex justify-content-md-center">
-                        <button class="btn btn-success px-4" type="submit">add</button>
-                        <button class="btn btn-danger px-4" type="button">cancel</button>
-                    </div>
-                  </div>
-                    
-            </div>
-        </div>
-    </div>
-
-
+   <header>
+    <div class="banner">
+      <h1 class="banner-title">MAKE AN APPOINTMENT</h1>
+      <div class="action-buttons">
+          <a href="#" class="action-button consult rounded" data-bs-toggle="modal" data-bs-target="#exampleModal">
+              <i class="bi bi-telephone-fill"></i>
+              Consult
+          </a>
+          <a href="#" class="action-button booking rounded">
+              <i class="bi bi-calendar-check"></i>
+              Booking
+          </a>
+          <a href="./professionals.html" class="action-button find-doctor rounded">
+              <i class="bi bi-person"></i>
+              Find a doctor
+          </a>
+      </div>
   </div>
-   </main>
+   </header>
+   <main class="maincontainer_book">  
+  <div class="container form-container">
+      <div class="container">
+        <nav aria-label="breadcrumb " class="mt-3">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item ms-3">
+              <a href="./index.html"><i class="fa-solid fa-house"></i> </a>
+            </li>
+            <li class="breadcrumb-item active">Booking</li>
+          </ol>
+        </nav>
+      </div>
 
-   <div class="table-container d-flex justify-content-center align-items-center" style="margin-top: 5%;">
-    <table class="booking-table">
-        <thead>
-            <tr >
-                <th >guest</th>
-                <th >phone</th>
-                <th >doctor</th>
-                <th >Classify</th>
-                <th >status</th>
-                <th >time</th>
-                <th >comment</th>
-            </tr>
-        </thead>
-        <tbody>
-            <td colspan="7" class="text-center opacity-75" style="color: rgb(116, 44, 44);">bạn chưa có lịch hẹn nào</td>
-        </tbody>
-    </table>
-</div>
-      
+        <form>
+            <!-- Appointment Details Section -->
+            <div class="section-title">
+                <h5 class="text-start mb-0">Appointment details</h5>
+            </div>
+
+            <div class="row mb-4">
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label class="label-color form-label required label_color">Vinmec Hospital/Clinic</label>
+                        <select class="form-select">
+                            <option>Preferred healthcare facility</option>
+                            <option value="1">Vinmec Times City (Ha Noi)</option>
+                            <option value="3">Vinmec Central Park (Ho Chi Minh)</option>
+                            <option value="9">Vinmec Hai Phong</option>
+                            <option value="8">Vinmec Ha Long</option>
+                            <option value="7">Vinmec Nha Trang</option>
+                            <option value="10">Vinmec Da Nang</option>
+                            <option value="6">Vinmec Phu Quoc</option>
+                            <option value="12">Vinmec Duong Dong Clinic</option>
+                            <option value="11">Vinmec Sai Gon Clinic</option>
+                            <option value="14">Vinmec Smart City (Ha Noi)</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label required label_color" >Specialty</label>
+                        <select class="form-select">
+                            <option value="" disabled="" selected="">Preferred specialty</option><option value="0">Not decided yet</option><option value="30">General Practice</option><option value="7">Dermatology</option><option value="24">Ophthalmology</option><option value="47">Orthopedic surgery</option><option value="22">Nephrology &amp; Urology</option><option value="63">Gastroenterological surgery</option><option value="28">Pediatrics</option><option value="18">Endocrinology</option><option value="83">Gastroenterological medicine</option><option value="84">Cardiological medicine</option><option value="6">Dentistry</option><option value="86">Gynecology &amp; Obstetrics</option><option value="21">E.N.T.</option><option value="50">Vaccine</option><option value="15">Gastroenterology</option><option value="19">Infectious Disease</option>
+                        </select>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label label_color" >Doctor</label>
+                        <select class="form-select">
+                            <option value="" selected="">Preferred doctor</option><option value="17615">Doctor Bùi Thị Liễu</option><option value="17614">Doctor Nguyễn Thị Tuyên</option><option value="17074">Doctor Đỗ Văn Cường</option><option value="16552">Doctor Nguyễn Trung Thành</option><option value="16551">Doctor Nguyễn Thái Bình - Specialist Level 2 Doctor</option><option value="16549">Doctor Hoàng Đăng Mịch</option><option value="16482">Doctor Hoàng Thị Trang</option><option value="16481">Doctor Nguyễn Huyền Nhung - MSc, MD</option><option value="16474">Doctor Hoàng Thị Thanh Hoa - Specialist Level 1 Doctor</option><option value="16278">Doctor Đỗ Đăng Duân - Specialist Level 1 Doctor</option><option value="16277">Doctor Đặng Tiến Đạt - MSc, MD</option><option value="16254">Doctor Đặng Tiến Lâm</option><option value="16112">Doctor Lê Văn Phú</option><option value="16088">Doctor Nguyễn Mạnh Hải - Specialist Level 2 Doctor</option><option value="16086">Doctor Lại Thị Nguyệt Hằng - Specialist Level 2 Doctor</option><option value="16085">Doctor Lê Thị Phương</option><option value="16084">Doctor Trần Mạnh Linh</option><option value="15138">Doctor Nguyễn Phương Thảo - MSc, MD</option><option value="15136">Doctor Nguyễn Văn Thành - MSc, MD</option><option value="15127">Doctor Ngô Thị Oanh - MSc, MD</option><option value="15124">Specialist Đặng Thị Ngoan - Specialist Level 1 Doctor, Resident Doctor</option><option value="15115">Doctor Trần Thanh Hùng - MSc, MD</option><option value="15109">Doctor Lê Khắc Hiệu - Specialist Level 1 Doctor</option><option value="15104">Doctor Lưu Hồng Hải - Associate Professor Ph.D, MD</option><option value="15103">Doctor Đồng Xuân Hà - Specialist Level 1 Doctor</option><option value="15098">Specialist Bùi Thị Hà - Specialist Level 1 Doctor</option><option value="15093">Doctor Đoàn Dư Đạt - Senior Consultant, Specialist Level 2 Doctor</option><option value="15072">Doctor Lê Thị Thu Hằng - Specialist Level 1 Doctor</option><option value="1">Doctor Doctor Test Việt</option>
+                        </select>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input border" type="checkbox" id="foreignerCheck">
+                        <label class="form-check-label"  for="foreignerCheck">
+                            Booking for a foreigner
+                        </label>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <label class="form-label required " >Appointment</label>
+                    <div class="appointment-dates">
+                        <div class="date-box active">
+                            <div>10/01</div>
+                            <small>Friday</small>
+                        </div>
+                        <div class="date-box">
+                            <div>11/01</div>
+                            <small>Saturday</small>
+                        </div>
+                        <div class="date-box">
+                            <div>12/01</div>
+                            <small>Sunday</small>
+                        </div>
+                        <div class="date-box">
+                            <div><i class="bi bi-calendar"></i></div>
+                            <small>Other date</small>
+                        </div>
+                    </div>
+                    <div class="note">
+                        *Note: Above are expected time slots only; our Contact Center will contact you to confirm the exact time of your appointment
+                    </div>
+                </div>
+            </div>
+
+            <!-- Patient's Information Section -->
+            <div class="section-title">
+                <h5 class="mb-0 text-start">Patient's information</h5>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label class="form-label required label_color" >Name</label>
+                        <div class="input-group">
+                            <input type="text" class="form-control border" placeholder="Name">
+                            <div class="ms-3">
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input border" type="radio" name="gender" id="male">
+                                    <label class="form-check-label" for="male">Male</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input border" type="radio" name="gender" id="female">
+                                    <label class="form-check-label" for="female">Female</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label required label_color" >Phone number</label>
+                        <input type="tel" class="form-control border" placeholder="Input phone number to get OTP">
+                        <div class="note">
+                            *Note: Only Vietnamese phone numbers can receive SMS messages from Vinmec. Please include a valid email address if you use a foreign phone number in order to obtain the OTP code and the appointment confirmation.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="mb-3">
+                        <label class="label_color form-label required " >Date of birth</label>
+                        <input type="date" class="form-control border">
+                    </div>
+
+                    <div class="mb-3">
+                        <label class="form-label label_color">Email</label>
+                        <input type="email" class="form-control border" placeholder="Enter email">
+                    </div>
+                </div>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label required label_color" >Reason for checkup</label>
+                <textarea class="form-control border" style="resize: none;" rows="4" placeholder="Reason for checkup"></textarea>
+            </div>
+
+            <div class="mb-4">
+                <div class="form-check">
+                    <input class="form-check-input border" type="checkbox" id="privacyCheck">
+                    <label class="form-check-label" for="privacyCheck">
+                        I have read, understood and agreed to the <a href="#">Personal Data Protection Policy of Vinmec</a> and consent to Vinmec processing my personal data in accordance with the laws on personal data protection.
+                    </label>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <button type="submit" class="confirm-btn">Confirm</button>
+            </div>
+        </form>
+    
+    </main>
 
     <!-- nhung javascript -->
      <!-- Footer -->
-     <footer class="footer" style="margin-top: 750px;">
+     <footer class="footer mt-5" >
       <div class="container">
           <div class="row gy-4">
               <div class="col-lg-3 col-md-6">
