@@ -725,3 +725,51 @@
   text-align: center;
   margin-right: 2px;
 }
+
+
+
+
+.media-section {
+  margin-bottom: 40px;
+}
+
+.media-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.media-card img {
+  height: auto;
+  border-radius: 5px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.partner-banner {
+  background: linear-gradient(to right, #e6f7ff, #ffffff);
+  padding: 30px;
+  border-radius: 10px;
+  margin-bottom: 40px;
+}
+
+.children-banner {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.children-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.logo_03 {
+  max-height:250px;
+}
+
+.hotline {
+  color: #0066cc;
+  font-weight: bold;
+}
