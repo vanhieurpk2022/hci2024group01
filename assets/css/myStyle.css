@@ -3,11 +3,12 @@
   --bs-light-blue: #e3f2fd;
   --bs-icon-blue: #2196f3;
 }
-* a {
-  text-decoration: none;
-}
+
 .icon-bg {
   background: linear-gradient(120deg, #e3f2fd, #bbdefb);
+}
+* a{
+  text-decoration: none !important;
 }
 
 .menu-item {
