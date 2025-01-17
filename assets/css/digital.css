@@ -1,12 +1,8 @@
-/* Basic Reset */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+
+
+* a{
+    text-decoration: none;
 }
-
-
-
 /* Header */
 .header {
     display: flex;
@@ -68,7 +64,7 @@
 }
 
 .contact-button:hover {
-    background-color: #0056b3;
+    background-color: #e8c870;
 }
 
 .hero h1 {
@@ -165,19 +161,7 @@
     margin: 0.5rem 0;
 }
 
-/* Footer */
-.footer {
-    background-color: #333;
-    color: #fff;
-    padding: 1.5rem;
-    text-align: center;
-}
 
-.footer-links a {
-    margin: 0 0.5rem;
-    color: #fff;
-    text-decoration: none;
-}
 /* Modal Background */
 .modal {
     display: none;

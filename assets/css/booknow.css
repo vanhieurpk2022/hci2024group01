@@ -7,6 +7,9 @@
     --text-gray: #637381;
     --required-red: #FF4D4F;
 }
+* a{
+    text-decoration: none !important;
+}
     .banner {
             position: relative;
             height: 300px;

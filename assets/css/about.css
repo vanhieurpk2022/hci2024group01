@@ -1,4 +1,8 @@
 :root {
+    --primary-blue: #007bff;
+    --secondary-blue: #0066ff;
+    --light-blue: #e5f1ff;
+    --dark-blue: #034ea2;
     --banner-height-desktop: 400px;
     --banner-height-tablet: 350px;
     --banner-height-mobile: 250px;
@@ -6,8 +10,8 @@
 }
 
 body{
-    --tw-bg-opacity:1;
-    background-color: rgb(229 241 255 / var(--tw-bg-opacity));
+    --tw-bg-opacity: 1;
+    background-color: white;
 }
 .banner-wrapper {
     padding: 1rem 0.5rem;
@@ -23,7 +27,8 @@ body{
 }
 
 .banner-section {
-    background: url(../img/breadcrumb.png);
+    background: linear-gradient(rgba(0, 123, 255, 0.85), rgba(3, 78, 162, 0.85)), url(../img/breadcrumb.png);
+
     height: var(--banner-height-desktop);
     position: relative;
     border-radius: 25px;
@@ -194,7 +199,8 @@ body{
     }
 }   
 .stats-box {
-    background-color: #007bff;
+    background-color: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     color: white;
     border-radius: 16px;
     padding: 20px;
@@ -203,11 +209,14 @@ body{
     .stats-number {
     font-size: 2.5rem;
     font-weight: bold;
+    color: var(--primary-blue);
+
     }
     
     .stats-label {
     font-size: 0.9rem;
     text-transform: uppercase;
+    color: #6c757d;
     }
     
     .service-item {
@@ -215,17 +224,20 @@ body{
     align-items: center;
     gap: 10px;
     margin-bottom: 15px;
+    color: #4a4a4a;
+
     }
     
     .service-dot {
     width: 8px;
     height: 8px;
-    background-color: #007bff;
+    background-color: var(--primary-blue);
     border-radius: 50%;
     }
     
     .more-about-btn {
-    background-color: #007bff;
+        background-color: var(--primary-blue);
+        border: none;
     color: white;
     padding: 17px 25px;
     border-radius: 25px;
@@ -254,7 +266,7 @@ body{
     
  
     .quote-mark {
-        color: #0d6efd;
+        color: var(--primary-blue);
         font-size: 48px;
         line-height: 0;
     }
@@ -262,6 +274,8 @@ body{
         background-color: white;
         border-radius: 20px;
         padding: 30px;
+        border: 1px solid var(--light-blue);
+
     }
     .avatar {
         width: 60px;
@@ -276,8 +290,7 @@ body{
     }
    
     .bg-medical {
-        background: linear-gradient(to right, #0066ff, #0099ff);
-        padding: 3rem 1rem;
+        background: linear-gradient(to right, var(--dark-blue), var(--primary-blue));        padding: 3rem 1rem;
         overflow: hidden;
     }
     
@@ -289,7 +302,6 @@ body{
     }
 
     .contact-btn {
-        border: 2px solid white;
         color: white;
         padding: 0.75rem 2rem;
         border-radius: 30px;
@@ -298,22 +310,24 @@ body{
         display: inline-block;
         margin-top: 1rem;
         white-space: nowrap;
+        background-color: transparent;
+    border: 2px solid white;
     }
 
     .contact-btn:hover {
         background-color: white;
-        color: #0066ff;
+        color: var(--primary-blue);
     }
 
     .number-circle {
         width: clamp(50px, 8vw, 80px);
         height: clamp(50px, 8vw, 80px);
-        background-color: #0099ff;
         border-radius: 50%;
         display: flex;
         align-items: center;
         justify-content: center;
-        color: white;
+        background-color: white;
+        color: var(--primary-blue);
         font-size: clamp(1.5rem, 3vw, 2rem);
         font-weight: bold;
         margin-right: 1rem;

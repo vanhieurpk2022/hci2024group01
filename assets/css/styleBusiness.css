@@ -126,7 +126,7 @@ footer {
 footer a {
   text-decoration: none;
 }
-.btn {
+.btn01 {
   background-color: #ffc00e;
   color: white;
   border: none;
@@ -137,9 +137,11 @@ footer a {
   margin: 20px auto;
   transition: transform 0.2s; 
   width: 80%;
+  text-align: center;
+  text-decoration: none;
 }
 
-.btn:hover {
+.btn01:hover {
   transform: scale(1.05); 
 }
 @media (max-width: 768px) {
@@ -154,7 +156,7 @@ footer a {
     margin-right: 10px;
   }
   
-  .btn {
+  .btn01 {
     font-size: 20px;
     
   }

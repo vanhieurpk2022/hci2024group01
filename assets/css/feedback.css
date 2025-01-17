@@ -159,8 +159,8 @@ textarea.custom-form-control {
 }
 
 .custom-btn-send {
-    background: linear-gradient(to right, #c2c2c2, #b0b0b0);
-    color: #333;
+    background: var(--custom-primary-color);
+    color: #e7d9d9;
     border: none;
     padding: 12px 40px;
     border-radius: 25px;
@@ -172,7 +172,6 @@ textarea.custom-form-control {
 }
 
 .custom-btn-send:hover {
-    background: linear-gradient(to right, #0d6efd, #0b5ed7);
     color: white;
     transform: translateY(-2px);
     box-shadow: 0 5px 15px rgba(13, 110, 253, 0.3);
