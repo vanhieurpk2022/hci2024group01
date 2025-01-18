@@ -1,261 +1,271 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <!-- favicon -->
-          <link rel="apple-touch-icon" sizes="57x57" href="../assets/img/favicon/apple-icon-57x57.png">
-          <link rel="apple-touch-icon" sizes="60x60" href="../assets/img/favicon//apple-icon-60x60.png">
-          <link rel="apple-touch-icon" sizes="72x72" href="../assets/img/favicon//apple-icon-72x72.png">
-          <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/favicon//apple-icon-76x76.png">
-          <link rel="apple-touch-icon" sizes="114x114" href="../assets/img/favicon/apple-icon-114x114.png">
-          <link rel="apple-touch-icon" sizes="120x120" href="../assets/img/favicon/apple-icon-120x120.png">
-          <link rel="apple-touch-icon" sizes="144x144" href="../assets/img/favicon/apple-icon-144x144.png">
-          <link rel="apple-touch-icon" sizes="152x152" href="../assets/img/favicon/apple-icon-152x152.png">
-          <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/favicon/apple-icon-180x180.png">
-          <link rel="icon" type="image/png" sizes="192x192"  href="../assets/img/favicon/android-icon-192x192.png">
-          <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon/favicon-32x32.png">
-          <link rel="icon" type="image/png" sizes="96x96" href="../assets/img/favicon/favicon-96x96.png">
-          <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicon/favicon-16x16.png">
-          <link rel="manifest" href="../assets/img/favicon/manifest.json"> 
-          <meta name="msapplication-TileColor" content="#ffffff">
-          <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
-          <meta name="theme-color" content="#ffffff">
-      
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="57x57" href="../assets/img/favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="../assets/img/favicon//apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="../assets/img/favicon//apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/favicon//apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="../assets/img/favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="../assets/img/favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="../assets/img/favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="../assets/img/favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="../assets/img/favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="../assets/img/favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="../assets/img/favicon/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
-    <link rel="stylesheet" href="./assets/css/myStyle.css" />
-    <link rel="stylesheet" href="./assets/css/setColor.css">
-    <title>HeathCare</title>
+    <link rel="stylesheet" href="../assets/css/myStyle.css" />
+    <link rel="stylesheet" href="../assets/css/setColor.css">
+    <title>Interview process - HeathCare</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+      .header {
+        background-color: #007BFF;
+        color: #fff;
+        text-align: center;
+        padding: 20px;
+      }
 
-        body {
-            font-family: Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            height: 100vh;
-        }
+      .large-section {
+        flex: 3;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border-right: 1px solid #ccc;
+        overflow-y: auto;
+      }
 
-        .header {
-            background-color: #007BFF;
-            color: #fff;
-            text-align: center;
-            padding: 20px;
-        }
+      .small-section {
+        flex: 1;
+        padding: 20px;
+        background-color: #fff;
+        overflow-y: auto;
+      }
 
-        .container {
-            display: flex;
-            flex-grow: 1;
-            width: 100%;
-        }
+      h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
 
-        .large-section {
-            flex: 3;
-            padding: 20px;
-            background-color: #f9f9f9;
-            border-right: 1px solid #ccc;
-            overflow-y: auto;
-        }
+      p {
+        font-size: 16px;
+        line-height: 1.5;
+        color: #555;
+      }
 
-        .small-section {
-            flex: 1;
-            padding: 20px;
-            background-color: #fff;
-            overflow-y: auto;
-        }
-
-        h1 {
-            font-size: 24px;
-            margin-bottom: 20px;
-        }
-
-        p {
-            font-size: 16px;
-            line-height: 1.5;
-            color: #555;
-        }
-
-        img {
-            max-width: 100%;
-            height: auto;
-            margin-top: 20px;
-        }
- 
+      .large-section img {
+        max-width: 100%;
+        height: auto;
+        margin-top: 20px;
+      }
     </style>
-</head>
-<body>
-     <!-- DashBroad -->
-     <div class="container " >
-        <nav class="navbar bg-body-tertiary">
-          <div class="container" style="color: var(--aqua-color);">
-            
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-          <!-- navBar -->
-          <a class="navbar-brand me-auto d-none d-md-flex" href="./index.html"
-          ><img width="200px" src="./assets/img/logo.png"  alt=""
-        /></a>
-
-        <a class="navbar-brand me-auto d-md-none " href="./index.html"
-        ><img width="150px" src="./assets/img/logo.png"  alt=""
-      /></a>
-    
-          <ul  class="list-unstyled nav-tabs nav-tabs-scroll border-0 mb-3 me-auto mb-2 mb-lg-0 d-flex flex-row  ms-auto order-lg-0 order-1 mt-3 mt-lg-0">
-            <li class="nav-item me-2 me-md-2 ">
-              <a class="nav-link " aria-current="page" href="./index.html"
-                >Home</a>
-            </li>
-    
-            <li class="nav-item me-2 me-md-2">
-              <a class="nav-link " href="./about.html"
-                >About</a
-              >
-            </li>
-            <li class="nav-item me-2 me-md-2">
-              <a class="nav-link" href="./project.html">Project</a>
-            </li>
-            <li class="nav-item me-2 me-md-2">
-              <a class="nav-link" href="#">Hospital</a>
-            </li>
-            
-            <li class="nav-item me-2 me-md-2">
-              <a class="nav-link" href="#">Wellness</a>
-            </li>
-           
-          </ul>
-        
-      <form class="d-flex order-lg-1 order-2 d-xl-flex d-flex d-sm-none text-center" role="search">
-        <!-- search khi chưa sm -->
-        <div
-          class="d-flex justify-content-center align-items-center  d-lg-flex  position-relative" >
-          <i class=" d-lg-flex fa-solid fa-magnifying-glass position-absolute start-0 ms-5 ms-md-0"style="color: #41353d";></i>
-        </div>
-        <input class="form-control form-control-search me-2 rounded-pill ms-5 ms-md-0 border " type="search"placeholder="Search" aria-label="Search"/>
-      </form>
-      <div class="order-lg-2 order-0 d-flex mt-lg-0  mt-sm-2 mt-sm-0  mt-2 mt-sm-0 ms-sm-3 ">
-        <!-- search khi small -->
-        <div
-          class="me-1 py-1 px-2 d-xl-none d-sm-flex d-none me-2 rounded-start rounded-end"
-          style="background-color: rgb(255, 240, 240)"
-        >
-          <a href=""
-            ><i
-              class="fa-solid fa-magnifying-glass p-2"
-              style="color: #41353d"
-              ;
-            ></i
-          ></a>
-        </div>
-    
-          <div class="ms-auto ">
-            
-            <a href="" class="px-3 btn d-flex flex-column text-center" style="color: var(--bookNow-color); background-color: #007BFF;" > <i class="fa-regular fa-clipboard"></i> Book now</a>
+  </head>
+  <body>
+    <div class="" style="background-color: #EFF5FF;">
+      <div class="d-none d-md-flex">
+        <div class="container d-flex flex-row ">
+          <div class="">
+            <i class="fa-solid fa-location-dot" style="color: #4268b3;"></i>
+            <small class="opacity-75">Linh trung, thủ đức, việt nam</small>
           </div>
-      </div>
-            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
-              <div class="offcanvas-header">
-                <h5 class="offcanvas-title " id="offcanvasNavbarLabel">Menu</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-              </div>
-              <div class="offcanvas-body">
-                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                  <li class="nav-item">
-                    <a class=" nav-link " aria-current="page" href="./index.html"><i class=" fa-solid fa-house"></i> Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="./handbook.html"><i class="fa-solid fa-book-medical"></i> Handbook</a>
-                  </li>
-                  <li class="nav-item">
-    
-                    <a class="nav-link" href="./contact.html"><i class="fa-regular fa-handshake"></i> Contact</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="./business.html"><i class="fa-solid fa-building"></i> Business heath</a>
-    
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link fw-semibold active" href="./digital.html"><i class="fa-solid fa-folder"></i> Digital Transformation Package</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="./Recruitment.html"><i class="fa-solid fa-users"></i> Recruitment</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="./patient.html"><i class="fa-solid fa-hospital-user"></i> Patitent</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="./doctor.html"><i class="fa-solid fa-user-doctor"></i> Doctor</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="./roleOf.html"><i class="fa-solid fa-flag"></i> Role of bookingcare</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="./hotLine.html"><i class="fa-solid fa-phone"></i> Hotline</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="./fAQ.html"><i class="fa-solid fa-question"></i> FAQ</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="./terms.html"><i class="fa-solid fa-scroll"></i> Terms</a>
-                  </li>
-                </ul>
+          <div class="ms-5">
+            <i class="fa-regular fa-clock" style="color: #3e6cbb;"></i>
+            <small class="opacity-75">Mon - Fri: 08.00 AM - 09.00 PM</small>
+          </div>
+          <div class="ms-auto">
+            <div class="d-flex flex-row">
+              <i class="fa-solid fa-phone p-1" style="color: #1f6ff9;"></i>
+              <small class="opacity-75">+012 345 6789</small>
+              <div class="ms-5">
+                <i class="fa-brands fa-facebook" style="color: #1d67e7;"></i>
+                <i class="fa-brands fa-twitter" style="color: #1868f2;"></i>
+                <i class="fa-brands fa-linkedin" style="color: #1c65e3;"></i>
+                <i class="fa-brands fa-instagram" style="color: #367df7;"></i>
               </div>
             </div>
           </div>
-        </nav>
-     </div>
-     <header>
-        <div class="container mt-4">
-          <nav aria-label="breadcrumb ">
-            <ol class="breadcrumb">
-              <li class="breadcrumb-item ms-3">
-                <a href="/index.html"><i class="fa-solid fa-house"></i> </a>
-              </li>
-              <li class="breadcrumb-item active">Recruitment</li>
-            </ol>
-          </nav>
-        </header>
-
-    <!-- DashBoard -->
-  
-            <div class="container">
-                <!-- Phần lớn -->
-                <div class="large-section">
-                    <img src="https://cdn.bookingcare.vn/fo/w828/2024/08/29/145356-tuyen-dung-thuc-tap-sinh-cx.jpg" alt="Placeholder Image for Large Section">
-                   
-            
-                    <h1>Quy trình tuyển dụng dành cho nhân sự chính thức</h1>
-                    <h2>Vòng 1: Sơ vấn Online</h2>
-                    <p>Khi đã vượt qua vòng Scan CV, bạn sẽ có một cuộc nói chuyện 30 phút qua Google Meet với HR. BookingCare thiết kế vòng Online này để những bạn ở xa hứng thú với BookingCare nhưng đắn đo vì đi phỏng vấn xa thì vòng này giúp các bạn tiết kiệm thời gian đi lại mà vẫn tìm hiểu về BookingCare.</p>
-                    <p>Mục tiêu đánh giá của vòng này là hiểu rõ hơn về kinh nghiệm, kỹ năng và mục tiêu nghề nghiệp của bạn. Bên cạnh đó, ở vòng này, qua trao đổi với HR bạn cũng phần nào hiểu thêm về công việc đang ứng tuyển, về công ty (quy định, quy mô, chế độ phúc lợi...) để từ đó có thêm quyết định cho cơ hội này.</p>
-                    <p>Hãy coi đây như một cơ hội, một buổi trò chuyện ngắn để BookingCare có thể hiểu thêm về bạn, và chính bạn cũng có thể làm rõ những điều mình còn băn khoăn.</p>
-            
-                    <h2>Vòng 2: Phỏng vấn trực tiếp</h2>
-                    <p>Nếu ở vòng sơ vấn, chúng mình chỉ được gặp nhau qua màn hình máy tính thì ở vòng này, bạn sẽ đến trực tiếp công ty để phỏng vấn với CEO và leader của team.</p>
-                    <p>Buổi phỏng vấn thường dài từ 50 - 60 phút và tập trung vào 2 phần chính: chuyên môn, kinh nghiệm làm việc và sự phù hợp với văn hóa công ty. Bên cạnh những kỹ năng chuyên môn, chúng mình đặc biệt quan tâm đến việc tìm kiếm những ứng viên phù hợp với văn hóa làm việc tại BookingCare.</p>
-                    <p>Là một công ty khởi nghiệp, chúng mình đã và đang cùng nhau xây dựng văn hóa, những giá trị cốt lõi riêng. Mỗi thành viên được xem như một mảnh ghép quan trọng trong bức tranh chung của công ty. Không có mảnh ghép nào là thừa, nhưng sự phù hợp là yếu tố quyết định đến sự hoàn hảo của bức tranh. Cũng giống như một bức tranh có nhiều màu sắc khác nhau nhưng vẫn cần phải đảm bảo sự hài hòa. Chúng mình quan niệm rằng, không có giỏi hay không giỏi mà chỉ có sự phù hợp ở mức độ cao hay thấp và sự thành công không chỉ đến từ năng lực cá nhân mà còn từ sự phù hợp của mỗi cá nhân với văn hóa công ty.</p>
-                    <p>Vòng phỏng vấn này không chỉ là cơ hội để chúng mình hiểu rõ hơn về bạn mà còn là dịp để bạn tìm hiểu kỹ hơn về công việc và văn hóa tại BookingCare qua thực tế. Ngay khi bước vào công ty, hay trong suốt buổi trao đổi trực tiếp, bạn sẽ cảm nhận được môi trường làm việc, đội ngũ ở đây có phù hợp với bạn hay không.</p>
-                    <p>Chúng mình rất khuyến khích bạn đặt câu hỏi để hiểu rõ hơn về công việc và cơ hội phát triển tại BookingCare. Hãy xem đây là một cuộc trò chuyện thoải mái từ 2 phía, không chỉ trả lời câu hỏi mà bạn cũng hoàn toàn có thể đặt câu hỏi, được chia sẻ, được lắng nghe. Vì vậy, nếu có thắc mắc gì sau vòng 1, bạn đừng ngần ngại đặt câu hỏi để có cái nhìn toàn diện hơn về công việc và cơ hội phát triển ở BookingCare.</p>
-                    
-                    <p>Một đội ngũ gắn kết, cùng chung chí hướng là yếu tố cốt lõi để xây dựng công ty thành công. Chính vì vậy, BookingCare luôn tìm kiếm những cá nhân tài năng, nhiệt huyết, sẵn sàng đồng hành cùng chúng tôi trên hành trình mang đến những dịch vụ y tế chất lượng, thông tin y tế hữu ích cho người dân Việt Nam. Hãy cùng tham gia chuyến tàu BookingCare để cùng nhau tạo nên những giá trị ý nghĩa cho cộng đồng!</p>
-                </div>
-            
-        <!-- Phần nhỏ -->
-        <div class="small-section">
-            <h1>Nội Dung Chính</h1>
-            <p>Quy trình tuyển dụng dành cho nhân sự chính thức</p>
-            <p>Vòng 1: Sơ vấn Online</p>
-            <p>Vòng 2: Phỏng vấn trực tiếp</p>
-       
         </div>
+      </div>
     </div>
-</body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!--navBar -->
+    <!--navBar -->
+    <!-- DashBroad -->
+    <div class="container sticky-top">
+      <nav class="navbar bg-body-tertiary ">
+        <div class="container" style="color: var(--aqua-color)">
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!-- navBar -->
+          <a class="navbar-brand me-auto d-none d-md-flex" href="../index.html">
+            <img width="200px" src="../assets/img/logo.png" alt="" />
+          </a>
+          <a class="navbar-brand me-auto d-md-none " href="../index.html">
+            <img width="150px" src="../assets/img/logo.png" alt="" />
+          </a>
+          <ul class="list-unstyled nav-tabs nav-tabs-scroll border-0 mb-3 me-auto mb-2 mb-lg-0 d-flex flex-row  ms-auto order-lg-0 order-1 mt-3 mt-lg-0">
+            <li class="nav-item me-2 me-md-2 ">
+              <a class="nav-link " aria-current="page" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item me-2 me-md-2">
+              <a class="nav-link " href="../about.html">About</a>
+            </li>
+            <li class="nav-item me-2 me-md-2">
+              <a class="nav-link" href="../HospitalVisit.html">Hospital</a>
+            </li>
+            <li class="nav-item me-2 me-md-2">
+              <a class="nav-link" href="../Healthily.html">Wellness</a>
+            </li>
+          </ul>
+          <form class="d-flex order-lg-1 order-2 d-xl-flex d-flex d-sm-none text-center" role="search">
+            <!-- search khi chưa sm -->
+            <div class="d-flex justify-content-center align-items-center  d-lg-flex  position-relative">
+              <i class=" d-lg-flex fa-solid fa-magnifying-glass position-absolute start-0 ms-5 ms-md-0" style="color: #41353d" ;></i>
+            </div>
+            <input class="form-control form-control-search me-2 rounded-pill ms-5 ms-md-0 border " type="search" placeholder="Search" aria-label="Search" />
+          </form>
+          <div class="order-lg-2 order-0 d-flex mt-lg-0  mt-sm-2 mt-sm-0  mt-2 mt-sm-0 ms-sm-3 ">
+            <!-- search khi small -->
+            <div class="me-1 py-1 px-2 d-xl-none d-sm-flex d-none me-2 rounded-start rounded-end" style="background-color: azure">
+              <a href="">
+                <i class="fa-solid fa-magnifying-glass p-2" style="color: #41353d" ;></i>
+              </a>
+            </div>
+            <div class="ms-auto ">
+              <a href="../booknow.html" class="px-3 btn d-flex flex-column text-center" style="color: var(--bookNow-color); background-color: #007BFF;">
+                <i class="fa-regular fa-clipboard"></i> Book now </a>
+            </div>
+          </div>
+          <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link " aria-current="page" href="../index.html">
+                    <i class="fa-solid fa-house"></i> Home </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../handbook.html">
+                    <i class="fa-solid fa-book-medical"></i> Handbook </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../contact.html">
+                    <i class="fa-regular fa-handshake"></i> Contact </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../business.html">
+                    <i class="fa-solid fa-building"></i> Business heath </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../digital.html">
+                    <i class="fa-solid fa-folder"></i> Digital Transformation Package </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active fw-semibold" href="../Recruitment.html">
+                    <i class="fa-solid fa-users"></i> Recruitment </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../patient.html">
+                    <i class="fa-solid fa-hospital-user"></i> Patitent </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../doctor.html">
+                    <i class="fa-solid fa-user-doctor"></i> Doctor </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../roleOf.html">
+                    <i class="fa-solid fa-flag"></i> Role of bookingcare </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../hotLine.html">
+                    <i class="fa-solid fa-phone"></i> Hotline </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../fAQ.html">
+                    <i class="fa-solid fa-question"></i> FAQ </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../terms.html">
+                    <i class="fa-solid fa-scroll"></i> Terms </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link " href="../feedback.html">
+                    <i class="fa-solid fa-message"></i> Feedback </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <header>
+      <div class="container mt-4">
+        <nav aria-label="breadcrumb ">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+              <a href="../index.html">
+                <i class="fa-solid fa-house"></i>
+              </a>
+            </li>
+            <li class="breadcrumb-item">
+              <a href="../recruitment.html">Recruitment </a>
+            </li>
+            <li class="breadcrumb-item active">Interview process </li>
+          </ol>
+        </nav>
+    </header>
+    <!-- DashBoard -->
+    <main>
+      <div class="container">
+        <div class=" row">
+          <div class="col-md-10">
+            <div class="large-section">
+                <img src="https://cdn.bookingcare.vn/fo/w828/2024/08/29/145356-tuyen-dung-thuc-tap-sinh-cx.jpg" alt="Placeholder Image for Large Section">
+                <h1>Recruitment Process for Permanent Staff</h1>
+<h2>Round 1: Online Interview</h2>
+<p>After passing the CV screening stage, you will have a 30-minute conversation via Google Meet with HR. This online interview is designed for those who are interested in BookingCare but may be hesitant due to the distance, saving you time on commuting while still giving you an opportunity to learn more about BookingCare.</p>
+<p>The goal of this round is to better understand your experience, skills, and career goals. Additionally, this is a chance for you to learn more about the position, the company (policies, scale, benefits, etc.), and help you make a more informed decision about this opportunity.</p>
+<p>Think of this as an opportunity for a brief chat where BookingCare can learn more about you, and you can clarify any uncertainties you may have.</p>
+
+<h2>Round 2: In-person Interview</h2>
+<p>If in Round 1 we only met via a computer screen, in this round, you'll come directly to the company for an interview with the CEO and team leader.</p>
+<p>The interview usually lasts between 50-60 minutes and focuses on two main areas: professional skills, work experience, and cultural fit. In addition to technical skills, we place particular importance on finding candidates who align with BookingCare's work culture.</p>
+<p>As a startup, we are continuously building our culture and core values. Every member is seen as an essential piece in the company’s overall picture. There is no unnecessary piece, but the alignment of each piece is key to achieving a perfect whole. Just like a painting with many colors, it needs to be harmonious. We believe that success comes not just from individual abilities but also from how well each individual fits into the company culture.</p>
+<p>This round is not only an opportunity for us to learn more about you, but also for you to better understand the job and the culture at BookingCare. From the moment you step into the company, or throughout the interview, you'll get a feel for the working environment and whether our team is a good fit for you.</p>
+<p>We strongly encourage you to ask questions to better understand the job and development opportunities at BookingCare. Consider this an open conversation where you can not only answer questions but also ask your own, share, and be heard. So, if you have any questions after Round 1, don't hesitate to ask to get a more comprehensive view of the job and growth opportunities at BookingCare.</p>
+
+<p>A cohesive, like-minded team is the core factor in building a successful company. That’s why BookingCare is always on the lookout for talented, passionate individuals who are ready to join us on our journey to provide quality healthcare services and valuable health information to the people of Vietnam. Join the BookingCare team and help create meaningful value for the community!</p>
+
+                
+            </div>
+          </div>
+           <!-- end col  -->
+
+          <div class="col-md-2 d-none d-md-flex">
+            <!-- Phần nhỏ -->
+            <div class="small-section">
+             
+                <h1>Main Content</h1>
+                <p>Recruitment Process for Permanent Staff</p>
+                <p>Round 1: Online Interview</p>
+                <p>Round 2: In-person Interview</p>
+                
+                
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </html>
