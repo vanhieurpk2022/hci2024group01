@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- favicon -->
+        <link rel="apple-touch-icon" sizes="57x57" href="../assets/img/favicon/apple-icon-57x57.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="../assets/img/favicon//apple-icon-60x60.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="../assets/img/favicon//apple-icon-72x72.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/favicon//apple-icon-76x76.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="../assets/img/favicon/apple-icon-114x114.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="../assets/img/favicon/apple-icon-120x120.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="../assets/img/favicon/apple-icon-144x144.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="../assets/img/favicon/apple-icon-152x152.png">
+        <link rel="apple-touch-icon" sizes="180x180" href="../assets/img/favicon/apple-icon-180x180.png">
+        <link rel="icon" type="image/png" sizes="192x192"  href="../assets/img/favicon/android-icon-192x192.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="96x96" href="../assets/img/favicon/favicon-96x96.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicon/favicon-16x16.png">
+        <link rel="manifest" href="../assets/img/favicon/manifest.json"> 
+        <meta name="msapplication-TileColor" content="#ffffff">
+        <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+        <meta name="theme-color" content="#ffffff">
+      
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <link rel="stylesheet" href="./assets/css/myStyle.css" />
+    <link rel="stylesheet" href="./assets/css/setColor.css">
+    <link rel="stylesheet" href="doctors.css">
+    <title>HeathCare</title>
+   
+</head>
+<body>
+     <!-- DashBroad -->
+     <div class="container " >
+      <nav class="navbar bg-body-tertiary ">
+        <div class="container" style="color: var(--aqua-color)">
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!-- navBar -->
+          <a class="navbar-brand me-auto d-none d-md-flex" href="../index.html">
+            <img width="200px" src="../assets/img/logo.png" alt="" />
+          </a>
+          <a class="navbar-brand me-auto d-md-none " href="../index.html">
+            <img width="150px" src="../assets/img/logo.png" alt="" />
+          </a>
+          <ul class="list-unstyled nav-tabs nav-tabs-scroll border-0 mb-3 me-auto mb-2 mb-lg-0 d-flex flex-row  ms-auto order-lg-0 order-1 mt-3 mt-lg-0">
+            <li class="nav-item me-2 me-md-2 ">
+              <a class="nav-link " aria-current="page" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item me-2 me-md-2">
+              <a class="nav-link " href="../23130109_ViVanHieu_about.html">About</a>
+            </li>
+            <li class="nav-item me-2 me-md-2">
+              <a class="nav-link" href="../23130153_NguyenDuyKhanh_hospitalVisit.html">Hospital</a>
+            </li>
+            <li class="nav-item me-2 me-md-2">
+              <a class="nav-link" href="../23130153_NguyenDuyKhanh_Healthily.html">Wellness</a>
+            </li>
+          </ul>
+          <form class="d-flex order-lg-1 order-2 d-xl-flex d-flex d-sm-none text-center" role="search">
+            <!-- search khi chưa sm -->
+            <div class="d-flex justify-content-center align-items-center  d-lg-flex  position-relative">
+              <i class=" d-lg-flex fa-solid fa-magnifying-glass position-absolute start-0 ms-5 ms-md-0" style="color: #41353d" ;></i>
+            </div>
+            <input class="form-control form-control-search me-2 rounded-pill ms-5 ms-md-0 border " type="search" placeholder="Search" aria-label="Search" />
+          </form>
+          <div class="order-lg-2 order-0 d-flex mt-lg-0  mt-sm-2 mt-sm-0  mt-2 mt-sm-0 ms-sm-3 ">
+            <!-- search khi small -->
+            <div class="me-1 py-1 px-2 d-xl-none d-sm-flex d-none me-2 rounded-start rounded-end" style="background-color: azure">
+              <a href="">
+                <i class="fa-solid fa-magnifying-glass p-2" style="color: #41353d" ;></i>
+              </a>
+            </div>
+            <div class="ms-auto ">
+              <a href="../23130109_ViVanHieu_booknow.html" class="px-3 btn d-flex flex-column text-center" style="color: var(--bookNow-color); background-color: #007BFF;">
+                <i class="fa-regular fa-clipboard"></i> Book now </a>
+            </div>
+          </div>
+          <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+            <div class="offcanvas-header">
+              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link " aria-current="page" href="../index.html">
+                    <i class="fa-solid fa-house"></i> Home </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../23130261_DoMinhQuoc_handbook.html">
+                    <i class="fa-solid fa-book-medical"></i> Handbook </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../23130261_DoMinhQuoc_contact.html">
+                    <i class="fa-regular fa-handshake"></i> Contact </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../23130261_DoMinhQuoc_business.html">
+                    <i class="fa-solid fa-building"></i> Business Health </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../23130001_NguyenThanhAn_digital.html">
+                    <i class="fa-solid fa-folder"></i> Digital Transformation Package </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link " href="../23130001_NguyenThanhAn_Recruitment.html">
+                    <i class="fa-solid fa-users"></i> Recruitment </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../23130035_DoanHuyCuong_patient.html">
+                    <i class="fa-solid fa-hospital-user"></i> Patitent </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link active fw-semibold" href="../23130035_DoanHuyCuong_doctor.html">
+                    <i class="fa-solid fa-user-doctor"></i> Doctor </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../23130035_DoanHuyCuong_roleOf.html">
+                    <i class="fa-solid fa-flag"></i> Role of bookingcare </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../23130109_ViVanHieu_hotLine.html">
+                    <i class="fa-solid fa-phone"></i> Hotline </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../23130109_ViVanHieu_fAQ.html">
+                    <i class="fa-solid fa-question"></i> FAQ </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="../23130109_ViVanHieu_terms.html">
+                    <i class="fa-solid fa-scroll"></i> Terms </a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link " href="../23130109_ViVanHieu_feedback.html">
+                    <i class="fa-solid fa-message"></i> Feedback </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </nav>
+     </div>
+
+    </nav>
+
+    <!-- Main Banner -->
+    <div class="main-banner">
+        <img src="https://vnn-imgs-a1.vgcloud.vn/img2.infonet.vn/w490/Uploaded/2020/pjauldz/2018_03_18/ictnews_bookingcare_1.jpg?width=0&s=a4QvblNPf1NF3yQn7lRj8w" alt="Giao tiếp giữa bác sĩ và bệnh nhân" class="img-fluid">
+    </div>
+
+    <!-- Content Section -->
+    <div class="container content-section">
+        <!-- Main Content -->
+        <div class="main-content">
+            <h1><strong>4 Lợi ích Giải pháp Chuyển đổi số Phòng khám BookingCare_DX</strong></h1>
+            <img src="https://cdn.bookingcare.vn/fo/w828/2022/10/13/174911-chuyen-doi-so-bookingcare-dx.png" alt="Placeholder Image for Large Section" class="img-fluid">
+            <p>Chuyển đổi số y tế ngày càng được đơn vị khám chữa bệnh quan tâm, đặc biệt là sau Covid. Tuy nhiên nhiều phòng khám gặp phải thế khó khi muốn chuyển đổi nhưng không biết bắt đầu từ đâu, cần chuyển đổi những gì hay không đủ chi phí cũng như nhân lực,... </p>
+            <p>Hiểu được bài toán này của phòng khám, từ thực tế của đơn vị khởi nghiệp trong lĩnh vực y tế, đã hợp tác, kết nối với hơn 200 đối tác bệnh viện, phòng khám, BookingCare thiết kế <span class="highlight">Giải pháp Chuyển đổi số toàn diện</span> cho Y tế Chăm sóc Sức khỏe BookingCare_DX.</p>
+            <p class="custom-text"><strong>"<span class="highlight">BookingCare_DX</span> là giải pháp do BookingCare phát triển. Giải pháp tập trung vào tối ưu kênh Website phòng khám (tính năng đặt lịch khám với bác sĩ, trang Admin quản trị bác sĩ, lịch khám,...),quản lý bệnh nhân, hồ sơ sức khỏe,...</strong></p>
+            <p><strong>4 Lợi ích Giải pháp Chuyển đổi số BookingCare_DX cho phòng  khám</strong></p>
+            <p>Giải pháp của BookingCare sẽ đồng hành, giúp phòng khám rút ngắn thời gian chuyển đổi số, đem lại hiệu quả vận hành, kinh doanh. </p>
+            <p><strong>1. Khai thác tối đa hiệu quả thu hút khách hàng trên kênh Website</strong></p>
+            <p>Giải pháp chuyển đổi của BookingCare tập trung tối ưu <span class="highlight">kênh Website phòng khám</span> - không chỉ là kênh thông tin, Marketing giới thiệu về phòng khám mà còn là kênh đặt lịch trực tiếp.</p>
+            <p>Theo thống kê, khoảng 7% tất cả các tìm kiếm trên Google có liên quan đến sức khỏe. Có đến 70.000 lượt tìm kiếm liên quan đến sức khỏe mỗi phút một ngày. Người dùng thường tìm kiếm các thông tin về một căn bệnh cụ thể, cách điều trị, bác sĩ giỏi, bệnh viện, cơ sở y tế,...</p>
+            <p>Điều này cũng hoàn toàn phù hợp với hành trình trước khi đi khám của người bệnh, thường tìm kiếm rất nhiều thông tin trên Google. </p>
+            <p>Như vậy, có thể thấy, trong lĩnh vực Y tế, Website vẫn là kênh Marketing hiệu quả thu hút khách hàng. Thực tế, nhiều phòng khám hiện nay chưa có kênh Website hoặc trang Web sơ sài, không có đủ thông tin, tính năng để chuyển đổi khách hàng đặt lịch. </p>
+            <p>Giải pháp Website phòng khám của BookingCare_DX sẽ giúp đơn vị nhanh chóng thiết kế, đưa vào sử dụng Website hiệu quả với các tính năng cần thiết, tính năng riêng cho y tế khám chữa bệnh:</p>
+            <p>* Thông tin giới thiệu chi tiết về phòng khám</p>
+            <p>* Tính năng đặt lịch khám với bác sĩ </p>
+            <p>* Chức năng Live chat</p>
+            <p>* Bài viết nội dung chuẩn SEO...</p>
+            <p>Giải pháp giúp phòng khám:</p>
+            <p>* Khai thác tối đa hiệu quả thu hút khách hàng trên kênh Website</p>
+            <p>* Tự động hóa, các thông tin trên Website đã rõ ràng, có lịch khám, giá khám,... khách hàng chủ động đặt lịch mọi lúc, mọi nơi, không cần xếp hàng, chờ đợi. Giúp giảm thời gian nhân viên chăm sóc khách hàng và chốt được nhiều lịch hơn. </p>
+            <p>* Người bệnh đặt lịch trước, có sẵn thông tin tại phòng khám, tiết kiệm thời gian khai báo, làm thủ tục thăm khám ban đầu. </p>
+            <p><strong>2. Chi phí chuyển đổi số tối ưu nhất</strong></p>
+            <p>Chuyển đổi số vẫn thường bị nhìn nhận là chỉ phù hợp với các bệnh viện, phòng khám lớn vì đầu tư công nghệ tốn nhiều chi phí. Tuy nhiên, sự phát triển công nghệ chứng minh rằng bất kỳ bệnh viện, phòng khám nào cũng có thể chuyển đổi số nếu sẵn sàng thay đổi.</p>
+            <p>Hơn nữa, tùy thuộc vào chiến lược của mỗi đơn vị sẽ áp dụng chuyển đổi số vào các hoạt động khác nhau, có mức chi phù hợp. Sẽ không có rào cản là phòng khám tư nhỏ không thể thực hiện chuyển đổi số.</p>
+            <p>Giải pháp chuyển đổi số BookingCare_DX được thiết kế với các gói dịch vụ cơ bản, nâng cao, cao diện với mức chi phí chỉ từ 12 triệu/năm. Hơn nữa, chi phí còn tối ưu hơn khi: </p>
+            <p>* Không chi phí đầu tư ban đầu</p>
+            <p>* Không chi phí máy chủ</p>
+            <p>* Không chi phí nhân sự và chi phí vận hành</p>
+            <p>Bên cạnh đó, phòng khám có thể nhìn thấy hiệu quả khi áp dụng chuyển đổi số thành công, giúp phòng khám tăng khách hàng, tăng doanh thu, giảm chi phí vận hành. </p>
+            <p>Có thể thấy chuyển đổi số không phải là một khoản chi mất đi, mà là một khoản đầu tư có lãi. Giá trị đến từ tối ưu hóa chi phí vận hành so với cách làm truyền thống, tạo ra các giá trị mới bền vững, lâu dài.</p>
+            <img src="https://cdn.bookingcare.vn/fo/w1200/2022/10/13/170312-goi-chuyen-doi-so-bookingcare-dx.jpg" alt="Placeholder Image for Large Section" class="img-fluid">
+            <p><strong>3. Gói giải pháp linh hoạt theo nhu cầu của phòng khám</strong></p>
+            <p>Mỗi phòng khám sẽ có hướng chuyển đổi số, áp dụng các giải pháp trong các hoạt động khác nhau. Giải pháp của BookingCare sẽ linh hoạt, tùy chỉnh theo nhu cầu của phòng khám.</p>
+            <p><strong>4. Triển khai nhanh chóng, dễ sử dụng </strong></p>
+            <p><span class="highlight">Trọn bộ Giải pháp BookingCare_DX</span> được thiết kế để các phòng khám có thể dễ dàng áp dụng, nhanh chóng tiến hành chuyển đổi số. Phòng khám có thể ngay lập tức áp dụng giải pháp chuyển đổi số sau 1 - 3 tháng.</p>
+            <p><strong>Giải pháp BookingCare_BX phù hợp với đơn vị nào?</strong></p>
+            <p>+ Phòng khám muốn chuyển đổi số, hiện đại quy trình khám chữa bệnh, thuận tiện cho nhân viên y tế và người bệnh nhưng gặp khó khăn về nhân lực triển khai, muốn hợp tác với bên thứ 3 để nhanh chóng triển khai. </p>
+            <p>+ Các phòng khám nhỏ muốn tối ưu quy trình khám chữa bệnh, giảm thời gian, công việc cho nhân viên lễ tân, bác sĩ. Quản lý việc thăm khám thuận tiện hơn, không cần sử dụng nhiều giấy tờ. </p>
+            <p>BookingCare hiện đang hỗ trợ các bản dùng thử miễn phí Giải pháp Chuyển đổi số BookingCare_DX. Phòng khám có thể trải nghiệm trước những tính năng trước khi đăng ký gói. Để lại thông tin hoặc liên hệ BookingCare để được hỗ trợ nhanh nhất. </p>
+             
+        </div>
+
+        <!-- Sidebar -->
+        <div class="sidebar-container">
+          <!-- Sidebar 1 -->
+          <div class="sidebar">
+              <h4>Nội dung chính</h4>
+              <ul class="list-group">
+             <p><span class="highlight"><strong>4 Lợi ích Giải pháp Chuyển đổi số BookingCare_DX cho phòng  khám</strong></span></p>
+             <p><span class="highlight">1. Khai thác tối đa hiệu quả thu hút khách hàng trên kênh Website</span></p>
+             <p><span class="highlight">2. Chi phí chuyển đổi số tối ưu nhất</span></p>
+             <p><span class="highlight">3. Gói giải pháp linh hoạt theo nhu cầu của phòng khám </span></p>
+             <p><span class="highlight">4. Triển khai nhanh chóng, dễ sử dụng </span></p>
+             <p><span class="highlight">Giải pháp BookingCare_BX phù hợp với đơn vị nào?</span></p>
+             
+              </ul>
+              <a href="#" class="btn btn-success mt-3">Liên hệ hợp tác</a>
+          </div>
+      
+          <!-- Sidebar 2 -->
+          <div class="sidebar new-sidebar">
+              <div class="explore-header d-flex align-items-center">
+                  <img src="https://cdn.bookingcare.vn/fo/2024/04/25/142829-ai-assistant.png" alt="Icon" class="me-2">
+                  <h5>Khám phá thêm</h5>
+              </div>
+              <div class="explore-body text-center">
+                  <p>Hỏi - đáp thông tin y tế, sức khỏe cùng Trợ lý AI của BookingCare</p>
+                  <button class="btn btn-primary">Bắt đầu</button>
+              </div>
+              <div class="explore-footer d-flex align-items-center">
+                  <input type="text" class="form-control" placeholder="Đặt câu hỏi với Trợ lý AI">
+                  <button class="btn btn-warning ms-2"><i class="fa-solid fa-paper-plane"></i></button>
+              </div>
+          </div>
+      </div>
+      
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="doctors.js"></script>
+</body>
+</html>
